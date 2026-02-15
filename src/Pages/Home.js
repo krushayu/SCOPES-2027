@@ -7,7 +7,6 @@ import { MdEventNote } from 'react-icons/md';
 
 const Home = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
   const [countdown, setCountdown] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
   const [speakers, setSpeakers] = useState([]);
   const [selectedSpeaker, setSelectedSpeaker] = useState(null);
@@ -43,6 +42,7 @@ const Home = () => {
       clearInterval(deptInterval);
       clearInterval(scopesInterval);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   // Countdown Timer
@@ -90,13 +90,11 @@ const Home = () => {
   ];
 
   useEffect(() => {
-    if (!isPaused) {
-      const interval = setInterval(() => {
-        setCurrentSlide((prev) => (prev + 1) % slides.length);
-      }, 4000);
-      return () => clearInterval(interval);
-    }
-  }, [isPaused, slides.length]);
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, [slides.length]);
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
@@ -104,10 +102,6 @@ const Home = () => {
 
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
-  };
-
-  const goToSlide = (index) => {
-    setCurrentSlide(index);
   };
 
   const conferenceInfo = [
@@ -128,6 +122,7 @@ const Home = () => {
   return (
     <div className="home-container">
       {/* Marquee Section */}
+      {/* eslint-disable-next-line jsx-a11y/no-distracting-elements */}
       <div className="marquee-section">
         <marquee className="marquee-text" behavior="scroll" direction="left">
           Conference Record Number: 71015 || 
