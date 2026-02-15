@@ -1,0 +1,266 @@
+.paper-wrapper {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  padding-top: 120px;
+}
+
+.paper-hero {
+  background: linear-gradient(135deg, #0a192f 0%, #1e3c72 100%);
+  padding: 60px 20px;
+  text-align: center;
+  color: white;
+}
+
+.paper-hero-title {
+  font-size: 48px;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.paper-hero-subtitle {
+  font-size: 20px;
+  color: #caf0f8;
+}
+
+.paper-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.paper-section {
+  margin-bottom: 40px;
+}
+
+.paper-section-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #0a192f;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.paper-icon {
+  color: #00b4d8;
+  font-size: 36px;
+}
+
+.paper-intro {
+  font-size: 18px;
+  color: #334155;
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+.paper-text {
+  font-size: 16px;
+  color: #475569;
+  line-height: 1.8;
+}
+
+.paper-card {
+  background: white;
+  border-radius: 20px;
+  padding: 35px;
+  margin-bottom: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.paper-card-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #0a192f;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.paper-small-icon {
+  color: #00b4d8;
+  font-size: 20px;
+}
+
+.paper-card p {
+  color: #475569;
+  line-height: 1.8;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.paper-template-links {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin: 25px 0;
+}
+
+.paper-template-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(135deg, #00b4d8 0%, #4cc9f0 100%);
+  color: white;
+  text-decoration: none;
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 180, 216, 0.3);
+}
+
+.paper-template-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 180, 216, 0.4);
+}
+
+.paper-note {
+  background: #fff5f5;
+  border-left: 4px solid #ff6b6b;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+.note-icon {
+  color: #ff6b6b;
+  font-size: 20px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.paper-note p {
+  margin: 0;
+  color: #334155;
+}
+
+.paper-instructions {
+  background: #f0f9ff;
+  padding: 25px;
+  border-radius: 15px;
+  margin: 25px 0;
+}
+
+.paper-instructions h4 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #0a192f;
+  margin-bottom: 15px;
+}
+
+.paper-instructions ol {
+  margin: 0;
+  padding-left: 25px;
+  color: #334155;
+  line-height: 2;
+}
+
+.paper-instructions li {
+  margin-bottom: 10px;
+}
+
+.paper-submit-section {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.paper-submit-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: linear-gradient(135deg, #ff6b6b 0%, #ff8e53 100%);
+  color: white;
+  text-decoration: none;
+  padding: 15px 40px;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 20px rgba(255, 107, 107, 0.3);
+}
+
+.paper-submit-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(255, 107, 107, 0.4);
+}
+
+.paper-help {
+  text-align: center;
+  padding: 20px;
+  background: #f8fafc;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.paper-help p {
+  margin: 0;
+  font-size: 15px;
+}
+
+.paper-help a {
+  color: #00b4d8;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.paper-help a:hover {
+  text-decoration: underline;
+}
+
+.policy-card {
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  border-left: 5px solid #00b4d8;
+}
+
+.plagiarism-card {
+  background: linear-gradient(135deg, #fff5f5 0%, #ffe4e6 100%);
+  border-left: 5px solid #ff6b6b;
+}
+
+@media screen and (max-width: 768px) {
+  .paper-wrapper {
+    padding-top: 140px;
+  }
+  
+  .paper-hero {
+    padding: 40px 15px;
+  }
+  
+  .paper-hero-title {
+    font-size: 32px;
+  }
+  
+  .paper-hero-subtitle {
+    font-size: 16px;
+  }
+  
+  .paper-container {
+    padding: 40px 15px;
+  }
+  
+  .paper-section-title {
+    font-size: 28px;
+  }
+  
+  .paper-card {
+    padding: 25px 20px;
+  }
+  
+  .paper-card-title {
+    font-size: 20px;
+  }
+  
+  .paper-template-links {
+    flex-direction: column;
+  }
+  
+  .paper-template-btn {
+    justify-content: center;
+  }
+}

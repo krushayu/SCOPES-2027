@@ -1,0 +1,288 @@
+.schedule-wrapper {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  padding-top: 120px;
+}
+
+.schedule-hero {
+  background: linear-gradient(135deg, #0a192f 0%, #1e3c72 100%);
+  padding: 60px 20px;
+  text-align: center;
+  color: white;
+}
+
+.schedule-hero-title {
+  font-size: 48px;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.schedule-hero-subtitle {
+  font-size: 20px;
+  color: #caf0f8;
+}
+
+.schedule-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.schedule-section {
+  margin-bottom: 60px;
+}
+
+.schedule-section-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #0a192f;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.schedule-icon {
+  color: #00b4d8;
+  font-size: 36px;
+}
+
+.schedule-tabs {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.schedule-tab {
+  padding: 12px 30px;
+  background: white;
+  border: 2px solid #e2e8f0;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #334155;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.schedule-tab:hover {
+  border-color: #00b4d8;
+  color: #00b4d8;
+}
+
+.schedule-tab.active {
+  background: linear-gradient(135deg, #00b4d8, #4cc9f0);
+  color: white;
+  border-color: transparent;
+}
+
+.schedule-card {
+  background: white;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.schedule-day-header {
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.schedule-day-header h3 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #0a192f;
+  margin-bottom: 10px;
+}
+
+.schedule-date {
+  font-size: 18px;
+  color: #00b4d8;
+  font-weight: 600;
+}
+
+.schedule-table-wrapper {
+  overflow-x: auto;
+}
+
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.schedule-table thead {
+  background: linear-gradient(135deg, #00b4d8, #4cc9f0);
+  color: white;
+}
+
+.schedule-table th {
+  padding: 15px;
+  text-align: left;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.schedule-table th svg {
+  margin-right: 8px;
+}
+
+.schedule-table tbody tr {
+  border-bottom: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+}
+
+.schedule-table tbody tr:hover {
+  background: #f8fafc;
+}
+
+.schedule-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.schedule-table td {
+  padding: 20px 15px;
+  color: #334155;
+  font-size: 15px;
+  vertical-align: top;
+}
+
+.schedule-time {
+  font-weight: 700;
+  color: #0a192f;
+  white-space: nowrap;
+  min-width: 180px;
+}
+
+.schedule-program {
+  white-space: pre-line;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+.schedule-venue {
+  white-space: pre-line;
+  color: #00b4d8;
+  font-weight: 600;
+}
+
+.schedule-presentation-section {
+  background: white;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.schedule-presentation-intro {
+  font-size: 16px;
+  color: #475569;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.schedule-presentation-tabs {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.schedule-presentation-tab {
+  padding: 12px 40px;
+  background: white;
+  border: 2px solid #e2e8f0;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #334155;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.schedule-presentation-tab:hover {
+  border-color: #00b4d8;
+  color: #00b4d8;
+}
+
+.schedule-presentation-tab.active {
+  background: linear-gradient(135deg, #00b4d8, #4cc9f0);
+  color: white;
+  border-color: transparent;
+}
+
+.schedule-presentation-content {
+  background: #f0f9ff;
+  padding: 40px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.schedule-presentation-content p {
+  font-size: 16px;
+  color: #334155;
+  margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .schedule-wrapper {
+    padding-top: 140px;
+  }
+
+  .schedule-hero {
+    padding: 40px 15px;
+  }
+
+  .schedule-hero-title {
+    font-size: 32px;
+  }
+
+  .schedule-hero-subtitle {
+    font-size: 16px;
+  }
+
+  .schedule-container {
+    padding: 40px 15px;
+  }
+
+  .schedule-section-title {
+    font-size: 28px;
+  }
+
+  .schedule-card {
+    padding: 25px 15px;
+  }
+
+  .schedule-day-header h3 {
+    font-size: 24px;
+  }
+
+  .schedule-tabs {
+    justify-content: center;
+  }
+
+  .schedule-tab {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .schedule-table th,
+  .schedule-table td {
+    padding: 12px 8px;
+    font-size: 13px;
+  }
+
+  .schedule-time {
+    min-width: 120px;
+    font-size: 12px;
+  }
+
+  .schedule-presentation-section {
+    padding: 25px 15px;
+  }
+
+  .schedule-presentation-tab {
+    padding: 10px 25px;
+    font-size: 14px;
+  }
+}

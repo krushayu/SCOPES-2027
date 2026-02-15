@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "Mr. Purna Mohanty",
+    "profession": "CEO, Marquee Semiconductor and Signature IP Corporation",
+    "about": "Purna brings in 28 years of experience and expertise in engineering, sales, business development, marketing and operations, and connecting these specialties to build a successful business. His love for Silicon Valley and its technology vibe accompanied by a passion for propagating Silicon Valley’s innovative culture around the world drove him to start MarqueeSemi and SignatureIP with a R&D presence in the 'best kept secret' locations around the world. Prior to founding MarqueeSemi and SignatureIP, Purna held the position of vice president engineering and operation at Tessolve USA. He brings in entrepreneurial vision to his companies – with his experience in co-founding or leading successful start-ups – ASIC Architect, Aims Technology, Kool Chip, Platys Communication, SmartSAN Network. Also, he had provided engineering and operational leadership at established companies – Adaptec, Semtech, Broadcom, NXP and Tessolve. He holds 5 US patents in the area of SoC verification and design. Purna holds a BSEE from NIT Rourkela, India and MSEE from University of Toledo, OH, USA.",
+    "talkTitle": "Advanced Signal Processing Techniques in Modern Communication",
+    "abstract": "This talk will cover the latest advancements in signal processing techniques and their applications in modern communication systems, including 5G and beyond.",
+    "image": "/speakers/purnamohanty.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Prof. (Dr.) Ganapati Panda ", 
+    "profession": "Professor and Research Advisor, C. V. Raman Global University, Former Deputy Director, IIT Bhubaneswar",
+    "about": "Prof. (Dr.) Ganapati Panda (Senior Life Member, IEEE) is currently working as a Professor and Research Advisor at C V Raman Global University-Odisha, Bhubaneswar, India. Professor Panda served as the Deputy Director, Dean (Academic Affairs), and Head, School of Electrical Sciences at the Indian Institute of Technology, Bhubaneswar. He was also Dean (Administration) at the National Institute of Technology, Rourkela. He was a member of the Board of Governors of IIT Bhubaneswar and NIT Rourkela. Dr. Panda also served as Director of the National Institute of Technology, Jamshedpur. He worked for 48 years in teaching and research in leading technical institutions in India. He did his Post-Doctoral research work at the University of Edinburgh, UK (1984-86), and Ph. D. (1981) from IIT, Kharagpur in Digital Signal Processing. He has guided 45 Ph.Ds . He has published more than 516 research papers in 306 referred Journals and 210 Conferences with 13980 citations, h-index of 56, and i10-index of 216 as of 15th June 2024. He listed under Top 2% Scientist of the world from the Stanford University in the area of AI&ML (2021, 2022, 2023) for significant contribution to engineering, education, and research. He is a Senior Member of IEEE, Fellow of IET, Fellow of IETE, Fellow of IE, Life Member of CSI, Life Member of ISTE, and a Life Member of System Society. He is a regular reviewer of many international journals. His research interests are in the areas of Artificial Intelligence, Machine Learning, Digital Signal Processing, Digital Communication, and Intelligent Instrumentation.",
+    "talkTitle": "IoT and Embedded Systems: Future Perspectives",
+    "abstract": "Exploring the convergence of IoT and embedded systems, discussing challenges and opportunities in the era of Industry 4.0.",
+    "image": "/speakers/ganpati panda.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Prof. Yeranuhi Margaryan",
+    "profession": "Software Engineer",
+    "about": "I am a tech professional with over 15 years of experience. I started as a software engineer and advanced my career to the position of VP of Engineering and eventually the CEO of a company with multinational customers and a presence in the EU and the USA. I have extensive experience in designing and developing complex technology solutions, working with multicultural remote teams, managing relationships with top-tier customers worldwide, building strong engineering teams, promoting corporate values and culture, and maintaining high team morale. Apart from that I am working as an adjunct lecturer at the American University of Armenia.",
+    "talkTitle": "Power Electronics in Renewable Energy Systems",
+    "abstract": "An in-depth analysis of power electronic converters and their role in efficient renewable energy integration.",
+    "image": "/speakers/Ms_Yeranuhi.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Dr. Raffaele Scuderi",
+    "profession": "Electromagnetics Industry Process Consultant and SIMULIA EMAG Specialist",
+    "about": "Raffaele Scuderi received his master degree (summa cum laude) in Telecommunication Engineering from the University of Pisa, Italy, in 2010. After he graduated, he joined the Microwave and Radiation Laboratory of the University of Pisa as Ph.D. student. During this period, his research activity was focused on the numerical solution of Maxwell equations with special attention to the development of equivalent radiation models for EMC problems. In 2011, he has been visiting student at the department of Electrical Engineering of the Pennsylvania State University. In 2012 he joined IDS –Ingegneria Dei Sistemi as System Analyst and then as Application Engineer. His job was focused on simulation and measurements of the electromagnetic phenomena for complex platforms (radiation and scattering), in the radio frequency and infrared spectrum. In 2018 he joined Dassault Systèmes and his current role is Electromagnetics Industry Process Consultant. He works in the field of the electromagnetic simulation as SIMULIA EMAG specialist, contributing into the pre/post-sales activities, consulting services and R&D. Raffaele actively contributes to the scientific community publishing articles and holding lectures and seminars on electromagnetic simulation.",
+    "talkTitle": "5G and Beyond: Wireless Communication Trends",
+    "abstract": "Discussing the evolution of wireless communication technologies and the roadmap towards 6G networks.",
+    "image": "/speakers/Raffaele.jpg"
+  }
+]

@@ -1,70 +1,167 @@
-# Getting Started with Create React App
+# SCOPES 2027 - Conference Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Official website for the 3rd International Conference on Signal Processing, Communication, Power & Embedded Systems (SCOPES-2027).
+
+## Conference Details
+
+- **Event**: SCOPES 2027
+- **Dates**: February 4-6, 2027
+- **Venue**: Centurion University of Technology and Management, Paralakhemundi, Odisha
+- **Format**: Hybrid Conference
+- **Technical Co-Sponsor**: IEEE Bhubaneswar Section & Computer Society Chapter (CH11163)
+
+## Tech Stack
+
+- **Frontend**: React.js
+- **Styling**: CSS3
+- **Icons**: React Icons
+- **Routing**: React Router DOM
+
+## Project Structure
+
+```
+ieee-cutm/
+├── public/
+│   ├── data/
+│   │   └── speakers.json
+│   ├── images/
+│   └── index.html
+├── src/
+│   ├── Components/
+│   │   ├── Navbar.js
+│   │   ├── Navbar.css
+│   │   ├── Footer.js
+│   │   └── Footer.css
+│   ├── Pages/
+│   │   ├── Home.js
+│   │   ├── Accommodation.js
+│   │   ├── CallForPapers.js
+│   │   ├── Committee.js
+│   │   ├── Contact.js
+│   │   ├── ImpDates.js
+│   │   ├── NotFound.js
+│   │   ├── PaperSubmission.js
+│   │   ├── Places.js
+│   │   ├── ProgramSchedule.js
+│   │   ├── Publication.js
+│   │   ├── Scope.js
+│   │   ├── Speakers.js
+│   │   ├── Sponsors.js
+│   │   └── Themes.js
+│   ├── styles/
+│   │   └── [All CSS files]
+│   ├── App.js
+│   └── index.js
+└── package.json
+```
 
 ## Available Scripts
 
-In the project directory, you can run:
-
 ### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Runs the app in development mode at [http://localhost:3000](http://localhost:3000)
 
 ### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Launches the test runner in interactive watch mode
 
 ### `npm run build`
+Builds the app for production to the `build` folder
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Deployment
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Option 1: Vercel (Recommended - Free & Auto-Build)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**Via Vercel Dashboard (No Manual Build Required):**
+- Go to [vercel.com](https://vercel.com)
+- Sign up/Login with GitHub
+- Click "New Project"
+- Import your GitHub repository
+- Vercel will automatically detect React and build/deploy
+- Your site will be live in 2-3 minutes!
 
-### `npm run eject`
+**Via Vercel CLI:**
+```bash
+npm install -g vercel
+vercel
+```
+- Vercel automatically builds and deploys
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Option 2: Netlify (Free & Auto-Build)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+**Via Netlify Dashboard (No Manual Build Required):**
+- Go to [netlify.com](https://netlify.com)
+- Sign up/Login with GitHub
+- Click "Add new site" → "Import an existing project"
+- Connect your GitHub repository
+- Netlify will automatically build and deploy
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+**Via Netlify CLI:**
+```bash
+npm install -g netlify-cli
+netlify deploy --prod
+```
+- Netlify automatically builds and deploys
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Option 3: GitHub Pages
 
-## Learn More
+1. Install gh-pages:
+```bash
+npm install --save-dev gh-pages
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+2. Add to `package.json`:
+```json
+"homepage": "https://yourusername.github.io/ieee-cutm",
+"scripts": {
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d build"
+}
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+3. Deploy:
+```bash
+npm run deploy
+```
 
-### Code Splitting
+### Option 4: Traditional Hosting (Manual Build)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1. Build:
+```bash
+npm run build
+```
 
-### Analyzing the Bundle Size
+2. Upload `build` folder contents via FTP/cPanel
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Features
 
-### Making a Progressive Web App
+- Responsive design for mobile and desktop
+- Dynamic speaker profiles with modal view
+- Conference schedule with day-wise tabs
+- Paper submission guidelines
+- Accommodation and transportation details
+- Committee member listings
+- Sponsor information
+- Interactive navigation with dropdown menus
+- Countdown timer to conference date
+- IEEE Xplore publication information
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Key Pages
 
-### Advanced Configuration
+1. **Home** - Conference overview, speakers, important dates
+2. **Themes** - Conference tracks and topics
+3. **Call for Papers** - Submission tracks with SDG alignment
+4. **Paper Submission** - Guidelines and templates
+5. **Program Schedule** - Day-wise event schedule
+6. **Speakers** - Keynote speaker profiles
+7. **Committee** - Organizing committee members
+8. **Accommodation** - Lodging and transport details
+9. **Sponsors** - Sponsorship tiers and benefits
+10. **Contact** - Contact information and location map
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Contact
 
-### Deployment
+**Email**: scopes2026@cutm.ac.in  
+**Conference Record Number**: 71015
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## License
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+© 2027 SCOPES Conference - Centurion University of Technology and Management

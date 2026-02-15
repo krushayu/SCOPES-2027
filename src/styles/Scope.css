@@ -1,0 +1,238 @@
+.scope-con-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  padding-top: 80px;
+}
+
+.scope-con-hero {
+  background: linear-gradient(135deg, #0a192f 0%, #1e3c72 100%);
+  padding: 60px 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.scope-con-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 30% 50%, rgba(76, 201, 240, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.scope-con-title {
+  font-size: 3rem;
+  font-weight: 800;
+  color: white;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.scope-con-underline {
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, #4cc9f0, #4895ef);
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+.scope-con-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.scope-con-intro {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  margin-bottom: 60px;
+  border-left: 5px solid #4cc9f0;
+}
+
+.scope-con-intro p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #334155;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.scope-con-intro p:last-child {
+  margin-bottom: 0;
+}
+
+.scope-con-tracks-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #0a192f;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.scope-con-tracks-subtitle {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #64748b;
+  margin-bottom: 50px;
+  font-style: italic;
+}
+
+.scope-con-tracks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+}
+
+.scope-con-track-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.scope-con-track-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.scope-con-track-header {
+  padding: 30px;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.scope-con-track-icon {
+  font-size: 2.5rem;
+  opacity: 0.9;
+}
+
+.scope-con-track-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.scope-con-track-list {
+  list-style: none;
+  padding: 30px;
+  margin: 0;
+}
+
+.scope-con-track-item {
+  padding: 12px 0;
+  padding-left: 30px;
+  color: #475569;
+  font-size: 1rem;
+  line-height: 1.6;
+  position: relative;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.scope-con-track-item:last-child {
+  border-bottom: none;
+}
+
+.scope-con-track-item::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: #4cc9f0;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .scope-con-container {
+    padding-top: 100px;
+  }
+
+  .scope-con-hero {
+    padding: 40px 20px;
+  }
+
+  .scope-con-title {
+    font-size: 2rem;
+  }
+
+  .scope-con-content {
+    padding: 40px 15px;
+  }
+
+  .scope-con-intro {
+    padding: 25px;
+  }
+
+  .scope-con-intro p {
+    font-size: 1rem;
+  }
+
+  .scope-con-tracks-title {
+    font-size: 1.8rem;
+  }
+
+  .scope-con-tracks-subtitle {
+    font-size: 1rem;
+  }
+
+  .scope-con-tracks-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .scope-con-track-header {
+    padding: 20px;
+  }
+
+  .scope-con-track-icon {
+    font-size: 2rem;
+  }
+
+  .scope-con-track-title {
+    font-size: 1.2rem;
+  }
+
+  .scope-con-track-list {
+    padding: 20px;
+  }
+
+  .scope-con-track-item {
+    font-size: 0.95rem;
+    padding: 10px 0;
+    padding-left: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .scope-con-title {
+    font-size: 1.5rem;
+  }
+
+  .scope-con-intro {
+    padding: 20px;
+  }
+
+  .scope-con-tracks-title {
+    font-size: 1.5rem;
+  }
+
+  .scope-con-track-header {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px 15px;
+  }
+
+  .scope-con-track-icon {
+    font-size: 2.5rem;
+  }
+}

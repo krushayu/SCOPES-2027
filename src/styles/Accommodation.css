@@ -1,0 +1,250 @@
+.accom-wrapper {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  padding-top: 120px;
+}
+
+.accom-hero {
+  background: linear-gradient(135deg, #0a192f 0%, #1e3c72 100%);
+  padding: 60px 20px;
+  text-align: center;
+  color: white;
+}
+
+.accom-hero-title {
+  font-size: 48px;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.accom-hero-subtitle {
+  font-size: 20px;
+  color: #caf0f8;
+}
+
+.accom-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.accom-section {
+  margin-bottom: 60px;
+}
+
+.accom-section-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.accom-section-icon {
+  font-size: 36px;
+  color: #00b4d8;
+}
+
+.accom-section-header h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #0a192f;
+}
+
+.accom-card {
+  background: white;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.accom-intro {
+  font-size: 18px;
+  font-weight: 600;
+  color: #0a192f;
+  margin-bottom: 15px;
+}
+
+.accom-card p {
+  color: #475569;
+  line-height: 1.8;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.accom-contact {
+  background: #f0f9ff;
+  padding: 15px;
+  border-radius: 10px;
+  border-left: 4px solid #00b4d8;
+  margin: 20px 0;
+}
+
+.accom-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.accom-list li {
+  padding: 15px;
+  margin-bottom: 10px;
+  background: #f8fafc;
+  border-radius: 10px;
+  border-left: 4px solid #00b4d8;
+  color: #334155;
+  line-height: 1.6;
+}
+
+.accom-form-section {
+  margin-top: 30px;
+  text-align: center;
+  padding: 30px;
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  border-radius: 15px;
+}
+
+.accom-form-section p {
+  font-size: 16px;
+  font-weight: 600;
+  color: #0a192f;
+  margin-bottom: 20px;
+}
+
+.accom-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #00b4d8 0%, #4cc9f0 100%);
+  color: white;
+  text-decoration: none;
+  padding: 15px 40px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 20px rgba(0, 180, 216, 0.3);
+}
+
+.accom-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(0, 180, 216, 0.4);
+}
+
+.accom-subtitle {
+  font-size: 22px;
+  font-weight: 700;
+  color: #0a192f;
+  margin: 30px 0 20px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.accom-train-icon {
+  color: #00b4d8;
+  font-size: 24px;
+}
+
+.accom-table-wrapper {
+  overflow-x: auto;
+  margin: 30px 0;
+}
+
+.accom-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.accom-table thead {
+  background: linear-gradient(135deg, #00b4d8 0%, #4cc9f0 100%);
+  color: white;
+}
+
+.accom-table th {
+  padding: 15px;
+  text-align: left;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.accom-table tbody tr {
+  border-bottom: 1px solid #e5e7eb;
+  transition: all 0.3s ease;
+}
+
+.accom-table tbody tr:hover {
+  background: #f8fafc;
+}
+
+.accom-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.accom-table td {
+  padding: 15px;
+  color: #334155;
+  font-size: 14px;
+}
+
+.accom-table td:first-child {
+  font-weight: 700;
+  color: #0a192f;
+}
+
+.accom-train-section {
+  background: #fff5f5;
+  padding: 25px;
+  border-radius: 15px;
+  margin: 30px 0;
+}
+
+.accom-train-list {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0 0 0;
+}
+
+.accom-train-list li {
+  padding: 12px 15px;
+  margin-bottom: 10px;
+  background: white;
+  border-radius: 8px;
+  color: #334155;
+  border-left: 3px solid #ff6b6b;
+}
+
+@media screen and (max-width: 768px) {
+  .accom-wrapper {
+    padding-top: 140px;
+  }
+  
+  .accom-hero {
+    padding: 40px 15px;
+  }
+  
+  .accom-hero-title {
+    font-size: 32px;
+  }
+  
+  .accom-hero-subtitle {
+    font-size: 16px;
+  }
+  
+  .accom-container {
+    padding: 40px 15px;
+  }
+  
+  .accom-section-header h2 {
+    font-size: 28px;
+  }
+  
+  .accom-card {
+    padding: 25px 20px;
+  }
+  
+  .accom-table th,
+  .accom-table td {
+    padding: 10px 8px;
+    font-size: 12px;
+  }
+}

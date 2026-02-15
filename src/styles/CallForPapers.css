@@ -1,0 +1,227 @@
+.cfp-wrapper {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  padding-top: 120px;
+}
+
+.cfp-hero {
+  background: linear-gradient(135deg, #0a192f 0%, #1e3c72 100%);
+  padding: 60px 20px;
+  text-align: center;
+  color: white;
+}
+
+.cfp-hero-title {
+  font-size: 48px;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.cfp-hero-subtitle {
+  font-size: 20px;
+  color: #caf0f8;
+}
+
+.cfp-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.cfp-intro {
+  background: white;
+  border-radius: 20px;
+  padding: 40px;
+  margin-bottom: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.cfp-intro-text {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #334155;
+  text-align: justify;
+  margin: 0;
+}
+
+.cfp-tracks-section {
+  background: white;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.cfp-section-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #0a192f;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.cfp-icon {
+  color: #00b4d8;
+  font-size: 32px;
+}
+
+.cfp-table-wrapper {
+  overflow-x: auto;
+}
+
+.cfp-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.cfp-table thead {
+  background: linear-gradient(135deg, #00b4d8, #4cc9f0);
+  color: white;
+}
+
+.cfp-table th {
+  padding: 20px 15px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.cfp-table tbody tr {
+  border-bottom: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+}
+
+.cfp-table tbody tr:hover {
+  background: #f8fafc;
+}
+
+.cfp-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.cfp-table td {
+  padding: 25px 15px;
+  color: #334155;
+  font-size: 15px;
+  vertical-align: top;
+}
+
+.cfp-table td[data-label="Track"] {
+  font-weight: 700;
+  color: #0a192f;
+  font-size: 16px;
+  min-width: 200px;
+}
+
+.cfp-themes-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cfp-themes-list li {
+  padding: 8px 0;
+  padding-left: 20px;
+  position: relative;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.cfp-themes-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #00b4d8;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.cfp-sdg-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+.cfp-sdg-img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+@media screen and (max-width: 768px) {
+  .cfp-wrapper {
+    padding-top: 140px;
+  }
+
+  .cfp-hero {
+    padding: 40px 15px;
+  }
+
+  .cfp-hero-title {
+    font-size: 32px;
+  }
+
+  .cfp-hero-subtitle {
+    font-size: 16px;
+  }
+
+  .cfp-container {
+    padding: 40px 15px;
+  }
+
+  .cfp-intro,
+  .cfp-tracks-section {
+    padding: 25px 20px;
+  }
+
+  .cfp-section-title {
+    font-size: 24px;
+  }
+
+  .cfp-table {
+    display: block;
+  }
+
+  .cfp-table thead {
+    display: none;
+  }
+
+  .cfp-table tbody {
+    display: block;
+  }
+
+  .cfp-table tr {
+    display: block;
+    margin-bottom: 30px;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 15px;
+  }
+
+  .cfp-table td {
+    display: block;
+    padding: 10px 0;
+    border: none;
+  }
+
+  .cfp-table td::before {
+    content: attr(data-label);
+    font-weight: 700;
+    color: #0a192f;
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+  }
+
+  .cfp-table td[data-label="Track"] {
+    font-size: 18px;
+    color: #00b4d8;
+    margin-bottom: 15px;
+  }
+
+  .cfp-sdg-images {
+    justify-content: flex-start;
+  }
+}

@@ -1,0 +1,157 @@
+.themes-wrapper {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  padding-top: 120px;
+}
+
+.themes-hero {
+  background: linear-gradient(135deg, #0a192f 0%, #1e3c72 100%);
+  padding: 60px 20px;
+  text-align: center;
+  color: white;
+}
+
+.themes-hero-title {
+  font-size: 48px;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.themes-hero-subtitle {
+  font-size: 20px;
+  color: #caf0f8;
+}
+
+.themes-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.themes-intro {
+  background: white;
+  border-radius: 20px;
+  padding: 40px;
+  margin-bottom: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.themes-section-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #0a192f;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.themes-icon {
+  color: #00b4d8;
+  font-size: 36px;
+}
+
+.themes-intro-text {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #334155;
+  text-align: justify;
+  margin: 0;
+}
+
+.themes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+}
+
+.themes-card {
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border-left: 5px solid #00b4d8;
+}
+
+.themes-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.themes-card-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #0a192f;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.themes-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.themes-list li {
+  padding: 10px 0;
+  padding-left: 25px;
+  position: relative;
+  color: #334155;
+  line-height: 1.6;
+  font-size: 15px;
+  text-align: justify;
+}
+
+.themes-list li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: #00b4d8;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+@media screen and (max-width: 768px) {
+  .themes-wrapper {
+    padding-top: 140px;
+  }
+
+  .themes-hero {
+    padding: 40px 15px;
+  }
+
+  .themes-hero-title {
+    font-size: 32px;
+  }
+
+  .themes-hero-subtitle {
+    font-size: 16px;
+  }
+
+  .themes-container {
+    padding: 40px 15px;
+  }
+
+  .themes-intro {
+    padding: 25px 20px;
+  }
+
+  .themes-section-title {
+    font-size: 28px;
+  }
+
+  .themes-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .themes-card {
+    padding: 25px 20px;
+  }
+
+  .themes-card-title {
+    font-size: 20px;
+  }
+}
