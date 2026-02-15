@@ -122,8 +122,8 @@ const Home = () => {
   return (
     <div className="home-container">
       {/* Marquee Section */}
-      {/* eslint-disable-next-line jsx-a11y/no-distracting-elements */}
       <div className="marquee-section">
+        {/* eslint-disable-next-line jsx-a11y/no-distracting-elements */}
         <marquee className="marquee-text" behavior="scroll" direction="left">
           Conference Record Number: 71015 || 
           <a 
