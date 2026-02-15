@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/Speakers.css';
-import { FaLinkedin, FaEnvelope, FaQuoteLeft } from 'react-icons/fa';
+import { FaQuoteLeft } from 'react-icons/fa';
 
 const Speakers = () => {
   const [speakers, setSpeakers] = useState([]);

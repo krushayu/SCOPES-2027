@@ -1,7 +1,6 @@
 import React from 'react';
 import '../styles/Places.css';
-import { FaMapMarkerAlt, FaExternalLinkAlt, FaWikipediaW } from 'react-icons/fa';
-import { MdLocationOn } from 'react-icons/md';
+import { FaMapMarkerAlt, FaExternalLinkAlt } from 'react-icons/fa';
 
 const Places = () => {
   const places = [
