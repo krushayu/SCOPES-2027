@@ -118,7 +118,7 @@ const Navbar = () => {
               
               {/* Right Logo */}
               <div className="header-logo right-header-logo">
-                <img src="/loGO.png" alt="IEEE Logo" className="header-logo-img" />
+                <img src="/LOGO.png" alt="IEEE Logo" className="header-logo-img" />
                 <div className="header-logo-text">
                   <div className="university-name">IEEE</div>
                   <div className="university-divider"></div>
