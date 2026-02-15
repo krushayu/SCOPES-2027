@@ -213,7 +213,7 @@ const Navbar = () => {
                 <div className="mobile-tagline">Signal Processing & Embedded Systems</div>
               </div>
               <div className="mobile-logo-item">
-                <img src="/loGO.png" alt="IEEE Logo" className="mobile-logo-img" />
+                <img src="/LOGO.png" alt="IEEE Logo" className="mobile-logo-img" />
               </div>
             </div>
             
@@ -257,7 +257,7 @@ const Navbar = () => {
               <span className="menu-logo-main">SCOPES</span>
               <span className="menu-logo-year">2027</span>
             </div>
-            <img src="/loGO.png" alt="IEEE" className="menu-logo-img" />
+            <img src="/LOGO.png" alt="IEEE" className="menu-logo-img" />
           </div>
           <button 
             className="mobile-close"
