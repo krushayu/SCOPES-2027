@@ -363,18 +363,50 @@
 }
 
 .mobile-logo-item {
-  width: 40px;
-  height: 40px;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  gap: 4px;
 }
 
 .mobile-logo-img {
-  width: 100%;
-  height: 100%;
+  width: 40px;
+  height: 40px;
   object-fit: contain;
   filter: brightness(1.2);
+}
+
+.mobile-logo-text {
+  font-size: 8px;
+  font-weight: 600;
+  color: #ffffff;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.mobile-university-name {
+  font-size: 8px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+}
+
+.mobile-university-divider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #ffffff, transparent);
+  margin: 1px 0;
+}
+
+.mobile-tagline-text {
+  font-family: 'Times New Roman', Times, serif;
+  font-style: italic;
+  color: #ff6b6b;
+  font-size: 6px;
+  font-weight: 400;
+  line-height: 1.2;
+  margin-top: 2px;
+  text-align: left;
 }
 
 .mobile-conference-title {
@@ -491,9 +523,17 @@
 
 .mobile-menu-logo {
   display: flex;
-  align-items: center;
-  gap: 15px;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
   flex: 1;
+}
+
+.menu-logo-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
 }
 
 .menu-logo-img {
@@ -501,6 +541,38 @@
   height: 40px;
   object-fit: contain;
   filter: brightness(1.2);
+}
+
+.menu-logo-text-wrapper {
+  font-size: 9px;
+  font-weight: 600;
+  color: #ffffff;
+  text-align: center;
+}
+
+.menu-university-name {
+  font-size: 9px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+}
+
+.menu-university-divider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #ffffff, transparent);
+  margin: 2px 0;
+}
+
+.menu-tagline-text {
+  font-family: 'Times New Roman', Times, serif;
+  font-style: italic;
+  color: #ff6b6b;
+  font-size: 7px;
+  font-weight: 400;
+  line-height: 1.2;
+  margin-top: 2px;
+  text-align: left;
 }
 
 .menu-logo-text {
@@ -889,8 +961,20 @@
   }
   
   .mobile-logo-item {
+    width: auto;
+  }
+  
+  .mobile-logo-img {
     width: 36px;
     height: 36px;
+  }
+  
+  .mobile-university-name {
+    font-size: 7px;
+  }
+  
+  .mobile-tagline-text {
+    font-size: 5.5px;
   }
   
   .mobile-badge {
@@ -932,9 +1016,17 @@
     height: 50px;
   }
   
-  .mobile-logo-item {
+  .mobile-logo-img {
     width: 32px;
     height: 32px;
+  }
+  
+  .mobile-university-name {
+    font-size: 6.5px;
+  }
+  
+  .mobile-tagline-text {
+    font-size: 5px;
   }
   
   .mobile-badge {
@@ -984,12 +1076,12 @@
     height: 32px;
   }
   
-  .menu-logo-main {
-    font-size: 18px;
+  .menu-university-name {
+    font-size: 8px;
   }
   
-  .menu-logo-year {
-    font-size: 10px;
+  .menu-tagline-text {
+    font-size: 6px;
   }
   
   .mobile-close {
@@ -1005,9 +1097,17 @@
     height: 48px;
   }
   
-  .mobile-logo-item {
+  .mobile-logo-img {
     width: 30px;
     height: 30px;
+  }
+  
+  .mobile-university-name {
+    font-size: 6px;
+  }
+  
+  .mobile-tagline-text {
+    font-size: 4.5px;
   }
   
   .mobile-badge {
