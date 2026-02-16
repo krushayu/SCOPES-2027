@@ -216,7 +216,7 @@ const Navbar = () => {
               </div>
               <div className="mobile-conference-title">
                 <div className="mobile-badge">3rd International Conference on</div>
-                <div className="mobile-tagline">Signal Processing & Embedded Systems</div>
+                <div className="mobile-tagline">Signal Processing, Communication, Power & Embedded Systems</div>
               </div>
               <div className="mobile-logo-item">
                 <img src="/LOGO.png" alt="IEEE Logo" className="mobile-logo-img" />
@@ -298,7 +298,7 @@ const Navbar = () => {
         
         <div className="mobile-menu-content">
           <div className="mobile-conference-info">
-            <h3>3rd International Conference</h3>
+            <h3>3rd International Conference on</h3>
             <p>Signal Processing, Communication, Power & Embedded Systems</p>
             <div className="mobile-date">
               <span className="date-icon">📅</span>
