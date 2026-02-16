@@ -207,13 +207,24 @@ const Navbar = () => {
             <div className="mobile-logos">
               <div className="mobile-logo-item">
                 <img src="/CUTMLOGO.png" alt="CUTM Logo" className="mobile-logo-img" />
+                <div className="mobile-logo-text">
+                  <div className="mobile-university-name">CENTURION</div>
+                  <div className="mobile-university-divider"></div>
+                  <div className="mobile-university-name">UNIVERSITY</div>
+                  <div className="mobile-tagline-text">Shaping Lives...<br/>Empowering Communities...</div>
+                </div>
               </div>
               <div className="mobile-conference-title">
-                <div className="mobile-badge">SCOPES 2027</div>
+                <div className="mobile-badge">3rd International Conference on</div>
                 <div className="mobile-tagline">Signal Processing & Embedded Systems</div>
               </div>
               <div className="mobile-logo-item">
                 <img src="/LOGO.png" alt="IEEE Logo" className="mobile-logo-img" />
+                <div className="mobile-logo-text">
+                  <div className="mobile-university-name">IEEE</div>
+                  <div className="mobile-university-divider"></div>
+                  <div className="mobile-university-name">BHUBANESWAR</div>
+                </div>
               </div>
             </div>
             
@@ -228,7 +239,7 @@ const Navbar = () => {
               {isOpen ? <FaTimes /> : <FaBars />}
             </button>
           </div>
-          
+            <br></br>  
           <div className="mobile-bottom-bar">
             <div className="mobile-info-strip">
               <div className="mobile-info-item">
@@ -237,7 +248,7 @@ const Navbar = () => {
               </div>
               <div className="mobile-info-item">
                 <span className="mobile-info-icon">📍</span>
-                <span className="mobile-info-text">CUTM, Odisha</span>
+                <span className="mobile-info-text">CUTM, PKD, Odisha</span>
               </div>
               <div className="mobile-info-item">
                 <span className="mobile-info-icon">⚡</span>
@@ -252,12 +263,29 @@ const Navbar = () => {
       <div className={`mobile-menu ${isOpen ? 'active' : ''}`}>
         <div className="mobile-menu-header">
           <div className="mobile-menu-logo">
-            <img src="/CUTMLOGO.png" alt="CUTM" className="menu-logo-img" />
-            <div className="menu-logo-text">
-              <span className="menu-logo-main">SCOPES</span>
-              <span className="menu-logo-year">2027</span>
+            <div className="menu-logo-item">
+              <img src="/CUTMLOGO.png" alt="CUTM" className="menu-logo-img" />
+              <div className="menu-logo-text-wrapper">
+                <div className="menu-university-name">CENTURION</div>
+                <div className="menu-university-divider"></div>
+                <div className="menu-university-name">UNIVERSITY</div>
+                {/* <div className="menu-tagline-text">Shaping Lives...<br/>Empowering Communities...</div> */}
+              </div>
             </div>
-            <img src="/LOGO.png" alt="IEEE" className="menu-logo-img" />
+            <div className="menu-logo-item">
+              <div className="menu-logo-text">
+                <span className="menu-logo-main">SCOPES</span>
+                <span className="menu-logo-year">2027</span>
+              </div>
+            </div>
+            <div className="menu-logo-item">
+              <img src="/LOGO.png" alt="IEEE" className="menu-logo-img" />
+              <div className="menu-logo-text-wrapper">
+                <div className="menu-university-name">IEEE</div>
+                <div className="menu-university-divider"></div>
+                <div className="menu-university-name">BHUBANESWAR SECTION</div>
+              </div>
+            </div>
           </div>
           <button 
             className="mobile-close"
