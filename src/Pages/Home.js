@@ -182,7 +182,7 @@ const Home = () => {
                   </button> */}
                   <button 
                     className="secondary-btn"
-                    onClick={() => window.open('/submission', '_blank')}
+                    onClick={() => window.open('/paper-submission', '_blank')}
                   >
                     <FaPaperPlane className="btn-icon" />
                     Submit Paper
