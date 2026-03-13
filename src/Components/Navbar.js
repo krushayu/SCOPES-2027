@@ -95,7 +95,7 @@ const Navbar = () => {
                 <div className="conference-badge">3rd International Conference</div>
                 <h1>Signal Processing, Communication, Power & Embedded Systems SCOPES - 2027</h1>
                 <div className="conference-info">
-                  <img src="/ALogo.png" alt="IEEE Logo" className="info-sponsor-logo" />
+                  <img src="/ALOGO.png" alt="IEEE Logo" className="info-sponsor-logo" />
                   <div className="info-item">
                     <span className="info-icon">📅</span>
                     <span className="info-text">4th - 6th February 2027</span>
