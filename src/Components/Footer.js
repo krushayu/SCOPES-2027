@@ -171,7 +171,7 @@ const Footer = () => {
             Technology & Management
           </p>
           <p className="mobile-developed-by">
-            Developed by <a href="https://www.linkedin.com/in/krushayu" target="_blank" rel="noopener noreferrer" className="developer-link">Krush@yu</a>
+            Design & Developed by <a href="https://www.linkedin.com/in/krushayu" target="_blank" rel="noopener noreferrer" className="developer-link">Krush@yu</a>
           </p>
         </div>
       </div>
