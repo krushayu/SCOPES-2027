@@ -28,6 +28,21 @@
   padding: 60px 20px;
 }
 
+.accom-coming-soon {
+  text-align: center;
+  padding: 100px 20px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.accom-coming-soon h2 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #00b4d8;
+  margin: 0;
+}
+
 .accom-section {
   margin-bottom: 60px;
 }

@@ -37,7 +37,7 @@ const Publication = () => {
               className="pub-proceedings-card"
             >
               <div className="pub-proceedings-icon">📚</div>
-              <h4>SCOPES 2018</h4>
+              <h4>SCOPES 2016</h4>
               <p>1st International Conference</p>
               <span className="pub-view-link">View on IEEE Xplore →</span>
             </a>

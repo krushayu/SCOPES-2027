@@ -17,11 +17,12 @@
 
 /* Desktop Conference Header Banner */
 .conference-header {
-  background: linear-gradient(135deg, #0a192f 0%, #1e3c72 100%);
-  color: white;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  color: #0a192f;
   padding: 12px 0;
   position: relative;
   overflow: hidden;
+  border-bottom: 3px solid #00629B;
 }
 
 .conference-header::before {
@@ -31,7 +32,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(45deg, transparent 60%, rgba(255, 255, 255, 0.1) 100%);
+  background: linear-gradient(45deg, transparent 60%, rgba(0, 98, 155, 0.05) 100%);
   pointer-events: none;
 }
 
@@ -52,7 +53,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
+  gap: 12px;
 }
 
 .header-logo:hover {
@@ -62,7 +63,7 @@
 .header-logo-text {
   font-size: 14px;
   font-weight: 600;
-  color: #ffffff;
+  color: #0a192f;
   text-align: center;
   white-space: nowrap;
 }
@@ -70,14 +71,14 @@
 .university-name {
   font-size: 14px;
   font-weight: 700;
-  color: #ffffff;
+  color: #00629B;
   letter-spacing: 1px;
 }
 
 .university-divider {
   width: 100%;
   height: 1px;
-  background: linear-gradient(90deg, transparent, #ffffff, transparent);
+  background: linear-gradient(90deg, transparent, #00629B, transparent);
   margin: 3px 0;
 }
 
@@ -94,11 +95,15 @@
 }
 
 .header-logo-img {
-  height: 80px;
+  height: 110px;
   width: auto;
   object-fit: contain;
   filter: brightness(1.2);
   transition: transform 0.3s ease;
+}
+
+.left-header-logo .header-logo-img {
+  height: 170px;
 }
 
 .header-logo:hover .header-logo-img {
@@ -127,30 +132,39 @@
 }
 
 .conference-title h1 {
-  font-size: 24px;
+  font-size: 26px;
   font-weight: 700;
   margin: 0 0 12px 0;
   line-height: 1.3;
-  color: white;
-  background: linear-gradient(135deg, #fff 0%, #caf0f8 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #0a192f;
 }
 
 .conference-info {
   display: flex;
   justify-content: center;
-  gap: 30px;
+  align-items: center;
+  gap: 45px;
   margin-bottom: 10px;
+}
+
+.info-sponsor-logo {
+  height: 80px;
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  margin: 0 10px;
+}
+
+.info-sponsor-logo:hover {
+  transform: scale(1.1);
 }
 
 .info-item {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 14px;
-  color: #caf0f8;
+  font-size: 16px;
+  color: #334155;
 }
 
 .info-icon {
@@ -161,24 +175,45 @@
 .sponsor-tag {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  background: rgba(0, 119, 182, 0.3);
-  padding: 6px 15px;
+  gap: 12px;
+  background: rgba(0, 98, 155, 0.1);
+  padding: 8px 20px;
   border-radius: 15px;
-  font-size: 13px;
-  color: #90e0ef;
-  border: 1px solid rgba(144, 224, 239, 0.3);
+  font-size: 15px;
+  color: #00629B;
+  border: 1px solid rgba(0, 98, 155, 0.3);
+}
+
+.sponsor-logos-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 8px 15px;
+  background: rgba(0, 98, 155, 0.05);
+  border-radius: 10px;
+  border: 1px solid rgba(0, 98, 155, 0.2);
+}
+
+.sponsor-logo-small {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.sponsor-logo-small:hover {
+  transform: scale(1.1);
 }
 
 .tag-icon {
   font-size: 14px;
-  color: #4cc9f0;
+  color: #00629B;
 }
 
 /* Desktop Navigation Container */
 .nav-container {
-  background: rgba(10, 25, 47, 0.98);
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  background: #00629B;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .nav-content {
@@ -209,7 +244,7 @@
   color: #e2e8f0;
   text-decoration: none;
   font-weight: 500;
-  font-size: 15px;
+  font-size: 16px;
   padding: 12px 18px;
   border-radius: 8px;
   display: flex;
@@ -221,13 +256,13 @@
 }
 
 .link-icon {
-  font-size: 14px;
-  color: #4cc9f0;
+  font-size: 16px;
+  color: #ffffff;
 }
 
 .nav-link:hover {
-  color: #4cc9f0;
-  background: rgba(76, 201, 240, 0.1);
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.15);
   transform: translateY(-2px);
 }
 
@@ -238,7 +273,7 @@
   transform: translateX(-50%);
   width: 0;
   height: 2px;
-  background: linear-gradient(90deg, #4cc9f0, #4895ef);
+  background: #ffffff;
   border-radius: 2px;
   transition: width 0.3s ease;
 }
@@ -266,8 +301,8 @@
   position: absolute;
   top: 100%;
   left: 0;
-  background: rgba(10, 25, 47, 0.98);
-  border: 1px solid rgba(76, 201, 240, 0.2);
+  background: #00629B;
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 12px;
   min-width: 220px;
   padding: 8px 0;
@@ -296,16 +331,16 @@
   padding: 12px 20px;
   color: #e2e8f0;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 500;
   transition: all 0.2s ease;
   border-left: 3px solid transparent;
 }
 
 .dropdown-link:hover {
-  background: rgba(76, 201, 240, 0.1);
-  color: #4cc9f0;
-  border-left-color: #4cc9f0;
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  border-left-color: #ffffff;
   padding-left: 24px;
 }
 
@@ -341,10 +376,11 @@
 /* =================== MOBILE HEADER =================== */
 .mobile-header {
   display: none;
-  background: linear-gradient(135deg, #0a192f 0%, #1e3c72 100%);
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
   width: 100%;
   padding: 8px 0 0 0;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border-bottom: 3px solid #00629B;
 }
 
 .mobile-top-bar {
@@ -364,14 +400,13 @@
 
 .mobile-logo-item {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 4px;
+  justify-content: center;
 }
 
 .mobile-logo-img {
-  width: 40px;
-  height: 40px;
+  width: 55px;
+  height: 55px;
   object-fit: contain;
   filter: brightness(1.2);
 }
@@ -379,7 +414,7 @@
 .mobile-logo-text {
   font-size: 8px;
   font-weight: 600;
-  color: #ffffff;
+  color: #0a192f;
   text-align: center;
   white-space: nowrap;
 }
@@ -387,14 +422,14 @@
 .mobile-university-name {
   font-size: 8px;
   font-weight: 700;
-  color: #ffffff;
+  color: #00629B;
   letter-spacing: 0.5px;
 }
 
 .mobile-university-divider {
   width: 100%;
   height: 1px;
-  background: linear-gradient(90deg, transparent, #ffffff, transparent);
+  background: linear-gradient(90deg, transparent, #00629B, transparent);
   margin: 1px 0;
 }
 
@@ -429,7 +464,7 @@
 }
 
 .mobile-tagline {
-  color: white;
+  color: #334155;
   font-size: 10px;
   font-weight: 600;
   line-height: 1.2;
@@ -441,7 +476,7 @@
 
 /* Mobile Toggle Button */
 .mobile-toggle {
-  background: linear-gradient(135deg, #4895ef 0%, #4cc9f0 100%);
+  background: #00629B;
   color: white;
   border: none;
   width: 44px;
@@ -453,13 +488,14 @@
   align-items: center;
   justify-content: center;
   font-size: 20px;
-  box-shadow: 0 4px 15px rgba(72, 149, 239, 0.3);
+  box-shadow: 0 4px 15px rgba(0, 98, 155, 0.3);
   margin-left: 10px;
 }
 
 .mobile-toggle:hover {
   transform: scale(1.05);
-  box-shadow: 0 6px 20px rgba(72, 149, 239, 0.4);
+  box-shadow: 0 6px 20px rgba(0, 98, 155, 0.4);
+  background: #004d7a;
 }
 
 .mobile-toggle.active {
@@ -467,9 +503,9 @@
 }
 
 .mobile-bottom-bar {
-  background: rgba(0, 119, 182, 0.2);
+  background: rgba(0, 98, 155, 0.1);
   padding: 6px 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(0, 98, 155, 0.2);
 }
 
 .mobile-info-strip {
@@ -483,7 +519,7 @@
   display: flex;
   align-items: center;
   gap: 6px;
-  color: #caf0f8;
+  color: #334155;
   font-size: 11px;
   font-weight: 500;
 }
@@ -499,13 +535,14 @@
   right: -100%;
   width: 320px;
   height: 100vh;
-  background: linear-gradient(135deg, #0a192f 0%, #1a1a2e 100%);
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
   z-index: 1003;
   transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: -5px 0 30px rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
   overflow-y: auto;
+  border-left: 3px solid #00629B;
 }
 
 .mobile-menu.active {
@@ -514,8 +551,8 @@
 
 .mobile-menu-header {
   padding: 20px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  background: rgba(10, 25, 47, 0.9);
+  border-bottom: 2px solid #00629B;
+  background: #ffffff;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -531,9 +568,8 @@
 
 .menu-logo-item {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 4px;
+  justify-content: center;
 }
 
 .menu-logo-img {
@@ -546,21 +582,21 @@
 .menu-logo-text-wrapper {
   font-size: 9px;
   font-weight: 600;
-  color: #ffffff;
+  color: #0a192f;
   text-align: center;
 }
 
 .menu-university-name {
   font-size: 9px;
   font-weight: 700;
-  color: #ffffff;
+  color: #00629B;
   letter-spacing: 0.5px;
 }
 
 .menu-university-divider {
   width: 100%;
   height: 1px;
-  background: linear-gradient(90deg, transparent, #ffffff, transparent);
+  background: linear-gradient(90deg, transparent, #00629B, transparent);
   margin: 2px 0;
 }
 
@@ -585,23 +621,20 @@
 .menu-logo-main {
   font-size: 22px;
   font-weight: 800;
-  background: linear-gradient(135deg, #4cc9f0, #4895ef);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #00629B;
 }
 
 .menu-logo-year {
   font-size: 12px;
-  color: #90e0ef;
+  color: #00629B;
   font-weight: 600;
   letter-spacing: 2px;
 }
 
 .mobile-close {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(0, 98, 155, 0.1);
   border: none;
-  color: white;
+  color: #00629B;
   width: 36px;
   height: 36px;
   border-radius: 8px;
@@ -626,15 +659,15 @@
 }
 
 .mobile-conference-info {
-  background: rgba(76, 201, 240, 0.1);
+  background: rgba(0, 98, 155, 0.05);
   border-radius: 12px;
   padding: 15px;
   margin-bottom: 25px;
-  border: 1px solid rgba(76, 201, 240, 0.2);
+  border: 1px solid rgba(0, 98, 155, 0.2);
 }
 
 .mobile-conference-info h3 {
-  color: #4cc9f0;
+  color: #00629B;
   font-size: 16px;
   margin-bottom: 8px;
   font-weight: 600;
@@ -642,7 +675,7 @@
 }
 
 .mobile-conference-info p {
-  color: #caf0f8;
+  color: #334155;
   font-size: 12px;
   line-height: 1.4;
   margin-bottom: 10px;
@@ -654,7 +687,7 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-  color: #ffb3c6;
+  color: #334155;
   font-size: 12px;
   font-weight: 500;
   margin-bottom: 5px;
@@ -677,13 +710,13 @@
   left: 0;
   right: 0;
   height: 1px;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(0, 98, 155, 0.2);
 }
 
 .mobile-menu-divider span {
-  background: #0a192f;
+  background: #f8f9fa;
   padding: 0 15px;
-  color: #90e0ef;
+  color: #00629B;
   font-size: 14px;
   font-weight: 600;
   text-transform: uppercase;
@@ -706,18 +739,18 @@
   align-items: center;
   justify-content: space-between;
   padding: 14px 16px;
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(0, 98, 155, 0.05);
   border-radius: 10px;
-  color: #e2e8f0;
+  color: #0a192f;
   text-decoration: none;
   transition: all 0.3s ease;
-  border: 1px solid transparent;
+  border: 1px solid rgba(0, 98, 155, 0.1);
 }
 
 .mobile-nav-link:hover {
-  background: rgba(76, 201, 240, 0.15);
-  border-color: rgba(76, 201, 240, 0.3);
-  color: #4cc9f0;
+  background: rgba(0, 98, 155, 0.1);
+  border-color: #00629B;
+  color: #00629B;
   transform: translateX(-5px);
 }
 
@@ -730,7 +763,7 @@
 
 .mobile-link-icon-wrapper {
   font-size: 16px;
-  color: #4cc9f0;
+  color: #00629B;
   width: 24px;
   display: flex;
   align-items: center;
@@ -743,14 +776,14 @@
 }
 
 .mobile-link-arrow {
-  color: #4895ef;
+  color: #00629B;
   font-size: 12px;
   opacity: 0.7;
 }
 
 /* Mobile Dropdown Arrow */
 .mobile-dropdown-arrow {
-  color: #4895ef;
+  color: #00629B;
   font-size: 12px;
   opacity: 0.7;
   transition: transform 0.3s ease;
@@ -765,7 +798,7 @@
   list-style: none;
   padding: 0;
   margin: 8px 0 0 0;
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 98, 155, 0.05);
   border-radius: 8px;
   overflow: hidden;
 }
@@ -773,7 +806,7 @@
 .mobile-submenu-link {
   display: block;
   padding: 12px 20px 12px 50px;
-  color: #caf0f8;
+  color: #334155;
   text-decoration: none;
   font-size: 14px;
   transition: all 0.2s ease;
@@ -781,9 +814,9 @@
 }
 
 .mobile-submenu-link:hover {
-  background: rgba(76, 201, 240, 0.1);
-  color: #4cc9f0;
-  border-left-color: #4cc9f0;
+  background: rgba(0, 98, 155, 0.1);
+  color: #00629B;
+  border-left-color: #00629B;
   padding-left: 54px;
 }
 
@@ -818,8 +851,8 @@
 
 .mobile-register-btn {
   background: transparent;
-  color: #4cc9f0;
-  border: 2px solid #4cc9f0;
+  color: #00629B;
+  border: 2px solid #00629B;
   text-decoration: none;
   padding: 14px 20px;
   border-radius: 10px;
@@ -830,7 +863,7 @@
 }
 
 .mobile-register-btn:hover {
-  background: rgba(76, 201, 240, 0.1);
+  background: rgba(0, 98, 155, 0.1);
 }
 
 .mobile-btn-icon {
@@ -861,7 +894,7 @@
 
 .contact-icon {
   font-size: 12px;
-  color: #4cc9f0;
+  color: #00629B;
 }
 
 .mobile-copyright {
@@ -965,8 +998,8 @@
   }
   
   .mobile-logo-img {
-    width: 36px;
-    height: 36px;
+    width: 50px;
+    height: 50px;
   }
   
   .mobile-university-name {
@@ -1017,8 +1050,8 @@
   }
   
   .mobile-logo-img {
-    width: 32px;
-    height: 32px;
+    width: 45px;
+    height: 45px;
   }
   
   .mobile-university-name {
@@ -1098,8 +1131,8 @@
   }
   
   .mobile-logo-img {
-    width: 30px;
-    height: 30px;
+    width: 42px;
+    height: 42px;
   }
   
   .mobile-university-name {
@@ -1145,12 +1178,12 @@
 }
 
 .mobile-menu-content::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(0, 98, 155, 0.05);
   border-radius: 3px;
 }
 
 .mobile-menu-content::-webkit-scrollbar-thumb {
-  background: linear-gradient(135deg, #4895ef, #4cc9f0);
+  background: #00629B;
   border-radius: 3px;
 }
 

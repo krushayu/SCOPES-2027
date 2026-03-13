@@ -18,7 +18,14 @@ const Sponsors = () => {
             Our Valued Sponsor
           </h2>
           <div className="sponsors-company">
-            <h3 className="sponsors-company-name">Dassault Systèmes SE</h3>
+            <div className="sponsors-company-header">
+              <img 
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAzlymDiAq_9AYD9KaKHdXGNg6otHW_6QWoQ&s" 
+                alt="Dassault Systèmes SE Logo" 
+                className="sponsors-company-logo"
+              />
+              <h3 className="sponsors-company-name">Dassault Systèmes SE</h3>
+            </div>
             <p className="sponsors-description">
               Dassault Systèmes SE is a French multinational software corporation which develops software for 3D product design, simulation, manufacturing and other 3D related products. Founded in 1981, it is headquartered in Vélizy-Villacoublay, France, and has 23,811 employees across 194 global offices.
             </p>
@@ -102,7 +109,7 @@ const Sponsors = () => {
 
           {/* Contact Section */}
           <div className="sponsors-contact">
-            <p>All interested sponsors, fill the Google form below or mail us at <a href="mailto:scopes2026@cutm.ac.in">scopes2026@cutm.ac.in</a></p>
+            <p>All interested sponsors, fill the Google form below or mail us at <a href="mailto:scopes2027@cutm.ac.in">scopes2027@cutm.ac.in</a></p>
             <a href="#sponsor-form" className="sponsors-form-btn">
               Call for Sponsor
             </a>

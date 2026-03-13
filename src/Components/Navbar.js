@@ -88,12 +88,6 @@ const Navbar = () => {
               {/* Left Logo */}
               <div className="header-logo left-header-logo">
                 <img src="/CUTMLOGO.png" alt="CUTM Logo" className="header-logo-img" />
-                <div className="header-logo-text">
-                  <div className="university-name">CENTURION</div>
-                  <div className="university-divider"></div>
-                  <div className="university-name">UNIVERSITY</div>
-                  <div className="header-tagline">Shaping Lives...<br/>Empowering Communities...</div>
-                </div>
               </div>
               
               {/* Conference Details */}
@@ -101,6 +95,7 @@ const Navbar = () => {
                 <div className="conference-badge">3rd International Conference</div>
                 <h1>Signal Processing, Communication, Power & Embedded Systems SCOPES - 2027</h1>
                 <div className="conference-info">
+                  <img src="/ALogo.png" alt="IEEE Logo" className="info-sponsor-logo" />
                   <div className="info-item">
                     <span className="info-icon">📅</span>
                     <span className="info-text">4th - 6th February 2027</span>
@@ -109,21 +104,17 @@ const Navbar = () => {
                     <span className="info-icon">📍</span>
                     <span className="info-text">Centurion University, Parlakhemundi, Odisha</span>
                   </div>
+                  <img src="/Com-Soc.png" alt="Computer Society" className="info-sponsor-logo" />
                 </div>
                 <div className="sponsor-tag">
                   <span className="tag-icon">⚡</span>
-                  Technical Co-Sponsored by IEEE Bhubaneswar Section & Compueter Society Chapter (CH11163)
+                  Technical Co-Sponsored by IEEE Bhubaneswar Section & Computer Society Chapter (CH11163)
                 </div>
               </div>
               
               {/* Right Logo */}
               <div className="header-logo right-header-logo">
                 <img src="/LOGO.png" alt="IEEE Logo" className="header-logo-img" />
-                <div className="header-logo-text">
-                  <div className="university-name">IEEE</div>
-                  <div className="university-divider"></div>
-                  <div className="university-name">BHUBANESWAR SECTION</div>
-                </div>
               </div>
             </div>
           </div>
@@ -207,12 +198,6 @@ const Navbar = () => {
             <div className="mobile-logos">
               <div className="mobile-logo-item">
                 <img src="/CUTMLOGO.png" alt="CUTM Logo" className="mobile-logo-img" />
-                <div className="mobile-logo-text">
-                  <div className="mobile-university-name">CENTURION</div>
-                  <div className="mobile-university-divider"></div>
-                  <div className="mobile-university-name">UNIVERSITY</div>
-                  <div className="mobile-tagline-text">Shaping Lives...<br/>Empowering Communities...</div>
-                </div>
               </div>
               <div className="mobile-conference-title">
                 <div className="mobile-badge">3rd International Conference on</div>
@@ -220,11 +205,6 @@ const Navbar = () => {
               </div>
               <div className="mobile-logo-item">
                 <img src="/LOGO.png" alt="IEEE Logo" className="mobile-logo-img" />
-                <div className="mobile-logo-text">
-                  <div className="mobile-university-name">IEEE</div>
-                  <div className="mobile-university-divider"></div>
-                  <div className="mobile-university-name">BHUBANESWAR</div>
-                </div>
               </div>
             </div>
             
@@ -265,12 +245,6 @@ const Navbar = () => {
           <div className="mobile-menu-logo">
             <div className="menu-logo-item">
               <img src="/CUTMLOGO.png" alt="CUTM" className="menu-logo-img" />
-              <div className="menu-logo-text-wrapper">
-                <div className="menu-university-name">CENTURION</div>
-                <div className="menu-university-divider"></div>
-                <div className="menu-university-name">UNIVERSITY</div>
-                {/* <div className="menu-tagline-text">Shaping Lives...<br/>Empowering Communities...</div> */}
-              </div>
             </div>
             <div className="menu-logo-item">
               <div className="menu-logo-text">
@@ -280,11 +254,6 @@ const Navbar = () => {
             </div>
             <div className="menu-logo-item">
               <img src="/LOGO.png" alt="IEEE" className="menu-logo-img" />
-              <div className="menu-logo-text-wrapper">
-                <div className="menu-university-name">IEEE</div>
-                <div className="menu-university-divider"></div>
-                <div className="menu-university-name">BHUBANESWAR SECTION</div>
-              </div>
             </div>
           </div>
           <button 

@@ -79,13 +79,13 @@ const Home = () => {
       image: '/slide2.png',
       title: '04-06 February 2027',
       subtitle: 'Centurion University, Parlakhemundi',
-      tag: 'Hybrid Conference'
+      tag: 'Hybrid Mode'
     },
     {
       image: '/slide3.png',
       title: 'Call for Papers',
       subtitle: 'Submit Your Research Work',
-      tag: 'IEEE Xplore Indexed'
+      tag: 'IEEE Conference'
     }
   ];
 
@@ -113,10 +113,10 @@ const Home = () => {
   ];
 
   const importantDates = [
-    { title: 'Abstract Submission date', date: '01 March 2026', status: 'active' },
-    { title: 'Full Papar Submission date', date: '01 April 2026', status: 'upcoming' },
+    // { title: 'Abstract Submission date', date: '01 March 2026', status: 'active' },
+    { title: 'Paper Submission open', date: '01 April 2026', status: 'upcoming' },
     { title: 'Notification of Acceptance date', date: '10 October 2026', status: 'upcoming' },
-    { title: 'Final Paper Submission date', date: '02 November 2026', status: 'upcoming' },
+    { title: 'Registration open date', date: '02 November 2026', status: 'upcoming' },
   ];
 
   return (
@@ -166,7 +166,7 @@ const Home = () => {
             <div
               key={index}
               className={`slider-slide ${index === currentSlide ? 'active' : ''}`}
-              style={{ backgroundImage: `linear-gradient(rgba(10, 25, 47, 0.8), rgba(10, 25, 47, 0.9)), url(${slide.image})` }}
+              style={{ backgroundImage: `linear-gradient(rgba(10, 25, 47, 0.65), rgba(10, 25, 47, 0.75)), url(${slide.image})` }}
             >
               <div className="slide-content">
                 <div className="slide-badge">{slide.tag}</div>
@@ -387,65 +387,14 @@ const Home = () => {
       <section className="ieee-copyright-section">
         <h3 className="copyright-heading">IEEE Copyright Details</h3>
         <div className="copyright-list">
-          {/* <p>U.S. Government work not protected by U.S. copyright</p>
+          <p>U.S. Government work not protected by U.S. copyright</p>
           <p>79-8-3315-0645-2/24/$31.00 ©2024 Crown</p>
           <p>979-8-3315-0645-2/24/$31.00 ©2024 European Union</p>
-          <p>979-8-3315-0645-2/24/$31.00 ©2024 IEEE</p> */}
-          <p>Copyright Details Coming Soon</p>
+          <p>979-8-3315-0645-2/24/$31.00 ©2024 IEEE</p>
+          {/* <p>Copyright Details Coming Soon</p> */}
         </div>
       </section>
 
-
-      {/* Conference Highlights */}
-      <section className="highlights-section">
-        <div className="section-header">
-          <h2 className="section-title">Conference Highlights</h2>
-          <p className="section-subtitle">Join the premier event in signal processing and embedded systems</p>
-        </div>
-        
-        <div className="highlights-grid">
-          <div className="highlight-card">
-            <div className="highlight-icon">
-              <div className="icon-circle" style={{ background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)' }}>
-                <FaAward />
-              </div>
-            </div>
-            <h3>IEEE Xplore Publication</h3>
-            <p>All accepted papers will be submitted for inclusion in IEEE Xplore Digital Library</p>
-          </div>
-          
-          <div className="highlight-card">
-            <div className="highlight-icon">
-              <div className="icon-circle" style={{ background: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)' }}>
-                <FaUserFriends />
-              </div>
-            </div>
-            <h3>Expert Speakers</h3>
-            <p>Learn from renowned researchers and industry experts from around the globe</p>
-          </div>
-          
-          <div className="highlight-card">
-            <div className="highlight-icon">
-              <div className="icon-circle" style={{ background: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)' }}>
-                <FaCalendarAlt />
-              </div>
-            </div>
-            <h3>Networking Opportunities</h3>
-            <p>Connect with professionals, researchers, and industry leaders</p>
-          </div>
-          
-          <div className="highlight-card">
-            <div className="highlight-icon">
-              <div className="icon-circle" style={{ background: 'linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)' }}>
-                <MdEventNote />
-              </div>
-            </div>
-            <h3>Hybrid Conference</h3>
-            <p>Participate both online and in-person with flexible attendance options</p>
-          </div>
-        </div>
-      </section>
-      
       {/* Important Dates & Registration Fees */}
       <section className="dates-fees-section">
         <div className="section-header">
@@ -509,30 +458,13 @@ const Home = () => {
                   </tr>
                 </tbody>
               </table>
-              <button className="register-btn">Register Now</button>
+              {/* <button className="register-btn">Register Now</button> */}
               <p className="fees-note">* Registration is mandatory. Fee includes Conference Kit, Banquet, Lunch (3), Tea (5), and GST.</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="cta-section">
-        <div className="cta-content">
-          <h2>Ready to Be Part of SCOPES 2027?</h2>
-          <p>Join leading researchers and industry professionals in this premier conference</p>
-          <div className="cta-buttons">
-            <button className="cta-primary-btn">
-              <FaPaperPlane className="btn-icon" />
-              Submit Your Paper
-            </button>
-            <button className="cta-secondary-btn">
-              <FaUserFriends className="btn-icon" />
-              Register as Attendee
-            </button>
-          </div>
-        </div>
-      </section>
     </div>
   );
 };

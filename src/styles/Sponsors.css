@@ -55,11 +55,24 @@
   padding: 20px 0;
 }
 
+.sponsors-company-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.sponsors-company-logo {
+  width: 80px;
+  height: auto;
+  object-fit: contain;
+}
+
 .sponsors-company-name {
   font-size: 32px;
   font-weight: 700;
   color: #0a192f;
-  margin-bottom: 20px;
+  margin: 0;
 }
 
 .sponsors-description {
@@ -274,5 +287,19 @@
   .sponsors-tier-header {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .sponsors-company-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .sponsors-company-logo {
+    width: 70px;
+  }
+
+  .sponsors-company-name {
+    font-size: 24px;
   }
 }

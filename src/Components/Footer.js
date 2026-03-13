@@ -25,12 +25,6 @@ const Footer = () => {
                       alt="CUTM Logo"
                       className="footer-logo"
                     />
-                    <div className="footer-logo-text">
-                      <div className="footer-university-name">CENTURION</div>
-                      <div className="footer-university-divider"></div>
-                      <div className="footer-university-name">UNIVERSITY</div>
-                      <div className="footer-tagline">Shaping Lives...<br/>Empowering Communities...</div>
-                    </div>
                   </div>
                 </div>
 
@@ -75,7 +69,7 @@ const Footer = () => {
                       </li>
                       <li>
                         <Link to="/accommodation">
-                          Accommodation & Transportation
+                          Accommodation
                         </Link>
                       </li>
                     </ul>
@@ -96,7 +90,8 @@ const Footer = () => {
                           <h4>Address</h4>
                           <p>
                             Room No: F-221, 2nd Floor, CRC-2<br />
-                            Department of ECE, School of Engineering & Technology<br />
+                            Department of ECE, School of Engineering & Technology,<br />
+                            Centurion University of Technology and Management,
                             At: R-Sitapur, Allurinagar, Paralakhemundi<br />
                             Dist: Gajapati, Odisha, India - 761211
                           </p>
@@ -121,7 +116,7 @@ const Footer = () => {
                         <div className="contact-details">
                           <h4>Email</h4>
                           <p>
-                            <a href="mailto:scopes2026@cutm.ac.in">scopes2026@cutm.ac.in</a><br />
+                            <a href="mailto:scopes2027@cutm.ac.in">scopes2027@cutm.ac.in</a><br />
                             <a href="mailto:debendra.sahoo@cutm.ac.in">debendra.sahoo@cutm.ac.in</a>
                           </p>
                         </div>
@@ -162,7 +157,7 @@ const Footer = () => {
               Technology & Management, Odisha, India
             </p>
             <p className="developed-by">
-              Developed by <a href="https://www.linkedin.com/in/krushayu" target="_blank" rel="noopener noreferrer" className="developer-link">Krush@yu</a>
+              Design & Developed by <a href="https://www.linkedin.com/in/krushayu" target="_blank" rel="noopener noreferrer" className="developer-link">krush@yu</a>
             </p>
           </div>
         </div>

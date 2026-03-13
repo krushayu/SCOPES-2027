@@ -502,12 +502,6 @@
   line-height: 1.6;
 }
 
-/* Highlights Section */
-.highlights-section {
-  padding: 100px 20px;
-  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
-}
-
 /* About University Section */
 .about-university-section {
   padding: 100px 20px;
@@ -1015,70 +1009,6 @@
   color: #0077b6;
 }
 
-.highlights-grid {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
-}
-
-.highlight-card {
-  background: white;
-  border-radius: 20px;
-  padding: 40px 30px;
-  text-align: center;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-  transition: all 0.4s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-.highlight-card:hover {
-  transform: translateY(-15px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-}
-
-.highlight-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 5px;
-  background: linear-gradient(90deg, #00b4d8, #4cc9f0);
-}
-
-.highlight-icon {
-  margin-bottom: 25px;
-}
-
-.icon-circle {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-size: 32px;
-  margin: 0 auto;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-}
-
-.highlight-card h3 {
-  font-size: 22px;
-  color: #0a192f;
-  margin-bottom: 15px;
-  font-weight: 700;
-}
-
-.highlight-card p {
-  color: #666;
-  line-height: 1.6;
-  font-size: 15px;
-}
-
 /* Dates Section */
 .dates-section {
   padding: 100px 20px;
@@ -1186,81 +1116,6 @@
   box-shadow: 0 8px 20px rgba(255, 107, 107, 0.4);
 }
 
-/* CTA Section */
-.cta-section {
-  padding: 100px 20px;
-  background: linear-gradient(135deg, #0a192f 0%, #1e3c72 100%);
-  text-align: center;
-  color: white;
-}
-
-.cta-content {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.cta-content h2 {
-  font-size: 48px;
-  font-weight: 800;
-  margin-bottom: 20px;
-  background: linear-gradient(135deg, #fff 0%, #4cc9f0 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.cta-content p {
-  font-size: 20px;
-  color: #caf0f8;
-  margin-bottom: 40px;
-  line-height: 1.6;
-}
-
-.cta-buttons {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-}
-
-.cta-primary-btn, .cta-secondary-btn {
-  padding: 18px 40px;
-  border: none;
-  border-radius: 50px;
-  font-size: 18px;
-  font-weight: 600;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  transition: all 0.3s ease;
-  min-width: 250px;
-}
-
-.cta-primary-btn {
-  background: linear-gradient(135deg, #ff6b6b 0%, #ff8e53 100%);
-  color: white;
-  box-shadow: 0 10px 30px rgba(255, 107, 107, 0.4);
-}
-
-.cta-primary-btn:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 35px rgba(255, 107, 107, 0.6);
-}
-
-.cta-secondary-btn {
-  background: transparent;
-  color: white;
-  border: 2px solid #4cc9f0;
-  box-shadow: 0 10px 30px rgba(76, 201, 240, 0.3);
-}
-
-.cta-secondary-btn:hover {
-  background: rgba(76, 201, 240, 0.1);
-  transform: translateY(-5px);
-  box-shadow: 0 15px 35px rgba(76, 201, 240, 0.5);
-}
-
 /* Responsive Design */
 @media screen and (max-width: 1200px) {
   .info-grid {
@@ -1268,9 +1123,6 @@
     gap: 15px;
   }
   
-  .highlights-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
 }
 
 @media screen and (max-width: 992px) {
@@ -1492,23 +1344,10 @@
     font-size: 13px;
   }
   
-  .highlights-grid {
-    grid-template-columns: 1fr;
-  }
-  
   .section-title {
     font-size: 30px;
   }
   
-  .cta-buttons {
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .cta-primary-btn, .cta-secondary-btn {
-    width: 100%;
-    max-width: 300px;
-  }
 }
 
 @media screen and (max-width: 576px) {
@@ -1574,13 +1413,6 @@
     font-size: 26px;
   }
   
-  .cta-content h2 {
-    font-size: 32px;
-  }
-  
-  .cta-content p {
-    font-size: 16px;
-  }
 }
 
 /* Dates & Fees Section */

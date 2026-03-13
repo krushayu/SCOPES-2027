@@ -5,11 +5,11 @@ const ImpDates = () => {
   const currentDate = new Date();
   
   const dates = [
-    { event: 'Paper Submission Open', date: 'July 1st, 2024', deadline: new Date('2024-07-01') },
-    { event: 'Last Date for Paper Submission', date: 'Feb 11th, 2026', deadline: new Date('2026-2-11') },
-    { event: 'Notification of Acceptance', date: 'November 15th, 2026', deadline: new Date('2026-11-15') },
-    { event: 'Last Date for Registration and Camera-Ready Paper Submission', date: 'November 30th, 2026', deadline: new Date('2026-11-30') },
-    { event: 'Conference Dates', date: 'December 19th - 21st, 2026', deadline: new Date('2026-12-21') }
+    { event: 'Paper Submission Open', date: 'April 4th, 2026', deadline: new Date('2026-04-01') },
+    // { event: 'Last Date for Paper Submission', date: 'Feb 11th, 2026', deadline: new Date('2026-2-11') },
+    { event: 'Notification of Acceptance', date: 'October 10th, 2026', deadline: new Date('2026-10-10') },
+    { event: 'Registaration open date', date: 'November 2nd, 2026', deadline: new Date('2026-11-02') },
+    { event: 'Conference Dates', date: 'February 4th - 6th, 2027', deadline: new Date('2027-02-07') }
   ];
 
   const isDateOver = (deadline) => {
@@ -41,7 +41,7 @@ const ImpDates = () => {
         <ul>
           <li>All dates are subject to change. Please check back regularly for updates.</li>
           <li>Ensure to submit your papers and register before the deadlines to avoid any inconvenience.</li>
-          <li>For any queries regarding the important dates, please contact to <a href="mailto:ieee@cutm.ac.in"><strong>ieee@cutm.ac.in</strong></a></li>
+          <li>For any queries regarding the important dates, please contact to <a href="mailto:scopes2027@cutm.ac.in"><strong>scopes2027@cutm.ac.in</strong></a></li>
         </ul>
       </div>
     </div>

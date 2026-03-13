@@ -159,7 +159,7 @@ npm run build
 
 ## Contact
 
-**Email**: scopes2026@cutm.ac.in  
+**Email**: scopes2027@cutm.ac.in  
 **Conference Record Number**: 71015
 
 ## License

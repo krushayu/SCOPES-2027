@@ -11,8 +11,12 @@ const Accommodation = () => {
       </div>
 
       <div className="accom-container">
+        <div className="accom-coming-soon">
+          <h2>Coming Soon...</h2>
+        </div>
+
         {/* Accommodation Section */}
-        <section className="accom-section">
+        {/* <section className="accom-section">
           <div className="accom-section-header">
             <FaHotel className="accom-section-icon" />
             <h2>Accommodation Details</h2>
@@ -33,10 +37,10 @@ const Accommodation = () => {
               </a>
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* Transportation Section */}
-        <section className="accom-section">
+        {/* <section className="accom-section">
           <div className="accom-section-header">
             <FaBus className="accom-section-icon" />
             <h2>Transportation Details</h2>
@@ -45,7 +49,7 @@ const Accommodation = () => {
           <div className="accom-card">
             <p className="accom-intro">Dear Author(s),</p>
             <p>We are happy to provide transport facilities from the following railway station to the Conference Venue (Centurion University (C.U.T.M.), Paralakhemundi Campus).</p>
-            <p>So interested authors are advised to follow the following schedule and fill up the Transportation form by <strong>December 10th, 2024</strong>.</p>
+            <p>So interested authors are advised to follow the following schedule and fill up the Transportation form by <strong>December 10th, 2026</strong>.</p>
             <p className="accom-contact">For any query related to Transportation, please contact: <strong>Dr. Kalyan Chakravarty (9439331442)</strong></p>
             
             <h3 className="accom-subtitle">Availability of Transport (Free of Cost):</h3>
@@ -113,7 +117,7 @@ const Accommodation = () => {
               </a>
             </div>
           </div>
-        </section>
+        </section> */}
       </div>
     </div>
   );

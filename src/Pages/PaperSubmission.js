@@ -83,7 +83,7 @@ const PaperSubmission = () => {
           </div>
 
           <div className="paper-help">
-            <p>In case of any uploading issue, email us at <a href="mailto:scopes2026@cutm.ac.in">scopes2026@cutm.ac.in</a></p>
+            <p>In case of any uploading issue, email us at <a href="mailto:scopes2027@cutm.ac.in">scopes2027@cutm.ac.in</a></p>
           </div>
         </section>
 

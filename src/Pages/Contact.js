@@ -50,11 +50,11 @@ const Contact = () => {
     }
   ];
 
-  const conferenceInfo = [
-    { icon: <FaCalendarAlt />, label: 'Conference Dates', value: '4th - 6th February 2027' },
-    { icon: <FaClock />, label: 'Venue Timings', value: '09:00 AM - 05:00 PM' },
-    { icon: <FaBuilding />, label: 'Conference Hall', value: 'CRC-2, Room No: F-221' }
-  ];
+  // const conferenceInfo = [
+  //   { icon: <FaCalendarAlt />, label: 'Conference Dates', value: '4th - 6th February 2027' },
+  //   { icon: <FaClock />, label: 'Venue Timings', value: '09:00 AM - 05:00 PM' },
+  //   { icon: <FaBuilding />, label: 'Conference Hall', value: 'CRC-2, Room No: F-221' }
+  // ];
 
   return (
     <div className="contact-wrapper">
@@ -71,7 +71,7 @@ const Contact = () => {
 
       <div className="contact-main">
         {/* Conference Information Cards */}
-        <div className="info-cards">
+        {/* <div className="info-cards">
           {conferenceInfo.map((item, index) => (
             <div className="info-card" key={index}>
               <div className="info-card-icon">{item.icon}</div>
@@ -81,7 +81,7 @@ const Contact = () => {
               </div>
             </div>
           ))}
-        </div>
+        </div> */}
 
         {/* Main Contact Grid */}
         <div className="contact-grid">
@@ -102,7 +102,8 @@ const Contact = () => {
                   <div className="detail-text">
                     <span className="detail-label">Address</span>
                     <p>Room No: F-221, 2nd Floor, CRC-2<br />
-                    Department of ECE, School of Engineering & Technology<br />
+                    Department of ECE, School of Engineering & Technology,<br />
+                    Centurion University of Technology & Management,<br />
                     At: R-Sitapur, Allurinagar, Paralakhemundi<br />
                     Dist: Gajapati, Odisha, India - 761211</p>
                   </div>
@@ -128,7 +129,7 @@ const Contact = () => {
                   <div className="detail-text">
                     <span className="detail-label">Email</span>
                     <p>
-                      <a href="mailto:scopes2026@cutm.ac.in">scopes2026@cutm.ac.in</a> (Primary)<br />
+                      <a href="mailto:scopes2027@cutm.ac.in">scopes2027@cutm.ac.in</a> (Primary)<br />
                       <a href="mailto:debendra.sahoo@cutm.ac.in">debendra.sahoo@cutm.ac.in</a> (Chair)
                     </p>
                   </div>
@@ -137,7 +138,7 @@ const Contact = () => {
 
               {/* Quick Contact */}
               <div className="quick-contact">
-                <a href="mailto:scopes2026@cutm.ac.in" className="contact-btn email-btn">
+                <a href="mailto:scopes2027@cutm.ac.in" className="contact-btn email-btn">
                   <MdEmail />
                   Email Us
                 </a>
