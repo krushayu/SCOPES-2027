@@ -1,13 +1,84 @@
 import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { ref, onValue, runTransaction, onDisconnect, push, remove, set } from "firebase/database";
+import { db } from "../firebase";
 import "./Footer.css";
 import {
   FaMapMarkerAlt,
   FaPhone,
   FaEnvelope,
   FaPaperPlane,
+  FaCircle,
 } from "react-icons/fa";
 
 const Footer = () => {
+  const [onlineCount, setOnlineCount] = useState(0);
+  const [totalCount, setTotalCount] = useState(null);
+
+  useEffect(() => {
+    // --- Online Users (real-time) using .info/connected ---
+    const connectedRef = ref(db, '.info/connected');
+    const onlineRef = ref(db, 'onlineUsers');
+    let userRef = null;
+
+    const unsubConnected = onValue(connectedRef, (snap) => {
+      if (snap.val() === true) {
+        userRef = push(onlineRef);
+        set(userRef, true);
+        onDisconnect(userRef).remove();
+      }
+    });
+
+    const unsubOnline = onValue(onlineRef, (snap) => {
+      const count = snap.exists() ? Object.keys(snap.val()).length : 0;
+      setOnlineCount(count);
+      const timeKey = new Date().toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' });
+      push(ref(db, 'onlineHistory'), { time: timeKey, count });
+    });
+
+    // --- Total Visitors + Country tracking ---
+    const totalRef = ref(db, 'totalVisitors');
+    const alreadyCounted = localStorage.getItem('v2counted') === new Date().toDateString();
+
+    if (!alreadyCounted) {
+      runTransaction(totalRef, (current) => (current || 0) + 1);
+      localStorage.setItem('v2counted', new Date().toDateString());
+
+      const getCountry = async () => {
+        const apis = [
+          () => fetch('https://ipwho.is/').then(r => r.json()).then(d => d.country_code ? d.country : null),
+          () => fetch('https://ipapi.co/json/').then(r => r.json()).then(d => d.country_name),
+          () => fetch('https://freeipapi.com/api/json').then(r => r.json()).then(d => d.countryName),
+        ];
+        for (const api of apis) {
+          try {
+            const country = await api();
+            if (country && country.length > 1 && country !== 'Unknown') return country;
+          } catch {}
+        }
+        return null;
+      };
+
+      getCountry().then(country => {
+        if (country) {
+          const key = country.replace(/[.#$[\]\s]/g, '_');
+          runTransaction(ref(db, `countryVisits/${key}`), (c) => (c || 0) + 1);
+        }
+      });
+    }
+
+    const unsubTotal = onValue(totalRef, (snap) => {
+      setTotalCount(snap.val() || 0);
+    });
+
+    return () => {
+      unsubConnected();
+      unsubOnline();
+      unsubTotal();
+      if (userRef) remove(userRef);
+    };
+  }, []);
+
   return (
     <>
       {/* Main Footer - Only shows on desktop */}
@@ -156,6 +227,19 @@ const Footer = () => {
               © SCOPES-2027 || All rights reserved by Centurion University of
               Technology & Management, Odisha, India
             </p>
+            <div className="visitor-counters">
+              <div className="visitor-counter">
+                <FaCircle className="online-dot" />
+                <span>{onlineCount} user{onlineCount !== 1 ? 's' : ''} online now</span>
+              </div>
+              <div className="visitor-divider">|</div>
+              <div className="visitor-counter">
+                <span className="total-label">Total Visitors:</span>
+                <span className="visitor-number">{totalCount !== null ? totalCount.toLocaleString() : '...'}</span>
+              </div>
+              <div className="visitor-divider">|</div>
+              <Link to="/analytics" className="analytics-btn">View More</Link>
+            </div>
             <p className="developed-by">
               Design & Developed by <a href="https://www.linkedin.com/in/krushayu" target="_blank" rel="noopener noreferrer" className="developer-link">krush@yu</a>
             </p>
@@ -170,6 +254,19 @@ const Footer = () => {
             © SCOPES-2027 || All rights reserved by Centurion University of
             Technology & Management
           </p>
+          <div className="visitor-counters">
+            <div className="visitor-counter">
+              <FaCircle className="online-dot" />
+              <span>{onlineCount} user{onlineCount !== 1 ? 's' : ''} online now</span>
+            </div>
+            <div className="visitor-divider">|</div>
+            <div className="visitor-counter">
+              <span className="total-label">Total Visitors:</span>
+              <span className="visitor-number">{totalCount !== null ? totalCount.toLocaleString() : '...'}</span>
+            </div>
+            <div className="visitor-divider">|</div>
+            <Link to="/analytics" className="analytics-btn">View More</Link>
+          </div>
           <p className="mobile-developed-by">
             Design & Developed by <a href="https://www.linkedin.com/in/krushayu" target="_blank" rel="noopener noreferrer" className="developer-link">Krush@yu</a>
           </p>

@@ -1,3 +1,107 @@
+/* =============================================
+   SCROLL ANIMATIONS
+   ============================================= */
+
+/* Base hidden states */
+.anim-fade-up {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 0.75s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.anim-slide-left {
+  opacity: 0;
+  transform: translateX(-70px);
+  transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.15s,
+              transform 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.15s;
+}
+
+.anim-slide-right {
+  opacity: 0;
+  transform: translateX(70px);
+  transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.3s,
+              transform 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.3s;
+}
+
+.anim-zoom-in {
+  opacity: 0;
+  transform: scale(0.88);
+  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Visible state - triggered by JS */
+.anim-visible.anim-fade-up,
+.anim-visible.anim-zoom-in {
+  opacity: 1;
+  transform: none;
+}
+
+.anim-visible .anim-slide-left,
+.anim-visible .anim-slide-right {
+  opacity: 1;
+  transform: none;
+}
+
+/* Speaker cards stagger */
+.speakers-section.anim-visible .speaker-card {
+  animation: cardPop 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.speakers-section.anim-visible .speaker-card:nth-child(1) { animation-delay: 0.05s; }
+.speakers-section.anim-visible .speaker-card:nth-child(2) { animation-delay: 0.15s; }
+.speakers-section.anim-visible .speaker-card:nth-child(3) { animation-delay: 0.25s; }
+.speakers-section.anim-visible .speaker-card:nth-child(4) { animation-delay: 0.35s; }
+.speakers-section.anim-visible .speaker-card:nth-child(5) { animation-delay: 0.45s; }
+.speakers-section.anim-visible .speaker-card:nth-child(6) { animation-delay: 0.55s; }
+
+@keyframes cardPop {
+  0%   { opacity: 0; transform: translateY(40px) scale(0.93); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* Info cards stagger */
+.conference-quick-info.anim-visible .info-card {
+  animation: cardPop 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.conference-quick-info.anim-visible .info-card:nth-child(1) { animation-delay: 0.05s; }
+.conference-quick-info.anim-visible .info-card:nth-child(2) { animation-delay: 0.15s; }
+.conference-quick-info.anim-visible .info-card:nth-child(3) { animation-delay: 0.25s; }
+.conference-quick-info.anim-visible .info-card:nth-child(4) { animation-delay: 0.35s; }
+.conference-quick-info.anim-visible .info-card:nth-child(5) { animation-delay: 0.45s; }
+
+/* Date items stagger */
+.dates-column.anim-visible .date-item {
+  animation: slideInLeft 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.dates-column.anim-visible .date-item:nth-child(1) { animation-delay: 0.1s; }
+.dates-column.anim-visible .date-item:nth-child(2) { animation-delay: 0.22s; }
+.dates-column.anim-visible .date-item:nth-child(3) { animation-delay: 0.34s; }
+
+@keyframes slideInLeft {
+  0%   { opacity: 0; transform: translateX(-30px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+/* Section header underline draw */
+.anim-visible .section-title::after {
+  animation: drawLine 0.6s ease 0.4s both;
+}
+
+@keyframes drawLine {
+  0%   { width: 0; }
+  100% { width: 80px; }
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .anim-fade-up, .anim-slide-left, .anim-slide-right, .anim-zoom-in {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
 /* Home Container */
 .home-container {
   width: 100%;
@@ -708,6 +812,31 @@
   height: 450px;
   object-fit: cover;
   transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+  display: block;
+}
+
+.scopes-img-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 18px 20px;
+  background: rgba(0, 0, 0, 0.35);
+  color: #ffffff;
+  font-size: 26px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  letter-spacing: 1px;
+  text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+  animation: titleFadeUp 0.7s ease-in-out;
+}
+
+@keyframes titleFadeUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
 }
 
 .scopes-image-slider .scopes-img {

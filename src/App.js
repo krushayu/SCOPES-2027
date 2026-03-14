@@ -18,6 +18,7 @@ import ProgramSchedule from './Pages/ProgramSchedule';
 import CallForPapers from './Pages/CallForPapers';
 import Themes from './Pages/Themes';
 import Publication from './Pages/Publication';
+import Analytics from './Pages/Analytics';
 import NotFound from './Pages/NotFound';
 
 function App() {
@@ -40,6 +41,7 @@ function App() {
           <Route path="/call-for-papers" element={<CallForPapers />} />
           <Route path="/themes" element={<Themes />} />
           <Route path="/publication" element={<Publication />} />
+          <Route path="/analytics" element={<Analytics />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />

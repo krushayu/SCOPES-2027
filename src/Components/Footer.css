@@ -265,6 +265,76 @@
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
+.visitor-counters {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.visitor-divider {
+  color: #cbd5e0;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.analytics-btn {
+  font-size: 13px;
+  font-weight: 600;
+  color: #667eea;
+  text-decoration: underline;
+  background: none;
+  padding: 0;
+  border-radius: 0;
+}
+
+.total-label {
+  font-size: 15px;
+  font-weight: 600;
+  color: #4a5568;
+}
+
+.visitor-number {
+  font-size: 18px;
+  font-weight: 800;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.visitor-counter {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #4a5568;
+}
+
+.online-dot {
+  color: #22c55e;
+  font-size: 12px;
+  animation: pulseDot 1.5s ease-in-out infinite;
+  filter: drop-shadow(0 0 4px #22c55e);
+}
+
+@keyframes pulseDot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.5; transform: scale(1.4); }
+}
+
+.visitor-number {
+  font-size: 20px;
+  font-weight: 800;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 /* Footer Bottom */
 .footer-bottom {
   padding: 20px 0;

@@ -1,9 +1,27 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/Home.css';
 import { FaCalendarAlt, FaPaperPlane, FaAward, FaUserFriends, FaMapMarkerAlt } from 'react-icons/fa';
 import { MdEventNote } from 'react-icons/md';
-// import { RiCalendarEventFill } from 'react-icons/ri';
+
+const useScrollAnim = (threshold = 0.15) => {
+  const ref = useRef(null);
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          el.classList.add('anim-visible');
+        }
+      },
+      { threshold }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [threshold]);
+  return ref;
+};
 
 const Home = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -16,7 +34,11 @@ const Home = () => {
 
   const aboutImages = ['/slide1.png', '/slide2.png', '/slide3.png'];
   const deptImages = ['/ece1.png', '/ece2.png', '/slide2.png'];
-  const scopesImages = ['/scope1.png', '/scope2.png', '/slide2.png'];
+  const scopesImages = [
+    { src: '/scope1.png', title: 'Conference' },
+    { src: '/scope2.png', title: 'Scopes 2016' },
+    { src: '/scope3.Jpeg', title: 'Scopes 2024' },
+  ];
   
  
   useEffect(() => {
@@ -111,6 +133,14 @@ const Home = () => {
     { icon: <FaAward />, label: 'Publication', value: 'IEEE Xplore', color: '#96CEB4', link: '/publication' },
     { icon: <MdEventNote />, label: 'Format', value: 'Hybrid', color: '#DDA0DD', link: '/program-schedule' }
   ];
+
+  const infoRef     = useScrollAnim();
+  const speakersRef = useScrollAnim();
+  const aboutRef    = useScrollAnim();
+  const deptRef     = useScrollAnim();
+  const scopesRef   = useScrollAnim();
+  const copyrightRef= useScrollAnim();
+  const datesRef    = useScrollAnim();
 
   const importantDates = [
     // { title: 'Abstract Submission date', date: '01 March 2026', status: 'active' },
@@ -213,7 +243,7 @@ const Home = () => {
         </div>
 
         {/* Conference Quick Info */}
-        <div className="conference-quick-info">
+        <div className="conference-quick-info anim-fade-up" ref={infoRef}>
           <div className="info-grid">
             {conferenceInfo.map((item, index) => {
               const isExternal = item.link.startsWith('http');
@@ -253,7 +283,7 @@ const Home = () => {
       </section>
 
       {/* Speakers Section */}
-      <section className="speakers-section">
+      <section className="speakers-section anim-fade-up" ref={speakersRef}>
         <div className="section-header">
           <h2 className="section-title">Keynote Speakers</h2>
           <p className="section-subtitle">Learn from world-renowned experts and industry leaders</p>
@@ -322,16 +352,16 @@ const Home = () => {
       )}
 
       {/* About University Section */}
-      <section className="about-university-section">
+      <section className="about-university-section anim-fade-up" ref={aboutRef}>
         <div className="section-header">
           <h2 className="section-title">Centurion University of Technology and Management</h2>
           <p className="section-subtitle">Accredited with 'A+' Grade by NAAC</p>
         </div>
         <div className="about-content">
-          <div className="about-image-slider">
+          <div className="about-image-slider anim-slide-left">
             <img key={aboutImgIndex} src={aboutImages[aboutImgIndex]} alt="CUTM Campus" className="about-img" />
           </div>
-          <div className="about-text">
+          <div className="about-text anim-slide-right">
             <p>
               Centurion University of Technology and Management (CUTM) is the first private University in Odisha established through the CUTM Act 4 of the Odisha State Legislative Assembly in 2010. It has been recognized as Grade-A+ University by National Assessment and Accreditation Council (NAAC), Ministry of HRD and 12 B status by the University Grants Commission (UGC).
             </p>
@@ -343,12 +373,12 @@ const Home = () => {
       </section>
 
       {/* Department Section */}
-      <section className="department-section">
+      <section className="department-section anim-fade-up" ref={deptRef}>
         <div className="section-header">
           <h2 className="section-title">Department of Electronics and Communication Engineering</h2>
         </div>
         <div className="department-content">
-          <div className="department-text">
+          <div className="department-text anim-slide-left">
             <p>
               It aims to produce qualified and dynamic engineers in the fast-changing area of Smart Devices, Mobile emerging technologies, automation, Industrial IoT, and VLSI. The Department has sophisticated and modern laboratory equipment and software/tool (HFSS, CADENCE, MATLAB, MULTISIM, KEIL uVision, LABVIEW) for research and development work.
             </p>
@@ -356,23 +386,24 @@ const Home = () => {
               The department undertakes real-time application projects in Smart Irrigation, Industrial IoT, Soil Moisture Prototype Development, Insulin Pump Prototype Development and Chip Design.
             </p>
           </div>
-          <div className="department-image">
+          <div className="department-image anim-slide-right">
             <img key={deptImgIndex} src={deptImages[deptImgIndex]} alt="ECE Department" className="dept-img" />
           </div>
         </div>
       </section>
 
       {/* SCOPES Conference Section */}
-      <section className="scopes-conference-section">
+      <section className="scopes-conference-section anim-fade-up" ref={scopesRef}>
         <div className="section-header">
           <h2 className="section-title">SCOPES 2027</h2>
           <p className="section-subtitle">Signal Processing, Communication, Power & Embedded Systems</p>
         </div>
         <div className="scopes-content">
-          <div className="scopes-image-slider">
-            <img key={scopesImgIndex} src={scopesImages[scopesImgIndex]} alt="SCOPES Conference" className="scopes-img" />
+          <div className="scopes-image-slider anim-slide-left">
+            <img key={scopesImgIndex} src={scopesImages[scopesImgIndex].src} alt="SCOPES Conference" className="scopes-img" />
+            <div className="scopes-img-title">{scopesImages[scopesImgIndex].title}</div>
           </div>
-          <div className="scopes-text">
+          <div className="scopes-text anim-slide-right">
             <p>
               SCOPES-2027 is being organized by CUTM with technical co-sponsorship by IEEE Kolkata Section and Bhubaneswar Sub-Section. The aim of this conference is to bring together academicians and industry experts in the fields of Signal Processing, Communication System, Power System and Embedded Systems.
             </p>
@@ -384,7 +415,7 @@ const Home = () => {
       </section>
 
       {/* IEEE Copyright Section */}
-      <section className="ieee-copyright-section">
+      <section className="ieee-copyright-section anim-zoom-in" ref={copyrightRef}>
         <h3 className="copyright-heading">IEEE Copyright Details</h3>
         <div className="copyright-list">
           <p>U.S. Government work not protected by U.S. copyright</p>
@@ -396,7 +427,7 @@ const Home = () => {
       </section>
 
       {/* Important Dates & Registration Fees */}
-      <section className="dates-fees-section">
+      <section className="dates-fees-section anim-fade-up" ref={datesRef}>
         <div className="section-header">
           <h2 className="section-title">Important Information</h2>
           <p className="section-subtitle">Key dates and registration details</p>
@@ -404,7 +435,7 @@ const Home = () => {
         
         <div className="dates-fees-grid">
           {/* Important Dates - Left Side */}
-          <div className="dates-column">
+          <div className="dates-column anim-slide-left">
             <h3 className="column-title">Important Dates</h3>
             <div className="dates-list">
               {importantDates.map((date, index) => (
@@ -420,7 +451,7 @@ const Home = () => {
           </div>
 
           {/* Registration Fees - Right Side */}
-          <div className="fees-column">
+          <div className="fees-column anim-slide-right">
             <h3 className="column-title">Registration Fees</h3>
             <div className="fees-table-wrapper">
               <table className="fees-table">
