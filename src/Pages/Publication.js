@@ -74,7 +74,7 @@ const Publication = () => {
             For any queries related to publication, please contact:
           </p>
           <div className="pub-contact-info">
-            <p><strong>Email:</strong> <a href="mailto:scopes2026@cutm.ac.in">scopes2026@cutm.ac.in</a></p>
+            <p><strong>Email:</strong> <a href="mailto:scopes2027@cutm.ac.in">scopes2027@cutm.ac.in</a></p>
             <p><strong>Subject Line:</strong> SCOPES-2027 Publication Query</p>
           </div>
         </section>
