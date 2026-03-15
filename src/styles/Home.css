@@ -874,6 +874,50 @@
   margin-bottom: 0;
 }
 
+/* Gallery Strip */
+.gallery-strip-section {
+  padding: 60px 0 40px;
+  background: #f8fafc;
+  overflow: hidden;
+}
+
+.gallery-strip-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+
+.gallery-strip-track {
+  display: flex;
+  gap: 16px;
+  width: max-content;
+  animation: galleryScroll 30s linear infinite;
+}
+
+.gallery-strip-track:hover {
+  animation-play-state: paused;
+}
+
+.gallery-strip-img {
+  height: 220px;
+  width: 320px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+  flex-shrink: 0;
+}
+
+@keyframes galleryScroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@media (max-width: 768px) {
+  .gallery-strip-img {
+    height: 160px;
+    width: 240px;
+  }
+}
+
 /* IEEE Copyright Section */
 .ieee-copyright-section {
   padding: 40px 20px;

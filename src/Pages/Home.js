@@ -424,6 +424,33 @@ const Home = () => {
         </div>
       </section>
 
+      {/* SCOPES 2024 Gallery Strip */}
+      <section className="gallery-strip-section">
+        <div className="section-header">
+          <h2 className="section-title">SCOPES 2024 Gallery</h2>
+          <p className="section-subtitle">Glimpses from the previous conference</p>
+        </div>
+        <div className="gallery-strip-wrapper">
+          <div className="gallery-strip-track">
+            {[...Array(2)].flatMap((_, si) =>
+              [
+                { n: 1, ext: 'png' },
+                { n: 2, ext: 'png' },
+                { n: 3, ext: 'jpeg' },
+                { n: 4, ext: 'jpeg' },
+                { n: 5, ext: 'jpeg' },
+                { n: 6, ext: 'jpeg' },
+                { n: 7, ext: 'jpeg' },
+                { n: 8, ext: 'jpeg' },
+                { n: 9, ext: 'jpeg' },
+              ].map((img, i) => (
+                <img key={`${si}-${i}`} src={`/scope${img.n}.${img.ext}`} alt={`SCOPES 2024 - ${img.n}`} className="gallery-strip-img" />
+              ))
+            )}
+          </div>
+        </div>
+      </section>
+
       {/* IEEE Copyright Section */}
       <section className="ieee-copyright-section anim-zoom-in" ref={copyrightRef}>
         <h3 className="copyright-heading">IEEE Copyright Details</h3>
