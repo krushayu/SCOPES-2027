@@ -37,7 +37,7 @@ const Home = () => {
   const scopesImages = [
     { src: '/scope1.png', title: 'Conference' },
     { src: '/scope2.png', title: 'Scopes 2016' },
-    { src: '/scope3.Jpeg', title: 'Scopes 2024' },
+    { src: '/scope3.jpeg', title: 'Scopes 2024' },
   ];
   
  
