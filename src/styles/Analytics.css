@@ -183,6 +183,23 @@
 }
 
 @media (max-width: 768px) {
+  .analytics-page {
+    padding: 110px 16px 40px;
+  }
+  .analytics-uni-header {
+    padding: 14px 16px;
+    gap: 12px;
+  }
+  .analytics-uni-logo {
+    width: 65px;
+    height: 65px;
+  }
+  .analytics-uni-text h2 {
+    font-size: 14px;
+  }
+  .analytics-uni-text p {
+    font-size: 12px;
+  }
   .stat-cards { grid-template-columns: 1fr; }
   .charts-grid { grid-template-columns: 1fr; }
   .chart-card.wide { grid-column: span 1; }

@@ -32,8 +32,16 @@ const Home = () => {
   const [deptImgIndex, setDeptImgIndex] = useState(0);
   const [scopesImgIndex, setScopesImgIndex] = useState(0);
 
-  const aboutImages = ['/slide1.png', '/slide2.png', '/slide3.png'];
-  const deptImages = ['/ece1.png', '/ece2.png', '/slide2.png'];
+  const aboutImages = [
+    { src: '/slide1.png', title: 'CUTM Campus' },
+    { src: '/slide2.png', title: 'University Area' },
+    { src: '/slide3.png', title: 'Pramod Udhyan' },
+  ];
+  const deptImages = [
+    { src: '/ece1.png', title: 'ECE' },
+    { src: '/ece2.png', title: 'Department of ECE' },
+    { src: '/slide2.png', title: 'University Area' },
+  ];
   const scopesImages = [
     { src: '/scope1.png', title: 'Conference' },
     { src: '/scope2.png', title: 'Scopes 2016' },
@@ -359,7 +367,8 @@ const Home = () => {
         </div>
         <div className="about-content">
           <div className="about-image-slider anim-slide-left">
-            <img key={aboutImgIndex} src={aboutImages[aboutImgIndex]} alt="CUTM Campus" className="about-img" />
+            <img key={aboutImgIndex} src={aboutImages[aboutImgIndex].src} alt="CUTM Campus" className="about-img" />
+            <div className="scopes-img-title">{aboutImages[aboutImgIndex].title}</div>
           </div>
           <div className="about-text anim-slide-right">
             <p>
@@ -387,7 +396,8 @@ const Home = () => {
             </p>
           </div>
           <div className="department-image anim-slide-right">
-            <img key={deptImgIndex} src={deptImages[deptImgIndex]} alt="ECE Department" className="dept-img" />
+            <img key={deptImgIndex} src={deptImages[deptImgIndex].src} alt="ECE Department" className="dept-img" />
+            <div className="scopes-img-title">{deptImages[deptImgIndex].title}</div>
           </div>
         </div>
       </section>

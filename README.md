@@ -1,21 +1,60 @@
-# SCOPES 2027 - Conference Website
+# SCOPES 2027 — Official Conference Website
 
-Official website for the 3rd International Conference on Signal Processing, Communication, Power & Embedded Systems (SCOPES-2027).
+> 3rd International Conference on Signal Processing, Communication, Power & Embedded Systems
+
+[![React](https://img.shields.io/badge/React-19-61DAFB?logo=react)](https://reactjs.org)
+[![Firebase](https://img.shields.io/badge/Firebase-Realtime_DB-FFCA28?logo=firebase)](https://firebase.google.com)
+[![Deployed on Render](https://img.shields.io/badge/Deployed-Render-46E3B7?logo=render)](https://render.com)
+
+---
 
 ## Conference Details
 
-- **Event**: SCOPES 2027
-- **Dates**: February 4-6, 2027
-- **Venue**: Centurion University of Technology and Management, Paralakhemundi, Odisha
-- **Format**: Hybrid Conference
-- **Technical Co-Sponsor**: IEEE Bhubaneswar Section & Computer Society Chapter (CH11163)
+| Field | Info |
+|-------|------|
+| Event | SCOPES 2027 |
+| Edition | 3rd International Conference |
+| Dates | February 4–6, 2027 |
+| Venue | Centurion University of Technology and Management, Paralakhemundi, Odisha |
+| Format | Hybrid (Online + Offline) |
+| Technical Co-Sponsor | IEEE Bhubaneswar Section & Computer Society Chapter (CH11163) |
+| Conference Record No. | 71015 |
+| Contact | scopes2027@cutm.ac.in |
+
+---
 
 ## Tech Stack
 
-- **Frontend**: React.js
-- **Styling**: CSS3
-- **Icons**: React Icons
-- **Routing**: React Router DOM
+| Layer | Technology |
+|-------|-----------|
+| Frontend | React.js 19 |
+| Styling | CSS3 |
+| Routing | React Router DOM |
+| Icons | React Icons |
+| Database | Firebase Realtime Database |
+| Charts | Recharts |
+| Deployment | Render |
+
+---
+
+## Features
+
+- Responsive design — mobile & desktop
+- Live visitor counter (online users + total visits)
+- Real-time analytics dashboard with live online users graph
+- Country-wise visitor tracking
+- Scroll animations (fade-up, slide-left, slide-right, zoom-in)
+- Dynamic keynote speaker profiles with modal view
+- Day-wise conference program schedule
+- Paper submission guidelines & templates
+- Accommodation and transportation details
+- Organizing committee listings
+- Sponsorship tiers and benefits
+- Countdown timer to conference date
+- IEEE Xplore publication information
+- Interactive navbar with dropdown menus
+
+---
 
 ## Project Structure
 
@@ -24,22 +63,18 @@ ieee-cutm/
 ├── public/
 │   ├── data/
 │   │   └── speakers.json
-│   ├── images/
 │   └── index.html
 ├── src/
 │   ├── Components/
-│   │   ├── Navbar.js
-│   │   ├── Navbar.css
-│   │   ├── Footer.js
-│   │   └── Footer.css
+│   │   ├── Navbar.js / Navbar.css
+│   │   └── Footer.js / Footer.css
 │   ├── Pages/
 │   │   ├── Home.js
-│   │   ├── Accommodation.js
+│   │   ├── Analytics.js
 │   │   ├── CallForPapers.js
 │   │   ├── Committee.js
 │   │   ├── Contact.js
 │   │   ├── ImpDates.js
-│   │   ├── NotFound.js
 │   │   ├── PaperSubmission.js
 │   │   ├── Places.js
 │   │   ├── ProgramSchedule.js
@@ -47,121 +82,109 @@ ieee-cutm/
 │   │   ├── Scope.js
 │   │   ├── Speakers.js
 │   │   ├── Sponsors.js
-│   │   └── Themes.js
+│   │   ├── Themes.js
+│   │   └── NotFound.js
 │   ├── styles/
 │   │   └── [All CSS files]
+│   ├── firebase.js
 │   ├── App.js
 │   └── index.js
+├── .env               ← Firebase keys (not committed)
+├── .gitignore
 └── package.json
 ```
 
-## Available Scripts
+---
 
-### `npm start`
-Runs the app in development mode at [http://localhost:3000](http://localhost:3000)
+## Environment Variables
 
-### `npm test`
-Launches the test runner in interactive watch mode
+Create a `.env` file in the root directory:
 
-### `npm run build`
-Builds the app for production to the `build` folder
-
-## Deployment
-
-### Option 1: Vercel (Recommended - Free & Auto-Build)
-
-**Via Vercel Dashboard (No Manual Build Required):**
-- Go to [vercel.com](https://vercel.com)
-- Sign up/Login with GitHub
-- Click "New Project"
-- Import your GitHub repository
-- Vercel will automatically detect React and build/deploy
-- Your site will be live in 2-3 minutes!
-
-**Via Vercel CLI:**
-```bash
-npm install -g vercel
-vercel
-```
-- Vercel automatically builds and deploys
-
-### Option 2: Netlify (Free & Auto-Build)
-
-**Via Netlify Dashboard (No Manual Build Required):**
-- Go to [netlify.com](https://netlify.com)
-- Sign up/Login with GitHub
-- Click "Add new site" → "Import an existing project"
-- Connect your GitHub repository
-- Netlify will automatically build and deploy
-
-**Via Netlify CLI:**
-```bash
-npm install -g netlify-cli
-netlify deploy --prod
-```
-- Netlify automatically builds and deploys
-
-### Option 3: GitHub Pages
-
-1. Install gh-pages:
-```bash
-npm install --save-dev gh-pages
+```env
+REACT_APP_FIREBASE_API_KEY=your_api_key
+REACT_APP_FIREBASE_AUTH_DOMAIN=your_auth_domain
+REACT_APP_FIREBASE_PROJECT_ID=your_project_id
+REACT_APP_FIREBASE_STORAGE_BUCKET=your_storage_bucket
+REACT_APP_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
+REACT_APP_FIREBASE_APP_ID=your_app_id
+REACT_APP_FIREBASE_MEASUREMENT_ID=your_measurement_id
+REACT_APP_FIREBASE_DATABASE_URL=your_database_url
 ```
 
-2. Add to `package.json`:
+> `.env` is listed in `.gitignore` and will never be committed to GitHub.  
+> For deployment, add these variables in your hosting platform's environment settings.
+
+---
+
+## Firebase Realtime Database Rules
+
 ```json
-"homepage": "https://yourusername.github.io/ieee-cutm",
-"scripts": {
-  "predeploy": "npm run build",
-  "deploy": "gh-pages -d build"
+{
+  "rules": {
+    "onlineUsers":   { ".read": true, ".write": true },
+    "totalVisitors": { ".read": true, ".write": true },
+    "countryVisits": { ".read": true, ".write": true },
+    "onlineHistory": { ".read": true, ".write": true }
+  }
 }
 ```
 
-3. Deploy:
+---
+
+## Getting Started
+
 ```bash
-npm run deploy
+# Clone the repository
+git clone https://github.com/krushayu/SCOPES-2027.git
+cd ieee-cutm
+
+# Install dependencies
+npm install --legacy-peer-deps
+
+# Add your .env file (see Environment Variables section)
+
+# Start development server
+npm start
 ```
 
-### Option 4: Traditional Hosting (Manual Build)
+App runs at [http://localhost:3000](http://localhost:3000)
 
-1. Build:
-```bash
-npm run build
-```
+---
 
-2. Upload `build` folder contents via FTP/cPanel
+## Deployment (Render)
 
-## Features
+1. Push code to GitHub
+2. Go to [render.com](https://render.com) → New → Static Site
+3. Connect your GitHub repository
+4. Set build command: `npm run build`
+5. Set publish directory: `build`
+6. Add all environment variables from `.env` in the Render dashboard
+7. Deploy — Render auto-deploys on every push to `main`
 
-- Responsive design for mobile and desktop
-- Dynamic speaker profiles with modal view
-- Conference schedule with day-wise tabs
-- Paper submission guidelines
-- Accommodation and transportation details
-- Committee member listings
-- Sponsor information
-- Interactive navigation with dropdown menus
-- Countdown timer to conference date
-- IEEE Xplore publication information
+---
 
-## Key Pages
+## Pages
 
-1. **Home** - Conference overview, speakers, important dates
-2. **Themes** - Conference tracks and topics
-3. **Call for Papers** - Submission tracks with SDG alignment
-4. **Paper Submission** - Guidelines and templates
-5. **Program Schedule** - Day-wise event schedule
-6. **Speakers** - Keynote speaker profiles
-7. **Committee** - Organizing committee members
-8. **Accommodation** - Lodging and transport details
-9. **Sponsors** - Sponsorship tiers and benefits
-10. **Contact** - Contact information and location map
+| Route | Page | Description |
+|-------|------|-------------|
+| `/` | Home | Overview, speakers, countdown, important dates |
+| `/themes` | Themes | Conference tracks and topics |
+| `/call-for-papers` | Call for Papers | Submission tracks with SDG alignment |
+| `/paper-submission` | Paper Submission | Guidelines and templates |
+| `/program-schedule` | Program Schedule | Day-wise event schedule |
+| `/speakers` | Speakers | Keynote speaker profiles |
+| `/committee` | Committee | Organizing committee members |
+| `/accommodation` | Accommodation | Lodging and transport details |
+| `/sponsors` | Sponsors | Sponsorship tiers and benefits |
+| `/contact` | Contact | Contact info and location map |
+| `/analytics` | Analytics | Live visitor analytics dashboard |
 
-## Contact
-
-**Email**: scopes2027@cutm.ac.in  
-**Conference Record Number**: 71015
+---
 
 ## License
 
-© 2027 SCOPES Conference - Centurion University of Technology and Management
+© 2027 SCOPES Conference — Centurion University of Technology and Management, Odisha, India
+
+---
+
+*Designed & Developed by [krush@yu](https://www.linkedin.com/in/krushayu)*
