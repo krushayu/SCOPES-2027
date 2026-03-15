@@ -161,17 +161,13 @@ const Home = () => {
     <div className="home-container">
       {/* Marquee Section */}
       <div className="marquee-section">
-        {/* eslint-disable-next-line jsx-a11y/no-distracting-elements */}
-        <marquee className="marquee-text" behavior="scroll" direction="left">
-          Conference Record Number: 71015 || 
-          <a 
-            href="/program-schedule" 
-            className="program-schedule-link"
-          >
+        <div className="marquee-text">
+          Conference Record Number: 71015 &nbsp;&nbsp;||&nbsp;&nbsp;
+          <a href="/program-schedule" className="program-schedule-link">
             Program Schedule <sup className="new-badge">(New)</sup> - Click Here
-          </a> || 
-          Accepted papers will be submitted for inclusion into IEEE Xplore subject to meeting IEEE Xplore's scope and quality requirements
-        </marquee>
+          </a>
+          &nbsp;&nbsp;||&nbsp;&nbsp; Accepted papers will be submitted for inclusion into IEEE Xplore subject to meeting IEEE Xplore's scope and quality requirements
+        </div>
       </div>
 
       {/* Hero Slider Section */}
@@ -434,14 +430,10 @@ const Home = () => {
           <div className="gallery-strip-track">
             {[...Array(2)].flatMap((_, si) =>
               [
-                { n: 1, ext: 'png' },
-                { n: 2, ext: 'png' },
-                { n: 3, ext: 'jpeg' },
-                { n: 4, ext: 'jpeg' },
-                { n: 5, ext: 'jpeg' },
-                { n: 6, ext: 'jpeg' },
-                { n: 7, ext: 'jpeg' },
-                { n: 8, ext: 'jpeg' },
+                { n: 1, ext: 'png' }, { n: 2, ext: 'png' },
+                { n: 3, ext: 'jpeg' }, { n: 4, ext: 'jpeg' },
+                { n: 5, ext: 'jpeg' }, { n: 6, ext: 'jpeg' },
+                { n: 7, ext: 'jpeg' }, { n: 8, ext: 'jpeg' },
                 { n: 9, ext: 'jpeg' },
               ].map((img, i) => (
                 <img key={`${si}-${i}`} src={`/scope${img.n}.${img.ext}`} alt={`SCOPES 2024 - ${img.n}`} className="gallery-strip-img" />
