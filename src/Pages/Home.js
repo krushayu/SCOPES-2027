@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/Home.css';
-import { FaCalendarAlt, FaPaperPlane, FaAward, FaUserFriends, FaMapMarkerAlt } from 'react-icons/fa';
-import { MdEventNote } from 'react-icons/md';
+import { FaCalendarAlt, FaPaperPlane, FaAward, FaMapMarkerAlt } from 'react-icons/fa';
+import { MdAppRegistration } from 'react-icons/md';
 
 const useScrollAnim = (threshold = 0.15) => {
   const ref = useRef(null);
@@ -139,7 +139,7 @@ const Home = () => {
     { icon: <FaMapMarkerAlt />, label: 'Venue', value: 'Centurion University, Paralakhemundi', color: '#4ECDC4', link: 'https://maps.app.goo.gl/hVvbqeLRXWvEa9gT9' },
     { icon: <FaPaperPlane />, label: 'Submissions', value: 'Open Now', color: '#45B7D1', link: '/paper-submission' },
     { icon: <FaAward />, label: 'Publication', value: 'IEEE Xplore', color: '#96CEB4', link: '/publication' },
-    { icon: <MdEventNote />, label: 'Format', value: 'Hybrid', color: '#DDA0DD', link: '/program-schedule' }
+    { icon: <MdAppRegistration />, label: 'Format', value: 'Hybrid', color: '#DDA0DD', link: '/program-schedule' }
   ];
 
   const infoRef     = useScrollAnim();
