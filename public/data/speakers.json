@@ -27,6 +27,24 @@
     "image": "/speakers/Ms_Yeranuhi.jpg"
   },
   {
+    "id": 5,
+    "name": "Prof. (Dr.) Bansidhar Majhi",
+    "profession": "VC, VSSUT, Burla",
+    "about": "Prof. (Dr.) Bansidhar Majhi is the Vice Chancellor of Veer Surendra Sai University of Technology (VSSUT), Burla. He is a distinguished academician and researcher with significant contributions in the fields of signal processing, machine learning, and computational intelligence.",
+    "talkTitle": "TBA",
+    "abstract": "Abstract coming soon.",
+    "image": "/speakers/Banshidharmanjhi.png"
+  },
+  {
+    "id": 6,
+    "name": "Prof. (Dr.) Tapan K. Gandhi",
+    "profession": "Cadence Chair Professor of AI and Automation, IIT Delhi",
+    "about": "Prof. (Dr.) Tapan K Gandhi is working as Professor in the Dept. of Electrical Engineering, Cadence Chair Professor of AI and Automation, Joint Faculty in School of AI, IIT Delhi and adjunct faculty in the school of AI and data science, IIT Jodhpur. He is also research affiliate to MIT, USA. He received his Ph.D. fellowship from (MIT, USA) and obtained his Ph.D. in Biomedical Engineering jointly from IIT Delhi. He is awarded as the excellent INSPIRE Faculty by DST, Govt. of India. His research expertise spans from Computational Neuroscience, Brain imaging, Assistive Technology, Bio-medical Instrumentation, machine learning, Cognitive Computing to Artificial intelligence. He has more than 200 publications in International journals and conference proceedings and six patents and three technologies transfer to Ministry of Social Justice, Govt. of India.",
+    "talkTitle": "Leveraging Embedded Technologies for Improved Patient-Provider Communication",
+    "abstract": "The healthcare industry is undergoing a digital revolution, with AI powered embedded technologies playing a key role in enhancing patient-provider communication. In my talk, I will demonstrate some of the cutting edge innovations and explain how these technologies can bridge the communication gap, fostering a more informed, engaged, and empowered patient and caregiver experience. I will also highlight some of the key challenges as well as opportunities in healthcare. Finally, I will conclude with future directions for embedded technologies in healthcare communication, including the potential of artificial intelligence in early diagnosis, prognosis, prediction and assistive technology for the betterment of human civilisation.",
+    "image": "/speakers/Tapan.png"
+  },
+  {
     "id": 4,
     "name": "Dr. Raffaele Scuderi",
     "profession": "Electromagnetics Industry Process Consultant and SIMULIA EMAG Specialist",
