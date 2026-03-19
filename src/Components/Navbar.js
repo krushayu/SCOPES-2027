@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 import { FaBars, FaTimes, FaDownload, FaChevronRight, FaUniversity, FaInfoCircle, FaChevronDown, FaTrophy } from 'react-icons/fa';
-import { MdPeople, MdLibraryBooks, MdContactMail } from 'react-icons/md';
+import { MdPeople, MdLibraryBooks, MdContactMail, MdEventNote } from 'react-icons/md';
 import { GiSpeaker, GiCalendar, GiArchiveResearch } from 'react-icons/gi';
 
 const Navbar = () => {
@@ -64,6 +64,7 @@ const Navbar = () => {
     { label: 'Accommodation', href: '/accommodation', icon: <FaUniversity />, isRoute: true },
     { label: 'Committee', href: '/committee', icon: <MdPeople />, isRoute: true},
     { label: 'Sponsors', href: '/sponsors', icon: <FaTrophy />, isRoute: true },
+    { label: 'Registration', href: '/registration', icon: <MdEventNote />, isRoute: true },
     { label: 'Contact', href: '/contact', icon: <MdContactMail />, isRoute: true }
   ];
 

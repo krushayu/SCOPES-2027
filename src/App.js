@@ -19,6 +19,7 @@ import CallForPapers from './Pages/CallForPapers';
 import Themes from './Pages/Themes';
 import Publication from './Pages/Publication';
 import Analytics from './Pages/Analytics';
+import Registration from './Pages/Registration';
 import NotFound from './Pages/NotFound';
 
 function App() {
@@ -42,6 +43,7 @@ function App() {
           <Route path="/themes" element={<Themes />} />
           <Route path="/publication" element={<Publication />} />
           <Route path="/analytics" element={<Analytics />} />
+          <Route path="/registration" element={<Registration />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />

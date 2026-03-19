@@ -522,39 +522,39 @@ const Home = () => {
                 <thead>
                   <tr>
                     <th>Category</th>
-                    <th>Early Bird</th>
-                    <th>Regular</th>
+                    <th>IEEE Member</th>
+                    <th>Non-IEEE Member</th>
+                    <th>Foreign Delegates</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td>Industry Practitioner</td>
-                    <td>₹10,000</td>
-                    <td>₹11,000</td>
+                    <td>R&amp;D and Industry Participants</td>
+                    <td>INR 9,000</td>
+                    <td>INR 10,000</td>
+                    <td>USD 225</td>
                   </tr>
                   <tr>
-                    <td>Academician</td>
-                    <td>₹6,000</td>
-                    <td>₹6,500</td>
-                  </tr>
-                  <tr>
-                    <td>Students</td>
-                    <td>₹4,000</td>
-                    <td>₹4,500</td>
-                  </tr>
-                  <tr>
-                    <td>Attendee</td>
-                    <td colSpan="2">₹2,500</td>
-                  </tr>
-                  <tr>
-                    <td>Foreign Delegates</td>
+                    <td>Faculty Participants from Academia</td>
+                    <td>INR 7,000</td>
+                    <td>INR 8,000</td>
                     <td>USD 200</td>
-                    <td>USD 250</td>
+                  </tr>
+                  <tr>
+                    <td>UG/PG Students &amp; Research Scholars</td>
+                    <td>INR 5,500</td>
+                    <td>INR 6,500</td>
+                    <td>USD 180</td>
+                  </tr>
+                  <tr>
+                    <td>Listener</td>
+                    <td>INR 2,000</td>
+                    <td>INR 2,500</td>
+                    <td>USD 100</td>
                   </tr>
                 </tbody>
               </table>
-              {/* <button className="register-btn">Register Now</button> */}
-              <p className="fees-note">* Registration is mandatory. Fee includes Conference Kit, Banquet, Lunch (3), Tea (5), and GST.</p>
+              <p className="fees-note">* Registration fee includes Conference Kit, Banquet, Lunch, Tea, and GST as applicable.</p>
             </div>
           </div>
         </div>
