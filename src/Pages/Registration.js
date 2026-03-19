@@ -4,7 +4,7 @@ import '../styles/Registration.css';
 const guidelines = [
   <>At least one author is required to register for the conference and oral presentation is mandatory to publish the paper in IEEE Xplore.</>,
   <>Check names, affiliations, and the sequence properly before uploading the camera-ready paper, as further changes cannot be entertained.</>,
-  <>Please strictly follow the IEEE conference format: <a href="https://www.ieee.org/conferences/publishing/templates.html" target="_blank" rel="noopener noreferrer">Download IEEE Conference Template (A4)</a></>,
+  <>Please strictly follow the IEEE conference format: <a href="https://www.ieee.org/content/dam/ieee-org/ieee/web/org/conferences/conference-template-a4.docx" target="_blank" rel="noopener noreferrer">Download IEEE Conference Template (A4)</a></>,
   <>The camera-ready version must be in PDF format compiled from IEEE PDF eXpress™: <a href="https://ieee-pdf-express.org/" target="_blank" rel="noopener noreferrer">Click here for IEEE PDF eXpress™</a></>,
   <>Use conference ID <strong>64467X</strong> when logging into PDF eXpress. After passing the paper, click on <strong>Approve</strong> option.</>,
   <>Manuscript must be <strong>4 to 6 pages</strong> in IEEE format with similarity index limited to <strong>20%</strong> (single source similarity must be less than 5%).</>,
@@ -14,10 +14,10 @@ const guidelines = [
 ];
 
 const fees = [
-  { category: 'R&D and Industry Participants', ieee: 'INR 9,000', nonIeee: 'INR 10,000', foreign: 'USD 225' },
-  { category: 'Faculty Participants from Academia', ieee: 'INR 7,000', nonIeee: 'INR 8,000', foreign: 'USD 200' },
-  { category: 'UG/PG Students & Research Scholars', ieee: 'INR 5,500', nonIeee: 'INR 6,500', foreign: 'USD 180' },
-  { category: 'Listener', ieee: 'INR 2,000', nonIeee: 'INR 2,500', foreign: 'USD 100' },
+  { category: 'R&D and Industry Participants', ieee: '₹9,000', nonIeee: '₹10,000', foreign: '$225' },
+  { category: 'Faculty Participants from Academia', ieee: '₹8,000', nonIeee: '₹9,000', foreign: '$200' },
+  { category: 'UG/PG Students & Research Scholars', ieee: '₹6,500', nonIeee: '₹7,500', foreign: '$180' },
+  { category: 'Listener', ieee: '₹2,000', nonIeee: '₹2,500', foreign: '$100' },
 ];
 
 const Registration = () => {
@@ -43,13 +43,13 @@ const Registration = () => {
           </div>
 
           <div className="reg-cta">
-            <a href="https://cmt3.research.microsoft.com/" target="_blank" rel="noopener noreferrer" className="reg-btn">
+            <a href="#" target="_blank" rel="noopener noreferrer" className="reg-btn">
               👉 Register Here
             </a>
           </div>
 
           <div className="reg-contact-note">
-            For queries, contact: <a href="mailto:scopes2027@cutm.ac.in">scopes2027@cutm.ac.in</a> &nbsp;|&nbsp; <a href="tel:8917440019">8917440019</a>
+            For queries, contact: <a href="mailto:scopes2027@cutm.ac.in">scopes2027@cutm.ac.in</a> 
           </div>
         </div>
 

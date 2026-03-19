@@ -530,31 +530,31 @@ const Home = () => {
                 <tbody>
                   <tr>
                     <td>R&amp;D and Industry Participants</td>
-                    <td>INR 9,000</td>
-                    <td>INR 10,000</td>
-                    <td>USD 225</td>
+                    <td>₹9,000</td>
+                    <td>₹10,000</td>
+                    <td>$225</td>
                   </tr>
                   <tr>
                     <td>Faculty Participants from Academia</td>
-                    <td>INR 7,000</td>
-                    <td>INR 8,000</td>
-                    <td>USD 200</td>
+                    <td>₹8,000</td>
+                    <td>₹9,000</td>
+                    <td>$200</td>
                   </tr>
                   <tr>
                     <td>UG/PG Students &amp; Research Scholars</td>
-                    <td>INR 5,500</td>
-                    <td>INR 6,500</td>
-                    <td>USD 180</td>
+                    <td>₹6,500</td>
+                    <td>₹7,500</td>
+                    <td>$180</td>
                   </tr>
                   <tr>
                     <td>Listener</td>
-                    <td>INR 2,000</td>
-                    <td>INR 2,500</td>
-                    <td>USD 100</td>
+                    <td>₹2,000</td>
+                    <td>₹2,500</td>
+                    <td>$100</td>
                   </tr>
                 </tbody>
               </table>
-              <p className="fees-note">* Registration fee includes Conference Kit, Banquet, Lunch, Tea, and GST as applicable.</p>
+              <p className="fees-note">* Fee includes Conference Kit, Banquet, Lunch, Tea, and GST as applicable.</p>
             </div>
           </div>
         </div>

@@ -5,6 +5,8 @@ import {
   FaPhone,
   FaEnvelope,
   FaPaperPlane,
+  FaDownload,
+  FaBookOpen,
 } from "react-icons/fa";
 
 const Footer = () => {
@@ -30,31 +32,39 @@ const Footer = () => {
                 </div>
 
                 <div className="footer-grid">
-                  {/* Call For Papers Section */}
+                  {/* Quick Links + Downloads stacked in one column */}
                   <div className="footer-section">
                     <h3 className="footer-title">
                       <FaPaperPlane className="section-icon" />
                       Quick Links
                     </h3>
                     <ul className="footer-links">
+                      <li><Link to="/">Home</Link></li>
+                      <li><Link to="/committee">Committee</Link></li>
+                      <li><Link to="/sponsors">Sponsors</Link></li>
+                      <li><Link to="/registration">Registration</Link></li>
+                    </ul>
+
+                    <h3 className="footer-title" style={{ marginTop: "20px" }}>
+                      <FaDownload className="section-icon" />
+                      Downloads
+                    </h3>
+                    <ul className="footer-links">
                       <li>
-                        <Link to="/">Home</Link>
+                        <a href="/downloads/brochure.pdf" target="_blank" rel="noopener noreferrer" className="download-link">Brochure</a>
                       </li>
                       <li>
-                        <Link to="/committee">Committee</Link>
-                      </li>
-                      <li>
-                        <Link to="/sponsors">Sponsors</Link>
-                      </li>
-                      <li>
-                        <Link to="/registration">Registration</Link>
+                        <a href="/downloads/invitation.pdf" target="_blank" rel="noopener noreferrer" className="download-link">Invitation</a>
                       </li>
                     </ul>
                   </div>
 
-                  {/* Downloads Section */}
+                  {/* Author Guidance Section */}
                   <div className="footer-section">
-                    <h3 className="footer-title">Author Guidance</h3>
+                    <h3 className="footer-title">
+                      <FaBookOpen className="section-icon" />
+                      Author Guidance
+                    </h3>
                     <ul className="footer-links">
                       <li>
                         <Link to="/scope">Scope</Link>
