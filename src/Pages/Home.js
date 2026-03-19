@@ -152,9 +152,11 @@ const Home = () => {
 
   const importantDates = [
     // { title: 'Abstract Submission date', date: '01 March 2026', status: 'active' },
-    { title: 'Paper Submission open', date: '01 April 2026', status: 'upcoming' },
-    { title: 'Notification of Acceptance date', date: '10 October 2026', status: 'upcoming' },
-    { title: 'Registration open date', date: '02 November 2026', status: 'upcoming' },
+    { title: 'Paper Submission open', date: '01 April 2026', status: 'active' },
+    {title: 'Paper Submission close', date: '30 August 2026', status: 'upcoming' },
+    { title: 'Notification of Acceptance', date: '30 October 2026', status: 'upcoming' },
+    { title: 'Last date of registration & camera ready submission', date: '30 November 2026', status: 'upcoming' },
+    { title: 'Conference Dates', date: '04-06 February 2027', status: 'upcoming' },
   ];
 
   return (

@@ -1,25 +1,28 @@
 .accom-wrapper {
   min-height: 100vh;
   background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-  padding-top: 120px;
+  padding-top: 80px;
 }
 
 .accom-hero {
   background: linear-gradient(135deg, #0a192f 0%, #1e3c72 100%);
-  padding: 60px 20px;
+  padding: 36px 20px;
   text-align: center;
   color: white;
+  border-bottom: 3px solid #00b4d8;
 }
 
 .accom-hero-title {
-  font-size: 48px;
+  font-size: 36px;
   font-weight: 800;
-  margin-bottom: 15px;
+  margin-bottom: 6px;
+  letter-spacing: -0.5px;
 }
 
 .accom-hero-subtitle {
-  font-size: 20px;
-  color: #caf0f8;
+  font-size: 15px;
+  color: #94a3b8;
+  font-weight: 400;
 }
 
 .accom-container {
@@ -230,19 +233,19 @@
 
 @media screen and (max-width: 768px) {
   .accom-wrapper {
-    padding-top: 140px;
+    padding-top: 100px;
   }
   
   .accom-hero {
-    padding: 40px 15px;
+    padding: 28px 15px;
   }
   
   .accom-hero-title {
-    font-size: 32px;
+    font-size: 26px;
   }
   
   .accom-hero-subtitle {
-    font-size: 16px;
+    font-size: 13px;
   }
   
   .accom-container {

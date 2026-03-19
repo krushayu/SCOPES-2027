@@ -6,44 +6,24 @@
 
 .comm-hero {
   background: linear-gradient(135deg, #0a192f 0%, #1e3c72 100%);
-  padding: 60px 20px;
+  padding: 36px 20px;
   text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-
-.comm-hero::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: radial-gradient(circle at 50% 50%, rgba(76, 201, 240, 0.1) 0%, transparent 70%);
-}
-
-.comm-hero-icon {
-  font-size: 4rem;
-  color: #4cc9f0;
-  margin-bottom: 20px;
-  position: relative;
-  z-index: 1;
+  color: white;
+  border-bottom: 3px solid #00b4d8;
 }
 
 .comm-title {
-  font-size: 3rem;
+  font-size: 36px;
   font-weight: 800;
   color: white;
-  margin-bottom: 10px;
-  position: relative;
-  z-index: 1;
+  margin-bottom: 6px;
+  letter-spacing: -0.5px;
 }
 
 .comm-subtitle {
-  font-size: 1.2rem;
-  color: #caf0f8;
-  position: relative;
-  z-index: 1;
+  font-size: 15px;
+  color: #94a3b8;
+  font-weight: 400;
 }
 
 .comm-content {
@@ -169,19 +149,15 @@
   }
 
   .comm-hero {
-    padding: 40px 20px;
-  }
-
-  .comm-hero-icon {
-    font-size: 3rem;
+    padding: 28px 20px;
   }
 
   .comm-title {
-    font-size: 2rem;
+    font-size: 26px;
   }
 
   .comm-subtitle {
-    font-size: 1rem;
+    font-size: 13px;
   }
 
   .comm-content {

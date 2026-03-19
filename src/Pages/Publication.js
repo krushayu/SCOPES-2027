@@ -17,7 +17,7 @@ const Publication = () => {
             IEEE Xplore Publication
           </h2>
           <p className="pub-intro-text">
-            All accepted and presented papers will be submitted for inclusion in IEEE Xplore Digital Library, subject to meeting IEEE Xplore's scope and quality requirements. The conference proceedings will be indexed by major indexing services including Scopus and Web of Science.
+            All accepted and presented papers will be submitted for inclusion in IEEE Xplore Digital Library, subject to meeting IEEE Xplore's scope and quality requirements. The conference proceedings will be indexed by major indexing services including Scopus.
           </p>
         </section>
 

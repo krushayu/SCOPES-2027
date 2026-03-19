@@ -1,110 +1,133 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../styles/Scope.css';
-import { FaSignal, FaNetworkWired, FaBolt, FaMicrochip, FaAtom } from 'react-icons/fa';
+import { FaSignal, FaNetworkWired, FaBolt, FaMicrochip, FaIndustry, FaFlask } from 'react-icons/fa';
+
+const tracks = [
+  {
+    icon: <FaSignal />,
+    title: 'Advanced Signal Processing & Intelligent Systems',
+    color: '#e74c3c',
+    topics: [
+      'AI/ML and deep learning for real-time signal processing',
+      'Integrated sensing and communication (ISAC)',
+      'Intelligent perception systems for autonomous applications',
+      'Neuromorphic and bio-inspired signal processing'
+    ]
+  },
+  {
+    icon: <FaNetworkWired />,
+    title: 'Next-Generation Communication Technologies',
+    color: '#2980b9',
+    topics: [
+      '5G-Advanced and emerging 6G communication systems',
+      'Semantic and intelligent communication',
+      'IoT, non-terrestrial networks, and satellite communication',
+      'Secure and energy-efficient communication systems'
+    ]
+  },
+  {
+    icon: <FaBolt />,
+    title: 'Smart Power Systems & Sustainable Energy',
+    color: '#f39c12',
+    topics: [
+      'Smart grids, digital energy systems, and microgrids',
+      'Renewable energy integration and storage technologies',
+      'Electric vehicles and advanced power electronics',
+      'Green and energy-efficient system design'
+    ]
+  },
+  {
+    icon: <FaMicrochip />,
+    title: 'Embedded Systems, VLSI & Advanced Chip Design',
+    color: '#27ae60',
+    topics: [
+      'VLSI, FPGA, and ASIC design methodologies',
+      'System-on-Chip (SoC) and heterogeneous integration',
+      'Biochips and lab-on-chip technologies for healthcare and diagnostics',
+      'Quantum computing hardware and quantum chip design',
+      'Neuromorphic chips and AI accelerators',
+      'Low-power, high-performance and secure chip design'
+    ]
+  },
+  {
+    icon: <FaIndustry />,
+    title: 'Industry 4.0/5.0 & Intelligent Automation',
+    color: '#8e44ad',
+    topics: [
+      'Cyber-physical systems and digital twins',
+      'Smart manufacturing, robotics, and automation',
+      'Edge AI and industrial IoT applications',
+      'Predictive maintenance and industrial analytics'
+    ]
+  },
+  {
+    icon: <FaFlask />,
+    title: 'Interdisciplinary & Emerging Technologies',
+    color: '#00897b',
+    topics: [
+      'Quantum communication and post-quantum security',
+      'Human-centric and sustainable technologies',
+      'Smart cities, intelligent healthcare, and infrastructure systems',
+      'Technology transfer and industry-academia collaboration'
+    ]
+  }
+];
+
+const conclusion = "The conference focuses on future-ready technologies and industry-driven innovations, particularly highlighting the convergence of advanced chip design (biochips, quantum chips, AI accelerators) with communication, power, and embedded systems. It aims to promote scalable, sustainable, and intelligent solutions that meet the demands of next-generation industries and global technological advancement.";
 
 const Scope = () => {
-  const tracks = [
-    {
-      icon: <FaSignal />,
-      title: 'Signal Processing',
-      color: '#FF6B6B',
-      topics: [
-        'Digital, adaptive, and statistical signal processing',
-        'Image, video, and speech processing',
-        'Biomedical signal processing',
-        'AI and machine learning for signal analysis',
-        'Pattern recognition and computer vision',
-        'Radar and remote sensing'
-      ]
-    },
-    {
-      icon: <FaNetworkWired />,
-      title: 'Communication and Computer Networks',
-      color: '#4ECDC4',
-      topics: [
-        'Wireless and mobile communications (5G/6G)',
-        'Optical, satellite, and underwater communications',
-        'Internet of Things (IoT) and sensor networks',
-        'Software-defined networking (SDN) and NFV',
-        'Network security and cryptography',
-        'Edge, fog, and cloud communication systems'
-      ]
-    },
-    {
-      icon: <FaBolt />,
-      title: 'Power and Energy Systems',
-      color: '#FFD93D',
-      topics: [
-        'Smart grids and microgrids',
-        'Renewable energy integration',
-        'Power electronics and electric drives',
-        'Energy storage and management systems',
-        'Electric vehicles and charging infrastructure',
-        'Power system protection, control, and reliability'
-      ]
-    },
-    {
-      icon: <FaMicrochip />,
-      title: 'Embedded Systems and Intelligent Platforms',
-      color: '#6BCF7F',
-      topics: [
-        'Embedded system architecture and design',
-        'Real-time and cyber-physical systems',
-        'VLSI, FPGA, and SoC design',
-        'Robotics and automation',
-        'IoT-enabled embedded platforms',
-        'AI-enabled embedded and edge computing'
-      ]
-    },
-    {
-      icon: <FaAtom />,
-      title: 'Quantum Technologies',
-      color: '#A78BFA',
-      topics: [
-        'Quantum computing and algorithms',
-        'Quantum communication and quantum networks',
-        'Quantum signal processing',
-        'Quantum cryptography and security',
-        'Quantum sensors and metrology',
-        'Hybrid classical–quantum systems'
-      ]
-    }
-  ];
+  const [active, setActive] = useState(0);
 
   return (
-    <div className="scope-con-container">
-      <div className="scope-con-hero">
-        <h1 className="scope-con-title">Scope of the Conference</h1>
-        <div className="scope-con-underline"></div>
+    <div className="scope-wrapper">
+      <div className="scope-hero">
+        <h1>Scope of the Conference</h1>
+        <p>SCOPES 2027 — Major Technical Tracks</p>
       </div>
 
-      <div className="scope-con-content">
-        <div className="scope-con-intro">
+      <div className="scope-content">
+        <div className="scope-intro">
           <p>
-            The International Conference on Signal Processing, Communication, Power and Embedded Systems provides an international platform for researchers, academicians, industry professionals, and students to present and discuss recent advances, practical challenges, and emerging trends in signal processing, communication systems, power and energy technologies, embedded systems, and quantum technologies.
-          </p>
-          <p>
-            The conference emphasizes interdisciplinary research that integrates intelligent computation, advanced communication networks, sustainable power systems, embedded intelligence, and next-generation quantum-enabled solutions. It encourages original, high-quality contributions addressing both theoretical foundations and real-world applications.
-          </p>
+The 3rd IEEE International Conference on Signal Processing, Communication, Power and Embedded Systems (SCOPES) aims to address the rapidly evolving technological landscape shaped by digital transformation, intelligent automation, and next-generation hardware innovations. The conference emphasizes cutting-edge research that integrates advanced chip design, intelligent systems, and scalable industrial solutions, fostering strong collaboration between academia and industry.
+With the emergence of transformative technologies such as AI-enabled hardware, 5G-Advanced/6G communication, edge intelligence, quantum computing, and bio-inspired chip design, the conference provides a platform to explore solutions for modern industrial challenges including smart manufacturing, healthcare technologies, energy sustainability, and intelligent infrastructure.          </p>
         </div>
 
-        <h2 className="scope-con-tracks-title">Major Technical Tracks</h2>
-        <p className="scope-con-tracks-subtitle">Include (but are not limited to):</p>
+        <div className="scope-layout">
+          {/* Left — Track List */}
+          <div className="scope-tabs">
+            {tracks.map((track, i) => (
+              <button
+                key={i}
+                className={`scope-tab ${active === i ? 'active' : ''}`}
+                style={{ '--c': track.color }}
+                onClick={() => setActive(i)}
+              >
+                <span className="scope-tab-icon">{track.icon}</span>
+                <span className="scope-tab-label">{track.title}</span>
+              </button>
+            ))}
+          </div>
 
-        <div className="scope-con-tracks-grid">
-          {tracks.map((track, index) => (
-            <div className="scope-con-track-card" key={index}>
-              <div className="scope-con-track-header" style={{ backgroundColor: track.color }}>
-                <div className="scope-con-track-icon">{track.icon}</div>
-                <h3 className="scope-con-track-title">{track.title}</h3>
-              </div>
-              <ul className="scope-con-track-list">
-                {track.topics.map((topic, idx) => (
-                  <li key={idx} className="scope-con-track-item">{topic}</li>
-                ))}
-              </ul>
+          {/* Right — Topics Panel */}
+          <div className="scope-panel" style={{ '--c': tracks[active].color }}>
+            <div className="scope-panel-header">
+              <div className="scope-panel-icon">{tracks[active].icon}</div>
+              <h2>{tracks[active].title}</h2>
             </div>
-          ))}
+            <ul className="scope-panel-list">
+              {tracks[active].topics.map((topic, i) => (
+                <li key={i}>
+                  <span className="scope-panel-dot" />
+                  {topic}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        <div className="scope-conclusion">
+          <h3>Conclusion</h3>
+          <p>{conclusion}</p>
         </div>
       </div>
     </div>

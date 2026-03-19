@@ -410,7 +410,7 @@ const Committee = () => {
   return (
     <div className="comm-container">
       <div className="comm-hero">
-        <FaUsers className="comm-hero-icon" />
+        {/* <FaUsers className="comm-hero-icon" /> */}
         <h1 className="comm-title">Committee Members</h1>
         <p className="comm-subtitle">SCOPES 2027 Organizing Team</p>
       </div>
