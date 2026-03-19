@@ -1,9 +1,10 @@
 .reg-wrapper {
   min-height: 100vh;
-  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  background: #f1f5f9;
   padding-top: 80px;
 }
 
+/* Hero */
 .reg-hero {
   background: linear-gradient(135deg, #0a192f 0%, #1e3c72 100%);
   padding: 36px 20px;
@@ -15,114 +16,114 @@
 .reg-hero h1 {
   font-size: 36px;
   font-weight: 800;
-  margin-bottom: 6px;
-  letter-spacing: -0.5px;
+  margin: 0 0 6px 0;
 }
 
 .reg-hero p {
   font-size: 15px;
   color: #94a3b8;
-  font-weight: 400;
+  margin: 0;
 }
 
+/* Container */
 .reg-container {
-  max-width: 1000px;
+  max-width: 960px;
   margin: 0 auto;
-  padding: 60px 20px;
+  padding: 50px 20px;
   display: flex;
   flex-direction: column;
-  gap: 36px;
+  gap: 32px;
 }
 
+/* Card */
 .reg-card {
   background: white;
-  border-radius: 20px;
-  padding: 40px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  border-radius: 16px;
+  padding: 36px 40px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.07);
 }
 
-.reg-section-title {
-  font-size: 24px;
+.reg-card-title {
+  font-size: 22px;
   font-weight: 800;
   color: #0a192f;
-  margin-bottom: 28px;
+  margin: 0 0 24px 0;
   padding-bottom: 14px;
   border-bottom: 3px solid #00b4d8;
 }
 
-/* Guidelines List */
-.reg-list {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 32px 0;
+/* Guidelines */
+.reg-guidelines {
   display: flex;
   flex-direction: column;
-  gap: 14px;
-  counter-reset: reg-counter;
+  gap: 12px;
+  margin-bottom: 32px;
 }
 
-.reg-list li {
-  counter-increment: reg-counter;
+.reg-guideline-item {
   display: flex;
-  gap: 14px;
+  gap: 16px;
   align-items: flex-start;
-  font-size: 15px;
-  color: #334155;
-  line-height: 1.8;
-  padding: 14px 18px;
   background: #f8fafc;
-  border-radius: 10px;
   border-left: 4px solid #00b4d8;
+  border-radius: 8px;
+  padding: 14px 18px;
 }
 
-.reg-list li::before {
-  content: counter(reg-counter);
+.reg-num {
   background: #00b4d8;
   color: white;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 700;
-  width: 22px;
-  height: 22px;
+  min-width: 28px;
+  height: 28px;
   border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  place-items: center;
   flex-shrink: 0;
-  margin-top: 2px;
+  margin-top: 1px;
 }
 
-.reg-list li a {
-  color: #00b4d8;
+.reg-guideline-item p {
+  margin: 0;
+  font-size: 15px;
+  color: #334155;
+  line-height: 1.75;
+}
+
+.reg-guideline-item a {
+  color: #0077b6;
   font-weight: 600;
   text-decoration: none;
+  word-break: break-word;
 }
 
-.reg-list li a:hover {
+.reg-guideline-item a:hover {
   text-decoration: underline;
 }
 
-/* CTA Button */
+/* CTA */
 .reg-cta {
   text-align: center;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 
 .reg-btn {
   display: inline-block;
-  background: linear-gradient(135deg, #ff6b6b 0%, #ff8e53 100%);
+  background: linear-gradient(135deg, #ff6b6b, #ff8e53);
   color: white;
   text-decoration: none;
-  padding: 14px 40px;
+  padding: 14px 44px;
   border-radius: 30px;
   font-size: 16px;
   font-weight: 700;
-  transition: all 0.3s ease;
   box-shadow: 0 6px 20px rgba(255,107,107,0.3);
+  transition: all 0.3s ease;
 }
 
 .reg-btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 12px 25px rgba(255,107,107,0.4);
+  box-shadow: 0 10px 24px rgba(255,107,107,0.4);
 }
 
 /* Contact Note */
@@ -131,14 +132,14 @@
   font-size: 14px;
   color: #475569;
   background: #f0f9ff;
-  padding: 16px 20px;
-  border-radius: 10px;
-  border-left: 4px solid #00b4d8;
+  padding: 14px 20px;
+  border-radius: 8px;
+  border: 1px solid #bae6fd;
   line-height: 1.8;
 }
 
 .reg-contact-note a {
-  color: #00b4d8;
+  color: #0077b6;
   font-weight: 600;
   text-decoration: none;
 }
@@ -151,26 +152,27 @@
 .reg-table-wrapper {
   overflow-x: auto;
   margin-bottom: 16px;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
 }
 
 .reg-table {
   width: 100%;
   border-collapse: collapse;
-  border-radius: 12px;
-  overflow: hidden;
+  min-width: 560px;
 }
 
-.reg-table thead {
+.reg-table thead tr {
   background: linear-gradient(135deg, #0a192f, #1e3c72);
-  color: white;
 }
 
 .reg-table th {
-  padding: 16px 18px;
-  text-align: center;
-  font-weight: 700;
+  padding: 14px 18px;
+  color: white;
   font-size: 14px;
-  letter-spacing: 0.3px;
+  font-weight: 700;
+  text-align: center;
+  white-space: nowrap;
 }
 
 .reg-table th:first-child {
@@ -179,86 +181,58 @@
 
 .reg-table tbody tr {
   border-bottom: 1px solid #e2e8f0;
-  transition: background 0.2s ease;
-}
-
-.reg-table tbody tr:hover {
-  background: #f0f9ff;
+  transition: background 0.2s;
 }
 
 .reg-table tbody tr:last-child {
   border-bottom: none;
 }
 
-.reg-table td {
-  padding: 16px 18px;
-  font-size: 15px;
-  color: #334155;
-  text-align: center;
-  font-weight: 600;
-}
-
-.reg-table td:first-child {
-  text-align: left;
-  font-weight: 700;
-  color: #0a192f;
-}
-
-.reg-table tbody tr:nth-child(odd) {
+.reg-table tbody tr:nth-child(even) {
   background: #f8fafc;
 }
 
-.reg-table tbody tr:nth-child(odd):hover {
-  background: #f0f9ff;
+.reg-table tbody tr:hover {
+  background: #e0f2fe;
+}
+
+.reg-table td {
+  padding: 14px 18px;
+  font-size: 15px;
+  color: #1e40af;
+  font-weight: 700;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.reg-td-cat {
+  text-align: left !important;
+  color: #0a192f !important;
+  font-weight: 600 !important;
+  white-space: normal !important;
+  line-height: 1.5;
 }
 
 .reg-fee-note {
   font-size: 13px;
   color: #64748b;
   margin: 0;
-  padding: 12px 16px;
+  padding: 10px 14px;
   background: #f8fafc;
-  border-radius: 8px;
+  border-radius: 6px;
   border-left: 3px solid #00b4d8;
 }
 
+/* Mobile */
 @media (max-width: 768px) {
-  .reg-wrapper {
-    padding-top: 100px;
-  }
-
-  .reg-hero {
-    padding: 28px 15px;
-  }
-
-  .reg-hero h1 {
-    font-size: 26px;
-  }
-
-  .reg-hero p {
-    font-size: 13px;
-  }
-
-  .reg-container {
-    padding: 40px 15px;
-  }
-
-  .reg-card {
-    padding: 24px 18px;
-  }
-
-  .reg-section-title {
-    font-size: 20px;
-  }
-
-  .reg-list li {
-    font-size: 14px;
-    padding: 12px 14px;
-  }
-
-  .reg-table th,
-  .reg-table td {
-    padding: 12px 10px;
-    font-size: 13px;
-  }
+  .reg-wrapper { padding-top: 100px; }
+  .reg-hero { padding: 28px 15px; }
+  .reg-hero h1 { font-size: 26px; }
+  .reg-hero p { font-size: 13px; }
+  .reg-container { padding: 32px 15px; }
+  .reg-card { padding: 24px 18px; }
+  .reg-card-title { font-size: 19px; }
+  .reg-guideline-item { padding: 12px 14px; gap: 12px; }
+  .reg-guideline-item p { font-size: 14px; }
+  .reg-num { min-width: 24px; height: 24px; font-size: 12px; }
 }
