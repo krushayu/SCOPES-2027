@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
-import { FaBars, FaTimes, FaDownload, FaChevronRight, FaUniversity, FaInfoCircle, FaChevronDown, FaTrophy } from 'react-icons/fa';
-import { MdPeople, MdLibraryBooks, MdContactMail, MdAppRegistration } from 'react-icons/md';
+import { FaBars, FaTimes, FaDownload, FaChevronRight, FaUniversity, FaInfoCircle, FaChevronDown, FaTrophy, FaFlask, FaClock, FaFileAlt, FaMapMarkerAlt, FaCalendarAlt } from 'react-icons/fa';
+import { MdPeople, MdLibraryBooks, MdContactMail, MdAppRegistration, MdPublish } from 'react-icons/md';
 import { GiSpeaker, GiCalendar, GiArchiveResearch } from 'react-icons/gi';
 
 const Navbar = () => {
@@ -59,7 +59,6 @@ const Navbar = () => {
   const navItems = [
     { label: 'Home', href: '/', icon: <FaInfoCircle />, isRoute: true },
     { label: 'Themes', href: '/themes', icon: <GiArchiveResearch />, isRoute: true },
-    { label: 'Speakers', href: '/speakers', icon: <GiSpeaker />, isRoute: true },
     { label: 'Dates', href: '/imp-dates', icon: <GiCalendar />, isRoute: true },
     { label: 'Accommodation', href: '/accommodation', icon: <FaUniversity />, isRoute: true },
     { label: 'Committee', href: '/committee', icon: <MdPeople />, isRoute: true},
@@ -69,14 +68,14 @@ const Navbar = () => {
   ];
 
   const callForPapersItems = [
-    // { label: 'Call for Papers', href: '/call-for-papers', isRoute: true },
-    { label: 'Scope of the Conference', href: '/scope', isRoute: true },
-    { label: 'Important Dates', href: '/imp-dates', isRoute: true },
-    { label: 'Publication', href: '/publication', isRoute: true },
-        { label: 'Paper Submission', href: '/paper-submission', isRoute: true },
-    { label: 'Program Schedule', href: '/program-schedule', isRoute: true },
-    { label: 'Place of Visit', href: '/places', isRoute: true },
-    { label: 'Contact', href: '/contact', isRoute: true }
+    { label: 'Scope of the Conference', href: '/scope', icon: <FaFlask />, isRoute: true },
+      { label: 'Speakers', href: '/speakers', icon: <GiSpeaker />, isRoute: true },
+    { label: 'Important Dates', href: '/imp-dates', icon: <FaClock />, isRoute: true },
+    { label: 'Publication', href: '/publication', icon: <MdPublish />, isRoute: true },
+    { label: 'Paper Submission', href: '/paper-submission', icon: <FaFileAlt />, isRoute: true },
+    { label: 'Program Schedule', href: '/program-schedule', icon: <FaCalendarAlt />, isRoute: true },
+    { label: 'Place of Visit', href: '/places', icon: <FaMapMarkerAlt />, isRoute: true },
+    { label: 'Contact', href: '/contact', icon: <MdContactMail />, isRoute: true }
   ];
 
   return (
@@ -154,9 +153,15 @@ const Navbar = () => {
                     {callForPapersItems.map((item, index) => (
                       <li key={index}>
                         {item.isRoute ? (
-                          <Link to={item.href} className="dropdown-link">{item.label}</Link>
+                          <Link to={item.href} className="dropdown-link">
+                            <span className="dropdown-item-icon">{item.icon}</span>
+                            {item.label}
+                          </Link>
                         ) : (
-                          <a href={item.href} className="dropdown-link">{item.label}</a>
+                          <a href={item.href} className="dropdown-link">
+                            <span className="dropdown-item-icon">{item.icon}</span>
+                            {item.label}
+                          </a>
                         )}
                       </li>
                     ))}

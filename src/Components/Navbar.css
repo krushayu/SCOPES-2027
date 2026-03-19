@@ -256,8 +256,16 @@
 }
 
 .link-icon {
-  font-size: 16px;
+  font-size: 22px;
   color: #ffffff;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.nav-cta {
+  margin-left: 20px;
+  flex-shrink: 0;
 }
 
 .nav-link:hover {
@@ -327,7 +335,9 @@
 }
 
 .dropdown-link {
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 10px;
   padding: 12px 20px;
   color: #e2e8f0;
   text-decoration: none;
@@ -335,6 +345,12 @@
   font-weight: 500;
   transition: all 0.2s ease;
   border-left: 3px solid transparent;
+}
+
+.dropdown-item-icon {
+  font-size: 14px;
+  color: rgba(255,255,255,0.7);
+  flex-shrink: 0;
 }
 
 .dropdown-link:hover {
