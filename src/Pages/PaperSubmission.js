@@ -17,7 +17,7 @@ const PaperSubmission = () => {
             Submission Guidelines
           </h2>
           <p className="paper-intro">
-            SCOPES-2027 welcomes papers related to the conference tracks. For further information, please refer to the Call for Papers.
+            SCOPES-2027 welcomes papers related to the conference tracks. (Please refer scope of the conference)
           </p>
           <p className="paper-text">The following instructions should be followed to make a successful submission:</p>
         </section>
@@ -63,7 +63,7 @@ const PaperSubmission = () => {
             Paper Submission Method:
           </h3>
           <p>
-            The online paper submission system opens from <strong>November 2nd, 2026</strong>. Please read over the paper kit for formatting instructions. Papers should be submitted via Microsoft CMT Link
+            The online paper submission system opens from <strong>April 1st, 2026</strong>. Please read over the paper kit for formatting instructions. Papers should be submitted via Microsoft CMT Link
           </p>
           
           <div className="paper-instructions">
@@ -105,7 +105,7 @@ const PaperSubmission = () => {
             Learn how to avoid plagiarism. IEEE defines plagiarism as the use of another's ideas, processes, results, or words without explicitly acknowledging the original author and source. Plagiarism in any form is unacceptable and is considered a serious breach of professional conduct, with potentially severe ethical and legal consequences (IEEE Publication Services and Products Board Operations Manual, Section 8.2.1.B.7).
           </p>
           <p>
-            Follow proper citation practices noted above to avoid plagiarism. All papers are checked for plagiarism before review process and the <strong>plagiarism should not exceed 20%</strong>.
+            Follow proper citation practices noted above to avoid plagiarism. All papers are checked for plagiarism before review process and the <strong>plagiarism should not exceed 15%</strong>.
           </p>
         </section>
       </div>

@@ -68,12 +68,12 @@ const Navbar = () => {
   ];
 
   const callForPapersItems = [
-    { label: 'Call for Papers', href: '/call-for-papers', isRoute: true },
+    // { label: 'Call for Papers', href: '/call-for-papers', isRoute: true },
     { label: 'Scope of the Conference', href: '/scope', isRoute: true },
     { label: 'Important Dates', href: '/imp-dates', isRoute: true },
     { label: 'Publication', href: '/publication', isRoute: true },
+        { label: 'Paper Submission', href: '/paper-submission', isRoute: true },
     { label: 'Program Schedule', href: '/program-schedule', isRoute: true },
-    { label: 'Paper Submission', href: '/paper-submission', isRoute: true },
     { label: 'Place of Visit', href: '/places', isRoute: true },
     { label: 'Contact', href: '/contact', isRoute: true }
   ];

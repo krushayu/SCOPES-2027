@@ -143,6 +143,7 @@ const Home = () => {
   ];
 
   const infoRef     = useScrollAnim();
+  const confAboutRef = useScrollAnim();
   const speakersRef = useScrollAnim();
   const aboutRef    = useScrollAnim();
   const deptRef     = useScrollAnim();
@@ -288,6 +289,38 @@ const Home = () => {
         </div>
       </section>
 
+      {/* About the Conference Section */}
+      <section className="conf-about-section anim-fade-up" ref={confAboutRef}>
+        <div className="section-header">
+          <h2 className="section-title">About the Conference</h2>
+          <p className="section-subtitle">SCOPES 2027 — Bringing together researchers, engineers, and industry experts</p>
+        </div>
+        <div className="conf-about-body">
+          <p className="conf-about-intro">
+            The International Conference on Sustainability and Cultural Heritage in Digital Construction brings together researchers, engineers, and industry experts. It focuses on integrating green technologies, digital tools like BIM, AI, and IoT, and innovative materials to achieve eco-friendly, efficient, and resilient infrastructure.
+          </p>
+          {/* <div className="conf-venue-strip">
+            {['Venue 1','Venue 2','Venue 3','Venue 4','Venue 5'].map((v,i) => (
+              <span className="conf-venue-tag" key={i}>{v}</span>
+            ))}
+          </div> */}
+          <div className="conf-vm-grid">
+            <div className="conf-vm-card conf-vision">
+              <h3>Conference Vision</h3>
+              <p>To be a premier global platform that fosters innovation, collaboration, and knowledge exchange in sustainable and digital construction, driving the transformation of Civil Engineering towards a smarter, greener, and more resilient future.</p>
+            </div>
+            <div className="conf-vm-card conf-mission">
+              <h3>Conference Mission</h3>
+              <ul>
+                <li>To integrate sustainability, digital technologies, and intelligent systems across all disciplines of Civil Engineering.</li>
+                <li>To promote research, innovation, and industrial partnerships that advance the built environment through responsible and data-driven construction practices.</li>
+                <li>To empower researchers, practitioners, and students with emerging knowledge in AI/ML, BIM, IoT, and green engineering for addressing present and future infrastructure challenges.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Speakers Section */}
       <section className="speakers-section anim-fade-up" ref={speakersRef}>
         <div className="section-header">
@@ -413,7 +446,7 @@ const Home = () => {
           </div>
           <div className="scopes-text anim-slide-right">
             <p>
-              SCOPES-2027 is being organized by CUTM with technical co-sponsorship by IEEE Kolkata Section and Bhubaneswar Sub-Section. The aim of this conference is to bring together academicians and industry experts in the fields of Signal Processing, Communication System, Power System and Embedded Systems.
+              SCOPES-2027 is being organized by CUTM with technical co-sponsorship by IEEE Bhubaneswar Section and IEEE Computer society chapter (CH-11163). The aim of this conference is to bring together academicians and industry experts in the fields of Signal Processing, Communication System, Power System and Embedded Systems.
             </p>
             <p>
               The conference aims to provide a premier international forum for sharing knowledge and the latest research advancement. All submitted papers will be reviewed by experts and accepted papers will be submitted for inclusion into IEEE Xplore subject to meeting IEEE Xplore's scope and quality requirements.

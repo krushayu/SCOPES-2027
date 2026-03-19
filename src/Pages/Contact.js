@@ -14,35 +14,43 @@ import { MdEmail, MdLocationOn, MdPhone } from 'react-icons/md';
 const Contact = () => {
   const organizers = [
     {
-      role: 'Organizing Chair',
+      // role: 'Organizing Chair',
+      name: 'Dr. Prafulla Panda',
+      phone: '+91 9438269572',
+      email: 'prafullapanda@cutm.ac.in',
+      designation: 'Dean of SoET'
+    }  
+    ,
+    {
+      // role: 'Organizing Chair',
       name: 'Dr. Debendra Kumar Sahoo',
       phone: '+91 7008242454',
       email: 'debendra.sahoo@cutm.ac.in',
       designation: 'Professor, Dept of ECE'
     },
     {
-      role: 'Convener',
+      // role: 'Convener',
       name: 'Dr. Ashok Misra',
       phone: '+91 9937563329',
       email: 'ashok.misra@cutm.ac.in',
       designation: 'Professor, Dept of ECE'
     },
     {
-      role: 'Co-Convener',
+      // role: 'Co-Convener',
       name: 'Prof. Prabhat Kumar Patnaik',
       phone: '+91 7008701920',
       email: 'prabhat.patnaik@cutm.ac.in',
       designation: 'Associate Professor, Dept of ECE'
     },
     {
-      role: 'Co-Convener',
+      // role: 'Co-Convener',
       name: 'Prof. Satyanarayan Padhy',
       phone: '+91 8917440019',
       email: 'snpadhy@cutm.ac.in',
       designation: 'Associate Professor, Dept of ECE'
     },
     {
-      role: 'Co-Convener',
+      // role: 'Co-Convener',
       name: 'Prof. (Dr.) Sangram Keshari Swain',
       phone: '+91 9937093949',
       email: 'sangram@cutm.ac.in',
@@ -117,7 +125,7 @@ const Contact = () => {
                     <span className="detail-label">Phone</span>
                     <p>
                       <a href="tel:+917008242454">+91 7008242454</a> (Organizing Chair)<br />
-                      <a href="tel:+919937563329">+91 9937563329</a> (Convener)
+                      {/* <a href="tel:+919937563329">+91 9937563329</a> (Convener) */}
                     </p>
                   </div>
                 </div>
@@ -130,7 +138,7 @@ const Contact = () => {
                     <span className="detail-label">Email</span>
                     <p>
                       <a href="mailto:scopes2027@cutm.ac.in">scopes2027@cutm.ac.in</a> (Primary)<br />
-                      <a href="mailto:debendra.sahoo@cutm.ac.in">debendra.sahoo@cutm.ac.in</a> (Chair)
+                      <a href="mailto:debendra.sahoo@cutm.ac.in">debendra.sahoo@cutm.ac.in</a> (Organizing Chair)
                     </p>
                   </div>
                 </div>
@@ -183,10 +191,10 @@ const Contact = () => {
               <div className="committee-list">
                 {organizers.map((organizer, index) => (
                   <div className="committee-member" key={index}>
-                    <div className="member-header">
+                    {/* <div className="member-header">
                       <div className="member-role-badge">{organizer.role}</div>
                       <div className="member-dot"></div>
-                    </div>
+                    </div> */}
                     <h3 className="member-name">{organizer.name}</h3>
                     <p className="member-designation">{organizer.designation}</p>
                     <div className="member-contact">

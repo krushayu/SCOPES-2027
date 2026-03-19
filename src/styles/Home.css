@@ -974,6 +974,129 @@
   border-left: 3px solid #00b4d8;
 }
 
+/* About the Conference Section */
+.conf-about-section {
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+}
+
+.conf-about-body {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.conf-about-intro {
+  font-size: 17px;
+  line-height: 1.9;
+  color: #334155;
+  text-align: justify;
+  background: white;
+  padding: 30px 36px;
+  border-radius: 16px;
+  border-left: 5px solid #00b4d8;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  margin-bottom: 28px;
+}
+
+.conf-venue-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 32px;
+  justify-content: center;
+}
+
+.conf-venue-tag {
+  background: linear-gradient(135deg, #00b4d8, #4cc9f0);
+  color: white;
+  padding: 8px 22px;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(0,180,216,0.25);
+}
+
+.conf-vm-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+}
+
+.conf-vm-card {
+  background: white;
+  border-radius: 18px;
+  padding: 32px 36px;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.08);
+}
+
+.conf-vm-card h3 {
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 3px solid;
+}
+
+.conf-vision h3 {
+  color: #0a192f;
+  border-color: #00b4d8;
+}
+
+.conf-mission h3 {
+  color: #0a192f;
+  border-color: #ff6b6b;
+}
+
+.conf-vm-card p {
+  font-size: 15px;
+  line-height: 1.9;
+  color: #475569;
+  margin: 0;
+  text-align: justify;
+}
+
+.conf-vm-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.conf-vm-card ul li {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #475569;
+  padding-left: 20px;
+  position: relative;
+}
+
+.conf-vm-card ul li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: #ff6b6b;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 768px) {
+  .conf-about-section {
+    padding: 60px 15px;
+  }
+  .conf-about-intro {
+    padding: 22px 20px;
+    font-size: 15px;
+  }
+  .conf-vm-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .conf-vm-card {
+    padding: 24px 20px;
+  }
+}
+
 /* Speakers Section */
 .speakers-section {
   padding: 100px 20px;
