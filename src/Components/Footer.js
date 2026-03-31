@@ -176,9 +176,26 @@ const Footer = () => {
                 />
               </a>
             </div>
-            <p className="developed-by">
-              Design & Developed by <a href="https://krushayu.in" target="_blank" rel="noopener noreferrer" className="developer-link">krush@yu</a>
-            </p>
+           <p className="developed-by">
+  Design & Developed by{" "}
+  <a
+    href="https://www.linkedin.com/in/krushayu/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="developer-link"
+  >
+    krush@yu
+  </a>{" "}
+  | 🌐
+  <a
+    href="https://krushayu.in"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="developer-link"
+  >
+    krushayu.in
+  </a>
+</p>
           </div>
         </div>
       </footer>
