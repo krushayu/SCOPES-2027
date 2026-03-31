@@ -38,6 +38,8 @@
   transform: none;
 }
 
+.anim-visible.anim-slide-left,
+.anim-visible.anim-slide-right,
 .anim-visible .anim-slide-left,
 .anim-visible .anim-slide-right {
   opacity: 1;
@@ -623,7 +625,7 @@
 
 /* About University Section */
 .about-university-section {
-  padding: 100px 20px;
+  padding: 60px 20px;
   background: white;
 }
 
@@ -632,8 +634,8 @@
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: center;
+  gap: 40px;
+  align-items: start;
 }
 
 .about-image-slider {
@@ -641,6 +643,8 @@
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 20px;
 }
 
 .about-image-slider::before {
@@ -662,9 +666,10 @@
 
 .about-img {
   width: 100%;
-  height: 450px;
+  height: 380px;
   object-fit: cover;
   transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+  display: block;
 }
 
 .about-image-slider .about-img {
@@ -672,34 +677,42 @@
 }
 
 @keyframes zoomFade {
-  0% { 
-    opacity: 0;
-    transform: scale(1.15);
-  }
-  100% { 
-    opacity: 1;
-    transform: scale(1);
-  }
+  0% { opacity: 0; transform: scale(1.15); }
+  100% { opacity: 1; transform: scale(1); }
 }
 
 .about-text {
   background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
-  padding: 40px;
+  padding: 28px 32px;
   border-radius: 20px;
   border-left: 5px solid #00b4d8;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  max-height: 380px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #00b4d8 #e0f2fe;
+}
+
+.about-text::-webkit-scrollbar {
+  width: 6px;
+}
+
+.about-text::-webkit-scrollbar-track {
+  background: #e0f2fe;
+  border-radius: 3px;
+}
+
+.about-text::-webkit-scrollbar-thumb {
+  background: #00b4d8;
+  border-radius: 3px;
 }
 
 .about-text p {
   color: #334155;
-  font-size: 16px;
-  line-height: 1.9;
-  margin-bottom: 20px;
-  text-align: justify;
-}
-
-.about-text p:last-child {
+  font-size: 15px;
+  line-height: 1.85;
   margin-bottom: 0;
+  text-align: justify;
 }
 
 /* Department Section */

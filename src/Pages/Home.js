@@ -1,8 +1,13 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
-import '../styles/Home.css';
-import { FaCalendarAlt, FaPaperPlane, FaAward, FaMapMarkerAlt } from 'react-icons/fa';
-import { MdAppRegistration } from 'react-icons/md';
+import React, { useState, useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
+import "../styles/Home.css";
+import {
+  FaCalendarAlt,
+  FaPaperPlane,
+  FaAward,
+  FaMapMarkerAlt,
+} from "react-icons/fa";
+import { MdAppRegistration } from "react-icons/md";
 
 const useScrollAnim = (threshold = 0.15) => {
   const ref = useRef(null);
@@ -12,10 +17,10 @@ const useScrollAnim = (threshold = 0.15) => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          el.classList.add('anim-visible');
+          el.classList.add("anim-visible");
         }
       },
-      { threshold }
+      { threshold },
     );
     observer.observe(el);
     return () => observer.disconnect();
@@ -25,7 +30,12 @@ const useScrollAnim = (threshold = 0.15) => {
 
 const Home = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [countdown, setCountdown] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+  const [countdown, setCountdown] = useState({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
+  });
   const [speakers, setSpeakers] = useState([]);
   const [selectedSpeaker, setSelectedSpeaker] = useState(null);
   const [aboutImgIndex, setAboutImgIndex] = useState(0);
@@ -33,29 +43,28 @@ const Home = () => {
   const [scopesImgIndex, setScopesImgIndex] = useState(0);
 
   const aboutImages = [
-    { src: '/slide1.png', title: 'CUTM Campus' },
-    { src: '/slide2.png', title: 'University Area' },
-    { src: '/slide3.png', title: 'Pramod Udhyan' },
+    { src: "/slide1.png", title: "CUTM Campus" },
+    { src: "/slide2.png", title: "University Area" },
+    { src: "/slide3.png", title: "Pramod Udhyan" },
   ];
   const deptImages = [
-    { src: '/ece1.png', title: 'ECE' },
-    { src: '/ece2.png', title: 'Department of ECE' },
-    { src: '/slide2.png', title: 'University Area' },
+    { src: "/ece1.png", title: "ECE" },
+    { src: "/ece2.png", title: "Department of ECE" },
+    { src: "/slide2.png", title: "University Area" },
   ];
   const scopesImages = [
-    { src: '/scope1.png', title: 'Conference' },
-    { src: '/scope2.png', title: 'Scopes 2016' },
-    { src: '/scope3.jpeg', title: 'Scopes 2024' },
+    { src: "/scope1.png", title: "Conference" },
+    { src: "/scope2.png", title: "Scopes 2016" },
+    { src: "/scope3.jpeg", title: "Scopes 2024" },
   ];
-  
- 
+
   useEffect(() => {
-    fetch('/data/speakers.json')
-      .then(res => res.json())
-      .then(data => setSpeakers(data))
-      .catch(err => console.error('Error loading speakers:', err));
+    fetch("/data/speakers.json")
+      .then((res) => res.json())
+      .then((data) => setSpeakers(data))
+      .catch((err) => console.error("Error loading speakers:", err));
   }, []);
-  
+
   // Auto-change images for About, Department, and SCOPES sections
   useEffect(() => {
     const aboutInterval = setInterval(() => {
@@ -77,46 +86,48 @@ const Home = () => {
 
   // Countdown Timer
   useEffect(() => {
-    const targetDate = new Date('2027-02-04T00:00:00').getTime();
-    
+    const targetDate = new Date("2027-02-04T00:00:00").getTime();
+
     const updateCountdown = () => {
       const now = new Date().getTime();
       const distance = targetDate - now;
-      
+
       if (distance > 0) {
         setCountdown({
           days: Math.floor(distance / (1000 * 60 * 60 * 24)),
-          hours: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+          hours: Math.floor(
+            (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
+          ),
           minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
-          seconds: Math.floor((distance % (1000 * 60)) / 1000)
+          seconds: Math.floor((distance % (1000 * 60)) / 1000),
         });
       }
     };
-    
+
     updateCountdown();
     const interval = setInterval(updateCountdown, 1000);
     return () => clearInterval(interval);
   }, []);
-  
+
   const slides = [
     {
-      image: '/slide1.png',
-      title: '3rd International Conference',
-      subtitle: 'Signal Processing, Communication, Power & Embedded Systems',
-      tag: 'IEEE Technical Co-Sponsored'
+      image: "/slide1.png",
+      title: "3rd International Conference",
+      subtitle: "Signal Processing, Communication, Power & Embedded Systems",
+      tag: "IEEE Technical Co-Sponsored",
     },
     {
-      image: '/slide2.png',
-      title: '04-06 February 2027',
-      subtitle: 'Centurion University, Parlakhemundi',
-      tag: 'Hybrid Mode'
+      image: "/slide2.png",
+      title: "04-06 February 2027",
+      subtitle: "Centurion University, Parlakhemundi",
+      tag: "Hybrid Mode",
     },
     {
-      image: '/slide3.png',
-      title: 'Call for Papers',
-      subtitle: 'Submit Your Research Work',
-      tag: 'IEEE Conference'
-    }
+      image: "/slide3.png",
+      title: "Call for Papers",
+      subtitle: "Submit Your Research Work",
+      tag: "IEEE Conference",
+    },
   ];
 
   useEffect(() => {
@@ -135,29 +146,75 @@ const Home = () => {
   };
 
   const conferenceInfo = [
-    { icon: <FaCalendarAlt />, label: 'Dates', value: '04-06 Feb 2027', color: '#FF6B6B', link: '/imp-dates' },
-    { icon: <FaMapMarkerAlt />, label: 'Venue', value: 'Centurion University, Paralakhemundi', color: '#4ECDC4', link: 'https://maps.app.goo.gl/hVvbqeLRXWvEa9gT9' },
-    { icon: <FaPaperPlane />, label: 'Submissions', value: 'Open Now', color: '#45B7D1', link: '/paper-submission' },
-    { icon: <FaAward />, label: 'Publication', value: 'IEEE Xplore', color: '#96CEB4', link: '/publication' },
-    { icon: <MdAppRegistration />, label: 'Format', value: 'Hybrid', color: '#DDA0DD', link: '/program-schedule' }
+    {
+      icon: <FaCalendarAlt />,
+      label: "Dates",
+      value: "04-06 Feb 2027",
+      color: "#FF6B6B",
+      link: "/imp-dates",
+    },
+    {
+      icon: <FaMapMarkerAlt />,
+      label: "Venue",
+      value: "Centurion University, Paralakhemundi",
+      color: "#4ECDC4",
+      link: "https://maps.app.goo.gl/hVvbqeLRXWvEa9gT9",
+    },
+    {
+      icon: <FaPaperPlane />,
+      label: "Submissions",
+      value: "Open Now",
+      color: "#45B7D1",
+      link: "/paper-submission",
+    },
+    {
+      icon: <FaAward />,
+      label: "Publication",
+      value: "IEEE Xplore",
+      color: "#96CEB4",
+      link: "/publication",
+    },
+    {
+      icon: <MdAppRegistration />,
+      label: "Format",
+      value: "Hybrid",
+      color: "#DDA0DD",
+      link: "/program-schedule",
+    },
   ];
 
-  const infoRef     = useScrollAnim();
+  const infoRef = useScrollAnim();
   const confAboutRef = useScrollAnim();
   const speakersRef = useScrollAnim();
-  const aboutRef    = useScrollAnim();
-  const deptRef     = useScrollAnim();
-  const scopesRef   = useScrollAnim();
-  const copyrightRef= useScrollAnim();
-  const datesRef    = useScrollAnim();
+  const aboutRef = useScrollAnim();
+  const deptRef = useScrollAnim();
+  const scopesRef = useScrollAnim();
+  const copyrightRef = useScrollAnim();
+  const datesRef = useScrollAnim();
 
   const importantDates = [
     // { title: 'Abstract Submission date', date: '01 March 2026', status: 'active' },
-    { title: 'Paper Submission open', date: '01 April 2026', status: 'active' },
-    {title: 'Paper Submission close', date: '30 August 2026', status: 'upcoming' },
-    { title: 'Notification of Acceptance', date: '30 October 2026', status: 'upcoming' },
-    { title: 'Last date of registration & camera ready submission', date: '30 November 2026', status: 'upcoming' },
-    { title: 'Conference Dates', date: '04-06 February 2027', status: 'upcoming' },
+    { title: "Paper Submission open", date: "01 April 2026", status: "active" },
+    {
+      title: "Paper Submission close",
+      date: "30 August 2026",
+      status: "upcoming",
+    },
+    {
+      title: "Notification of Acceptance",
+      date: "30 October 2026",
+      status: "upcoming",
+    },
+    {
+      title: "Last date of registration & camera ready submission",
+      date: "30 November 2026",
+      status: "upcoming",
+    },
+    {
+      title: "Conference Dates",
+      date: "04-06 February 2027",
+      status: "upcoming",
+    },
   ];
 
   return (
@@ -169,7 +226,9 @@ const Home = () => {
           <a href="/program-schedule" className="program-schedule-link">
             Program Schedule <sup className="new-badge">(New)</sup> - Click Here
           </a>
-          &nbsp;&nbsp;||&nbsp;&nbsp; Accepted papers will be submitted for inclusion into IEEE Xplore subject to meeting IEEE Xplore's scope and quality requirements
+          &nbsp;&nbsp;||&nbsp;&nbsp; Accepted papers will be submitted for
+          inclusion into IEEE Xplore subject to meeting IEEE Xplore's scope and
+          quality requirements
         </div>
       </div>
 
@@ -198,12 +257,14 @@ const Home = () => {
               </div>
             </div>
           </div>
-          
+
           {slides.map((slide, index) => (
             <div
               key={index}
-              className={`slider-slide ${index === currentSlide ? 'active' : ''}`}
-              style={{ backgroundImage: `linear-gradient(rgba(10, 25, 47, 0.65), rgba(10, 25, 47, 0.75)), url(${slide.image})` }}
+              className={`slider-slide ${index === currentSlide ? "active" : ""}`}
+              style={{
+                backgroundImage: `linear-gradient(rgba(10, 25, 47, 0.65), rgba(10, 25, 47, 0.75)), url(${slide.image})`,
+              }}
             >
               <div className="slide-content">
                 <div className="slide-badge">{slide.tag}</div>
@@ -217,9 +278,9 @@ const Home = () => {
                     <FaFileAlt className="btn-icon" />
                     Register Now
                   </button> */}
-                  <button 
+                  <button
                     className="secondary-btn"
-                    onClick={() => window.open('/paper-submission', '_blank')}
+                    onClick={() => window.open("/paper-submission", "_blank")}
                   >
                     <FaPaperPlane className="btn-icon" />
                     Submit Paper
@@ -228,7 +289,7 @@ const Home = () => {
               </div>
             </div>
           ))}
-          
+
           {/* Slider Controls */}
           <button className="slider-btn prev" onClick={prevSlide}>
             ‹
@@ -236,7 +297,7 @@ const Home = () => {
           <button className="slider-btn next" onClick={nextSlide}>
             ›
           </button>
-          
+
           {/* Slider Dots */}
           {/* <div className="slider-dots">
             {slides.map((_, index) => (
@@ -253,13 +314,23 @@ const Home = () => {
         <div className="conference-quick-info anim-fade-up" ref={infoRef}>
           <div className="info-grid">
             {conferenceInfo.map((item, index) => {
-              const isExternal = item.link.startsWith('http');
-              const isHash = item.link.startsWith('#');
-              
+              const isExternal = item.link.startsWith("http");
+              const isHash = item.link.startsWith("#");
+
               if (isExternal) {
                 return (
-                  <a href={item.link} target="_blank" rel="noopener noreferrer" className="info-card" key={index} style={{ textDecoration: 'none' }}>
-                    <div className="info-icon" style={{ backgroundColor: item.color }}>
+                  <a
+                    href={item.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="info-card"
+                    key={index}
+                    style={{ textDecoration: "none" }}
+                  >
+                    <div
+                      className="info-icon"
+                      style={{ backgroundColor: item.color }}
+                    >
                       {item.icon}
                     </div>
                     <div className="info-content">
@@ -269,13 +340,23 @@ const Home = () => {
                   </a>
                 );
               }
-              
-              const CardWrapper = isHash ? 'a' : Link;
-              const linkProps = isHash ? { href: item.link } : { to: item.link };
-              
+
+              const CardWrapper = isHash ? "a" : Link;
+              const linkProps = isHash
+                ? { href: item.link }
+                : { to: item.link };
+
               return (
-                <CardWrapper {...linkProps} className="info-card" key={index} style={{ textDecoration: 'none' }}>
-                  <div className="info-icon" style={{ backgroundColor: item.color }}>
+                <CardWrapper
+                  {...linkProps}
+                  className="info-card"
+                  key={index}
+                  style={{ textDecoration: "none" }}
+                >
+                  <div
+                    className="info-icon"
+                    style={{ backgroundColor: item.color }}
+                  >
                     {item.icon}
                   </div>
                   <div className="info-content">
@@ -293,11 +374,18 @@ const Home = () => {
       <section className="conf-about-section anim-fade-up" ref={confAboutRef}>
         <div className="section-header">
           <h2 className="section-title">About the Conference</h2>
-          <p className="section-subtitle">SCOPES 2027 — Bringing together researchers, engineers, and industry experts</p>
+          <p className="section-subtitle">
+            SCOPES 2027 — Bringing together researchers, engineers, and industry
+            experts
+          </p>
         </div>
         <div className="conf-about-body">
           <p className="conf-about-intro">
-            The International Conference on Sustainability and Cultural Heritage in Digital Construction brings together researchers, engineers, and industry experts. It focuses on integrating green technologies, digital tools like BIM, AI, and IoT, and innovative materials to achieve eco-friendly, efficient, and resilient infrastructure.
+            The International Conference on Sustainability and Cultural Heritage
+            in Digital Construction brings together researchers, engineers, and
+            industry experts. It focuses on integrating green technologies,
+            digital tools like BIM, AI, and IoT, and innovative materials to
+            achieve eco-friendly, efficient, and resilient infrastructure.
           </p>
           {/* <div className="conf-venue-strip">
             {['Venue 1','Venue 2','Venue 3','Venue 4','Venue 5'].map((v,i) => (
@@ -307,14 +395,43 @@ const Home = () => {
           <div className="conf-vm-grid">
             <div className="conf-vm-card conf-vision">
               <h3>Conference Vision</h3>
-              <p>To be a premier global platform that fosters innovation, collaboration, and knowledge exchange in sustainable and digital construction, driving the transformation of Civil Engineering towards a smarter, greener, and more resilient future.</p>
+              <p>
+                The conference aims to provide a global platform for
+                researchers, academicians, industry experts, and students to
+                share cutting-edge ideas and advancements in signal processing,
+                communication, power systems, and embedded technologies. It
+                seeks to promote interdisciplinary collaboration and bridge the
+                gap between academia and industry by highlighting emerging
+                technologies such as artificial intelligence, machine learning,
+                quantum computing, and advanced chip design. Through keynote
+                sessions and technical discussions, the conference envisions
+                fostering innovation, encouraging knowledge exchange, and
+                addressing real-world challenges. It ultimately aspires to
+                support sustainable development and build a smart, connected,
+                and technology-driven future.
+              </p>
             </div>
             <div className="conf-vm-card conf-mission">
               <h3>Conference Mission</h3>
               <ul>
-                <li>To integrate sustainability, digital technologies, and intelligent systems across all disciplines of Civil Engineering.</li>
-                <li>To promote research, innovation, and industrial partnerships that advance the built environment through responsible and data-driven construction practices.</li>
-                <li>To empower researchers, practitioners, and students with emerging knowledge in AI/ML, BIM, IoT, and green engineering for addressing present and future infrastructure challenges.</li>
+                <li>
+                  The mission of the conference is to integrate research
+                  excellence with skill enhancement by providing a platform for
+                  sharing cutting-edge innovations and practical knowledge. It
+                  seeks to equip students, researchers, and professionals with
+                  industry-aligned skills through technical sessions, workshops,
+                  and expert interactions.
+                </li>
+                <li>
+                  The conference is committed to strengthening academia-industry
+                  collaboration, encouraging experiential learning, and
+                  promoting the development of job-ready and entrepreneurial
+                  talent. It also aims to support young innovators in
+                  transforming ideas into real-world solutions, thereby
+                  contributing to technological advancement and socio-economic
+                  growth.
+                </li>
+                {/* <li>To empower researchers, practitioners, and students with emerging knowledge in AI/ML, BIM, IoT, and green engineering for addressing present and future infrastructure challenges.</li> */}
               </ul>
             </div>
           </div>
@@ -325,18 +442,24 @@ const Home = () => {
       <section className="speakers-section anim-fade-up" ref={speakersRef}>
         <div className="section-header">
           <h2 className="section-title">Keynote Speakers</h2>
-          <p className="section-subtitle">Learn from world-renowned experts and industry leaders</p>
+          <p className="section-subtitle">
+            Learn from world-renowned experts and industry leaders
+          </p>
         </div>
-        
+
         <div className="speakers-grid">
           {speakers.map((speaker) => (
             <div className="speaker-card" key={speaker.id}>
               <div className="speaker-image-wrapper">
-                <img src={speaker.image} alt={speaker.name} className="speaker-image" />
+                <img
+                  src={speaker.image}
+                  alt={speaker.name}
+                  className="speaker-image"
+                />
               </div>
               <h3 className="speaker-name">{speaker.name}</h3>
               <p className="speaker-profession">{speaker.profession}</p>
-              <button 
+              <button
                 className="speaker-see-more"
                 onClick={() => setSelectedSpeaker(speaker)}
               >
@@ -349,32 +472,51 @@ const Home = () => {
 
       {/* Speaker Modal */}
       {selectedSpeaker && (
-        <div className="speaker-modal-overlay" onClick={() => setSelectedSpeaker(null)}>
+        <div
+          className="speaker-modal-overlay"
+          onClick={() => setSelectedSpeaker(null)}
+        >
           <div className="speaker-modal" onClick={(e) => e.stopPropagation()}>
-            <button className="modal-close" onClick={() => setSelectedSpeaker(null)}>×</button>
+            <button
+              className="modal-close"
+              onClick={() => setSelectedSpeaker(null)}
+            >
+              ×
+            </button>
             <div className="modal-content">
               <div className="modal-left">
-                <img src={selectedSpeaker.image} alt={selectedSpeaker.name} className="modal-speaker-image" />
+                <img
+                  src={selectedSpeaker.image}
+                  alt={selectedSpeaker.name}
+                  className="modal-speaker-image"
+                />
               </div>
               <div className="modal-right">
                 <h2 className="modal-speaker-name">{selectedSpeaker.name}</h2>
-                <p className="modal-speaker-profession">{selectedSpeaker.profession}</p>
+                <p className="modal-speaker-profession">
+                  {selectedSpeaker.profession}
+                </p>
                 <div className="modal-section">
                   <h3>About</h3>
-                  <p>{selectedSpeaker.about.length > 300 ? (
-                    <>
-                      {selectedSpeaker.about.substring(0, 300)}...
-                      <button 
-                        className="read-more-btn"
-                        onClick={(e) => {
-                          e.target.previousSibling.textContent = selectedSpeaker.about;
-                          e.target.style.display = 'none';
-                        }}
-                      >
-                        Read More
-                      </button>
-                    </>
-                  ) : selectedSpeaker.about}</p>
+                  <p>
+                    {selectedSpeaker.about.length > 300 ? (
+                      <>
+                        {selectedSpeaker.about.substring(0, 300)}...
+                        <button
+                          className="read-more-btn"
+                          onClick={(e) => {
+                            e.target.previousSibling.textContent =
+                              selectedSpeaker.about;
+                            e.target.style.display = "none";
+                          }}
+                        >
+                          Read More
+                        </button>
+                      </>
+                    ) : (
+                      selectedSpeaker.about
+                    )}
+                  </p>
                 </div>
                 <div className="modal-section">
                   <h3>Talk Title</h3>
@@ -393,21 +535,58 @@ const Home = () => {
       {/* About University Section */}
       <section className="about-university-section anim-fade-up" ref={aboutRef}>
         <div className="section-header">
-          <h2 className="section-title">Centurion University of Technology and Management</h2>
+          <h2 className="section-title">
+            Centurion University of Technology and Management
+          </h2>
           <p className="section-subtitle">Accredited with 'A+' Grade by NAAC</p>
         </div>
         <div className="about-content">
           <div className="about-image-slider anim-slide-left">
-            <img key={aboutImgIndex} src={aboutImages[aboutImgIndex].src} alt="CUTM Campus" className="about-img" />
-            <div className="scopes-img-title">{aboutImages[aboutImgIndex].title}</div>
+            <img
+              key={aboutImgIndex}
+              src={aboutImages[aboutImgIndex].src}
+              alt="CUTM Campus"
+              className="about-img"
+            />
+            <div className="scopes-img-title">
+              {aboutImages[aboutImgIndex].title}
+            </div>
           </div>
           <div className="about-text anim-slide-right">
             <p>
-              Centurion University of Technology and Management (CUTM) is the first private University in Odisha established through the CUTM Act 4 of the Odisha State Legislative Assembly in 2010. It has been recognized as Grade-A+ University by National Assessment and Accreditation Council (NAAC), Ministry of HRD and 12 B status by the University Grants Commission (UGC).
+              Centurion University of Technology and Management is the first
+              private University in Odisha which was established through the
+              CUTM Act 4 of the Odisha State Legislative Assembly in 2010. In
+              due course, it has got recognition as Grade-A+ University by NAAC
+              and 12 B status by the UGC. Centurion University's School of
+              Vocational Education and Training has been recognized as a Centre
+              of Excellence by the Ministry of Skill Development and
+              Entrepreneurship, Govt. of India. This University is duly
+              recognized as a pioneer in 'Skill Integrated Higher Education".
+              Its unique model lays specific emphasis on creating sustainable
+              livelihoods on a national scale in challenging geographies through
+              education that results in employability and sparks
+              entrepreneurship. This model has been recognized by multiple
+              Governments (Central and State), Internation Organizations such as
+              UNESCO and the World Bank as well as Policy Think-tanks such as
+              the Niti Ayog. It is the only University in India to be recognized
+              as such. Centurion has focused sed on 'hands- on', 'experience
+              based', 'practice oriented' learning that creates transformative
+              impact through community centric innovation and action research.
+              While promoting Nano, Mini and Micro Enterprises, the University
+              works toward learning experiences that are 'quantifiable',
+              'sustainable', 'scalable' and 'replicable'. Centurion University
+              has both built and participated in building eco-systems that
+              include and integrate the community around it's campuses and
+              beyond, industry, entrepreneurs and other education institutions.
+              Its education and training delivery approach is: Skill Integrated
+              and Employability Teaching/Learning Process Linked
+              Focuses/Leverages Industry and Community Partnerships
+              Creates/co-creates Enterprises{" "}
             </p>
-            <p>
+            {/* <p>
               This University is duly recognized as a pioneer in 'Skill Integrated Higher Education'. Its unique model lays specific emphasis on creating sustainable livelihoods on a national scale in challenging geographies through education that results in employability and sparks entrepreneurship.
-            </p>
+            </p> */}
           </div>
         </div>
       </section>
@@ -415,41 +594,73 @@ const Home = () => {
       {/* Department Section */}
       <section className="department-section anim-fade-up" ref={deptRef}>
         <div className="section-header">
-          <h2 className="section-title">Department of Electronics and Communication Engineering</h2>
+          <h2 className="section-title">
+            Department of Electronics and Communication Engineering
+          </h2>
         </div>
         <div className="department-content">
           <div className="department-text anim-slide-left">
             <p>
-              It aims to produce qualified and dynamic engineers in the fast-changing area of Smart Devices, Mobile emerging technologies, automation, Industrial IoT, and VLSI. The Department has sophisticated and modern laboratory equipment and software/tool (HFSS, CADENCE, MATLAB, MULTISIM, KEIL uVision, LABVIEW) for research and development work.
+              Department of Electronics and Communication Engineering aims to produce qualified and dynamic engineers in the fast-changing area of Smart Devices, Mobile Emerging Technologies, Automation, Industrial IoT, and VLSI. The Department has sophisticated and modern laboratory equipment and software/tool (HFSS, CADENCE, MATLAB, MULTISIM, KEIL uVision, LABVIEW) for research and development work in the areas of Antenna and Microwave Engineering, Signal Processing and Communication, VLSI and Embedded System. The department undertakes real-time application projects in Smart Irrigation, Industrial IoT, Soil Moisture Prototype Development, Insulin Pump Prototype Development and Chip Design
             </p>
-            <p>
-              The department undertakes real-time application projects in Smart Irrigation, Industrial IoT, Soil Moisture Prototype Development, Insulin Pump Prototype Development and Chip Design.
-            </p>
+            {/* <p>
+              The department undertakes real-time application projects in Smart
+              Irrigation, Industrial IoT, Soil Moisture Prototype Development,
+              Insulin Pump Prototype Development and Chip Design.
+            </p> */}
           </div>
           <div className="department-image anim-slide-right">
-            <img key={deptImgIndex} src={deptImages[deptImgIndex].src} alt="ECE Department" className="dept-img" />
-            <div className="scopes-img-title">{deptImages[deptImgIndex].title}</div>
+            <img
+              key={deptImgIndex}
+              src={deptImages[deptImgIndex].src}
+              alt="ECE Department"
+              className="dept-img"
+            />
+            <div className="scopes-img-title">
+              {deptImages[deptImgIndex].title}
+            </div>
           </div>
         </div>
       </section>
 
       {/* SCOPES Conference Section */}
-      <section className="scopes-conference-section anim-fade-up" ref={scopesRef}>
+      <section
+        className="scopes-conference-section anim-fade-up"
+        ref={scopesRef}
+      >
         <div className="section-header">
           <h2 className="section-title">SCOPES 2027</h2>
-          <p className="section-subtitle">Signal Processing, Communication, Power & Embedded Systems</p>
+          <p className="section-subtitle">
+            Signal Processing, Communication, Power & Embedded Systems
+          </p>
         </div>
         <div className="scopes-content">
           <div className="scopes-image-slider anim-slide-left">
-            <img key={scopesImgIndex} src={scopesImages[scopesImgIndex].src} alt="SCOPES Conference" className="scopes-img" />
-            <div className="scopes-img-title">{scopesImages[scopesImgIndex].title}</div>
+            <img
+              key={scopesImgIndex}
+              src={scopesImages[scopesImgIndex].src}
+              alt="SCOPES Conference"
+              className="scopes-img"
+            />
+            <div className="scopes-img-title">
+              {scopesImages[scopesImgIndex].title}
+            </div>
           </div>
           <div className="scopes-text anim-slide-right">
             <p>
-              SCOPES-2027 is being organized by CUTM with technical co-sponsorship by IEEE Bhubaneswar Section and IEEE Computer society chapter (CH-11163). The aim of this conference is to bring together academicians and industry experts in the fields of Signal Processing, Communication System, Power System and Embedded Systems.
+              SCOPES-2027 is being organized by CUTM with technical
+              co-sponsorship by IEEE Bhubaneswar Section and IEEE Computer
+              society chapter (CH-11163). The aim of this conference is to bring
+              together academicians and industry experts in the fields of Signal
+              Processing, Communication System, Power System and Embedded
+              Systems.
             </p>
             <p>
-              The conference aims to provide a premier international forum for sharing knowledge and the latest research advancement. All submitted papers will be reviewed by experts and accepted papers will be submitted for inclusion into IEEE Xplore subject to meeting IEEE Xplore's scope and quality requirements.
+              The conference aims to provide a premier international forum for
+              sharing knowledge and the latest research advancement. All
+              submitted papers will be reviewed by experts and accepted papers
+              will be submitted for inclusion into IEEE Xplore subject to
+              meeting IEEE Xplore's scope and quality requirements.
             </p>
           </div>
         </div>
@@ -459,27 +670,41 @@ const Home = () => {
       <section className="gallery-strip-section">
         <div className="section-header">
           <h2 className="section-title">SCOPES 2024 Gallery</h2>
-          <p className="section-subtitle">Glimpses from the previous conference</p>
+          <p className="section-subtitle">
+            Glimpses from the previous conference
+          </p>
         </div>
         <div className="gallery-strip-wrapper">
           <div className="gallery-strip-track">
             {[...Array(2)].flatMap((_, si) =>
               [
-                { n: 1, ext: 'png' }, { n: 2, ext: 'png' },
-                { n: 3, ext: 'jpeg' }, { n: 4, ext: 'jpeg' },
-                { n: 5, ext: 'jpeg' }, { n: 6, ext: 'jpeg' },
-                { n: 7, ext: 'jpeg' }, { n: 8, ext: 'jpeg' },
-                { n: 9, ext: 'jpeg' },
+                { n: 1, ext: "png" },
+                { n: 2, ext: "png" },
+                { n: 3, ext: "jpeg" },
+                { n: 4, ext: "jpeg" },
+                { n: 5, ext: "jpeg" },
+                { n: 6, ext: "jpeg" },
+                { n: 7, ext: "jpeg" },
+                { n: 8, ext: "jpeg" },
+                { n: 9, ext: "jpeg" },
               ].map((img, i) => (
-                <img key={`${si}-${i}`} src={`/scope${img.n}.${img.ext}`} alt={`SCOPES 2024 - ${img.n}`} className="gallery-strip-img" />
-              ))
+                <img
+                  key={`${si}-${i}`}
+                  src={`/scope${img.n}.${img.ext}`}
+                  alt={`SCOPES 2024 - ${img.n}`}
+                  className="gallery-strip-img"
+                />
+              )),
             )}
           </div>
         </div>
       </section>
 
       {/* IEEE Copyright Section */}
-      <section className="ieee-copyright-section anim-zoom-in" ref={copyrightRef}>
+      <section
+        className="ieee-copyright-section anim-zoom-in"
+        ref={copyrightRef}
+      >
         <h3 className="copyright-heading">IEEE Copyright Details</h3>
         <div className="copyright-list">
           <p>U.S. Government work not protected by U.S. copyright</p>
@@ -496,7 +721,7 @@ const Home = () => {
           <h2 className="section-title">Important Information</h2>
           <p className="section-subtitle">Key dates and registration details</p>
         </div>
-        
+
         <div className="dates-fees-grid">
           {/* Important Dates - Left Side */}
           <div className="dates-column anim-slide-left">
@@ -542,7 +767,7 @@ const Home = () => {
                   </tr>
                   <tr>
                     <td>UG/PG Students &amp; Research Scholars</td>
-                    <td>₹6,500</td>
+                    <td>₹7,000</td>
                     <td>₹7,500</td>
                     <td>$180</td>
                   </tr>
@@ -554,12 +779,14 @@ const Home = () => {
                   </tr>
                 </tbody>
               </table>
-              <p className="fees-note">* Fee includes Conference Kit, Banquet, Lunch, Tea, and GST as applicable.</p>
+              <p className="fees-note">
+                * Fee includes Conference Kit, Banquet, Lunch, Tea, and GST as
+                applicable.
+              </p>
             </div>
           </div>
         </div>
       </section>
-
     </div>
   );
 };
