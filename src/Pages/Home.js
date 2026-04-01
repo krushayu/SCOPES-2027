@@ -456,19 +456,7 @@ const Home = () => {
               SCOPES aligns with IEEE’s mission of advancing technology for
               humanity by promoting innovation, interdisciplinary research, and
               knowledge sharing at a global level.
-            </li>
-                        {/* <li>
- The IEEE International Conference on Signal Processing, Communication, Power and Embedded Systems (SCOPES) is a premier global forum dedicated to advancing research and innovation in key engineering domains. The conference brings together researchers, academicians, industry professionals, and students to present cutting-edge work, exchange ideas, and foster interdisciplinary collaboration.
-            </li>
-                        <li>
-       Aligned with the theme “Convergence of Intelligent Communication, Smart Power, Quantum Technologies, and Advanced Embedded Systems for Sustainable and Future-Ready Solutions,” SCOPES focuses on both theoretical advancements and practical applications. It highlights emerging areas such as artificial intelligence, next-generation communication (5G/6G), smart and sustainable energy systems, quantum technologies, advanced chip design, and intelligent embedded systems.
-            </li>
-                        <li>
-   The conference aims to bridge the gap between academia and industry by addressing real-world challenges in smart manufacturing, healthcare technologies, energy sustainability, and intelligent infrastructure. Through keynote talks, technical sessions, and tutorials, participants gain insights into recent developments and future trends.
-            </li>
-                        <li>
-            SCOPES aligns with IEEE’s mission of advancing technology for the benefit of humanity by promoting innovation, collaboration, and knowledge dissemination at a global level.
-            </li> */}
+            </li>       
           </ul>
           {/* <p className="conf-about-intro">
         SCOPES focuses on both fundamental and applied aspects of signal processing, communication systems, power engineering, quantum technology, and embedded systems. It highlights emerging trends such as artificial intelligence, next-generation communication (5G/6G), smart energy systems, advanced chip design, and intelligent embedded solutions.          </p>
