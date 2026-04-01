@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+﻿import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import "../styles/Home.css";
 import {
@@ -380,13 +380,6 @@ const Home = () => {
           </p>
         </div>
         <div className="conf-about-body">
-          <p className="conf-about-intro">
-            The International Conference on Sustainability and Cultural Heritage
-            in Digital Construction brings together researchers, engineers, and
-            industry experts. It focuses on integrating green technologies,
-            digital tools like BIM, AI, and IoT, and innovative materials to
-            achieve eco-friendly, efficient, and resilient infrastructure.
-          </p>
           {/* <div className="conf-venue-strip">
             {['Venue 1','Venue 2','Venue 3','Venue 4','Venue 5'].map((v,i) => (
               <span className="conf-venue-tag" key={i}>{v}</span>
@@ -396,45 +389,96 @@ const Home = () => {
             <div className="conf-vm-card conf-vision">
               <h3>Conference Vision</h3>
               <p>
-                The conference aims to provide a global platform for
-                researchers, academicians, industry experts, and students to
-                share cutting-edge ideas and advancements in signal processing,
-                communication, power systems, and embedded technologies. It
-                seeks to promote interdisciplinary collaboration and bridge the
-                gap between academia and industry by highlighting emerging
-                technologies such as artificial intelligence, machine learning,
-                quantum computing, and advanced chip design. Through keynote
-                sessions and technical discussions, the conference envisions
-                fostering innovation, encouraging knowledge exchange, and
-                addressing real-world challenges. It ultimately aspires to
-                support sustainable development and build a smart, connected,
-                and technology-driven future.
+                To become a leading international platform that fosters
+                innovation, interdisciplinary research, and collaboration in
+                emerging technologies, driving the development of intelligent,
+                sustainable, and future-ready engineering solutions aligned with
+                global and industrial needs.
               </p>
             </div>
             <div className="conf-vm-card conf-mission">
               <h3>Conference Mission</h3>
               <ul>
                 <li>
-                  The mission of the conference is to integrate research
-                  excellence with skill enhancement by providing a platform for
-                  sharing cutting-edge innovations and practical knowledge. It
-                  seeks to equip students, researchers, and professionals with
-                  industry-aligned skills through technical sessions, workshops,
-                  and expert interactions.
+                  To provide a global forum for researchers, academicians, and
+                  industry professionals to present and exchange cutting-edge
+                  research.
                 </li>
                 <li>
-                  The conference is committed to strengthening academia-industry
-                  collaboration, encouraging experiential learning, and
-                  promoting the development of job-ready and entrepreneurial
-                  talent. It also aims to support young innovators in
-                  transforming ideas into real-world solutions, thereby
-                  contributing to technological advancement and socio-economic
-                  growth.
+                  To promote integration of signal processing, communication,
+                  power, quantum technologies, and embedded systems.
+                </li>
+                <li>
+                  To address real-world industrial challenges through innovative
+                  and scalable solutions.
+                </li>
+                <li>
+                  To encourage collaboration between academia and industry for
+                  technology transfer and innovation.
+                </li>
+                <li>
+                  To support the development of sustainable, intelligent, and
+                  human-centric technologies aligned with IEEE’s mission of
+                  advancing technology for humanity.
                 </li>
                 {/* <li>To empower researchers, practitioners, and students with emerging knowledge in AI/ML, BIM, IoT, and green engineering for addressing present and future infrastructure challenges.</li> */}
               </ul>
             </div>
-          </div>
+          </div>{" "}
+          <br></br>
+          <ul className="conf-about-intro">
+            <li>
+              The IEEE International Conference on Signal Processing,
+              Communication, Power and Embedded Systems (SCOPES) is a premier
+              forum dedicated to advancing research and innovation in key
+              engineering domains. The conference brings together researchers,
+              academicians, industry experts, and students from across the globe
+              to exchange ideas, present cutting-edge research, and foster
+              collaborative partnerships.
+            </li>
+            <li>
+              SCOPES focuses on both fundamental and applied aspects of signal
+              processing, communication systems, power engineering, quantum
+              technology, and embedded systems. It highlights emerging trends
+              such as artificial intelligence, next-generation communication
+              (5G/6G), smart energy systems, advanced chip design, and
+              intelligent embedded solutions.
+            </li>
+            <li>
+              The conference aims to bridge the gap between academia and
+              industry by addressing real-world challenges in areas such as
+              smart manufacturing, healthcare technologies, sustainable energy,
+              and intelligent infrastructure. Through keynote talks, technical
+              sessions, and tutorials, participants gain insights into the
+              latest technological advancements and future directions.
+            </li>
+            <li>
+              SCOPES aligns with IEEE’s mission of advancing technology for
+              humanity by promoting innovation, interdisciplinary research, and
+              knowledge sharing at a global level.
+            </li>
+                        <li>
+ The IEEE International Conference on Signal Processing, Communication, Power and Embedded Systems (SCOPES) is a premier global forum dedicated to advancing research and innovation in key engineering domains. The conference brings together researchers, academicians, industry professionals, and students to present cutting-edge work, exchange ideas, and foster interdisciplinary collaboration.
+            </li>
+                        <li>
+       Aligned with the theme “Convergence of Intelligent Communication, Smart Power, Quantum Technologies, and Advanced Embedded Systems for Sustainable and Future-Ready Solutions,” SCOPES focuses on both theoretical advancements and practical applications. It highlights emerging areas such as artificial intelligence, next-generation communication (5G/6G), smart and sustainable energy systems, quantum technologies, advanced chip design, and intelligent embedded systems.
+            </li>
+                        <li>
+   The conference aims to bridge the gap between academia and industry by addressing real-world challenges in smart manufacturing, healthcare technologies, energy sustainability, and intelligent infrastructure. Through keynote talks, technical sessions, and tutorials, participants gain insights into recent developments and future trends.
+            </li>
+                        <li>
+            SCOPES aligns with IEEE’s mission of advancing technology for the benefit of humanity by promoting innovation, collaboration, and knowledge dissemination at a global level.
+            </li>
+          </ul>
+          {/* <p className="conf-about-intro">
+        SCOPES focuses on both fundamental and applied aspects of signal processing, communication systems, power engineering, quantum technology, and embedded systems. It highlights emerging trends such as artificial intelligence, next-generation communication (5G/6G), smart energy systems, advanced chip design, and intelligent embedded solutions.          </p>
+          <p className="conf-about-intro">
+        The conference aims to bridge the gap between academia and industry by addressing real-world challenges in areas such as smart manufacturing, healthcare technologies, sustainable energy, and intelligent infrastructure. Through keynote talks, technical sessions, and tutorials, participants gain insights into the latest technological advancements and future directions.          </p>
+          <p className="conf-about-intro">
+        SCOPES aligns with IEEE’s mission of advancing technology for humanity by promoting innovation, interdisciplinary research, and knowledge sharing at a global level.          </p>           */}
+          {/* <p className="conf-about-intro">
+           The IEEE International Conference on Signal Processing, Communication, Power and Embedded Systems (SCOPES) is a premier forum dedicated to advancing research and innovation in key engineering domains. The conference brings together researchers, academicians, industry experts, and students from across the globe to exchange ideas, present cutting-edge research, and foster collaborative partnerships.
+          </p>  */}
         </div>
       </section>
 
@@ -554,39 +598,53 @@ const Home = () => {
           </div>
           <div className="about-text anim-slide-right">
             <p>
-              Centurion University of Technology and Management is the first
-              private University in Odisha which was established through the
-              CUTM Act 4 of the Odisha State Legislative Assembly in 2010. In
-              due course, it has got recognition as Grade-A+ University by NAAC
-              and 12 B status by the UGC. Centurion University's School of
-              Vocational Education and Training has been recognized as a Centre
-              of Excellence by the Ministry of Skill Development and
-              Entrepreneurship, Govt. of India. This University is duly
-              recognized as a pioneer in 'Skill Integrated Higher Education".
-              Its unique model lays specific emphasis on creating sustainable
-              livelihoods on a national scale in challenging geographies through
-              education that results in employability and sparks
-              entrepreneurship. This model has been recognized by multiple
-              Governments (Central and State), Internation Organizations such as
-              UNESCO and the World Bank as well as Policy Think-tanks such as
-              the Niti Ayog. It is the only University in India to be recognized
-              as such. Centurion has focused sed on 'hands- on', 'experience
-              based', 'practice oriented' learning that creates transformative
-              impact through community centric innovation and action research.
-              While promoting Nano, Mini and Micro Enterprises, the University
-              works toward learning experiences that are 'quantifiable',
-              'sustainable', 'scalable' and 'replicable'. Centurion University
-              has both built and participated in building eco-systems that
-              include and integrate the community around it's campuses and
-              beyond, industry, entrepreneurs and other education institutions.
-              Its education and training delivery approach is: Skill Integrated
-              and Employability Teaching/Learning Process Linked
-              Focuses/Leverages Industry and Community Partnerships
-              Creates/co-creates Enterprises{" "}
+              ▪ Centurion University of Technology and Management (CUTM) is a
+              leading state-private university in Odisha, India, with six
+              constituent campuses. Promoted by visionary edupreneurs, it is
+              widely recognized for skill-integrated higher education combining
+              academic excellence with hands-on, industry-linked learning. A
+              sister institution, Centurion University Andhra Pradesh, extends
+              this vision to Vijayanagaram.{" "}
+              <a
+                href="https://cutm.ac.in/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="cutm-inline-link"
+              >
+                Visit cutm.ac.in →
+              </a>
             </p>
-            {/* <p>
-              This University is duly recognized as a pioneer in 'Skill Integrated Higher Education'. Its unique model lays specific emphasis on creating sustainable livelihoods on a national scale in challenging geographies through education that results in employability and sparks entrepreneurship.
-            </p> */}
+            <p>
+              ▪ CUTM distinguishes itself through entrepreneurship and
+              enterprise creation, with in-house labs for wood engineering,
+              transformer manufacturing, apparel design, e-vehicle production,
+              and waste-to-wealth units serving ITI, diploma, UG, and PG
+              students.
+            </p>
+            <p>
+              ▪ The university hosts over 50 industry-sponsored laboratories and
+              social enterprises under the Gram Tarang brand, fostering
+              employability, inclusive development, technology innovation, and
+              vocational training.
+            </p>
+            <p>
+              ▪ In research, 24 specialized centers focus on computational
+              mathematics, medical diagnostics, aquaculture, phytopharma,
+              genetics, and drone technology, supported by in-house grants for
+              cutting-edge international research.
+            </p>
+            <p>
+              ▪ Academically, CUTM offers 50+ domain and 150+ skill-based
+              courses through 16 schools, with collaborations with Ashok
+              Leyland, Yamaha, Godrej, HAL, Schneider Electric, Dassault
+              Systemes, and Manipal Hospitals.
+            </p>
+            <p>
+              ▪ Built on academia-industry-government collaboration, CUTM
+              partners with NSDC, PMKVY, and Odisha Livelihood Mission,
+              promoting inclusive education and placement-linked training for
+              rural youth and differently-abled individuals.
+            </p>
           </div>
         </div>
       </section>
@@ -601,7 +659,18 @@ const Home = () => {
         <div className="department-content">
           <div className="department-text anim-slide-left">
             <p>
-              Department of Electronics and Communication Engineering aims to produce qualified and dynamic engineers in the fast-changing area of Smart Devices, Mobile Emerging Technologies, Automation, Industrial IoT, and VLSI. The Department has sophisticated and modern laboratory equipment and software/tool (HFSS, CADENCE, MATLAB, MULTISIM, KEIL uVision, LABVIEW) for research and development work in the areas of Antenna and Microwave Engineering, Signal Processing and Communication, VLSI and Embedded System. The department undertakes real-time application projects in Smart Irrigation, Industrial IoT, Soil Moisture Prototype Development, Insulin Pump Prototype Development and Chip Design
+              Department of Electronics and Communication Engineering aims to
+              produce qualified and dynamic engineers in the fast-changing area
+              of Smart Devices, Mobile Emerging Technologies, Automation,
+              Industrial IoT, and VLSI. The Department has sophisticated and
+              modern laboratory equipment and software/tool (HFSS, CADENCE,
+              MATLAB, MULTISIM, KEIL uVision, LABVIEW) for research and
+              development work in the areas of Antenna and Microwave
+              Engineering, Signal Processing and Communication, VLSI and
+              Embedded System. The department undertakes real-time application
+              projects in Smart Irrigation, Industrial IoT, Soil Moisture
+              Prototype Development, Insulin Pump Prototype Development and Chip
+              Design
             </p>
             {/* <p>
               The department undertakes real-time application projects in Smart

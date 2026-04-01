@@ -58,12 +58,12 @@ const Navbar = () => {
 
   const navItems = [
     { label: 'Home', href: '/', icon: <FaInfoCircle />, isRoute: true },
-    { label: 'Themes', href: '/themes', icon: <GiArchiveResearch />, isRoute: true },
+    // { label: 'Themes', href: '/themes', icon: <GiArchiveResearch />, isRoute: true },
     { label: 'Dates', href: '/imp-dates', icon: <GiCalendar />, isRoute: true },
-    { label: 'Accommodation', href: '/accommodation', icon: <FaUniversity />, isRoute: true },
     { label: 'Committee', href: '/committee', icon: <MdPeople />, isRoute: true},
     { label: 'Sponsors', href: '/sponsors', icon: <FaTrophy />, isRoute: true },
     { label: 'Registration', href: '/registration', icon: <MdAppRegistration />, isRoute: true },
+    { label: 'Accommodation', href: '/accommodation', icon: <FaUniversity />, isRoute: true },
     { label: 'Contact', href: '/contact', icon: <MdContactMail />, isRoute: true }
   ];
 
@@ -87,7 +87,9 @@ const Navbar = () => {
             <div className="conference-header-content">
               {/* Left Logo */}
               <div className="header-logo left-header-logo">
-                <img src="/CUTMLOGO.png" alt="CUTM Logo" className="header-logo-img" />
+                <a href="https://cutm.ac.in/" target="_blank" rel="noopener noreferrer">
+                  <img src="/CUTMLOGO.png" alt="CUTM Logo" className="header-logo-img" />
+                </a>
               </div>
               
               {/* Conference Details */}
@@ -203,7 +205,9 @@ const Navbar = () => {
           <div className="mobile-top-bar">
             <div className="mobile-logos">
               <div className="mobile-logo-item">
-                <img src="/CUTMLOGO.png" alt="CUTM Logo" className="mobile-logo-img" />
+                <a href="https://cutm.ac.in/" target="_blank" rel="noopener noreferrer">
+                  <img src="/CUTMLOGO.png" alt="CUTM Logo" className="mobile-logo-img" />
+                </a>
               </div>
               <div className="mobile-conference-title">
                 <div className="mobile-badge">3rd International Conference on</div>
@@ -250,7 +254,9 @@ const Navbar = () => {
         <div className="mobile-menu-header">
           <div className="mobile-menu-logo">
             <div className="menu-logo-item">
-              <img src="/CUTMLOGO.png" alt="CUTM" className="menu-logo-img" />
+              <a href="https://cutm.ac.in/" target="_blank" rel="noopener noreferrer">
+                <img src="/CUTMLOGO.png" alt="CUTM" className="menu-logo-img" />
+              </a>
             </div>
             <div className="menu-logo-item">
               <div className="menu-logo-text">
