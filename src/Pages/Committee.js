@@ -29,7 +29,7 @@ const Committee = () => {
       color: '#FF6B6B',
       members: [
         'Prof. (Dr.) Mukti Kanta Mishra, President, CUTM, Odisha & AP',
-        'Prof. D. N. Rao, Vice-President, CUTM, Odisha & AP'
+        'Prof. (Dr.) D. N. Rao, Vice-President, CUTM, Odisha & AP'
       ]
     },
     {
