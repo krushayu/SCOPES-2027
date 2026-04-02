@@ -154,6 +154,8 @@ const Committee = () => {
         'Dr. Debendra Muduli, Assistant Professor, CV Raman Global University, Odisha',
         'Prof. Manoj Kumar Padhi, Assistant Professor, SoET, CUTM, Odisha',
         'Prof. Susanta Kumar Nayak, Assistant Professor, SoET, CUTM, Odisha',
+        'Dr. Dukhishyam Sabat, Assistant Professor, SoET, CUTM, Odisha',
+        'Dr. Vikash Kumar Rathore, Assistant Professor, SoET, CUTM, Odisha',
       ]
     },
     {
@@ -165,11 +167,9 @@ const Committee = () => {
         'Prof. (Dr.) Sukumar Mishra, Professor, IIT, Delhi',
         'Prof. (Dr.) Ramesh Chandra Mohanty, Professor, Dept. of Mech. Engg.,CUTM, Odisha',
         'Dr. Abhishek Das, Assistant Professor, SoET, CUTM, Odisha, (Co-Chair)',
-        'Dr. Abinash Rath, Assistant Professor, SoET, CUTM, Odisha',
-        'Prof. Ashirbad Khuntia, Assistant Professor, SoET, CUTM, Odisha',
-        'Dr. Prangya Paramita Pradhan, Assistant Professor, SoET, CUTM, Odisha',
         'Dr. Dhawaleswar Rao, HOD, Dept. of CSE, SoET, CUTM, Odisha',
-        'Dr. Ashish Ranjan Dash, Associate Professor, SoET, CUTM, Odisha'
+        'Dr. Ashish Ranjan Dash, Associate Professor, SoET, CUTM, Odisha',
+        'Dr. Ribhu Abhusan Panda, Assistant Professor, SoET, CUTM, Odisha'
       ]
     },
     {
