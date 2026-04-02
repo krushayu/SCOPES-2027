@@ -84,7 +84,7 @@ const Committee = () => {
       color: '#F8B500',
       members: [
         'Prof. (Dr.) Sangram Keshari Swain, Dean (Exams & Students\' Welfare), CUTM, Odisha',
-        'Prof. Prabhat Kumar Patnaik, HOD, Dept. of ECE (PKD), CUTM, Odisha',
+        'Dr. Prabhat Kumar Patnaik, HOD, Dept. of ECE (PKD), CUTM, Odisha',
         'Prof. Satyanarayan Padhy, Academic Co-ordinator, SoET, CUTM, Odisha'
       ]
     },
