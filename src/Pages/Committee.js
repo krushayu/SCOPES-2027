@@ -298,7 +298,7 @@ const Committee = () => {
       color: '#8338EC',
       members: [
         'Prof. Sandipan Pine, Assoc. Prof. Dept. of ECE, PKD, CUTM, Odisha',
-        'Dr. Tanmaya Sankar, Assoc. Prof. Dept. of Agronomy, CUTM, Odisha'
+        'Dr. Tanmaya Sankar, Assoc. Prof. Dept. of Agronomy, CUTM, Odisha',
       ]
     },
     {
@@ -308,7 +308,9 @@ const Committee = () => {
       members: [
         'Dr. Gouri Kumar Sahu, Assoc. Prof. Dept. of SoAS, PKD, CUTM, Odisha ',
         'Dr. Prangya Paramita Pradhan, Asst. Prof. Dept. of ECE, PKD, CUTM, Odisha',
-        'Prof. N. Jeevaratnam, Asst. Prof. Dept. of ECE, PKD, CUTM, Odisha'
+        'Prof. N. Jeevaratnam, Asst. Prof. Dept. of ECE, PKD, CUTM, Odisha',
+        'Prof. Lipsa Priyadarshanini Singh, Asst. Prof. Dept. of CSE, PKD, CUTM, Odisha',
+        'Prof. Sagarika Dash, Asst. Prof. Dept. of CSE, PKD, CUTM, Odisha',
       ]
     },
     {
@@ -358,7 +360,8 @@ const Committee = () => {
       color: '#EF4444',
       members: [
         'Dr. Kalyan Chakravarty,SoM, CUTM, Odisha',
-        'Mr. Lingaraj Mohapatra,Transport Incharge, CUTM, Odisha'
+        'Mr. Lingaraj Mohapatra,Transport Incharge, CUTM, Odisha',
+        'Mr. Sanjay Kar, CUTM, Odisha',
       ]
     },
     {
@@ -415,7 +418,8 @@ const Committee = () => {
         'Prof. Prakash KVD, Dean HRD, CUTM, Odisha',
         'Dr. Durga Prasad Padhi, Director Administration, PKD, CUTM, Odisha',
         'Prof. (Dr.) Satya Prakash Nanda, Dean(Admin.),MSSSoA, CUTM, Odisha',
-        'Prof. Babu Sankar, MD, GT TECH'
+        'Prof. Babu Sankar, MD, GT TECH',
+        'Prof. Mir Sadat Ali, Dean SoVET, CUTM, Odisha',
       ]
     }
   ];
