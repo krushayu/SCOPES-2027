@@ -306,8 +306,8 @@ const Committee = () => {
       title: 'Registration Committee',
       color: '#FB5607',
       members: [
+        'Dr. Gouri Kumar Sahu, Assoc. Prof. Dept. of SoAS, PKD, CUTM, Odisha ',
         'Dr. Prangya Paramita Pradhan, Asst. Prof. Dept. of ECE, PKD, CUTM, Odisha',
-        'Dr. Rajib Majhi, Asst. Prof. Dept. of Civil Engg, PKD, CUTM, Odisha',
         'Prof. N. Jeevaratnam, Asst. Prof. Dept. of ECE, PKD, CUTM, Odisha'
       ]
     },
