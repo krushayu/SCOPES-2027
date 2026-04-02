@@ -156,6 +156,10 @@ const Committee = () => {
         'Prof. Susanta Kumar Nayak, Assistant Professor, SoET, CUTM, Odisha',
         'Dr. Dukhishyam Sabat, Assistant Professor, SoET, CUTM, Odisha',
         'Dr. Vikash Kumar Rathore, Assistant Professor, SoET, CUTM, Odisha',
+        'Dr. Aurobinda Bag, Assistant Professor, SoET, CUTM, Odisha',
+        'Dr. Sasmita Kumari Nayak, Assistant Professor, SoET, CUTM, Odisha',
+        'Dr. Chinmayee Dora, Associate Professor, SoET, CUTM, Odisha',
+        'Dr. P Anthony Sunny Dayal, Associate Professor, SoET, CUTM, AP',
       ]
     },
     {
@@ -169,7 +173,10 @@ const Committee = () => {
         'Dr. Abhishek Das, Assistant Professor, SoET, CUTM, Odisha, (Co-Chair)',
         'Dr. Dhawaleswar Rao, HOD, Dept. of CSE, SoET, CUTM, Odisha',
         'Dr. Ashish Ranjan Dash, Associate Professor, SoET, CUTM, Odisha',
-        'Dr. Ribhu Abhusan Panda, Assistant Professor, SoET, CUTM, Odisha'
+        'Dr. Ribhu Abhusan Panda, Assistant Professor, SoET, CUTM, Odisha',
+        'prof (Dr.) Susanta Kumar Biswal, Professor, SoS, CUTM, Odisha',
+        'Dr. Mohammed Siddique, Associate Professor, SoS, CUTM, Odisha',
+        'Dr. K Vijaya Babu, Dean R & D, CUTM, AP',
       ]
     },
     {
