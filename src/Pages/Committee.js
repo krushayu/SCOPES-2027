@@ -135,24 +135,25 @@ const Committee = () => {
       title: 'Technical Programme Committee',
       color: '#7209B7',
       members: [
-        'Prof. (Dr.) Girish Kumar, Professor, IIT, Bombay,(Chair)',
-        'Prof. (Dr.) Sukumar Mishra, Professor, IIT, Delhi',
+        // 'Prof. (Dr.) Girish Kumar, Professor, IIT, Bombay,(Chair)',
+        'Prof. (Dr.) Sukumar Mishra, Professor, IIT, Delhi, (Chair)',
         'Prof. (Dr.) Prasant Kumar Sahu, Professor, IIT, Bhubaneswar',
         'Prof. (Dr.) Saroj Kumar Meher, Associate Professor, ISI, Bangalore',
         'Prof. (Dr.) Nithin V. George, Associate Professor, IIT, Gandhi Nagar',
         'Prof. (Dr.) Gautam Mohanty, Associate Professor, NIT, Durgapur',
-        'Prof. (Dr.) Ramesh Chandra Mohanty, Professor, SoET, CUTM, Odisha',
-        'Prof. Ashirbad Khuntia, Assistant Professor, SoET, CUTM, Odisha',
+        // 'Prof. (Dr.) Ramesh Chandra Mohanty, Professor, SoET, CUTM, Odisha',
+        // 'Prof. Ashirbad Khuntia, Assistant Professor, SoET, CUTM, Odisha',
         'Dr. Abinash Gaya, Associate Professor, SoET, CUTM, Odisha, (Co-Chair)',
         'Dr. Abhishek Das, Assistant Professor, SoET, CUTM, Odisha, (Co-Chair)',
-        'Dr. Ashish Ranjan Dash, Associate Professor, SoET, CUTM, Odisha',
         'Dr. Rajendra Kumar Khadanga, Associate Professor, SoET, CUTM, Odisha',
         'Dr. Chandra Sekhar Dash, Associate Professor, SoET, CUTM, Odisha',
         'Dr. Abinash Rath, Assistant Professor, SoET, CUTM, Odisha',
         'Dr. Adyasha Rath, Assistant Professor, CV Raman Global University, Odisha',
         'Dr. Prangya Paramita Pradhan, Assistant Professor, SoET, CUTM, Odisha',
         'Dr. Nimay Chandra Giri, Assistant Professor, SoET, CUTM, Odisha',
-        'Dr. Debendra Muduli, Assistant Professor, CV Raman Global University, Odisha'
+        'Dr. Debendra Muduli, Assistant Professor, CV Raman Global University, Odisha',
+        'Prof. Manoj Kumar Padhi, Assistant Professor, SoET, CUTM, Odisha',
+        'Prof. Susanta Kumar Nayak, Assistant Professor, SoET, CUTM, Odisha',
       ]
     },
     {
@@ -168,6 +169,7 @@ const Committee = () => {
         'Prof. Ashirbad Khuntia, Assistant Professor, SoET, CUTM, Odisha',
         'Dr. Prangya Paramita Pradhan, Assistant Professor, SoET, CUTM, Odisha',
         'Dr. Dhawaleswar Rao, HOD, Dept. of CSE, SoET, CUTM, Odisha',
+        'Dr. Ashish Ranjan Dash, Associate Professor, SoET, CUTM, Odisha'
       ]
     },
     {
