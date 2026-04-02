@@ -112,7 +112,7 @@ const Home = () => {
   const slides = [
     {
       image: "/slide1.png",
-      title: "3rd International Conference",
+      title: "3rd International Conference on",
       subtitle: "Signal Processing, Communication, Power & Embedded Systems",
       tag: "IEEE Technical Co-Sponsored",
     },
@@ -156,7 +156,7 @@ const Home = () => {
     {
       icon: <FaMapMarkerAlt />,
       label: "Venue",
-      value: "Centurion University, Paralakhemundi",
+      value: "Centurion University Paralakhemundi, Odisha",
       color: "#4ECDC4",
       link: "https://maps.app.goo.gl/hVvbqeLRXWvEa9gT9",
     },
