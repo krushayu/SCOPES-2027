@@ -132,7 +132,7 @@ const Committee = () => {
     },
     {
       id: 'technical',
-      title: 'Technical Committee',
+      title: 'Technical Programme Committee',
       color: '#7209B7',
       members: [
         'Prof. (Dr.) Girish Kumar, Professor, IIT, Bombay, Chair',
