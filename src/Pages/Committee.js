@@ -94,7 +94,8 @@ const Committee = () => {
       color: '#00B4D8',
       members: [
         'Prof. (Dr.) Brojo Kishore Mishra, NIST, Berhampur',
-        'Prof. (Dr.) Ranjeeta Patel, KIIT, Bhubaneswar'
+        'Prof. (Dr.) Ranjeeta Patel, KIIT, Bhubaneswar',
+        'Dr. Pratap Ranjan Mohanty, Sr. Assitant Prof., Silicon University, Odisha',
       ]
     },
     {
@@ -129,6 +130,8 @@ const Committee = () => {
         'Dr. Sujit Mishra, HOD, Dept. of Mechanical Engg. (PKD), CUTM, Odisha',
         'Dr. Rajib Majhi, HOD, Dept. of Civil Engg. (PKD), CUTM, Odisha',
         'Dr. Sudhansu Kumar Samal, HoD, Dept. of EEE, (BBSR), CUTM, Odisha',
+        'Dr. Nihal R, Assitant Professor, MSSSoA, PKD, CUTM, Odisha',
+        'Prof. Prabhat Ranjan Sahoo, Principal SoVET, CUTM, Odisha'
       ]
     },
     {
