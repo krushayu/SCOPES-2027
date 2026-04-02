@@ -133,7 +133,7 @@ const Committee = () => {
         'Dr. Sujit Mishra, HOD, Dept. of Mechanical Engg. (PKD), CUTM, Odisha',
         'Dr. Rajib Majhi, HOD, Dept. of Civil Engg. (PKD), CUTM, Odisha',
         'Dr. Sudhansu Kumar Samal, HoD, Dept. of EEE, (BBSR), CUTM, Odisha',
-        'Prof. Debendra Kumar Maharana, HOD, Dept. of CSE (PKD), CUTM, Odisha'
+        'Prof. (Dr.) Dhawaleswar Rao Ch, HOD, Dept. of CSE (PKD), CUTM, Odisha'
       ]
     },
     {
