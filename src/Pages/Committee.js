@@ -57,7 +57,9 @@ const Committee = () => {
       color: '#96CEB4',
       members: [
         'Prof. (Dr.) Anita Patra, Registrar, CUTM, Odisha',
-        'Prof. (Dr.) Subhransu Ranjan Samantaray, IIT Bhubaneswar, Odisha'
+        'Prof. (Dr.) Subhransu Ranjan Samantaray, IIT Bhubaneswar, Odisha',
+        'Dr. Debendra Kumar Sahoo, Assoc. Professor, Dept. of ECE, CUTM, Odisha'
+
       ]
     },
     {
@@ -65,7 +67,6 @@ const Committee = () => {
       title: 'Program Chair',
       color: '#FFEAA7',
       members: [
-        'Dr. Debendra Kumar Sahoo, Assoc. Professor, Dept. of ECE, CUTM, Odisha',
         'Prof. (Dr.) Ashok Misra, Professor, Dept. of Mathematics, CUTM, Odisha'
       ]
     },
