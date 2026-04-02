@@ -275,7 +275,6 @@ const Committee = () => {
       members: [
         'Mr. Debasis Panda, Comptroller of Finance, CUTM, Odisha',
         'Prof. Satyanarayan Padhy, Academic Coordinator, SoET, PKD, CUTM, Odisha',
-        'Prof. Prabhat Ranjan Sahoo, Principal SoVET, CUTM, Odisha',
         'Mr. Debaraj Grahacharya, Manager Finance, PKD, CUTM, Odisha'
       ]
     },
