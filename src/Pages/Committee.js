@@ -298,8 +298,7 @@ const Committee = () => {
       color: '#8338EC',
       members: [
         'Prof. Sandipan Pine, Assoc. Prof. Dept. of ECE, PKD, CUTM, Odisha',
-        'Dr. Tanmaya Sankar, Assoc. Prof. Dept. of Agronomy, CUTM, Odisha',
-        'Prof. Rajesh Kumar Misra, Asst. Prof. Dept. of ECE, PKD, CUTM, Odisha'
+        'Dr. Tanmaya Sankar, Assoc. Prof. Dept. of Agronomy, CUTM, Odisha'
       ]
     },
     {
@@ -309,8 +308,7 @@ const Committee = () => {
       members: [
         'Dr. Prangya Paramita Pradhan, Asst. Prof. Dept. of ECE, PKD, CUTM, Odisha',
         'Dr. Rajib Majhi, Asst. Prof. Dept. of Civil Engg, PKD, CUTM, Odisha',
-        'Prof. N. Jeevaratnam, Asst. Prof. Dept. of ECE, PKD, CUTM, Odisha',
-        'Prof. Subhrashree Pritichhanda, Asst. Prof. Dept. of EEE, PKD, CUTM, Odisha'
+        'Prof. N. Jeevaratnam, Asst. Prof. Dept. of ECE, PKD, CUTM, Odisha'
       ]
     },
     {
