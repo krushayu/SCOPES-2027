@@ -6,7 +6,7 @@ const guidelines = [
   <>Check names, affiliations, and the sequence properly before uploading the camera-ready paper, as further changes cannot be entertained.</>,
   <>Please strictly follow the IEEE conference format: <a href="https://www.ieee.org/content/dam/ieee-org/ieee/web/org/conferences/conference-template-a4.docx" target="_blank" rel="noopener noreferrer">Download IEEE Conference Template (A4)</a></>,
   <>The camera-ready version must be in PDF format compiled from IEEE PDF eXpress™: <a href="https://ieee-pdf-express.org/" target="_blank" rel="noopener noreferrer">Click here for IEEE PDF eXpress™</a></>,
-  <>Use conference ID <strong>64467X</strong> when logging into PDF eXpress. After passing the paper, click on <strong>Approve</strong> option.</>,
+  <>Use conference ID <strong>71015X</strong> when logging into PDF eXpress. After passing the paper, click on <strong>Approve</strong> option.</>,
   <>Manuscript must be <strong>4 to 6 pages</strong> in IEEE format with similarity index limited to <strong>20%</strong> (single source similarity must be less than 5%).</>,
   <>Upload camera-ready paper in both <strong>.pdf</strong> and <strong>.doc</strong> formats on the CMT portal by <strong>30th November 2026</strong>.</>,
   <>All authors must individually transfer the electronic copyright to IEEE through CMT while submitting the camera-ready paper.</>,
