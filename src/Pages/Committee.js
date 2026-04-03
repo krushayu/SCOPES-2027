@@ -67,7 +67,7 @@ const Committee = () => {
       title: 'Program Chair',
       color: '#FFEAA7',
       members: [
-        'Prof. (Dr.) Ashok Misra, Professor, Dept. of Mathematics, CUTM, Odisha'
+        'Dr. Prafulla Kumar Panda, Dean SoET (PKD), CUTM, Odisha'
       ]
     },
     {
@@ -75,7 +75,7 @@ const Committee = () => {
       title: 'Convener',
       color: '#DDA0DD',
       members: [
-        'Dr. Prafulla Kumar Panda, Dean SoET (PKD), CUTM, Odisha'
+        'Prof. (Dr.) Ashok Misra, Professor, Dept. of Mathematics, CUTM, Odisha'
       ]
     },
     {
