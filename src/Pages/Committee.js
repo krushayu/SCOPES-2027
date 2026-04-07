@@ -25,25 +25,38 @@ const Committee = () => {
   const committees = [
     {
       id: 'chief-patron',
-      title: 'Chief Patron',
+      title: 'Chief Patrons',
       color: '#FF6B6B',
       members: [
         'Prof. (Dr.) Mukti Kanta Mishra, President, CUTM, Odisha & AP',
-        'Prof. D. N. Rao, Vice-President, CUTM, Odisha & AP'
+        'Prof. (Dr.) D. N. Rao, Vice-President, CUTM, Odisha & AP'
       ]
     },
     {
       id: 'patron',
-      title: 'Patron',
+      title: 'Patrons',
       color: '#4ECDC4',
       members: [
         'Prof. (Dr.) Supriya Pattanayak, Vice-Chancellor, CUTM, Odisha',
+        // 'Prof. (Dr.) Anita Patra, Registrar, CUTM, Odisha',
         'Prof. Purna Mohanty, Co-founder and CEO Marquee Semiconductor'
       ]
     },
     {
+      id: 'co-patron',
+      title:'Co-Patrons',
+      color:'#FFB6C1',
+      members: [
+          'Prof. (Dr.) Biswajit Mishra, Pro-Vice Chancellor, CUTM, Odisha',
+          'Prof. Ajay Kumar Nayak, Pro-Vice Chancellor, CUTM, Odisha',
+          'Prof. (Dr.) Anita Patra, Registrar, CUTM, Odisha',
+          'Prof. Jagannath Padhi, Director, CIT, CUTM, Odisha'
+        
+      ]
+    },
+    {
       id: 'honorary-general-chair',
-      title: 'Honorary General Chair',
+      title: 'Honorary General Chairs',
       color: '#45B7D1',
       members: [
         'Prof. (Dr.) G. S. N. Raju, Chancellor, CUTM, AP',
@@ -53,20 +66,21 @@ const Committee = () => {
     },
     {
       id: 'general-chair',
-      title: 'General Chair',
+      title: 'General Chairs',
       color: '#96CEB4',
       members: [
-        'Prof. (Dr.) Anita Patra, Registrar, CUTM, Odisha',
-        'Prof. (Dr.) Subhransu Ranjan Samantaray, IIT Bhubaneswar, Odisha'
+        'Prof. (Dr.) Subhransu Ranjan Samantaray, IIT Bhubaneswar, Odisha',
+        'Prof. (Dr.) Prafulla Kumar Panda, Dean SoET (PKD), CUTM, Odisha',
+
       ]
     },
     {
       id: 'program-chair',
-      title: 'Program Chair',
+      title: 'Program Chairs',
       color: '#FFEAA7',
       members: [
-        'Dr. Prafulla Kumar Panda, Dean SoET (PKD), CUTM, Odisha',
         'Dr. Debendra Kumar Sahoo, Assoc. Professor, Dept. of ECE, CUTM, Odisha'
+
       ]
     },
     {
@@ -79,12 +93,12 @@ const Committee = () => {
     },
     {
       id: 'co-convener',
-      title: 'Co-Convener',
+      title: 'Co-Conveners',
       color: '#F8B500',
       members: [
         'Prof. (Dr.) Sangram Keshari Swain, Dean (Exams & Students\' Welfare), CUTM, Odisha',
-        'Prof. Prabhat Kumar Patnaik, HOD, Dept. of ECE (PKD), CUTM, Odisha',
-        'Prof. Satyanarayan Padhy, Academic Co-ordinator, SoET, CUTM, Odisha'
+        'Dr. Prabhat Kumar Patnaik, HOD, Dept. of ECE (PKD), CUTM, Odisha',
+        'Prof. Satyanarayan Padhy, Academic Co-ordinator, SoET, CUTM, Odisha',
       ]
     },
     {
@@ -93,7 +107,8 @@ const Committee = () => {
       color: '#00B4D8',
       members: [
         'Prof. (Dr.) Brojo Kishore Mishra, NIST, Berhampur',
-        'Prof. (Dr.) Ranjeeta Patel, KIIT, Bhubaneswar'
+        'Prof. (Dr.) Ranjeeta Patel, KIIT, Bhubaneswar',
+        'Dr. Pratap Ranjan Mohanty, Sr. Assitant Prof., Silicon University, Odisha',
       ]
     },
     {
@@ -102,8 +117,7 @@ const Committee = () => {
       color: '#4895EF',
       members: [
         'Prof. (Dr.) Satya Prakash Nanda, Dean (Admin.) MSSSoA, CUTM, Odisha',
-        'Prof. (Dr.) M. Devender Reddy, Dean (Acad.),MSSSoA CUTM, Odisha',
-        'Prof. (Dr.) Rajkishore Swain, Dean SoVAS, CUTM, Odisha',
+        'Prof. (Dr.) B. Suresh Subramonian, Dean SoVAS, CUTM, Odisha',
         'Prof. (Dr.) Satyasis Misra, Dean SDG, CUTM, Odisha',
         'Dr. Prafulla Kumar Panda, Dean SoET, PKD, CUTM, Odisha',
         'Prof. (Dr.) Sujata Chakravarty, Dean SoET, Bhubaneswar, CUTM, Odisha',
@@ -112,14 +126,11 @@ const Committee = () => {
         'Prof. (Dr.) Anil Kumar Jonnalagadda, Associate Dean ABM, CUTM, Odisha',
         'Dr. Durga Prasad Padhi, Director Administration, PKD, CUTM, Odisha',
         'Prof. (Dr.) Ashok Misra, Professor, Dept. of Mathematics, CUTM, Odisha',
-        'Prof. (Dr.) Ramesh Chandra Mohanty, Professor, Dept. of Mech. Engg.,CUTM, Odisha',
-        'Prof. (Dr.) Susanta Kumar Biswal, Professor, Dept. of Chemistry,CUTM, Odisha',
+        'Prof. (Dr.) Ramesh Chandra Mohanty, Professor, Dept. of Mechanical Engg.,CUTM, Odisha',
         'Prof. (Dr.) Sagar Maitra, Professor, Dept. of Agronomy, MSSSoA, CUTM, Odisha',
         'Dr. Debendra Kumar Sahoo, Assoc. Professor, Dept. of ECE, CUTM, Odisha',
-        'Prof. (Dr.) Harish Chandra Mohanta, HoD, Dept. of ECE, Bhubaneswar,CUTM, Odisha',
         'Prof. Satyanarayan Padhy, Academic Coordinator, SoET, PKD, CUTM, Odisha',
-        'Dr. Gouri Kumar Sahoo, Coordinator, SoAS, PKD, CUTM, Odisha',
-        'Prof. Prabhat Kumar Patnaik, Asst. Professor, Dept. of ECE, CUTM, Odisha'
+        'Dr. Prabhat Kumar Patnaik, HOD , Dept. of ECE, CUTM, Odisha'
       ]
     },
     {
@@ -129,36 +140,40 @@ const Committee = () => {
       members: [
         'Dr. Durga Prasad Padhi, Director Administration, PKD, CUTM, Odisha',
         'Dr. Ritesh Kumar, Dean Student Affairs, PKD, CUTM, Odisha',
-        'Dr. Harish Chandra Mohanta, HoD, Dept. of ECE, (BBSR), CUTM, Odisha',
+       'Dr. Dhawaleswar Rao, HOD, Dept. of CSE, (PKD) SoET, CUTM, Odisha',
         'Dr. Sujit Mishra, HOD, Dept. of Mechanical Engg. (PKD), CUTM, Odisha',
         'Dr. Rajib Majhi, HOD, Dept. of Civil Engg. (PKD), CUTM, Odisha',
         'Dr. Sudhansu Kumar Samal, HoD, Dept. of EEE, (BBSR), CUTM, Odisha',
-        'Prof. Debendra Kumar Maharana, HOD, Dept. of CSE (PKD), CUTM, Odisha'
+        'Dr. Nihal R, Assitant Professor, MSSSoA, PKD, CUTM, Odisha',
+        'Prof. Prabhat Ranjan Sahoo, Principal SoVET, CUTM, Odisha'
       ]
     },
     {
       id: 'technical',
-      title: 'Technical Committee',
+      title: 'Technical Programme Committee',
       color: '#7209B7',
       members: [
-        'Prof. (Dr.) Girish Kumar, Professor, IIT, Bombay',
-        'Prof. (Dr.) Sukumar Mishra, Professor, IIT, Delhi',
+        'Prof. (Dr.) Sukumar Mishra, Professor, IIT, Delhi, (Chair)',
         'Prof. (Dr.) Prasant Kumar Sahu, Professor, IIT, Bhubaneswar',
         'Prof. (Dr.) Saroj Kumar Meher, Associate Professor, ISI, Bangalore',
         'Prof. (Dr.) Nithin V. George, Associate Professor, IIT, Gandhi Nagar',
+        'Dr. Abinash Gaya, Associate Professor, SoET, CUTM, Odisha, (Co-Chair)',
         'Prof. (Dr.) Gautam Mohanty, Associate Professor, NIT, Durgapur',
-        'Prof. (Dr.) Ramesh Chandra Mohanty, Professor, SoET, CUTM, Odisha',
-        'Prof. Ashirbad Khuntia, Assistant Professor, SoET, CUTM, Odisha',
-        'Prof. Sourav Chakraborty, Assistant Professor, SoET, CUTM, Odisha',
-        'Dr. Ashish Ranjan Dash, Associate Professor, SoET, CUTM, Odisha',
         'Dr. Rajendra Kumar Khadanga, Associate Professor, SoET, CUTM, Odisha',
         'Dr. Chandra Sekhar Dash, Associate Professor, SoET, CUTM, Odisha',
-        'Dr. Abhishek Das, Assistant Professor, SoET, CUTM, Odisha',
         'Dr. Abinash Rath, Assistant Professor, SoET, CUTM, Odisha',
         'Dr. Adyasha Rath, Assistant Professor, CV Raman Global University, Odisha',
         'Dr. Prangya Paramita Pradhan, Assistant Professor, SoET, CUTM, Odisha',
         'Dr. Nimay Chandra Giri, Assistant Professor, SoET, CUTM, Odisha',
-        'Dr. Debendra Muduli, Assistant Professor, CV Raman Global University, Odisha'
+        'Dr. Debendra Muduli, Assistant Professor, CV Raman Global University, Odisha',
+        'Prof. Manoj Kumar Padhi, Assistant Professor, SoET, CUTM, Odisha',
+        'Prof. Susanta Kumar Nayak, Assistant Professor, SoET, CUTM, Odisha',
+        'Dr. Dukhishyam Sabat, Assistant Professor, SoET, CUTM, Odisha',
+        'Dr. Vikash Kumar Rathore, Assistant Professor, SoET, CUTM, Odisha',
+        'Dr. Aurobinda Bag, Assistant Professor, SoET, CUTM, Odisha',
+        'Dr. Sasmita Kumari Nayak, Assistant Professor, SoET, CUTM, Odisha',
+        'Dr. Chinmayee Dora, Associate Professor, SoET, CUTM, Odisha',
+        'Dr. P Anthony Sunny Dayal, Associate Professor, SoET, CUTM, AP',
       ]
     },
     {
@@ -166,14 +181,15 @@ const Committee = () => {
       title: 'Publication Committee',
       color: '#3A0CA3',
       members: [
-        'Prof. (Dr.) Girish Kumar, Professor, IIT, Bombay',
+        'Prof. (Dr.) Girish Kumar, Professor, IIT, Bombay, (Chair)',
         'Prof. (Dr.) Sukumar Mishra, Professor, IIT, Delhi',
         'Prof. (Dr.) Ramesh Chandra Mohanty, Professor, Dept. of Mech. Engg.,CUTM, Odisha',
-        'Dr. Abhishek Das, Assistant Professor, SoET, CUTM, Odisha',
-        'Dr. Abinash Rath, Assistant Professor, SoET, CUTM, Odisha',
-        'Prof. Ashirbad Khuntia, Assistant Professor, SoET, CUTM, Odisha',
-        'Prof. Sourav Chakraborty, Assistant Professor, SoET, CUTM, Odisha',
-        'Dr. Prangya Paramita Pradhan, Assistant Professor, SoET, CUTM, Odisha'
+        'Dr. Abhishek Das, Assistant Professor, SoET, CUTM, Odisha, (Co-Chair)',
+        'Dr. Ashish Ranjan Dash, Associate Professor, SoET, CUTM, Odisha',
+        'Dr. Ribhu Abhusan Panda, Assistant Professor, SoET, CUTM, Odisha',
+        'prof (Dr.) Susanta Kumar Biswal, Professor, SoS, CUTM, Odisha',
+        'Dr. Mohammed Siddique, Associate Professor, SoS, CUTM, Odisha',
+        'Dr. K Vijaya Babu, Dean R & D, CUTM, AP',
       ]
     },
     {
@@ -272,7 +288,6 @@ const Committee = () => {
       members: [
         'Mr. Debasis Panda, Comptroller of Finance, CUTM, Odisha',
         'Prof. Satyanarayan Padhy, Academic Coordinator, SoET, PKD, CUTM, Odisha',
-        'Prof. Prabhat Ranjan Sahoo, Principal SoVET, CUTM, Odisha',
         'Mr. Debaraj Grahacharya, Manager Finance, PKD, CUTM, Odisha'
       ]
     },
@@ -282,7 +297,7 @@ const Committee = () => {
       color: '#023047',
       members: [
         'Mr. Sukanta Parida, CUTM, Odisha',
-        'Dr. K. C. Sethi, CUTM, Odisha',
+        // 'Dr. K. C. Sethi, CUTM, Odisha',
         'Mr. Nrusinha Das, CUTM, Odisha',
         'Prof. Sambeet Patra, CUTM, Odisha',
         'Prof. Tofan Kumar Nahak, CUTM, Odisha',
@@ -295,9 +310,10 @@ const Committee = () => {
       title: 'Track (Session and Event) Committee',
       color: '#8338EC',
       members: [
-        'Prof. Sandipan Pine, Assoc. Prof. Dept. of ECE, PKD, CUTM, Odisha',
+        'Prof. (Dr.) Sandipan Pine, Assoc. Prof. Dept. of ECE, PKD, CUTM, Odisha',
         'Dr. Tanmaya Sankar, Assoc. Prof. Dept. of Agronomy, CUTM, Odisha',
-        'Prof. Rajesh Kumar Misra, Asst. Prof. Dept. of ECE, PKD, CUTM, Odisha'
+        'Dr. Sujit Mishra, HOD, Dept. of Mechanical Engg. (PKD), CUTM, Odisha',
+        'Prof. Manoj Kumar Padhi, Assistant Professor, SoET, CUTM, Odisha',
       ]
     },
     {
@@ -305,10 +321,11 @@ const Committee = () => {
       title: 'Registration Committee',
       color: '#FB5607',
       members: [
+        // 'Dr. Gouri Kumar Sahu, Assoc. Prof. Dept. of SoAS, PKD, CUTM, Odisha ',
         'Dr. Prangya Paramita Pradhan, Asst. Prof. Dept. of ECE, PKD, CUTM, Odisha',
-        'Dr. Rajib Majhi, Asst. Prof. Dept. of Civil Engg, PKD, CUTM, Odisha',
         'Prof. N. Jeevaratnam, Asst. Prof. Dept. of ECE, PKD, CUTM, Odisha',
-        'Prof. Subhrashree Pritichhanda, Asst. Prof. Dept. of EEE, PKD, CUTM, Odisha'
+        'Prof. Lipsa Priyadarshanini Singh, Asst. Prof. Dept. of CSE, PKD, CUTM, Odisha',
+        'Prof. Sagarika Dash, Asst. Prof. Dept. of CSE, PKD, CUTM, Odisha',
       ]
     },
     {
@@ -317,7 +334,9 @@ const Committee = () => {
       color: '#FF006E',
       members: [
         'Prof. (Dr.) Prajna Pani, Associate Dean SoM, PKD, CUTM, Odisha',
-        'Prof. (Dr.) Sagar Maitra, HOD, Dept. of Agronomy, CUTM, Odisha'
+        // 'Prof. (Dr.) Sagar Maitra, HOD, Dept. of Agronomy, CUTM, Odisha'
+        'Dr. Abinash Gaya, Associate Professor, SoET, CUTM, Odisha',
+        'Dr. Ribhu Abhusan Panda, Assistant Professor, SoET, CUTM, Odisha',
       ]
     },
     {
@@ -336,9 +355,8 @@ const Committee = () => {
       members: [
         'Dr. Girish Rath, SoM, PKD, CUTM, Odisha',
         'Dr. Prangya Paramita Pradhan, SoET, PKD, CUTM, Odisha',
-        'Prof. Dwiti Sundar Rout, MSSSoA, CUTM, Odisha',
-        'Dr. Ashirbachan Mahapatra,MSSSoA, CUTM, Odisha',
-        'Prof. Upasana Sahoo, CUTM, Odisha'
+        'Prof. Susanta Kumar Nayak, Assistant Professor, SoET, CUTM, Odisha',
+        'Prof. B. Bikram Narayana, SoET, PKD, CUTM, Odisha'
       ]
     },
     {
@@ -346,7 +364,7 @@ const Committee = () => {
       title: 'Accommodation and Hospitality Committee',
       color: '#F59E0B',
       members: [
-        'Dr. Sambid Swain, Assoc. Dean SoF, CUTM, Odisha',
+        'Dr. Nihal R, Assitant Professor, MSSSoA, PKD, CUTM, Odisha',
         'Prof. Jagannath Padhy, CUTM, Odisha',
         'Mr. Jagannath Panda, Hostel Chief Warden, CUTM, Odisha',
         'Mr. Prasanta Panda, CUTM, Odisha'
@@ -358,7 +376,8 @@ const Committee = () => {
       color: '#EF4444',
       members: [
         'Dr. Kalyan Chakravarty,SoM, CUTM, Odisha',
-        'Mr. Lingaraj Mohapatra,Transport Incharge, CUTM, Odisha'
+        'Mr. Lingaraj Mohapatra, CUTM, Odisha',
+        'Mr. Sanjay Kar,Transport Incharge, CUTM, Odisha',
       ]
     },
     {
@@ -367,7 +386,9 @@ const Committee = () => {
       color: '#EC4899',
       members: [
         'Dr. Ritesh Kumar, Dean Student Affairs, PKD, CUTM, Odisha',
-        'Dr. Susanta Kumar Patnaik, Asst. Professor, SoM, PKD, CUTM, Odisha'
+        'Dr. Susanta Kumar Patnaik, Asst. Professor, SoM, PKD, CUTM, Odisha',
+        'Dr. Abinash Rath, Assistant Professor, SoET, CUTM, Odisha',
+        'Dr. Prangya Paramita Pradhan, Assistant Professor, SoET, CUTM, Odisha'
       ]
     },
     {
@@ -375,9 +396,12 @@ const Committee = () => {
       title: 'Snacks and Beverage Committee',
       color: '#14B8A6',
       members: [
-        'Dr. Sambid Swain, Assoc. Dean SoF, CUTM, Odisha',
-        'Mr. Santosh Pradhan, CUTM, Odisha',
-        'Mr. Rajendra Panda, CUTM, Odisha'
+        'Dr. Aurobinda Bag, Assistant Professor, SoET, CUTM, Odisha',
+        'Dr. Rashmi Rekha Behera, Assistant Professor, SoET, CUTM, Odisha',
+        'Prof. Biswaranjan Routray, Assistant Professor, SoET, CUTM, Odisha',
+        'Prof. Rajesh Kumar Misra, Assistant Professor, SoET, CUTM, Odisha'
+      
+        
       ]
     },
     {
@@ -385,7 +409,8 @@ const Committee = () => {
       title: 'Ambience and Beautification Committee',
       color: '#8B5CF6',
       members: [
-        'Dr. Susanta Kumar Patnaik, Asst. Professor, SoM, PKD, CUTM, Odisha',
+        'Dr. Madan Mohan Rout, Asst. Prof., SoET, PKD, CUTM',
+        'Dr. Krushna Chandra Sethi, Asst. Prof., SoET, PKD, CUTM',
         'Dr. Narayan Gouda, CUTM, Odisha'
       ]
     },
@@ -394,8 +419,13 @@ const Committee = () => {
       title: 'Volunteers Committee',
       color: '#06B6D4',
       members: [
-        'Dr. Ritesh Kumar, Dean Student Affairs, PKD, CUTM, Odisha',
-        'Dr. Susanta Kumar Patnaik, Asst. Professor, SoM, PKD, CUTM, Odisha'
+        // 'Dr. Ritesh Kumar, Dean Student Affairs, PKD, CUTM, Odisha',
+        // 'Dr. Susanta Kumar Patnaik, Asst. Professor, SoM, PKD, CUTM, Odisha',
+        'Prof. N. Jeevaratnam, Asst. Prof. Dept. of ECE, PKD, CUTM, Odisha',
+        'Prof. Jagannath Padhy, Asst. Prof. Dept. of CSE, PKD, CUTM, Odisha',
+        'Dr. Sashikant Das Asst. Prof. Dept. of MECH, PKD, CUTM, Odisha,',
+        'Dr. Mithlesh Kumar Mahto Asst. Prof. Dept. of MECH, PKD, CUTM, Odisha',
+        'Dr. Md Anis Ansari, Asst. Prof. Dept. of MECH, PKD, CUTM, Odisha',
       ]
     },
     {
@@ -415,7 +445,8 @@ const Committee = () => {
         'Prof. Prakash KVD, Dean HRD, CUTM, Odisha',
         'Dr. Durga Prasad Padhi, Director Administration, PKD, CUTM, Odisha',
         'Prof. (Dr.) Satya Prakash Nanda, Dean(Admin.),MSSSoA, CUTM, Odisha',
-        'Prof. Babu Sankar, MD, GT TECH'
+        'Prof. Babu Sankar, MD, GT TECH',
+        'Prof. Mir Sadat Ali, Dean SoVET, CUTM, Odisha',
       ]
     }
   ];
