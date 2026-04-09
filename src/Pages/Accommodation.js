@@ -1,6 +1,5 @@
 import React from 'react';
 import '../styles/Accommodation.css';
-import { FaHotel, FaBus, FaTrain } from 'react-icons/fa';
 
 const Accommodation = () => {
   return (

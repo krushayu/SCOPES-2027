@@ -4,10 +4,7 @@ import {
   FaEnvelope, 
   FaMapMarkerAlt, 
   FaUser, 
-  FaCalendarAlt, 
-  FaClock, 
   FaBuilding,
-
 } from 'react-icons/fa';
 import { MdEmail, MdLocationOn, MdPhone } from 'react-icons/md';
 
@@ -15,47 +12,46 @@ const Contact = () => {
   const organizers = [
     {
       // role: 'Organizing Chair',
-      name: 'Dr. Prafulla Panda',
-      phone: '+91 9438269572',
-      email: 'prafullapanda@cutm.ac.in',
-      designation: 'Dean of SoET'
-    }  
-    ,
-    {
-      // role: 'Organizing Chair',
       name: 'Dr. Debendra Kumar Sahoo',
       phone: '+91 7008242454',
       email: 'debendra.sahoo@cutm.ac.in',
-      designation: 'Professor, Dept of ECE'
+      designation: 'Assoc. Prof., Dept of ECE'
     },
     {
       // role: 'Convener',
       name: 'Dr. Ashok Misra',
       phone: '+91 9937563329',
       email: 'ashok.misra@cutm.ac.in',
-      designation: 'Professor, Dept of ECE'
+      designation: 'Prof., Dept of Mathematics'
     },
     {
       // role: 'Co-Convener',
       name: 'Prof. Prabhat Kumar Patnaik',
       phone: '+91 7008701920',
       email: 'prabhat.patnaik@cutm.ac.in',
-      designation: 'Associate Professor, Dept of ECE'
+      designation: 'Asst. Prof., Dept of ECE'
     },
     {
       // role: 'Co-Convener',
       name: 'Prof. Satyanarayan Padhy',
       phone: '+91 8917440019',
       email: 'snpadhy@cutm.ac.in',
-      designation: 'Associate Professor, Dept of ECE'
+      designation: 'Asst. Prof., Dept of ECE'
     },
     {
       // role: 'Co-Convener',
       name: 'Prof. (Dr.) Sangram Keshari Swain',
       phone: '+91 9937093949',
       email: 'sangram@cutm.ac.in',
-      designation: 'Professor, Dept of ECE'
-    }
+      designation: 'Prof., Dept of CSE'
+    },
+        {
+      // role: 'Organizing Chair',
+      name: 'Dr. Abhishek Das',
+      phone: '+91 7008809932',
+      email: 'abhishek.das@cutm.ac.in',
+      designation: 'Asst. Prof., Dept of CSE'
+    }  
   ];
 
   // const conferenceInfo = [

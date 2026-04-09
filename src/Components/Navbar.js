@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './Navbar.css';
 import { FaBars, FaTimes, FaDownload, FaChevronRight, FaUniversity, FaInfoCircle, FaChevronDown, FaTrophy, FaFlask, FaClock, FaFileAlt, FaMapMarkerAlt, FaCalendarAlt } from 'react-icons/fa';
 import { MdPeople, MdLibraryBooks, MdContactMail, MdAppRegistration, MdPublish } from 'react-icons/md';
-import { GiSpeaker, GiCalendar, GiArchiveResearch } from 'react-icons/gi';
+import { GiCalendar } from 'react-icons/gi';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -69,7 +69,6 @@ const Navbar = () => {
 
   const callForPapersItems = [
     { label: 'Scope of the Conference', href: '/scope', icon: <FaFlask />, isRoute: true },
-      { label: 'Speakers', href: '/speakers', icon: <GiSpeaker />, isRoute: true },
     { label: 'Important Dates', href: '/imp-dates', icon: <FaClock />, isRoute: true },
     { label: 'Publication', href: '/publication', icon: <MdPublish />, isRoute: true },
     { label: 'Paper Submission', href: '/paper-submission', icon: <FaFileAlt />, isRoute: true },
@@ -94,8 +93,8 @@ const Navbar = () => {
               
               {/* Conference Details */}
               <div className="conference-title">
-                <div className="conference-badge">3rd International Conference</div>
-                <h1>Signal Processing, Communication, Power & Embedded Systems SCOPES - 2027</h1>
+                <div className="conference-badge">3rd International Conference on</div>
+                <h1>Signal Processing, Communication, Power & Embedded Systems (SCOPES)-2027</h1>
                 <div className="conference-info">
                   <img src="/ALOGO.png" alt="IEEE Logo" className="info-sponsor-logo" />
                   <div className="info-item">

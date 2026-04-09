@@ -16,7 +16,7 @@ const guidelines = [
 const fees = [
   { category: 'R&D and Industry Participants', ieee: '₹9,000', nonIeee: '₹10,000', foreign: '$225' },
   { category: 'Faculty Participants from Academia', ieee: '₹8,000', nonIeee: '₹9,000', foreign: '$200' },
-  { category: 'UG/PG Students & Research Scholars', ieee: '₹7,000', nonIeee: '₹7,500', foreign: '$180' },
+  { category: 'UG/PG Students & Research Scholars', ieee: '₹7,000', nonIeee: '₹8,000', foreign: '$180' },
   { category: 'Listener', ieee: '₹2,000', nonIeee: '₹2,500', foreign: '$100' },
 ];
 
@@ -43,9 +43,9 @@ const Registration = () => {
           </div>
 
           <div className="reg-cta">
-            <a href="#" target="_blank" rel="noopener noreferrer" className="reg-btn">
+            <button className="reg-btn" disabled>
               👉 Register Here
-            </a>
+            </button>
           </div>
 
           <div className="reg-contact-note">
