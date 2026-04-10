@@ -184,7 +184,7 @@ const Footer = () => {
     rel="noopener noreferrer"
     className="developer-link"
   >
-    krush@yu
+    Aayush Raj
   </a>{" "}
   | 🌐
   <a
@@ -217,7 +217,7 @@ const Footer = () => {
               </a>
             </div>
           <p className="mobile-developed-by">
-            Design & Developed by <a href="https://krushayu.in" target="_blank" rel="noopener noreferrer" className="developer-link">Krush@yu</a>
+            Design & Developed by <a href="https://krushayu.in" target="_blank" rel="noopener noreferrer" className="developer-link">Aayush Raj</a>
           </p>
         </div>
       </div>
