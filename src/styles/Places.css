@@ -1,0 +1,270 @@
+.places-wrapper {
+  min-height: 100vh;
+  background: #f8f9fa;
+  padding-top: 120px;
+}
+
+.places-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 40px 20px 70px;
+}
+
+.places-intro {
+  background: white;
+  border-radius: 15px;
+  padding: 45px;
+  margin-bottom: 50px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.places-intro-title {
+  font-size: 38px;
+  font-weight: 700;
+  color: #1e3c72;
+  margin-bottom: 25px;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.places-intro-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #FFD700, #FFA500);
+  border-radius: 2px;
+}
+
+.places-intro-text {
+  color: #555;
+  font-size: 17px;
+  line-height: 1.8;
+  margin-bottom: 18px;
+  text-align: justify;
+}
+
+.places-highlight {
+  background: linear-gradient(135deg, #fff8e1 0%, #ffe0b2 100%);
+  border-left: 5px solid #FFA500;
+  padding: 25px;
+  border-radius: 8px;
+  margin-top: 25px;
+}
+
+.places-highlight p {
+  color: #333;
+  font-size: 16px;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.places-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 35px;
+}
+
+.place-card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.place-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 35px rgba(0,0,0,0.15);
+}
+
+.place-image-container {
+  position: relative;
+  height: 280px;
+  overflow: hidden;
+  background: #e0e0e0;
+}
+
+.place-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.place-card:hover .place-image {
+  transform: scale(1.08);
+}
+
+.place-overlay {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: rgba(255, 215, 0, 0.95);
+  padding: 8px 18px;
+  border-radius: 25px;
+  font-weight: 700;
+  color: #1e3c72;
+  font-size: 13px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(5px);
+}
+
+.place-content {
+  padding: 28px;
+}
+
+.place-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1e3c72;
+  margin: 0 0 18px 0;
+}
+
+.place-description {
+  color: #666;
+  font-size: 15px;
+  line-height: 1.7;
+  margin-bottom: 22px;
+  text-align: justify;
+}
+
+.place-read-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: #1e3c72;
+  font-weight: 600;
+  text-decoration: none;
+  margin-left: 8px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.place-read-more:hover {
+  color: #FFA500;
+  gap: 8px;
+}
+
+.place-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 18px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.place-distance {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #555;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.distance-icon {
+  color: #FFA500;
+  font-size: 16px;
+}
+
+.place-map-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: white;
+  padding: 9px 18px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 13px;
+  transition: all 0.3s ease;
+}
+
+.place-map-link:hover {
+  background: linear-gradient(135deg, #2a5298, #3d6bb3);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(30, 60, 114, 0.3);
+}
+
+@media (max-width: 1024px) {
+  .places-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .places-intro {
+    padding: 35px 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .places-wrapper {
+    padding-top: 80px;
+  }
+  
+  .places-container {
+    padding: 30px 15px 50px;
+  }
+  
+  .places-intro {
+    padding: 28px 20px;
+  }
+  
+  .places-intro-title {
+    font-size: 26px;
+    line-height: 1.3;
+  }
+  
+  .places-intro-text {
+    font-size: 15px;
+  }
+  
+  .place-image-container {
+    height: 220px;
+  }
+  
+  .place-content {
+    padding: 22px 18px;
+  }
+  
+  .place-title {
+    font-size: 21px;
+  }
+  
+  .place-description {
+    font-size: 14px;
+  }
+  
+  .place-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .place-map-link {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .places-intro {
+    padding: 20px 15px;
+  }
+  
+  .places-intro-title {
+    font-size: 20px;
+    line-height: 1.3;
+  }
+  
+  .places-intro-text {
+    font-size: 14px;
+  }
+  
+  .place-title {
+    font-size: 20px;
+  }
+}

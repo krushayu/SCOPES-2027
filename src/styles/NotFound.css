@@ -1,0 +1,64 @@
+.nf-simple-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  padding: 20px;
+}
+
+.nf-simple-content {
+  text-align: center;
+}
+
+.nf-simple-image {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  margin-bottom: 30px;
+}
+
+.nf-simple-title {
+  font-size: 36px;
+  font-weight: 700;
+  margin: 20px 0;
+  color: #0a192f;
+}
+
+.nf-simple-text {
+  font-size: 18px;
+  color: #1e3c72;
+  margin-bottom: 40px;
+}
+
+.nf-simple-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #4895ef 0%, #4cc9f0 100%);
+  color: white;
+  text-decoration: none;
+  padding: 15px 40px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 20px rgba(72, 149, 239, 0.3);
+}
+
+.nf-simple-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(72, 149, 239, 0.4);
+}
+
+@media screen and (max-width: 768px) {
+  .nf-simple-image {
+    max-width: 350px;
+  }
+  
+  .nf-simple-title {
+    font-size: 28px;
+  }
+  
+  .nf-simple-text {
+    font-size: 16px;
+  }
+}

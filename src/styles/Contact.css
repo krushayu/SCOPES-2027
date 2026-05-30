@@ -1,0 +1,330 @@
+.ct-wrapper {
+  min-height: 100vh;
+  background: #f1f5f9;
+  padding-top: 80px;
+}
+
+/* ══════════════════════════════
+   HERO
+══════════════════════════════ */
+.ct-hero {
+  background: linear-gradient(135deg, #0a192f, #1e3c72);
+  padding: 32px 20px;
+  text-align: center;
+  color: white;
+  border-bottom: 3px solid #00b4d8;
+  position: relative;
+  overflow: hidden;
+}
+
+.ct-hero::before {
+ content: 'SCOPES - 2027';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 100px;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.07);
+  letter-spacing: 10px;
+  white-space: nowrap;
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+}
+
+.ct-hero h1 {
+  font-size: 40px;
+  font-weight: 800;
+  margin: 0 0 8px;
+  letter-spacing: -0.5px;
+}
+
+.ct-hero p {
+  font-size: 17px;
+  color: #94a3b8;
+  margin: 0;
+}
+
+
+
+
+
+/* ══════════════════════════════
+   SECTIONS
+══════════════════════════════ */
+.ct-section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 50px 20px;
+}
+
+.ct-section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #00b4d8;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.ct-sl-icon { font-size: 13px; }
+
+/* ══════════════════════════════
+   ADDRESS + MAP
+══════════════════════════════ */
+.ct-info-map {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 30px;
+  align-items: start;
+}
+
+/* Address block */
+.ct-address-block {
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 36px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+  border: 1px solid #e2e8f0;
+  border-top: 4px solid #00b4d8;
+}
+
+.ct-address-title {
+  font-size: 22px;
+  font-weight: 800;
+  color: #0a192f;
+  margin: 0 0 16px;
+}
+
+.ct-address-text {
+  font-size: 14px;
+  color: #475569;
+  line-height: 1.9;
+  margin: 0 0 28px;
+  padding: 16px;
+  background: #f8fafc;
+  border-radius: 12px;
+  border-left: 3px solid #00b4d8;
+}
+
+.ct-address-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.ct-action-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 13px 16px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.ct-action-email {
+  background: #f0f9ff;
+  color: #0284c7;
+  border: 2px solid #bae6fd;
+}
+
+.ct-action-email:hover {
+  background: #0284c7;
+  color: white;
+  border-color: #0284c7;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(2,132,199,0.3);
+}
+
+.ct-action-call {
+  background: linear-gradient(135deg, #0a192f, #1e3c72);
+  color: white;
+  border: 2px solid transparent;
+}
+
+.ct-action-call:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(10,25,47,0.35);
+}
+
+/* Map block */
+.ct-map-block {
+  background: #ffffff;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+  border: 1px solid #e2e8f0;
+}
+
+.ct-map-inner iframe {
+  width: 100%;
+  height: 320px;
+  border: 0;
+  display: block;
+}
+
+.ct-map-footer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 20px;
+  font-size: 13px;
+  color: #475569;
+  background: #f8fafc;
+  border-top: 1px solid #e2e8f0;
+}
+
+.ct-map-pin {
+  color: #ef4444;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+/* ══════════════════════════════
+   COMMITTEE
+══════════════════════════════ */
+.ct-committee-section {
+  padding-top: 0;
+  padding-bottom: 70px;
+}
+
+.ct-section-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.ct-section-header .ct-section-label {
+  justify-content: center;
+}
+
+.ct-section-title {
+  font-size: 32px;
+  font-weight: 900;
+  color: #0a192f;
+  margin: 0 0 8px;
+  letter-spacing: -0.5px;
+}
+
+.ct-section-sub {
+  font-size: 15px;
+  color: #64748b;
+  margin: 0;
+}
+
+.ct-members-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.ct-member-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  border: 1px solid #e2e8f0;
+  border-top: 3px solid var(--accent, #00b4d8);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ct-member-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 36px rgba(0,0,0,0.12);
+}
+
+.ct-member-top {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.ct-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 14px;
+  color: white;
+  font-size: 22px;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.ct-member-meta h3 {
+  font-size: 15px;
+  font-weight: 800;
+  color: #0a192f;
+  margin: 0 0 4px;
+  line-height: 1.3;
+}
+
+.ct-member-desig {
+  font-size: 12px;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.ct-member-divider {
+  height: 1px;
+  background: #f1f5f9;
+  margin-bottom: 16px;
+}
+
+.ct-member-contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ct-contact-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #475569;
+  font-size: 12.5px;
+  font-weight: 500;
+  transition: color 0.2s;
+  overflow: hidden;
+}
+
+.ct-contact-row:hover { color: var(--accent, #00b4d8); }
+
+.ct-contact-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  flex-shrink: 0;
+}
+
+/* ══════════════════════════════
+   RESPONSIVE
+══════════════════════════════ */
+@media (max-width: 1024px) {
+  .ct-members-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .ct-wrapper { padding-top: 100px; }
+  .ct-hero-content h1 { font-size: 32px; }
+  /* .ct-hero { padding: 44px 20px 54px; } */
+  .ct-chip { width: 100%; max-width: 320px; }
+  .ct-info-map { grid-template-columns: 1fr; }
+  .ct-members-grid { grid-template-columns: 1fr; }
+  .ct-address-actions { flex-direction: column; }
+  .ct-hero::after { font-size: 40px; }
+}
