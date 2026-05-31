@@ -11,6 +11,66 @@ import {
   FaSeedling,
 } from "react-icons/fa";
 
+// SDG images mapping for each track
+const trackSDGImages = {
+  0: [ // Track 1 - Advanced Signal, Image & Intelligent Systems
+    { src: "/assets/sdg/track1-1.png", name: "SDG 1", alt: "track1-1" },
+    { src: "/assets/sdg/track1-2.png", name: "SDG 2", alt: "track1-2" },
+    { src: "/assets/sdg/track1-3.png", name: "SDG 3", alt: "track1-3" },
+    { src: "/assets/sdg/track1-4.png", name: "SDG 4", alt: "track1-4" },
+  ],
+  1: [ // Track 2 - Next-Generation Communication Technologies
+    { src: "/assets/sdg/track2-1.png", name: "SDG 5", alt: "track2-1" },
+    { src: "/assets/sdg/track2-2.png", name: "SDG 6", alt: "track2-2" },
+    { src: "/assets/sdg/track2-3.png", name: "SDG 7", alt: "track2-3" },
+    { src: "/assets/sdg/track2-4.png", name: "SDG 8", alt: "track2-4" },
+  ],
+  2: [ // Track 3 - Smart Power Systems & Sustainable Energy
+    { src: "/assets/sdg/track3-1.png", name: "SDG 9", alt: "track3-1" },
+    { src: "/assets/sdg/track3-2.png", name: "SDG 10", alt: "track3-2" },
+    { src: "/assets/sdg/track3-3.png", name: "SDG 11", alt: "track3-3" },
+    { src: "/assets/sdg/track3-4.png", name: "SDG 12", alt: "track3-4" },
+    { src: "/assets/sdg/track3-5.png", name: "SDG 13", alt: "track3-5" },
+  ],
+  3: [ // Track 4 - Embedded Systems, VLSI & Advanced Chip Design
+    { src: "/assets/sdg/track4-1.png", name: "SDG 14", alt: "track4-1" },
+    { src: "/assets/sdg/track4-2.png", name: "SDG 15", alt: "track4-2" },
+    { src: "/assets/sdg/track4-3.png", name: "SDG 16", alt: "track4-3" },
+    { src: "/assets/sdg/track4-4.png", name: "SDG 17", alt: "track4-4" },
+    { src: "/assets/sdg/track4-5.png", name: "SDG 18", alt: "track4-5" },
+    { src: "/assets/sdg/track4-6.png", name: "SDG 19", alt: "track4-6" },
+  ],
+  4: [ // Track 5 - Industry 4.0/5.0 & Intelligent Automation
+    { src: "/assets/sdg/track5-1.png", name: "SDG 20", alt: "track5-1" },
+    { src: "/assets/sdg/track5-2.png", name: "SDG 21", alt: "track5-2" },
+    { src: "/assets/sdg/track5-3.png", name: "SDG 22", alt: "track5-3" },
+    { src: "/assets/sdg/track5-4.png", name: "SDG 23", alt: "track5-4" },
+    { src: "/assets/sdg/track5-5.png", name: "SDG 24", alt: "track5-5" },
+  ],
+  5: [ // Track 6 - Interdisciplinary & Emerging Technologies
+    { src: "/assets/sdg/track6-1.png", name: "SDG 25", alt: "track6-1" },
+    { src: "/assets/sdg/track6-2.png", name: "SDG 26", alt: "track6-2" },
+    { src: "/assets/sdg/track6-3.png", name: "SDG 27", alt: "track6-3" },
+    { src: "/assets/sdg/track6-4.png", name: "SDG 28", alt: "track6-4" },
+    { src: "/assets/sdg/track6-5.png", name: "SDG 29", alt: "track6-5" },
+  ],
+  6: [ // Track 7 - Quantum Control, Computing & Learning
+    { src: "/assets/sdg/track7-1.png", name: "SDG 30", alt: "track7-1" },
+    { src: "/assets/sdg/track7-2.png", name: "SDG 31", alt: "track7-2" },
+    { src: "/assets/sdg/track7-3.png", name: "SDG 32", alt: "track7-3" },
+  ],
+  7: [ // Track 8 - Precision Agriculture & Digital Farming
+    { src: "/assets/sdg/track8-1.png", name: "SDG 33", alt: "track8-1" },
+    { src: "/assets/sdg/track8-2.png", name: "SDG 34", alt: "track8-2" },
+    { src: "/assets/sdg/track8-3.png", name: "SDG 35", alt: "track8-3" },
+    { src: "/assets/sdg/track8-4.png", name: "SDG 36", alt: "track8-4" },
+    { src: "/assets/sdg/track8-5.png", name: "SDG 37", alt: "track8-5" },
+    { src: "/assets/sdg/track8-6.png", name: "SDG 38", alt: "track8-6" },
+    { src: "/assets/sdg/track8-7.png", name: "SDG 39", alt: "track8-7" },
+
+  ],
+};
+
 const tracks = [
   {
     icon: <FaSignal />,
@@ -28,7 +88,6 @@ const tracks = [
       "Edge AI for real-time intelligent systems",
     ],
   },
-
   {
     icon: <FaNetworkWired />,
     title: "Next-Generation Communication Technologies",
@@ -44,7 +103,6 @@ const tracks = [
       "Network virtualization and software-defined networking",
     ],
   },
-
   {
     icon: <FaBolt />,
     title: "Smart Power Systems & Sustainable Energy",
@@ -60,7 +118,6 @@ const tracks = [
       "Energy management and sustainable power technologies",
     ],
   },
-
   {
     icon: <FaMicrochip />,
     title: "Embedded Systems, VLSI & Advanced Chip Design",
@@ -76,7 +133,6 @@ const tracks = [
       "Biochips and lab-on-chip technologies",
     ],
   },
-
   {
     icon: <FaIndustry />,
     title: "Industry 4.0/5.0 & Intelligent Automation",
@@ -92,7 +148,6 @@ const tracks = [
       "Intelligent sensing for industrial applications",
     ],
   },
-
   {
     icon: <FaFlask />,
     title: "Interdisciplinary & Emerging Technologies",
@@ -108,7 +163,6 @@ const tracks = [
       "AI and ML applications in engineering systems",
     ],
   },
-
   {
     icon: <FaAtom />,
     title: "Quantum Control, Computing & Learning",
@@ -124,7 +178,6 @@ const tracks = [
       "Computational complexity in quantum systems",
     ],
   },
-
   {
     icon: <FaSeedling />,
     title: "Precision Agriculture & Digital Farming Technologies",
@@ -143,10 +196,9 @@ const tracks = [
   },
 ];
 
-// const conclusion = "The conference focuses on future-ready technologies and industry-driven innovations, particularly highlighting the convergence of advanced chip design (biochips, quantum chips, AI accelerators) with communication, power, and embedded systems. It aims to promote scalable, sustainable, and intelligent solutions that meet the demands of next-generation industries and global technological advancement.";
-
 const Scope = () => {
   const [active, setActive] = useState(0);
+  const currentSDGs = trackSDGImages[active] || [];
 
   return (
     <div className="scope-wrapper">
@@ -166,20 +218,23 @@ const Scope = () => {
             integrating advanced chip design, intelligent systems, communication
             technologies, sustainable energy solutions, and scalable industrial
             applications, fostering strong collaboration between academia,
-            research organizations, and industry. With the emergence of
+            research organizations, and industry. <br />With the emergence of
             transformative technologies such as AI-enabled hardware, 5G/6G
             communication, edge intelligence, quantum computing, cyber-physical
             systems, and bio-inspired computing, SCOPES provides a
             multidisciplinary platform to discuss innovative solutions for
             modern challenges in healthcare, smart manufacturing, sustainable
             energy, intelligent transportation, agriculture, and smart
-            infrastructure.{" "}
+            infrastructure.
           </p>
         </div>
+        
         <div>
-          <h2> The conference invites original research contributions in the following tracks, but not limited to..</h2>
+          <h2>
+            The conference invites original research contributions in the following tracks, but not limited to...
+          </h2>
         </div>
-        <br></br>
+        <br />
 
         <div className="scope-layout">
           {/* Left — Track List */}
@@ -197,27 +252,49 @@ const Scope = () => {
             ))}
           </div>
 
-          {/* Right — Topics Panel */}
+          {/* Right — Topics Panel with SDGs */}
           <div className="scope-panel" style={{ "--c": tracks[active].color }}>
             <div className="scope-panel-header">
               <div className="scope-panel-icon">{tracks[active].icon}</div>
               <h2>{tracks[active].title}</h2>
             </div>
-            <ul className="scope-panel-list">
-              {tracks[active].topics.map((topic, i) => (
-                <li key={i}>
-                  <span className="scope-panel-dot" />
-                  {topic}
-                </li>
-              ))}
-            </ul>
+
+            {/* Topics and SDGs Side by Side */}
+            <div className="scope-panel-content">
+              {/* Left Side - Topics List */}
+              <div className="scope-panel-topics">
+                <ul className="scope-panel-list">
+                  {tracks[active].topics.map((topic, i) => (
+                    <li key={i}>
+                      <span className="scope-panel-dot" />
+                      {topic}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Right Side - SDG Images (6 per track) */}
+              <div className="scope-panel-sdgs">
+                {/* <h4 className="sdg-section-title">
+                  <span>🎯</span> Aligned with UN SDGs
+                </h4> */}
+                <div className="sdg-grid">
+                  {currentSDGs.map((sdg, idx) => (
+                    <div key={idx} className="sdg-card">
+                      <img 
+                        src={sdg.src} 
+                        alt={sdg.alt}
+                        className="sdg-img"
+                        loading="lazy"
+                      />
+                      {/* <span className="sdg-name">{sdg.name}</span> */}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-
-        {/* <div className="scope-conclusion">
-          <h3>Conclusion</h3>
-          <p>{conclusion}</p>
-        </div> */}
       </div>
     </div>
   );

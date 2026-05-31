@@ -54,9 +54,9 @@ const Home = () => {
     { src: "/assets/slide2.png", title: "University Area" },
   ];
   const scopesImages = [
-    { src: "/scopes-prev/scopes2024/scope1.png", title: "Conference" },
-    { src: "/scopes-prev/scopes2024/scope2.png", title: "Scopes 2016" },
-    { src: "/scopes-prev/scopes2024/scope3.jpeg", title: "Scopes 2024" },
+    { src: "/assets/soet1.jpg", title: "SoET Drone Performance" },
+    { src: "/assets/soet2.jpg", title: "SoET Building" },
+    { src: "/assets/soet3.jpg", title: "SoET Building" },
   ];
 
   useEffect(() => {
@@ -398,9 +398,9 @@ const Home = () => {
         </div>
         <div className="scopes-content">
           <div className="scopes-text anim-slide-left">
-            <p>▪ The School of Engineering and Technology (SoET) at Centurion University is a premier hub of technical education and applied research, offering undergraduate, postgraduate, and doctoral programs across a wide spectrum of engineering disciplines including Electronics & Communication, Computer Science, Electrical, Mechanical, and Civil Engineering.</p>
-            <p>▪ SoET is equipped with state-of-the-art laboratories, innovation centers, and research facilities that foster hands-on learning and industry-ready skill development. The school maintains strong collaborations with leading industries and research organizations to ensure curriculum relevance and placement excellence.</p>
-            <p>▪ With a focus on interdisciplinary research, entrepreneurship, and societal impact, SoET actively contributes to national and international conferences, publications, and funded research projects, making it a vibrant center for academic and technological advancement.</p>
+            <p> Established in 1997 at Paralakhemundi and expanded to Bhubaneswar in 2008, the School of Engineering and Technology at Centurion University of Technology and Management (CUTM), Odisha, has been committed to excellence in engineering education, research, innovation, and skill development. Since its inception, the School has nurtured competent, socially responsible, and globally competitive engineers equipped to address contemporary technological challenges and contribute effectively to industry, academia, and society.</p>
+            <p> SoET is equipped with state-of-the-art laboratories, innovation centers, and research facilities that foster hands-on learning and industry-ready skill development. The school maintains strong collaborations with leading industries and research organizations to ensure curriculum relevance and placement excellence.</p>
+            {/* <p>▪ With a focus on interdisciplinary research, entrepreneurship, and societal impact, SoET actively contributes to national and international conferences, publications, and funded research projects, making it a vibrant center for academic and technological advancement.</p> */}
           </div>
           <div className="scopes-image-slider anim-slide-right">
             <img key={scopesImgIndex} src={scopesImages[scopesImgIndex].src} alt="SoET" className="scopes-img" />
@@ -468,6 +468,11 @@ const Home = () => {
                 { n : 13, ext: "jpeg" },
                 { n : 14, ext: "jpeg" },
                 { n : 15, ext: "jpeg" },
+                { n : 16, ext: "jpeg" },
+                { n : 18, exy: "jpg" },
+                { n : 19, ext: "jpeg" },
+
+                
               ].map((img, i) => (
                 <img
                   key={`${si}-${i}`}
