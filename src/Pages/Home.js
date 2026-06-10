@@ -138,7 +138,7 @@ const Home = () => {
 
   const conferenceInfo = [
     { icon: <FaCalendarAlt />, label: "Dates", value: <>04-06 Feb 2027</>, color: "#FF6B6B", link: "/imp-dates" },
-    { icon: <FaMapMarkerAlt />, label: "Venue", value: "Centurion University, Paralakhemundi", color: "#4ECDC4", link: "https://maps.app.goo.gl/hVvbqeLRXWvEa9gT9" },
+    { icon: <FaMapMarkerAlt />, label: "Venue", value: "Centurion University of Technology and Management, Paralakhemundi", color: "#4ECDC4", link: "https://maps.app.goo.gl/hVvbqeLRXWvEa9gT9" },
     { icon: <FaPaperPlane />, label: "Submissions", value: "Open Now", color: "#45B7D1", link: "/paper-submission" },
     { icon: <FaAward />, label: "Publication", value: "IEEE Xplore", color: "#96CEB4", link: "/publication" },
     { icon: <MdAppRegistration />, label: "Mode", value: "Hybrid", color: "#DDA0DD", link: "/program-schedule" },
@@ -157,7 +157,7 @@ const Home = () => {
     { title: "Paper Submission open",   date: "01 May 2026",         start: new Date('2026-05-01'), end: new Date('2026-08-30') },
     { title: "Paper Submission close",  date: "30 August 2026",      start: new Date('2026-08-30'), end: new Date('2026-08-30') },
     { title: "Notification of Acceptance", date: "30 October 2026",  start: new Date('2026-10-30'), end: new Date('2026-10-30') },
-    { title: "Last date of registration & camera ready submission", date: "30 November 2026", start: new Date('2026-11-30'), end: new Date('2026-11-30') },
+    { title: "Start date of registration & camera ready submission", date: "01 November 2026", start: new Date('2026-11-01'), end: new Date('2026-11-30') },
     { title: "Conference Dates",        date: "04-06 February 2027", start: new Date('2027-02-04'), end: new Date('2027-02-07') },
   ].map((d) => {
     const now = new Date();

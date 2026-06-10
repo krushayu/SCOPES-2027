@@ -24,10 +24,10 @@ const Publication = () => {
         <section className="pub-card">
           <h3 className="pub-card-title">
             <FaBook className="pub-small-icon" />
-            Previous SCOPES Proceedings
+            Previous SCOPES Proceedings & SCOPES Database
           </h3>
           <p className="pub-text">
-            Explore the published proceedings from previous SCOPES conferences, now available on IEEE Xplore:
+            Explore the published proceedings from previous SCOPES conferences, now available on IEEE Xplore and SCOPES Database.:
           </p>
           <div className="pub-proceedings-grid">
             <a 
@@ -51,6 +51,31 @@ const Publication = () => {
               <h4>SCOPES 2024</h4>
               <p>2nd International Conference</p>
               <span className="pub-view-link">View on IEEE Xplore →</span>
+            </a>
+          </div>
+          {/* IEEE Scopes Database.. */}
+          <div className="pub-proceedings-grid">
+            <a 
+              href="https://www.scopus.com/pages/search/publications?searchId=085caace-dd28-41f4-b1a1-ca8ed49dcab5" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="pub-proceedings-card"
+            >
+              <div className="pub-proceedings-icon">📚</div>
+              <h4>SCOPES DATABASE - 2016</h4>
+              <p>1st International Conference</p>
+              <span className="pub-view-link">View on Scopus Database →</span>
+            </a>
+            <a 
+              href="https://www.scopus.com/pages/search/publications?searchId=1d84eb7a-3677-48b9-98ab-982339b74761" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="pub-proceedings-card"
+            >
+              <div className="pub-proceedings-icon">📚</div>
+              <h4>SCOPES DATABASE - 2024</h4>
+              <p>2nd International Conference</p>
+              <span className="pub-view-link">View on Scopus Database →</span>
             </a>
           </div>
         </section>

@@ -205,7 +205,7 @@ const PaperSubmission = () => {
             Follow proper citation practices noted above to avoid plagiarism.
             All papers are checked for plagiarism before review process and the{" "}
             <strong>
-              plagiarism should not exceed 20% (Including references.)
+              plagiarism should not exceed 30% (Including references.)
             </strong>
             .
           </p>
