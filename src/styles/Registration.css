@@ -64,14 +64,14 @@
   display: flex;
   gap: 16px;
   align-items: flex-start;
-  background: #6366f1;
-  border-left: 4px solid #4338ca;
+  background: #f8fafc;
+  border-left: 4px solid #00b4d8;
   border-radius: 10px;
   padding: 14px 18px;
 }
 
 .reg-num {
-  background: rgba(255,255,255,0.25);
+  background: #00b4d8;
   color: white;
   font-size: 13px;
   font-weight: 800;
@@ -88,23 +88,23 @@
 .reg-guideline-item p {
   margin: 0;
   font-size: 15px;
-  color: #ffffff;
+  color: #334155;
   line-height: 1.75;
 }
 
 .reg-guideline-item a {
-  color: #bfdbfe;
+  color: #334155;
   font-weight: 600;
   text-decoration: underline;
   word-break: break-word;
 }
 
 .reg-guideline-item a:hover {
-  color: #ffffff;
+  color: #334155;
 }
 
 .reg-guideline-item strong {
-  color: #ffffff;
+  color: #334155;
 }
 
 /* Title icon */

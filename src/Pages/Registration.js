@@ -127,7 +127,7 @@ const Registration = () => {
             <div className="reg-payment-header">
               <img src="/assets/cutm_logo.png" alt="CUTM Logo" className="reg-company-logo" />
               <div>
-                <h3>CUTM - BHUBANESWAR</h3>
+                <h3>SCOPES - 2027</h3>
                 <p>IEEE Conference Registration</p>
               </div>
             </div>
