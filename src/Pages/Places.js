@@ -57,7 +57,7 @@ const Places = () => {
     {
       id: 6,
       name: 'Harabhangi Dam',
-      description: 'The Harabhangi Dam is a popular tourist destination in Gajapati District, Odisha. It is known for its scenic beauty and the reservoir it creates.',
+      description: 'Harabhangi dam is located about 6 km North-West of Adava, and it is 28 km distance from Mohana and around 132 km distance from Paralakhemundi. The purpose of the Harabhangi Reservoir is to store water for irrigation. The Harabhangi has surrounded by mountains and green forests. A large number of tourists come here to visit and feast on the Reservoir in the winter. Harabhangi Picnic Spot is a beautiful place to visit nearby the Paralakhemundi.',
       distance: '132 KM',
       mapLink: 'https://share.google/oQTOMF8S1MTigqm9o',
       wikiLink: 'https://en.wikipedia.org/wiki/Harabhangi_Dam',
