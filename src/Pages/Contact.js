@@ -1,19 +1,23 @@
 import React from 'react';
 import '../styles/Contact.css';
 import {
-  FaMapMarkerAlt, FaLocationArrow, FaQuestionCircle, FaBullhorn, FaCogs, FaBook, FaFileAlt, FaPhone
+  FaMapMarkerAlt, FaLocationArrow, FaQuestionCircle, FaBullhorn, FaCogs,
+  FaBook, FaFileAlt, FaPhone, FaEnvelope, FaBuilding, FaUserTie
 } from 'react-icons/fa';
 import { MdEmail, MdPhone } from 'react-icons/md';
 
 const Contact = () => {
-  // const organizers = [
-  //   { name: 'Dr. Debendra Kumar Sahoo',          phone: '+91 7008242454', email: 'debendra.sahoo@cutm.ac.in',  designation: 'Assoc. Prof., Dept of ECE',  color: '#6366f1' },
-  //   { name: 'Dr. Ashok Misra',                   phone: '+91 9937563329', email: 'ashok.misra@cutm.ac.in',     designation: 'Prof., Dept of Mathematics',  color: '#0ea5e9' },
-  //   { name: 'Prof. Prabhat Kumar Patnaik',        phone: '+91 7008701920', email: 'prabhat.patnaik@cutm.ac.in', designation: 'Asst. Prof., Dept of ECE',    color: '#10b981' },
-  //   { name: 'Prof. Satyanarayan Padhy',           phone: '+91 8917440019', email: 'snpadhy@cutm.ac.in',         designation: 'Asst. Prof., Dept of ECE',    color: '#f59e0b' },
-  //   { name: 'Prof. (Dr.) Sangram Keshari Swain', phone: '+91 9937093949', email: 'sangram@cutm.ac.in',         designation: 'Prof., Dept of CSE',          color: '#ef4444' },
-  //   { name: 'Dr. Abhishek Das',                  phone: '+91 7008809932', email: 'abhishek.das@cutm.ac.in',    designation: 'Asst. Prof., Dept of CSE',    color: '#8b5cf6' },
-  // ];
+  const queryContacts = [
+    { icon: <FaBullhorn />, reason: 'Publicity & Sponsorship', name: 'Prof. (Dr.) Sangram Keshari Swain', desig: "Dean (Exams & Students' Welfare), CUTM, Odisha", phone: '+91 9937093949', accent: '#6366f1' },
+    { icon: <FaCogs />,    reason: 'Administration',           name: 'Dr. Prabhat Kumar Patnaik',          desig: 'HOD, Dept. of ECE & EEE (PKD), CUTM, Odisha', phone: '+91 7008701920', accent: '#0ea5e9' },
+    { icon: <FaBook />,    reason: 'Publication',              name: 'Prof. Satyanarayan Padhy',            desig: 'Associate Dean, SoET, CUTM, Odisha',           phone: '+91 8917440019', accent: '#10b981' },
+    { icon: <FaFileAlt />, reason: 'Paper Submission',         name: 'Dr. Abhishek Das',                   desig: 'Assistant Professor, SoET, CUTM, Odisha',      phone: '+91 7008809932', accent: '#f59e0b' },
+  ];
+
+  const generalContacts = [
+    { name: 'Dr. Debendra Kumar Sahoo', role: 'Organizing Chair', desig: 'Associate Professor, Dept. of ECE, CUTM, Odisha', phone: '+91 7008242454', email: 'debendra.sahoo@cutm.ac.in', accent: '#00629B' },
+    { name: 'Dr. Ashok Misra',          role: 'Convener', desig: 'Professor, Dept. of Mathematics, CUTM, Odisha',  phone: '+91 9937563329', email: 'ashok.misra@cutm.ac.in',    accent: '#00b4d8' },
+  ];
 
   return (
     <div className="ct-wrapper">
@@ -28,29 +32,34 @@ const Contact = () => {
 
       {/* ── Address + Map ── */}
       <div className="ct-section ct-info-map">
+
         <div className="ct-address-block">
-          <div className="ct-section-label">
-            <FaLocationArrow className="ct-sl-icon" />
+          <div className="ct-address-badge">
+            <FaBuilding className="ct-address-badge-icon" />
             Office Address
           </div>
           <h2 className="ct-address-title">SCOPES-2027</h2>
-          <p className="ct-address-text">
-            Room No: F-221, 2nd Floor, CRC-2<br />
-            Department of ECE, School of Engineering & Technology<br />
-            Centurion University of Technology & Management<br />
-            R-Sitapur, Allurinagar, Paralakhemundi<br />
-            Dist: Gajapati, Odisha - 761211<br />
-            Phone: +91 7008242454(Chair)<br />
-            +91 9937563329 (Convener)
-          </p>
-          <div className="ct-address-actions">
+
+          <div className="ct-address-rows">
+            <div className="ct-addr-row">
+              <FaMapMarkerAlt className="ct-addr-icon" />
+              <span>Room No: F-221, 2nd Floor, CRC-2<br />Dept. of ECE, School of Engineering &amp; Technology<br />Centurion University of Technology &amp; Management<br />R-Sitapur, Allurinagar, Paralakhemundi<br />Dist: Gajapati, Odisha — 761211</span>
+            </div>
+            
+            <div className="ct-addr-row">
+              <FaEnvelope className="ct-addr-icon" />
+              <a href="mailto:scopes2027@cutm.ac.in">scopes2027@cutm.ac.in</a>
+            </div>
+          </div>
+
+          {/* <div className="ct-address-actions">
             <a href="mailto:scopes2027@cutm.ac.in" className="ct-action-btn ct-action-email">
               <MdEmail /> Email Us
             </a>
             <a href="tel:+917008242454" className="ct-action-btn ct-action-call">
               <MdPhone /> Call Us
             </a>
-          </div>
+          </div> */}
         </div>
 
         <div className="ct-map-block">
@@ -65,59 +74,18 @@ const Contact = () => {
           </div>
           <div className="ct-map-footer">
             <FaMapMarkerAlt className="ct-map-pin" />
-            <span>Centurion University of Technology & Management, Paralakhemundi, Odisha</span>
+            <span>Centurion University of Technology &amp; Management, Paralakhemundi, Odisha</span>
           </div>
           <div className="ct-map-footer">
-            <FaQuestionCircle className="ct-map-pin" />
-            <span>If any website related issue? <a href="https://krushayu.in/contact" target="_blank">Click Here</a></span>
+            <FaQuestionCircle className="ct-map-pin" style={{color: '#00b4d8'}} />
+            <span>If any website related issue? <a href="https://krushayu.in/contact" target="_blank" rel="noreferrer">Click Here</a></span>
           </div>
         </div>
       </div>
 
-      {/* ── Organizing Committee ── */}
-      {/* <div className="ct-section ct-committee-section">
-        <div className="ct-section-header">
-          <div className="ct-section-label">
-            <FaUsers className="ct-sl-icon" />
-            Meet the Team
-          </div>
-          <h2 className="ct-section-title">Organizing Committee</h2>
-          <p className="ct-section-sub">Reach out directly to our organizing members</p>
-        </div>
-
-        <div className="ct-members-grid">
-          {organizers.map((o, i) => (
-            <div className="ct-member-card" key={i} style={{ '--accent': o.color }}>
-              <div className="ct-member-top">
-                <div className="ct-avatar" style={{ background: o.color }}>
-                  {o.name.split(' ').slice(-1)[0].charAt(0)}
-                </div>
-                <div className="ct-member-meta">
-                  <h3>{o.name}</h3>
-                  <span className="ct-member-desig">{o.designation}</span>
-                </div>
-              </div>
-              <div className="ct-member-divider"></div>
-              <div className="ct-member-contacts">
-                <a href={`tel:${o.phone}`} className="ct-contact-row">
-                  <span className="ct-contact-icon" style={{ background: o.color + '18', color: o.color }}>
-                    <FaPhone />
-                  </span>
-                  <span>{o.phone}</span>
-                </a>
-                <a href={`mailto:${o.email}`} className="ct-contact-row">
-                  <span className="ct-contact-icon" style={{ background: o.color + '18', color: o.color }}>
-                    <FaEnvelope />
-                  </span>
-                  <span>{o.email}</span>
-                </a>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div> */}
-
-      {/* ── Query Contact Section ── */}
+      {/* ── General Contact (Chair & Convener) ── */}
+      
+      {/* ── Specific Query Section ── */}
       <div className="ct-section ct-query-section">
         <div className="ct-section-header">
           <div className="ct-section-label">
@@ -128,12 +96,7 @@ const Contact = () => {
           <p className="ct-section-sub">Reach out to the right person for your query</p>
         </div>
         <div className="ct-query-grid">
-          {[
-            { icon: <FaBullhorn />, reason: 'Publicity & Sponsorship', name: 'Prof. (Dr.) Sangram Keshari Swain', desig: "Dean (Exams & Students' Welfare), CUTM, Odisha", phone: '+91 9937093949', accent: '#6366f1' },
-            { icon: <FaCogs />,    reason: 'Administration',           name: 'Dr. Prabhat Kumar Patnaik',          desig: 'HOD, Dept. of ECE & EEE (PKD), CUTM, Odisha', phone: '+91 7008701920', accent: '#0ea5e9' },
-            { icon: <FaBook />,    reason: 'Publication',              name: 'Prof. Satyanarayan Padhy',            desig: 'Associate Dean, SoET, CUTM, Odisha',           phone: '+91 8917440019', accent: '#10b981' },
-            { icon: <FaFileAlt />, reason: 'Paper Submission',         name: 'Dr. Abhishek Das',                   desig: 'Assistant Professor, SoET, CUTM, Odisha',      phone: '+91 7008809932', accent: '#f59e0b' },
-          ].map((c, i) => (
+          {queryContacts.map((c, i) => (
             <div className="ct-query-card" key={i} style={{'--accent': c.accent}}>
               <div className="ct-query-icon-wrap">
                 <div className="ct-query-icon" style={{background: c.accent}}>{c.icon}</div>
@@ -144,6 +107,44 @@ const Contact = () => {
               <a href={`tel:${c.phone}`} className="ct-query-phone">
                 <FaPhone className="ct-query-phone-icon" /> {c.phone}
               </a>
+            </div>
+          ))}
+        </div>
+      </div>
+
+<div className="ct-section ct-general-section">
+        <div className="ct-section-header">
+          <div className="ct-section-label">
+            <FaUserTie className="ct-sl-icon" />
+            For More Query or Information
+          </div>
+          <h2 className="ct-section-title">For Detailed Information</h2>
+          <p className="ct-section-sub">Reach out directly to the conference Chair &amp; Convener</p>
+        </div>
+        <div className="ct-general-grid">
+          {generalContacts.map((c, i) => (
+            <div className="ct-general-card" key={i} style={{'--accent': c.accent}}>
+              <div className="ct-general-top">
+                <div className="ct-general-avatar" style={{background: c.accent}}>
+                  {c.name.replace(/^(Dr\.|Prof\.|Mr\.|Ms\.)\s*/i, '').split(' ').filter(w => w).map(w => w[0]).slice(0,2).join('')}
+                </div>
+                <div>
+                  <div className="ct-general-role" style={{color: c.accent}}>{c.role}</div>
+                  <h3 className="ct-general-name">{c.name}</h3>
+                  <p className="ct-general-desig">{c.desig}</p>
+                </div>
+              </div>
+              <div className="ct-general-divider" />
+              <div className="ct-general-contacts">
+                <a href={`tel:${c.phone}`} className="ct-general-contact-row">
+                  <span className="ct-general-contact-icon" style={{background: c.accent + '18', color: c.accent}}><FaPhone /></span>
+                  {c.phone}
+                </a>
+                {/* <a href={`mailto:${c.email}`} className="ct-general-contact-row">
+                  <span className="ct-general-contact-icon" style={{background: c.accent + '18', color: c.accent}}><FaEnvelope /></span>
+                  {c.email}
+                </a> */}
+              </div>
             </div>
           ))}
         </div>
