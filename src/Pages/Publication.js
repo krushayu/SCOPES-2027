@@ -54,7 +54,7 @@ const Publication = () => {
             </a>
           </div>
           {/* IEEE Scopes Database.. */}
-          <div className="pub-proceedings-grid">
+          {/* <div className="pub-proceedings-grid">
             <a 
               href="https://www.scopus.com/pages/search/publications?searchId=085caace-dd28-41f4-b1a1-ca8ed49dcab5" 
               target="_blank" 
@@ -77,7 +77,7 @@ const Publication = () => {
               <p>2nd International Conference</p>
               <span className="pub-view-link">View on Scopus Database →</span>
             </a>
-          </div>
+          </div> */}
         </section>
 
         <section className="pub-card copyright-card">
