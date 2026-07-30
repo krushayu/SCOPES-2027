@@ -8,6 +8,7 @@ import {
   FaRocket,
   FaCheckCircle,
 } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const PaperSubmission = () => {
   const [btnState, setBtnState] = useState("idle");
@@ -38,9 +39,13 @@ const PaperSubmission = () => {
             Submission Guidelines
           </h2>
           <p className="paper-intro">
-            SCOPES-2027 welcomes papers related to the conference tracks.
-            (Please refer scope of the conference)
-          </p>
+  SCOPES-2027 welcomes papers related to the conference tracks. (
+  Please refer{" "}
+  <Link to="/scope" className="scope-link">
+    Scope of the Conference
+  </Link>
+  )
+</p>
           <p className="paper-text">
             The following instructions should be followed to make a successful
             submission:
@@ -52,10 +57,9 @@ const PaperSubmission = () => {
           <h3 className="paper-card-title">Paper Size:</h3>
           <p>
             Please ensure pinned manuscript adheres to the specified length
-            requirement of <strong>4-6 pages</strong> with Abstract word count
+            requirement of <strong>4-6 pages</strong> with abstract word count
             limit <strong>150-250 words</strong>, following the IEEE Conference
-            format guidelines. You can download the template from the provided
-            link:
+            format guidelines. 
           </p>
         </section>
 
@@ -65,6 +69,7 @@ const PaperSubmission = () => {
             <FaDownload className="paper-small-icon" />
             Paper Template:
           </h3>
+          <p>You can download the template from the provided link.</p>
           <div className="paper-template-links">
             <a href="/doc/ms_word_template.docx" className="paper-template-btn">
               <FaDownload />
@@ -84,24 +89,24 @@ const PaperSubmission = () => {
               IEEE - Manuscript Templates
             </a>
           </div>
-          <div className="paper-note">
+          {/* <div className="paper-note">
             <FaExclamationTriangle className="note-icon" />
             <p>
               <strong>Note:</strong> Manuscripts that do not conform to the
               formatting guidelines will be removed from further consideration
               without review.
             </p>
-          </div>
+          </div> */}
         </section>
 
         {/* Paper Submission Method */}
         <section className="paper-card">
           <h3 className="paper-card-title">
             <FaUpload className="paper-small-icon" />
-            Paper Submission Method:
+            Instructions for Paper Submission:
           </h3>
           <div className="paper-instructions">
-            <h4>Instructions:</h4>
+            {/* <h4>Instructions:</h4> */}
             <ol>
               <li>Upload papers in IEEE format only.</li>
               <li>
@@ -117,21 +122,22 @@ const PaperSubmission = () => {
 
           {/* CMT Submit Card */}
           <div className="cmt-card">
-
             <div className="cmt-card-left">
               <div className="cmt-badge">
                 <span className="cmt-badge-dot"></span>
                 Submission Open
               </div>
 
-              <p className="cmt-card-heading">
-                Ready to Submit<br />Your Paper?
-              </p>
+              {/* <p className="cmt-card-heading">
+                Ready to Submit
+                <br />
+                Your Paper?
+              </p> */}
 
               <p className="cmt-card-sub">
                 Click the button below to open the Microsoft CMT submission
-                portal for SCOPES 2027. Make sure your paper follows IEEE
-                format before submitting.
+                portal for SCOPES-2027. Make sure your paper follows IEEE format
+                before submitting.
               </p>
 
               <button
@@ -140,18 +146,24 @@ const PaperSubmission = () => {
                 disabled={btnState === "loading"}
               >
                 {btnState === "idle" && (
-                  <><FaRocket className="cmt-btn-icon" /> Submit via CMT</>
+                  <>
+                    <FaRocket className="cmt-btn-icon" /> Submit via CMT
+                  </>
                 )}
                 {btnState === "loading" && (
-                  <><span className="cmt-ring"></span> Launching...</>
+                  <>
+                    <span className="cmt-ring"></span> Launching...
+                  </>
                 )}
                 {btnState === "success" && (
-                  <><FaCheckCircle className="cmt-btn-icon" /> Opening CMT!</>
+                  <>
+                    <FaCheckCircle className="cmt-btn-icon" /> Opening CMT!
+                  </>
                 )}
               </button>
 
               <p className="cmt-card-help">
-                Having issues?{" "}
+                Having issues? Contact us{" "}
                 <a href="mailto:scopes2027@cutm.ac.in">scopes2027@cutm.ac.in</a>
               </p>
             </div>
@@ -159,11 +171,14 @@ const PaperSubmission = () => {
             <div className="cmt-card-right">
               <p className="cmt-qr-title">Scan to Submit</p>
               <div className="cmt-qr-frame">
-                <img src="/assets/cmt_qr.png" alt="CMT QR Code" className="cmt-qr-img" />
+                <img
+                  src="/assets/cmt_qr.png"
+                  alt="CMT QR Code"
+                  className="cmt-qr-img"
+                />
               </div>
               <p className="cmt-qr-sub">Microsoft CMT Portal</p>
             </div>
-
           </div>
         </section>
 
@@ -205,7 +220,7 @@ const PaperSubmission = () => {
             Follow proper citation practices noted above to avoid plagiarism.
             All papers are checked for plagiarism before review process and the{" "}
             <strong>
-              plagiarism should not exceed 30% (Including references.)
+              plagiarism should not exceed 20% (Including references.) AI plagiarism should not exceed 20%
             </strong>
             .
           </p>

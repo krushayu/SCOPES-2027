@@ -50,8 +50,7 @@ const Home = () => {
   ];
   const deptImages = [
     { src: "/assets/ece1.png", title: "ECE" },
-    { src: "/assets/ece2.png", title: "Department of ECE" },
-    { src: "/assets/slide2.png", title: "University Area" },
+    { src: "/assets/slide2.png", title: "University Area" }
   ];
   const scopesImages = [
     { src: "/assets/soet1.jpg", title: "SoET Drone Performance" },
@@ -108,14 +107,14 @@ const Home = () => {
       image: "/assets/slide4.JPG",
       overlay: "rgba(0,0,0,0.3)",
       title: <>3<sup>rd</sup> International Conference</>,
+      on: "on",
       subtitle: "Signal Processing, Communication, Power & Embedded Systems",
-      tag: "IEEE Technically Co-Sponsored",
     },
     {
       image: "/assets/slide1.png",
       overlay: "rgba(0,0,0,0.2)",
-      title: "Centurion University of Technology and Management, Parlakhemundi, Odisha",
-      subtitle:  <>04<sup>th</sup>-06<sup>th</sup> February 2027</>,
+      title: "Centurion University of Technology and Management, Paralakhemundi, Odisha",
+      subtitle: <>04<sup>th</sup>-06<sup>th</sup> February 2027</>,
       tag: "Hybrid Mode",
     },
     {
@@ -139,7 +138,7 @@ const Home = () => {
   const conferenceInfo = [
     { icon: <FaCalendarAlt />, label: "Dates", value: <>04-06 Feb 2027</>, color: "#FF6B6B", link: "/imp-dates" },
     { icon: <FaMapMarkerAlt />, label: "Venue", value: "Centurion University of Technology and Management, Paralakhemundi", color: "#4ECDC4", link: "https://maps.app.goo.gl/hVvbqeLRXWvEa9gT9" },
-    { icon: <FaPaperPlane />, label: "Submissions", value: "Open Now", color: "#45B7D1", link: "/paper-submission" },
+    { icon: <FaPaperPlane />, label: "Submit Paper", value: "Open Now", color: "#45B7D1", link: "/paper-submission" },
     { icon: <FaAward />, label: "Publication", value: "IEEE Xplore", color: "#96CEB4", link: "/publication" },
     { icon: <MdAppRegistration />, label: "Mode", value: "Hybrid", color: "#DDA0DD", link: "/program-schedule" },
   ];
@@ -210,10 +209,11 @@ const Home = () => {
               }}
             >
               <div className="slide-content">
-                <div className="slide-badge">{slide.tag}</div>
+                {slide.tag && <div className="slide-badge">{slide.tag}</div>}
                 <h1 className="slide-title">{slide.title}</h1>
+                {slide.on && <h2 className="slide-on">{slide.on}</h2>}
                 <h2 className="slide-subtitle">{slide.subtitle}</h2>
-                <div className="slide-actions">
+                {/* <div className="slide-actions">
                   <button
                     className="secondary-btn"
                     onClick={() => window.open("/paper-submission", "_blank")}
@@ -221,7 +221,7 @@ const Home = () => {
                     <FaPaperPlane className="btn-icon" />
                     Submit Paper
                   </button>
-                </div>
+                </div> */}
               </div>
             </div>
           ))}
@@ -297,19 +297,19 @@ const Home = () => {
       {/* About the Conference Section */}
       <section className="conf-about-section anim-fade-up" ref={confAboutRef}>
         <div className="section-header">
-          <h2 className="section-title">About the Conference</h2>
-          <p className="section-subtitle">SCOPES 2027 - Bringing Together Researchers, Engineers, And Industry Experts</p>
+          <h2 className="section-title">Scope-2027 Conference</h2>
+          <p className="section-subtitle">SCOPES-2027 - Bringing Together Researchers, Engineers, and Industry Experts</p>
         </div>
         <div className="conf-about-body">
           <div className="conf-vm-grid">
             <div className="conf-vm-card conf-vision">
-              <h3>Conference Vision</h3>
+              <h3>Vision</h3>
               <p>
                 To become a leading international platform that fosters innovation, interdisciplinary research, and collaboration in emerging technologies, driving the development of intelligent, sustainable, and future-ready engineering solutions aligned with global and industrial needs.
               </p>
             </div>
             <div className="conf-vm-card conf-mission">
-              <h3>Conference Mission</h3>
+              <h3>Mission</h3>
               <ul>
                 <li>To provide a global forum for researchers, academicians, and industry professionals to present and exchange cutting-edge research.</li>
                 <li>To promote integration of signal processing, communication, power, quantum technologies, and embedded systems.</li>
@@ -373,7 +373,7 @@ const Home = () => {
       {/* About University Section */}
       <section className="about-university-section anim-fade-up" ref={aboutRef}>
         <div className="section-header">
-          <h2 className="section-title">Centurion University of Technology and Management</h2>
+          <h2 className="section-title">Centurion University of Technology and Management, Odisha</h2>
           <p className="section-subtitle">Accredited with 'A+' Grade by NAAC</p>
         </div>
         <div className="about-content">
@@ -393,7 +393,7 @@ const Home = () => {
       {/* About School of Engineering and Technology (SoET) */}
       <section className="scopes-conference-section anim-fade-up" ref={scopesRef}>
         <div className="section-header">
-          <h2 className="section-title">About - School of Engineering and Technology</h2>
+          <h2 className="section-title">School of Engineering and Technology, Paralakhemundi</h2>
           {/* <p className="section-subtitle">SoET - Centurion University of Technology and Management</p> */}
         </div>
         <div className="scopes-content">
@@ -412,7 +412,7 @@ const Home = () => {
       {/* Department Section */}
       <section className="department-section anim-fade-up" ref={deptRef}>
         <div className="section-header">
-          <h2 className="section-title">Department of Electronics and Communication Engineering</h2>
+          <h2 className="section-title">Department of Electronics and Communication Engineering, Paralakhemundi</h2>
         </div>
         <div className="department-content">
           <div className="department-image anim-slide-left">
@@ -462,15 +462,15 @@ const Home = () => {
                 { n: 7, ext: "jpeg" },
                 { n: 8, ext: "jpeg" },
                 { n: 9, ext: "jpeg" },
-                { n: 10, ext: "jpeg" },
-                { n: 11, ext: "jpeg" },
-                { n: 12, ext: "jpeg" },
-                { n : 13, ext: "jpeg" },
-                { n : 14, ext: "jpeg" },
-                { n : 15, ext: "jpeg" },
-                { n : 16, ext: "jpeg" },
-                { n : 18, exy: "jpg" },
-                { n : 19, ext: "jpeg" },
+                // { n: 10, ext: "jpeg" },
+                // { n: 11, ext: "jpeg" },
+                // { n: 12, ext: "jpeg" },
+                // { n : 13, ext: "jpeg" },
+                // { n : 14, ext: "jpeg" },
+                // { n : 15, ext: "jpeg" },
+                // { n : 16, ext: "jpeg" },
+                // { n : 18, exy: "jpg" },
+                // { n : 19, ext: "jpeg" },
 
                 
               ].map((img, i) => (
@@ -505,6 +505,7 @@ const Home = () => {
                 { n: 7, ext: "jpeg" },
                 { n: 8, ext: "jpeg" },
                 { n: 9, ext: "jpeg" },
+                
               ].map((img, i) => (
                 <img
                   key={`${si}-${i}`}

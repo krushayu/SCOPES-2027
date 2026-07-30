@@ -195,7 +195,7 @@ const Footer = () => {
         <div className="footer-bottom">
           <div className="footer-container">
             <p className="developed-by">
-              Design &amp; Developed by{" "}
+              Designed &amp; Developed by{" "}
               <a href="https://www.linkedin.com/in/krushayu/" target="_blank" rel="noopener noreferrer" className="developer-link">krush@yu</a>{" "}
               | 🌐
               <a href="https://krushayu.in" target="_blank" rel="noopener noreferrer" className="developer-link">krushayu.in</a>
@@ -217,7 +217,7 @@ const Footer = () => {
       <div className="mobile-footer">
         <div className="mobile-footer-content">
           <p className="developed-by">
-            Design &amp; Developed by{" "}
+            Designed &amp; Developed by{" "}
             <a href="https://www.linkedin.com/in/krushayu/" target="_blank" rel="noopener noreferrer" className="developer-link">krush@yu</a>{" "}
             | 🌐
             <a href="https://krushayu.in" target="_blank" rel="noopener noreferrer" className="developer-link">krushayu.in</a>

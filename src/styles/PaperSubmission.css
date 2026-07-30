@@ -432,3 +432,26 @@
     height: 130px;
   }
 }
+
+.paper-intro {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #444;
+}
+
+.scope-link {
+  color: #0d6efd;
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.scope-link:hover {
+  color: #084298;
+  border-bottom: 2px solid #084298;
+}
+
+.scope-link:active {
+  color: #052c65;
+}

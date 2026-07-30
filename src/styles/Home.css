@@ -396,6 +396,14 @@
   text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000, 0 0 30px rgba(0,0,0,0.9);
 }
 
+.slide-on {
+  font-size: 22px;
+  font-weight: 600;
+  color: #caf0f8;
+  margin: -10px 0 10px;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.8);
+}
+
 .slide-subtitle {
   font-size: 48px;
   color: #ffffff;

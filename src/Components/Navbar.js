@@ -94,13 +94,13 @@ const Navbar = () => {
               {/* Conference Details */}
               <div className="conference-title">
                 <div className="conference-badge">3<sup>rd</sup> International Conference<br/>on</div>
-                <h1>Signal Processing, Communication, Power &amp; Embedded Systems (SCOPES)-2027</h1>
+                <h1>Signal Processing, Communication, Power &amp; Embedded Systems SCOPES-2027</h1>
                 <div className="conference-info">
                   <img src="/assets/scopes_logo.png" alt="IEEE Logo" className="info-sponsor-logo" />
                   <div className="conference-info-details">
                     <div className="info-item">
                       {/* <span className="info-icon">📍</span> */}
-                      <span className="info-text">📍 Centurion University of Technology and Management, Paralakhemundi, Odisha</span>
+                      <span className="info-text">Centurion University of Technology and Management, Paralakhemundi, Odisha</span>
                     </div>
                     <div className="info-item">
                       {/* <span className="info-icon">📅</span> */}
@@ -110,7 +110,7 @@ const Navbar = () => {
                   <img src="/assets/com_soc.png" alt="Computer Society" className="info-sponsor-logo" />
                 </div>
                 <div className="sponsor-tag">
-                  <span className="tag-icon">⚡</span>
+                  {/* <span className="tag-icon">⚡</span> */}
                   Technically Co-Sponsored by IEEE Bhubaneswar Section &amp; Computer Society Chapter (CH11163)
                 </div>
               </div>

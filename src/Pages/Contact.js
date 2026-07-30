@@ -2,7 +2,7 @@ import React from 'react';
 import '../styles/Contact.css';
 import {
   // FaPhone, FaEnvelope,FaUsers,
-  FaMapMarkerAlt, FaLocationArrow
+  FaMapMarkerAlt, FaLocationArrow,FaQuestionCircle
 } from 'react-icons/fa';
 import { MdEmail, MdPhone,
   // MdLocationOn
@@ -69,6 +69,10 @@ const Contact = () => {
           <div className="ct-map-footer">
             <FaMapMarkerAlt className="ct-map-pin" />
             <span>Centurion University of Technology & Management, Paralakhemundi, Odisha</span>
+          </div>
+          <div className="ct-map-footer">
+            <FaQuestionCircle className="ct-map-pin" />
+            <span>If any website related issue? <a href="https://krushayu.in/contact" target="_blank">Click Here</a></span>
           </div>
         </div>
       </div>

@@ -102,8 +102,8 @@ const Committee = () => {
       bg: "#fff7ed",
       members: [
         "Prof. (Dr.) Sangram Keshari Swain, Dean (Exams & Students' Welfare), CUTM, Odisha",
-        "Dr. Prabhat Kumar Patnaik, HOD, Dept. of ECE (PKD), CUTM, Odisha",
-        "Prof. Satyanarayan Padhy, Academic Coordinator, SoET, CUTM, Odisha",
+        "Dr. Prabhat Kumar Patnaik, HOD, Dept. of ECE & EEE (PKD), CUTM, Odisha",
+        "Prof. Satyanarayan Padhy, Associate Dean, SoET, CUTM, Odisha",
         "Dr. Abhishek Das, Assistant Professor, SoET, CUTM, Odisha",
       ],
     },
@@ -136,8 +136,8 @@ const Committee = () => {
         "Prof. (Dr.) Ramesh Chandra Mohanty, Professor, Dept. of Mechanical Engg., CUTM, Odisha",
         "Prof. (Dr.) Sagar Maitra, Professor, Dept. of Agronomy, MSSSoA, CUTM, Odisha",
         "Dr. Debendra Kumar Sahoo, Associate Professor, Dept. of ECE, CUTM, Odisha",
-        "Prof. Satyanarayan Padhy, Academic Coordinator, SoET, PKD, CUTM, Odisha",
-        "Dr. Prabhat Kumar Patnaik, HOD, Dept. of ECE, CUTM, Odisha",
+        "Prof. Satyanarayan Padhy, Associate Dean, SoET, PKD, CUTM, Odisha",
+        "Dr. Prabhat Kumar Patnaik, HOD, Dept. of ECE & EEE, CUTM, Odisha",
       ],
     },
     {
