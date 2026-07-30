@@ -11,6 +11,27 @@
   display: block;
 }
 
+/* Sticky nav bar on scroll - desktop only */
+@media screen and (min-width: 769px) {
+  .navbar.scrolled .nav-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1001;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  }
+
+  .navbar.scrolled .nav-placeholder {
+    display: block;
+  }
+
+  .nav-placeholder {
+    display: none;
+    height: 65px;
+  }
+}
+
 .mobile-header {
   display: none;
 }
@@ -126,6 +147,31 @@
 .right-header-logo .header-logo-img {
   margin-top: 10px;
   margin-right: 0;
+}
+
+@media screen and (min-width: 769px) {
+  .header-logo-img {
+    margin-top: -48px;
+    opacity: 0.82;
+    transform: scale(0.93);
+  }
+
+  .left-header-logo .header-logo-img {
+    margin-top: -52px;
+    opacity: 0.82;
+    transform: scale(0.93);
+  }
+
+  .right-header-logo .header-logo-img {
+    margin-top: -8px;
+    opacity: 0.82;
+    transform: scale(0.93);
+  }
+
+  .header-logo:hover .header-logo-img {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .header-logo:hover .header-logo-img {

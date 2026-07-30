@@ -1174,17 +1174,19 @@
   display: flex;
   gap: 24px;
   width: max-content;
-  animation: speakersScroll 8s linear infinite;
+  animation: speakersScroll 28s linear infinite;
   padding: 10px 0 20px 0;
+  will-change: transform;
 }
 
 .speakers-strip-wrapper:hover .speakers-strip-track {
   animation-play-state: paused;
 }
 
+/* 8 speakers × (220px card + 24px gap) = 8 × 244px = 1952px */
 @keyframes speakersScroll {
   0%   { transform: translateX(0); }
-  100% { transform: translateX(calc(-244px * 6)); }
+  100% { transform: translateX(calc(-244px * 8)); }
 }
 
 .speaker-card {

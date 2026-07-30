@@ -40,9 +40,9 @@ const Committee = () => {
       bg: "#ecfeff",
       members: [
         // "Prof. Purna Mohanty, Co-founder and CEO Marquee Semiconductor",
-        "Prof. (Dr.) Anita Patra, Registrar, CUTM, Odisha",
         "Prof. (Dr.) Biswajit Mishra, Pro-Vice Chancellor, CUTM, Odisha",
         "Prof. (Dr.) Ajay Kumar Nayak, Pro-Vice Chancellor, CUTM, Odisha",
+        "Prof. (Dr.) Anita Patra, Registrar, CUTM, Odisha",
       ],
     },
     // {
@@ -62,7 +62,7 @@ const Committee = () => {
       color: "#b45309",
       bg: "#fffbeb",
       members: [
-        "Prof. (Dr.) G. S. N. Raju, Chancellor, CUTM, AP",
+        "Prof. (Dr.) G. S. N. Raju, EX-Chancellor, CUTM, AP",
         "Prof. (Dr.) Ganapati Panda, Former Deputy Director, IIT Bhubaneswar, Odisha",
         "Prof. (Dr.) Okyay Kaynak, Istanbul, Turkey",
       ],
@@ -96,8 +96,8 @@ const Committee = () => {
       ],
     },
     {
-      id: "Organizing Security ",
-      title: "Organizing Security ",
+      id: "Organizing Secretary ",
+      title: "Organizing Secretary ",
       color: "#c2410c",
       bg: "#fff7ed",
       members: [
@@ -127,7 +127,7 @@ const Committee = () => {
         "Prof. (Dr.) B. Suresh Subramonian, Dean SoVAS, CUTM, Odisha",
         "Prof. (Dr.) Satyasis Misra, Dean SDG, CUTM, Odisha",
         "Dr. Prafulla Kumar Panda, Dean SoET, PKD, CUTM, Odisha",
-        "Prof. (Dr.) Sujata Chakravarty, Dean SoET, Bhubaneswar, CUTM, Odisha",
+        "Prof. (Dr.) Sujata Chakravarty, Director IIC, CUTM, Odisha",
         "Dr. Sambid Swain, Associate Dean SoF, CUTM, Odisha",
         "Prof. (Dr.) Prajna Pani, Associate Dean SoM, PKD, CUTM, Odisha",
         "Prof. (Dr.) Anil Kumar Jonnalagadda, Associate Dean ABM, CUTM, Odisha",
@@ -302,7 +302,7 @@ const Committee = () => {
       bg: "#fffbeb",
       members: [
         "Mr. Debasis Panda, Comptroller of Finance, CUTM, Odisha",
-        "Prof. Satyanarayan Padhy, Academic Coordinator, SoET, PKD, CUTM, Odisha",
+        "Prof. Satyanarayan Padhy, Associate Dean, SoET, CUTM, Odisha",
         "Mr. Debaraj Grahacharya, Manager Finance, PKD, CUTM, Odisha",
       ],
     },
@@ -375,6 +375,8 @@ const Committee = () => {
         "Dr. Prangya Paramita Pradhan, SoET, PKD, CUTM, Odisha",
         "Prof. Susanta Kumar Nayak, Assistant Professor, SoET, CUTM, Odisha",
         "Prof. B. Bikram Narayana, SoET, PKD, CUTM, Odisha",
+        "Dr. Susanta Kumar Patnaik, Assistant Professor, SoM, PKD, CUTM, Odisha",
+
       ],
     },
     {
@@ -467,6 +469,8 @@ const Committee = () => {
         "Prof. (Dr.) Satya Prakash Nanda, Dean (Admin.), MSSSoA, CUTM, Odisha",
         "Prof. Babu Sankar, MD, GT TECH",
         "Prof. Mir Sadat Ali, Dean SoVET, CUTM, Odisha",
+        "Mr. Debasis Panda, Comptroller of Finance, CUTM, Odisha",
+
       ],
     },
   ];

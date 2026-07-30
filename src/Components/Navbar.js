@@ -122,6 +122,9 @@ const Navbar = () => {
             </div>
           </div>
 
+          {/* Placeholder to prevent content jump when nav becomes fixed */}
+          <div className="nav-placeholder"></div>
+
           {/* Desktop Navigation */}
           <div className="nav-container">
             <div className="nav-content">

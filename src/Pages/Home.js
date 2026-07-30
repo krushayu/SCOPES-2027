@@ -274,22 +274,20 @@ const Home = () => {
         </div>
         <div className="speakers-strip-wrapper">
           <div className="speakers-strip-track">
-            {[...Array(2)].flatMap((_, si) =>
-              speakers.map((speaker) => (
-                <div className="speaker-card" key={`${si}-${speaker.id}`}>
-                  <div className="speaker-image-wrapper">
-                    <img src={speaker.image} alt={speaker.name} className="speaker-image" />
-                  </div>
-                  <div className="speaker-card-divider"></div>
-                  <h3 className="speaker-name">{speaker.name}</h3>
-                  <div className="speaker-card-divider2"></div>
-                  <p className="speaker-profession">{speaker.profession}</p>
-                  <button className="speaker-see-more" onClick={() => setSelectedSpeaker(speaker)}>
-                    See More →
-                  </button>
+            {[...speakers, ...speakers].map((speaker, i) => (
+              <div className="speaker-card" key={i}>
+                <div className="speaker-image-wrapper">
+                  <img src={speaker.image} alt={speaker.name} className="speaker-image" />
                 </div>
-              ))
-            )}
+                <div className="speaker-card-divider"></div>
+                <h3 className="speaker-name">{speaker.name}</h3>
+                <div className="speaker-card-divider2"></div>
+                <p className="speaker-profession">{speaker.profession}</p>
+                <button className="speaker-see-more" onClick={() => setSelectedSpeaker(speaker)}>
+                  See More →
+                </button>
+              </div>
+            ))}
           </div>
         </div>
       </section>
