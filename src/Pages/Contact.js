@@ -36,7 +36,7 @@ const Contact = () => {
             <FaLocationArrow className="ct-sl-icon" />
             Office Address
           </div>
-          <h2 className="ct-address-title">SCOPES 2027</h2>
+          <h2 className="ct-address-title">SCOPES-2027</h2>
           <p className="ct-address-text">
             Room No: F-221, 2nd Floor, CRC-2<br />
             Department of ECE, School of Engineering & Technology<br />
