@@ -1,12 +1,9 @@
 import React from 'react';
 import '../styles/Contact.css';
 import {
-  // FaPhone, FaEnvelope,FaUsers,
-  FaMapMarkerAlt, FaLocationArrow,FaQuestionCircle
+  FaMapMarkerAlt, FaLocationArrow, FaQuestionCircle, FaBullhorn, FaCogs, FaBook, FaFileAlt, FaPhone
 } from 'react-icons/fa';
-import { MdEmail, MdPhone,
-  // MdLocationOn
-} from 'react-icons/md';
+import { MdEmail, MdPhone } from 'react-icons/md';
 
 const Contact = () => {
   // const organizers = [
@@ -119,6 +116,38 @@ const Contact = () => {
           ))}
         </div>
       </div> */}
+
+      {/* ── Query Contact Section ── */}
+      <div className="ct-section ct-query-section">
+        <div className="ct-section-header">
+          <div className="ct-section-label">
+            <FaQuestionCircle className="ct-sl-icon" />
+            Query Related Contacts
+          </div>
+          <h2 className="ct-section-title">For Specific Queries</h2>
+          <p className="ct-section-sub">Reach out to the right person for your query</p>
+        </div>
+        <div className="ct-query-grid">
+          {[
+            { icon: <FaBullhorn />, reason: 'Publicity & Sponsorship', name: 'Prof. (Dr.) Sangram Keshari Swain', desig: "Dean (Exams & Students' Welfare), CUTM, Odisha", phone: '+91 9937093949', accent: '#6366f1' },
+            { icon: <FaCogs />,    reason: 'Administration',           name: 'Dr. Prabhat Kumar Patnaik',          desig: 'HOD, Dept. of ECE & EEE (PKD), CUTM, Odisha', phone: '+91 7008701920', accent: '#0ea5e9' },
+            { icon: <FaBook />,    reason: 'Publication',              name: 'Prof. Satyanarayan Padhy',            desig: 'Associate Dean, SoET, CUTM, Odisha',           phone: '+91 8917440019', accent: '#10b981' },
+            { icon: <FaFileAlt />, reason: 'Paper Submission',         name: 'Dr. Abhishek Das',                   desig: 'Assistant Professor, SoET, CUTM, Odisha',      phone: '+91 7008809932', accent: '#f59e0b' },
+          ].map((c, i) => (
+            <div className="ct-query-card" key={i} style={{'--accent': c.accent}}>
+              <div className="ct-query-icon-wrap">
+                <div className="ct-query-icon" style={{background: c.accent}}>{c.icon}</div>
+              </div>
+              <div className="ct-query-reason">{c.reason}</div>
+              <h3 className="ct-query-name">{c.name}</h3>
+              <p className="ct-query-desig">{c.desig}</p>
+              <a href={`tel:${c.phone}`} className="ct-query-phone">
+                <FaPhone className="ct-query-phone-icon" /> {c.phone}
+              </a>
+            </div>
+          ))}
+        </div>
+      </div>
 
     </div>
   );

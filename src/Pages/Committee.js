@@ -96,8 +96,8 @@ const Committee = () => {
       ],
     },
     {
-      id: "co-convener",
-      title: "Co-Conveners",
+      id: "Organizing Security ",
+      title: "Organizing Security ",
       color: "#c2410c",
       bg: "#fff7ed",
       members: [
