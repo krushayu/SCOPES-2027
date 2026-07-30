@@ -53,6 +53,16 @@ const Places = () => {
       wikiLink: 'https://en.wikipedia.org/wiki/Taptapani',
       image: '/places/taptapani.png',
       location: 'Near Mohana'
+    },
+    {
+      id: 6,
+      name: 'Harabhangi Dam',
+      description: 'The Harabhangi Dam is a popular tourist destination in Gajapati District, Odisha. It is known for its scenic beauty and the reservoir it creates.',
+      distance: '132 KM',
+      mapLink: 'https://share.google/oQTOMF8S1MTigqm9o',
+      wikiLink: 'https://en.wikipedia.org/wiki/Harabhangi_Dam',
+      image: '/places/Harabhangi_Dam.webp',
+      location: 'Near Mohana'
     }
   ];
 
