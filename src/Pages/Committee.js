@@ -133,7 +133,7 @@ const Committee = () => {
         "Prof. (Dr.) Anil Kumar Jonnalagadda, Associate Dean ABM, CUTM, Odisha",
         "Dr. Durga Prasad Padhi, Director Administration, PKD, CUTM, Odisha",
         "Prof. (Dr.) Ashok Misra, Professor, Dept. of Mathematics, CUTM, Odisha",
-        "Prof. (Dr.) Ramesh Chandra Mohanty, Professor, Dept. of Mechanical Engg., CUTM, Odisha",
+        "Prof. (Dr.) Ramesh Chandra Mohanty, Professor, Dept. of Mechanicalanical Engg., CUTM, Odisha",
         "Prof. (Dr.) Sagar Maitra, Professor, Dept. of Agronomy, MSSSoA, CUTM, Odisha",
         "Dr. Debendra Kumar Sahoo, Associate Professor, Dept. of ECE, CUTM, Odisha",
         "Prof. Satyanarayan Padhy, Associate Dean, SoET, PKD, CUTM, Odisha",
@@ -149,7 +149,7 @@ const Committee = () => {
         "Dr. Durga Prasad Padhi, Director Administration, PKD, CUTM, Odisha",
         "Dr. Ritesh Kumar, Dean Student Affairs, PKD, CUTM, Odisha",
         "Dr. Dhawaleswar Rao, HOD, Dept. of CSE, (PKD) SoET, CUTM, Odisha",
-        "Dr. Sujit Mishra, HOD, Dept. of Mechanical Engg. (PKD), CUTM, Odisha",
+        "Dr. Sujit Mishra, HOD, Dept. of Mechanicalanical Engg. (PKD), CUTM, Odisha",
         "Dr. Rajib Majhi, HOD, Dept. of Civil Engg. (PKD), CUTM, Odisha",
         "Dr. Sudhansu Kumar Samal, HOD, Dept. of EEE, (BBSR), CUTM, Odisha",
         "Dr. Nihal R, Assistant Professor, MSSSoA, PKD, CUTM, Odisha",
@@ -195,7 +195,7 @@ const Committee = () => {
       members: [
         "Prof. (Dr.) Girish Kumar, Professor, IIT, Bombay, (Chair)",
         "Prof. (Dr.) Sukumar Mishra, Professor, IIT, Delhi",
-        "Prof. (Dr.) Ramesh Chandra Mohanty, Professor, Dept. of Mech. Engg., CUTM, Odisha",
+        "Prof. (Dr.) Ramesh Chandra Mohanty, Professor, Dept. of Mechanical. Engg., CUTM, Odisha",
         "Dr. Abhishek Das, Assistant Professor, SoET, CUTM, Odisha, (Co-Chair)",
         "Dr. Ashish Ranjan Dash, Associate Professor, SoET, CUTM, Odisha",
         "Dr. Ribhu Abhusan Panda, Assistant Professor, SoET, CUTM, Odisha",
@@ -328,7 +328,7 @@ const Committee = () => {
       members: [
         "Prof. (Dr.) Sandipan Pine, Associate Prof. Dept. of ECE, PKD, CUTM, Odisha",
         "Dr. Tanmaya Sankar, Associate Prof. Dept. of Agronomy, CUTM, Odisha",
-        "Dr. Sujit Mishra, HOD, Dept. of Mechanical Engg. (PKD), CUTM, Odisha",
+        "Dr. Sujit Mishra, HOD, Dept. of Mechanicalanical Engg. (PKD), CUTM, Odisha",
         "Prof. Manoj Kumar Padhi, Assistant Professor, SoET, CUTM, Odisha",
       ],
     },
@@ -342,6 +342,7 @@ const Committee = () => {
         "Prof. N. Jeevaratnam, Assistant Prof. Dept. of ECE, PKD, CUTM, Odisha",
         "Prof. Lipsa Priyadarshini Singh, Assistant Prof. Dept. of CSE, PKD, CUTM, Odisha",
         "Prof. Sagarika Dash, Assistant Prof. Dept. of CSE, PKD, CUTM, Odisha",
+        "Prof. G. Sridevi, Assistant Prof. Dept. of Mechanical, PKD, CUTM, Odisha",
       ],
     },
     {
@@ -445,9 +446,9 @@ const Committee = () => {
       members: [
         "Prof. N. Jeevaratnam, Assistant Prof. Dept. of ECE, PKD, CUTM, Odisha",
         "Prof. Jagannath Padhy, Assistant Prof. Dept. of CSE, PKD, CUTM, Odisha",
-        "Dr. Sashikant Das, Assistant Prof. Dept. of MECH, PKD, CUTM, Odisha",
-        "Dr. Mithlesh Kumar Mahto, Assistant Prof. Dept. of MECH, PKD, CUTM, Odisha",
-        "Dr. Md Anis Ansari, Assistant Prof. Dept. of MECH, PKD, CUTM, Odisha",
+        "Dr. Sashikant Das, Assistant Prof. Dept. of Mechanical, PKD, CUTM, Odisha",
+        "Dr. Mithlesh Kumar Mahto, Assistant Prof. Dept. of Mechanical, PKD, CUTM, Odisha",
+        "Dr. Md Anis Ansari, Assistant Prof. Dept. of Mechanical, PKD, CUTM, Odisha",
       ],
     },
     {
