@@ -94,7 +94,8 @@ const Navbar = () => {
               {/* Conference Details */}
               <div className="conference-title">
                 <div className="conference-badge">3<sup>rd</sup> International Conference<br/>on</div>
-                <h1>Signal Processing, Communication, Power &amp; Embedded Systems SCOPES-2027</h1>
+                <h1>Signal Processing, Communication, Power &amp; Embedded Systems </h1>
+                <h2>SCOPES-2027</h2>
                 <div className="conference-info">
                   <img src="/assets/scopes_logo.png" alt="IEEE Logo" className="info-sponsor-logo" />
                   <div className="conference-info-details">

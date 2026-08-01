@@ -114,13 +114,13 @@ const Home = () => {
       image: "/assets/slide1.png",
       overlay: "rgba(0,0,0,0.2)",
       title: "Centurion University of Technology and Management, Paralakhemundi, Odisha",
-      subtitle: <>04<sup>th</sup>-06<sup>th</sup> February 2027</>,
+      subtitle: <>4<sup>th</sup>-6<sup>th</sup> February 2027</>,
       tag: "Hybrid Mode",
     },
     {
       image: "/assets/slide5.JPG",
       overlay: "rgba(0,0,0,0.3)",
-      subtitle: "Call for Papers",
+      subtitle: "",
       tag: "IEEE Conference",
     },
   ];
@@ -136,8 +136,7 @@ const Home = () => {
   const prevSlide = () => setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
 
   const conferenceInfo = [
-    { icon: <FaCalendarAlt />, label: "Dates", value: <>04-06 Feb 2027</>, color: "#FF6B6B", link: "/imp-dates" },
-    { icon: <FaMapMarkerAlt />, label: "Venue", value: "Centurion University of Technology and Management, Paralakhemundi", color: "#4ECDC4", link: "https://maps.app.goo.gl/hVvbqeLRXWvEa9gT9" },
+{ icon: <FaCalendarAlt />, label: "Dates", value: <>4<sup>th</sup>-6<sup>th</sup> Feb 2027</>, color: "#FF6B6B", link: "/imp-dates" },    { icon: <FaMapMarkerAlt />, label: "Venue", value: "Centurion University of Technology and Management, Paralakhemundi", color: "#4ECDC4", link: "https://maps.app.goo.gl/hVvbqeLRXWvEa9gT9" },
     { icon: <FaPaperPlane />, label: "Submit Paper", value: "Open Now", color: "#45B7D1", link: "/paper-submission" },
     { icon: <FaAward />, label: "Publication", value: "IEEE Xplore", color: "#96CEB4", link: "/publication" },
     { icon: <MdAppRegistration />, label: "Mode", value: "Hybrid", color: "#DDA0DD", link: "/program-schedule" },
@@ -270,7 +269,7 @@ const Home = () => {
       <section className="speakers-section anim-fade-up" ref={speakersRef}>
         <div className="section-header">
           <h2 className="section-title">Keynote Speakers</h2>
-          <p className="section-subtitle">Learn from world-renowned experts and industry leaders</p>
+          <p className="section-subtitle">Learn from World-renowned Experts and Industry Leaders</p>
         </div>
         <div className="speakers-strip-wrapper">
           <div className="speakers-strip-track">
@@ -295,8 +294,8 @@ const Home = () => {
       {/* About the Conference Section */}
       <section className="conf-about-section anim-fade-up" ref={confAboutRef}>
         <div className="section-header">
-          <h2 className="section-title">Scope-2027 Conference</h2>
-          <p className="section-subtitle">SCOPES-2027 - Bringing Together Researchers, Engineers, and Industry Experts</p>
+          <h2 className="section-title">SCOPES-2027 Conference</h2>
+          <p className="section-subtitle">Bringing Together Researchers, Engineers, and Industry Experts</p>
         </div>
         <div className="conf-about-body">
           <div className="conf-vm-grid">
