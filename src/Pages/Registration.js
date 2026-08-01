@@ -101,7 +101,7 @@ const Registration = () => {
 
         {/* Payment Section */}
         <div className="reg-payment-section">
-          <h2 className="reg-card-title" style={{marginBottom: '28px'}}>Registration Payment Link</h2>
+          <h2 className="reg-card-title" style={{marginBottom: '28px'}}>Registration Payment Links</h2>
 
           <div className="reg-payment-cards">
 
@@ -110,7 +110,7 @@ const Registration = () => {
               <div className="reg-pay-card-header">
                 <div className="reg-pay-flag">🇮🇳</div>
                 <div>
-                  <div className="reg-pay-tag">Indian Author</div>
+                  <div className="reg-pay-tag">For Indian Authors</div>
                 </div>
               </div>
               <div className="reg-pay-divider" />
@@ -119,7 +119,7 @@ const Registration = () => {
                 target="_blank" rel="noopener noreferrer"
                 className="reg-pay-btn reg-pay-btn-india"
               >
-                Pay Now (Indian) →
+                Pay Now →
               </a>
             </div>
 
@@ -128,7 +128,7 @@ const Registration = () => {
               <div className="reg-pay-card-header">
                 <div className="reg-pay-flag">🌍</div>
                 <div>
-                  <div className="reg-pay-tag">Internatonal Author</div>
+                  <div className="reg-pay-tag">For Internatonal Authors</div>
                 </div>
               </div>
               <div className="reg-pay-divider" />
@@ -137,7 +137,7 @@ const Registration = () => {
                 target="_blank" rel="noopener noreferrer"
                 className="reg-pay-btn reg-pay-btn-foreign"
               >
-                Pay Now (Others) →
+                Pay Now →
               </a>
             </div>
 
