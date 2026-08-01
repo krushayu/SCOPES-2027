@@ -294,7 +294,7 @@ const Home = () => {
       {/* About the Conference Section */}
       <section className="conf-about-section anim-fade-up" ref={confAboutRef}>
         <div className="section-header">
-          <h2 className="section-title">SCOPES-2027 Conference</h2>
+          <h2 className="section-title">SCOPES-2027</h2>
           <p className="section-subtitle">Bringing Together Researchers, Engineers, and Industry Experts</p>
         </div>
         <div className="conf-about-body">
