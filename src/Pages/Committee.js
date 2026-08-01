@@ -51,7 +51,7 @@ const Committee = () => {
     //   color: "#7c3aed",
     //   bg: "#f5f3ff",
     //   members: [
-        
+
     //     // "Prof. (Dr.) Anita Patra, Registrar, CUTM, Odisha",
     //     // "Prof. Jagannath Padhi, Director, CIT, CUTM, Odisha",
     //   ],
@@ -123,21 +123,22 @@ const Committee = () => {
       color: "#0f766e",
       bg: "#f0fdfa",
       members: [
+        // "Prof (Dr. ) Durga Prasad Padhi, Director Administration, PKD, CUTM, Odisha",
+        "Dr. Ritesh Kumar, Dean Student Affairs, PKD, CUTM, Odisha",
         "Prof. (Dr.) Satya Prakash Nanda, Dean (Admin.) MSSSoA, CUTM, Odisha",
         "Prof. (Dr.) B. Suresh Subramonian, Dean SoVAS, CUTM, Odisha",
         "Prof. (Dr.) Satyasis Misra, Dean SDG, CUTM, Odisha",
-        "Dr. Prafulla Kumar Panda, Dean SoET, PKD, CUTM, Odisha",
+        // "Prof. (Dr.) Prafulla Kumar Panda, Dean SoET, PKD, CUTM, Odisha",
         "Prof. (Dr.) Sujata Chakravarty, Director IIC, CUTM, Odisha",
         "Dr. Sambid Swain, Associate Dean SoF, CUTM, Odisha",
         "Prof. (Dr.) Prajna Pani, Associate Dean SoM, PKD, CUTM, Odisha",
         "Prof. (Dr.) Anil Kumar Jonnalagadda, Associate Dean ABM, CUTM, Odisha",
-        "Dr. Durga Prasad Padhi, Director Administration, PKD, CUTM, Odisha",
-        "Prof. (Dr.) Ashok Misra, Professor, Dept. of Mathematics, CUTM, Odisha",
+        // "Prof. (Dr.) Ashok Misra, Professor, Dept. of Mathematics, CUTM, Odisha",
         "Prof. (Dr.) Ramesh Chandra Mohanty, Professor, Dept. of Mechanicalanical Engg., CUTM, Odisha",
         "Prof. (Dr.) Sagar Maitra, Professor, Dept. of Agronomy, MSSSoA, CUTM, Odisha",
-        "Dr. Debendra Kumar Sahoo, Associate Professor, Dept. of ECE, CUTM, Odisha",
-        "Prof. Satyanarayan Padhy, Associate Dean, SoET, PKD, CUTM, Odisha",
-        "Dr. Prabhat Kumar Patnaik, HOD, Dept. of ECE & EEE, CUTM, Odisha",
+        // "Dr. Debendra Kumar Sahoo, Associate Professor, Dept. of ECE, CUTM, Odisha",
+        // "Prof. Satyanarayan Padhy, Associate Dean, SoET, PKD, CUTM, Odisha",
+        // "Dr. Prabhat Kumar Patnaik, HOD, Dept. of ECE & EEE, CUTM, Odisha",
       ],
     },
     {
@@ -146,7 +147,7 @@ const Committee = () => {
       color: "#be185d",
       bg: "#fdf2f8",
       members: [
-        "Dr. Durga Prasad Padhi, Director Administration, PKD, CUTM, Odisha",
+        "Prof (Dr. ) Durga Prasad Padhi, Director Administration, PKD, CUTM, Odisha",
         "Dr. Ritesh Kumar, Dean Student Affairs, PKD, CUTM, Odisha",
         "Dr. Dhawaleswar Rao, HOD, Dept. of CSE, (PKD) SoET, CUTM, Odisha",
         "Dr. Sujit Mishra, HOD, Dept. of Mechanicalanical Engg. (PKD), CUTM, Odisha",
@@ -377,7 +378,6 @@ const Committee = () => {
         "Prof. Susanta Kumar Nayak, Assistant Professor, SoET, CUTM, Odisha",
         "Prof. B. Bikram Narayana, SoET, PKD, CUTM, Odisha",
         "Dr. Susanta Kumar Patnaik, Assistant Professor, SoM, PKD, CUTM, Odisha",
-
       ],
     },
     {
@@ -471,7 +471,6 @@ const Committee = () => {
         "Prof. Babu Sankar, MD, GT TECH",
         "Prof. Mir Sadat Ali, Dean SoVET, CUTM, Odisha",
         "Mr. Debasis Panda, Comptroller of Finance, CUTM, Odisha",
-
       ],
     },
   ];
