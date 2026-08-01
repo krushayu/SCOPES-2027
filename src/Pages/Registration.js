@@ -152,13 +152,13 @@ const Registration = () => {
               </div>
             </div>
             <div className="reg-pay-shared-divider" />
-            <div className="reg-pay-shared-item">
+            {/* <div className="reg-pay-shared-item">
               <span className="reg-pay-shared-icon">📞</span>
               <div>
                 <div className="reg-pay-shared-label">Phone (Chair)</div>
                 <a href="tel:+917008242454">+91 7008242454</a>
               </div>
-            </div>
+            </div> */}
             <div className="reg-pay-shared-divider" />
             <div className="reg-pay-shared-item">
               <span className="reg-pay-shared-icon">📞</span>
