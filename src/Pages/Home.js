@@ -443,7 +443,7 @@ const Home = () => {
       {/* SCOPES 2016 Gallery Strip */}
       <section className="gallery-strip-section">
         <div className="section-header">
-          <h2 className="section-title">SCOPES 2024 Gallery</h2>
+          <h2 className="section-title">SCOPES-2024 Gallery</h2>
           <p className="section-subtitle">Glimpses from the previous conference</p>
         </div>
         <div className="gallery-strip-wrapper">
@@ -486,7 +486,7 @@ const Home = () => {
 {/* SCOPES 2024 Gallery Strip */}
       <section className="gallery-strip-section">
         <div className="section-header">
-          <h2 className="section-title">SCOPES 2016 Gallery</h2>
+          <h2 className="section-title">SCOPES-2016 Gallery</h2>
           <p className="section-subtitle">Glimpses from the previous conference</p>
         </div>
         <div className="gallery-strip-wrapper">

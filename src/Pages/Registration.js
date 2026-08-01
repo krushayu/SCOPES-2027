@@ -115,7 +115,7 @@ const Registration = () => {
               </div>
               <div className="reg-pay-divider" />
               <a
-                href="https://axisbpayments.razorpay.com/CUTM-IEEEConference2026"
+                href="https://rzp.io/rzp/cutm-scopes2027"
                 target="_blank" rel="noopener noreferrer"
                 className="reg-pay-btn reg-pay-btn-india"
               >
@@ -133,7 +133,8 @@ const Registration = () => {
               </div>
               <div className="reg-pay-divider" />
               <a
-                href="mailto:scopes2027@cutm.ac.in?subject=SCOPES-2027 Foreign Payment"
+                href="https://axisbpayments.razorpay.com/CUTM-IEEEConference2026"
+                target="_blank" rel="noopener noreferrer"
                 className="reg-pay-btn reg-pay-btn-foreign"
               >
                 Pay Now (Others) →
