@@ -62,7 +62,7 @@ const Committee = () => {
       color: "#b45309",
       bg: "#fffbeb",
       members: [
-        "Prof. (Dr.) G. S. N. Raju, EX-Chancellor, CUTM, AP",
+        "Prof. (Dr.) G. S. N. Raju, Former Chancellor, CUTM, AP",
         "Prof. (Dr.) Ganapati Panda, Former Deputy Director, IIT Bhubaneswar, Odisha",
         "Prof. (Dr.) Okyay Kaynak, Istanbul, Turkey",
       ],
