@@ -101,7 +101,7 @@ const Registration = () => {
 
         {/* Payment Section */}
         <div className="reg-payment-section">
-          <h2 className="reg-card-title" style={{marginBottom: '28px'}}>Registration Payment</h2>
+          <h2 className="reg-card-title" style={{marginBottom: '28px'}}>Registration Payment Link</h2>
 
           <div className="reg-payment-cards">
 
@@ -110,7 +110,7 @@ const Registration = () => {
               <div className="reg-pay-card-header">
                 <div className="reg-pay-flag">🇮🇳</div>
                 <div>
-                  <div className="reg-pay-tag">Indian Delegates</div>
+                  <div className="reg-pay-tag">Indian Author</div>
                 </div>
               </div>
               <div className="reg-pay-divider" />
@@ -128,7 +128,7 @@ const Registration = () => {
               <div className="reg-pay-card-header">
                 <div className="reg-pay-flag">🌍</div>
                 <div>
-                  <div className="reg-pay-tag">Foreign Delegates</div>
+                  <div className="reg-pay-tag">Internatonal Author</div>
                 </div>
               </div>
               <div className="reg-pay-divider" />
@@ -136,7 +136,7 @@ const Registration = () => {
                 href="mailto:scopes2027@cutm.ac.in?subject=SCOPES-2027 Foreign Payment"
                 className="reg-pay-btn reg-pay-btn-foreign"
               >
-                Contact for Payment →
+                Pay Now (Others) →
               </a>
             </div>
 
@@ -152,18 +152,18 @@ const Registration = () => {
               </div>
             </div>
             <div className="reg-pay-shared-divider" />
-            {/* <div className="reg-pay-shared-item">
-              <span className="reg-pay-shared-icon">📞</span>
-              <div>
-                <div className="reg-pay-shared-label">Phone (Chair)</div>
-                <a href="tel:+917008242454">+91 7008242454</a>
-              </div>
-            </div> */}
+           <div className="reg-pay-shared-item">
+  <span className="reg-pay-shared-icon">👤</span>
+  <div>
+    <div className="reg-pay-shared-label">Contact</div>
+    <span>Prof. Satyanarayan Padhy</span>
+  </div>
+</div>
             <div className="reg-pay-shared-divider" />
             <div className="reg-pay-shared-item">
               <span className="reg-pay-shared-icon">📞</span>
               <div>
-                <div className="reg-pay-shared-label">Phone (Finance)</div>
+                <div className="reg-pay-shared-label">Phone</div>
                 <a href="tel:+918917440019">+91 8917440019</a>
               </div>
             </div>
