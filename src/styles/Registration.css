@@ -477,12 +477,26 @@
 }
 
 .reg-pay-tag {
-  font-size: 11px;
-  font-weight: 700;
+  font-size: 13px;
+  font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 1.2px;
-  color: #64748b;
+  letter-spacing: 1px;
   margin-bottom: 4px;
+  display: inline-block;
+  padding: 4px 14px;
+  border-radius: 20px;
+}
+
+.reg-pay-india .reg-pay-tag {
+  color: #c45e00;
+  background: #fff3e0;
+  border: 1.5px solid #ffb74d;
+}
+
+.reg-pay-foreign .reg-pay-tag {
+  color: #006994;
+  background: #e0f7fa;
+  border: 1.5px solid #4dd0e1;
 }
 
 .reg-pay-title {
