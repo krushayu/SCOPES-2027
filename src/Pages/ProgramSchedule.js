@@ -33,7 +33,7 @@ const ProgramSchedule = () => {
     <div className="schedule-wrapper">
       <div className="schedule-hero">
         <h1 className="schedule-hero-title">Program Schedule</h1>
-        <p className="schedule-hero-subtitle">SCOPES-2027 Conference</p>
+
       </div>
 
       <div className="schedule-container">

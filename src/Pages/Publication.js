@@ -7,7 +7,7 @@ const Publication = () => {
     <div className="pub-wrapper">
       <div className="pub-hero">
         <h1 className="pub-hero-title">Publication</h1>
-        <p className="pub-hero-subtitle">SCOPES-2027 Conference</p>
+
       </div>
 
       <div className="pub-container">

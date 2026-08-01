@@ -60,7 +60,7 @@ const CallForPapers = () => {
     <div className="cfp-wrapper">
       <div className="cfp-hero">
         <h1 className="cfp-hero-title">Call for Papers</h1>
-        <p className="cfp-hero-subtitle">SCOPES-2027 Conference</p>
+
       </div>
 
       <div className="cfp-container">

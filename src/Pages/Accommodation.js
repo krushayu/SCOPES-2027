@@ -6,12 +6,12 @@ const Accommodation = () => {
     <div className="accom-wrapper">
       <div className="accom-hero">
         <h1 className="accom-hero-title">Accommodation & Transportation</h1>
-        <p className="accom-hero-subtitle">Details for SCOPES 2027 Conference</p>
+        {/* <p className="accom-hero-subtitle">SCOPES-2027 Conference</p> */}
       </div>
 
       <div className="accom-container">
         <div className="accom-coming-soon">
-          <h2>Coming Soon...</h2>
+          <h2>To be Updated..</h2>
         </div>
 
         {/* Accommodation Section */}

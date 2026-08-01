@@ -68,7 +68,7 @@ const ImpDates = () => {
       {/* Hero */}
       <div className="impd-hero">
         <h1>Important Dates</h1>
-        <p>SCOPES 2027 — Key Deadlines & Milestones</p>
+        {/* <p>SCOPES 2027 — Key Deadlines & Milestones</p> */}
       </div>
 
       <div className="impd-container">

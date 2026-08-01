@@ -51,7 +51,7 @@ const Registration = () => {
     <div className="reg-wrapper">
       <div className="reg-hero">
         <h1>Registration</h1>
-        <p>Camera Ready Paper Submission and Registration Guidelines</p>
+        {/* <p>Camera Ready Paper Submission and Registration Guidelines</p> */}
       </div>
 
       <div className="reg-container">
@@ -100,14 +100,81 @@ const Registration = () => {
         </div>
 
         {/* Payment Section */}
-        <div className="reg-payment-layout">
+        <div className="reg-payment-section">
+          <h2 className="reg-card-title" style={{marginBottom: '28px'}}>Registration Payment</h2>
 
-          {/* LEFT - Instructions */}
-          <div className="reg-payment-instructions">
-            <h3 className="reg-payment-title">Registration Payment Instructions</h3>
+          <div className="reg-payment-cards">
+
+            {/* Indian Payment */}
+            <div className="reg-pay-card reg-pay-india">
+              <div className="reg-pay-card-header">
+                <div className="reg-pay-flag">🇮🇳</div>
+                <div>
+                  <div className="reg-pay-tag">Indian Delegates</div>
+                </div>
+              </div>
+              <div className="reg-pay-divider" />
+              <a
+                href="https://axisbpayments.razorpay.com/CUTM-IEEEConference2026"
+                target="_blank" rel="noopener noreferrer"
+                className="reg-pay-btn reg-pay-btn-india"
+              >
+                Pay Now (Indian) →
+              </a>
+            </div>
+
+            {/* Foreign Payment */}
+            <div className="reg-pay-card reg-pay-foreign">
+              <div className="reg-pay-card-header">
+                <div className="reg-pay-flag">🌍</div>
+                <div>
+                  <div className="reg-pay-tag">Foreign Delegates</div>
+                </div>
+              </div>
+              <div className="reg-pay-divider" />
+              <a
+                href="mailto:scopes2027@cutm.ac.in?subject=SCOPES-2027 Foreign Payment"
+                className="reg-pay-btn reg-pay-btn-foreign"
+              >
+                Contact for Payment →
+              </a>
+            </div>
+
+          </div>
+
+          {/* Shared Contact Below Both Cards */}
+          <div className="reg-pay-shared-contact">
+            <div className="reg-pay-shared-item">
+              <span className="reg-pay-shared-icon">📧</span>
+              <div>
+                <div className="reg-pay-shared-label">Email</div>
+                <a href="mailto:scopes2027@cutm.ac.in">scopes2027@cutm.ac.in</a>
+              </div>
+            </div>
+            <div className="reg-pay-shared-divider" />
+            <div className="reg-pay-shared-item">
+              <span className="reg-pay-shared-icon">📞</span>
+              <div>
+                <div className="reg-pay-shared-label">Phone (Chair)</div>
+                <a href="tel:+917008242454">+91 7008242454</a>
+              </div>
+            </div>
+            <div className="reg-pay-shared-divider" />
+            <div className="reg-pay-shared-item">
+              <span className="reg-pay-shared-icon">📞</span>
+              <div>
+                <div className="reg-pay-shared-label">Phone (Finance)</div>
+                <a href="tel:+918917440019">+91 8917440019</a>
+              </div>
+            </div>
+          </div>
+
+          {/* Instructions */}
+          <div className="reg-pay-instructions">
+            <h4 className="reg-pay-inst-title">Payment Instructions</h4>
             <div className="reg-instruction-list">
               {[
-                'Scan the QR code or click the payment button to complete the registration payment.',
+                'Click the payment button above to complete the registration payment.',
                 'Enter Author Name, Email ID, Phone Number, Category, and Institute details correctly.',
                 'Select IEEE Member / Non-IEEE category carefully before payment submission.',
                 'Upload payment proof or transaction details during camera-ready submission.',
@@ -120,30 +187,6 @@ const Registration = () => {
                 </div>
               ))}
             </div>
-          </div>
-
-          {/* RIGHT - Payment Card */}
-          <div className="reg-payment-box">
-            <div className="reg-payment-header">
-              <img src="/assets/cutm_logo.png" alt="CUTM Logo" className="reg-company-logo" />
-              <div>
-                <h3>SCOPES - 2027</h3>
-                <p>IEEE Conference Registration</p>
-              </div>
-            </div>
-            <img src="/assets/payment_qr.jpeg" alt="Payment QR" className="reg-qr-image" />
-            <div className="reg-payment-details">
-              <p><strong>Contact:</strong> snpadhy@cutm.ac.in</p>
-              <p><strong>Phone:</strong> +91 9438251062</p>
-            </div>
-            <a
-              href="https://axisbpayments.razorpay.com/CUTM-IEEEConference2026"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="reg-payment-link"
-            >
-              Pay Registration Fee
-            </a>
           </div>
         </div>
 

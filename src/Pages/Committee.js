@@ -482,7 +482,7 @@ const Committee = () => {
       <div className="comm-hero">
         <p className="comm-hero-tag">SCOPES 2027</p>
         <h1 className="comm-title">Organizing Committee</h1>
-        <p className="comm-subtitle">Meet the team behind the conference</p>
+        {/* <p className="comm-subtitle">Meet the team behind the conference</p> */}
       </div>
 
       {/* Blocks */}

@@ -26,7 +26,7 @@ const Contact = () => {
       <div className="ct-hero">
         <div className="ct-hero-content">
           <h1>Contact Us</h1>
-          <p>Reach out to the SCOPES 2027 organizing team for any queries</p>
+          {/* <p>Reach out to the SCOPES 2027 organizing team for any queries</p> */}
         </div>
       </div>
 
@@ -92,7 +92,7 @@ const Contact = () => {
             <FaQuestionCircle className="ct-sl-icon" />
             Query Related Contacts
           </div>
-          <h2 className="ct-section-title">For Specific Queries</h2>
+          {/* <h2 className="ct-section-title">For Specific Queries</h2> */}
           <p className="ct-section-sub">Reach out to the right person for your query</p>
         </div>
         <div className="ct-query-grid">
@@ -118,7 +118,7 @@ const Contact = () => {
             <FaUserTie className="ct-sl-icon" />
             For More Query or Information
           </div>
-          <h2 className="ct-section-title">For Detailed Information</h2>
+          {/* <h2 className="ct-section-title">For Detailed Information</h2> */}
           <p className="ct-section-sub">Reach out directly to the conference Chair &amp; Convener</p>
         </div>
         <div className="ct-general-grid">

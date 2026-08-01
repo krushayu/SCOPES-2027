@@ -29,7 +29,7 @@ const PaperSubmission = () => {
     <div className="paper-wrapper">
       <div className="paper-hero">
         <h1 className="paper-hero-title">Paper Submission</h1>
-        <p className="paper-hero-subtitle">SCOPES-2027 Conference</p>
+
       </div>
 
       <div className="paper-container">

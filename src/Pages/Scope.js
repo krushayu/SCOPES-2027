@@ -204,7 +204,7 @@ const Scope = () => {
     <div className="scope-wrapper">
       <div className="scope-hero">
         <h1>Scope of the Conference</h1>
-        <p>SCOPES 2027 — Major Technical Tracks</p>
+        {/* <p>SCOPES 2027 — Major Technical Tracks</p> */}
       </div>
 
       <div className="scope-content">

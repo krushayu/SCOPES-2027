@@ -117,7 +117,7 @@ const Footer = () => {
                           <FaMapMarkerAlt />
                         </div>
                         <div className="contact-details">
-                          <h4>Address</h4>
+                          <h4>SCOPES-2027 Office</h4>
                           <p>
                             Room No: F-221, 2nd Floor, CRC-2
                             <br />
