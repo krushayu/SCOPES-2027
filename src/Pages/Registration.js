@@ -21,8 +21,8 @@ const fees = [
   { category: 'R&D and Industry Participants',       ieee: '₹9,000',  nonIeee: '₹10,000', foreign: '$250' },
   { category: 'Faculty Participants from Academia',  ieee: '₹8,000',  nonIeee: '₹9,000',  foreign: '$225' },
   { category: 'UG/PG Students & Research Scholars',  ieee: '₹7,000',  nonIeee: '₹8,000',  foreign: '$200' },
-  { category: 'Listener',                            ieee: '₹2,000',  nonIeee: '₹2,500',  foreign: '$100' },
-  { category: 'Accompany Person',                    ieee: '₹1,000',  nonIeee: '₹1,000',  foreign: '$50'  },
+  { category: 'Listener / Accompany Person',          ieee: '₹2,000',  nonIeee: '₹2,500',  foreign: '$100' },
+  // { category: 'Accompany Person',                    ieee: '₹1,000',  nonIeee: '₹1,000',  foreign: '$50'  },
 ];
 
 const importantDates = [
@@ -180,7 +180,7 @@ const Registration = () => {
                 'Select IEEE Member / Non-IEEE category carefully before payment submission.',
                 'Upload payment proof or transaction details during camera-ready submission.',
                 'Keep the payment receipt safely for future verification and conference registration confirmation.',
-                'For any payment-related issue, contact the conference coordinator immediately.',
+                'For any payment-related issue, contact Prof. Satyanarayan Padhy immediately.',
               ].map((text, i) => (
                 <div className="reg-instruction-item" key={i}>
                   <span>{i + 1}</span>

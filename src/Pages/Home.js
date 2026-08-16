@@ -575,13 +575,13 @@ const Home = () => {
                     <td>₹7,000</td><td>₹8,000</td><td>$200</td>
                   </tr>
                   <tr>
-                    <td>Listener</td>
+                    <td>Listener / Accompany Person</td>
                     <td>₹2,000</td><td>₹2,500</td><td>$100</td>
                   </tr>
-                  <tr>
+                  {/* <tr>
                     <td>Accompany</td>
                     <td>₹1,000</td><td>₹1,000</td><td>$50</td>
-                  </tr>
+                  </tr> */}
                 </tbody>
               </table>
               <p className="fees-note">* Fee includes Conference Kit, Banquet, Lunch, Tea, and GST as applicable.</p>

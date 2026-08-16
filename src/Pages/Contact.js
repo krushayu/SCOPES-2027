@@ -36,7 +36,7 @@ const Contact = () => {
         <div className="ct-address-block">
           <div className="ct-address-badge">
             <FaBuilding className="ct-address-badge-icon" />
-            Office Address
+            Conference Office Address
           </div>
           <h2 className="ct-address-title">SCOPES-2027</h2>
 
