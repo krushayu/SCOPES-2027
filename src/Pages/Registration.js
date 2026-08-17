@@ -21,7 +21,7 @@ const fees = [
   { category: 'R&D and Industry Participants',       ieee: '₹9,000',  nonIeee: '₹10,000', foreign: '$250' },
   { category: 'Faculty Participants from Academia',  ieee: '₹8,000',  nonIeee: '₹9,000',  foreign: '$225' },
   { category: 'UG/PG Students & Research Scholars',  ieee: '₹7,000',  nonIeee: '₹8,000',  foreign: '$200' },
-  { category: 'Listener / Accompany Person',          ieee: '₹2,000',  nonIeee: '₹2,500',  foreign: '$100' },
+  { category: 'Listener / Accompany Person',          ieee: '₹2,000',  nonIeee: '₹2,000',  foreign: '$100' },
   // { category: 'Accompany Person',                    ieee: '₹1,000',  nonIeee: '₹1,000',  foreign: '$50'  },
 ];
 

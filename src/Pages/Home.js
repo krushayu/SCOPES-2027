@@ -576,7 +576,7 @@ const Home = () => {
                   </tr>
                   <tr>
                     <td>Listener / Accompany Person</td>
-                    <td>₹2,000</td><td>₹2,500</td><td>$100</td>
+                    <td>₹2,000</td><td>₹2,000</td><td>$100</td>
                   </tr>
                   {/* <tr>
                     <td>Accompany</td>
