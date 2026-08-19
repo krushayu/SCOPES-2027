@@ -160,7 +160,7 @@ const tracks = [
       "Disaster mitigation and management technologies",
       "Human-centric and sustainable technologies",
       "Industry-academia collaboration and technology transfer",
-      "AI and ML applications in engineering systems",
+      // "AI and ML applications in engineering systems",
     ],
   },
   {
