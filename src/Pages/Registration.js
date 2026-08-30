@@ -27,7 +27,7 @@ const fees = [
 
 const importantDates = [
   { event: 'Paper Submission Open',                               date: 'May 1st, 2026',            start: new Date('2026-05-01'), end: new Date('2026-08-30'), icon: <FaRocket /> },
-  { event: 'Last Date for Paper Submission',                      date: 'August 30th, 2026',        start: new Date('2026-08-30'), end: new Date('2026-08-30'), icon: <FaFileAlt /> },
+  { event: 'Last Date for Paper Submission',                      date: 'September 15th, 2026',        start: new Date('2026-09-15'), end: new Date('2026-09-15'), icon: <FaFileAlt /> },
   { event: 'Notification of Acceptance',                         date: 'October 30th, 2026',       start: new Date('2026-10-30'), end: new Date('2026-10-30'), icon: <FaBell /> },
   { event: 'Registration & Camera Ready Submission',             date: 'November 30th, 2026',      start: new Date('2026-11-30'), end: new Date('2026-11-30'), icon: <FaUserCheck /> },
   { event: 'Conference Dates',                                   date: 'February 4th – 6th, 2027', start: new Date('2027-02-04'), end: new Date('2027-02-07'), icon: <FaStar /> },

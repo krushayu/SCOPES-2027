@@ -15,9 +15,9 @@ const ImpDates = () => {
     },
     {
       event: 'Last Date for Paper Submission',
-      date: 'August 30th, 2026',
+      date: 'September 15th, 2026',
       desc: 'Final deadline to submit your full paper via Microsoft CMT.',
-      start: new Date('2026-08-30'), end: new Date('2026-08-30'),
+      start: new Date('2026-09-15'), end: new Date('2026-09-15'),
       icon: <FaFileAlt />,
     },
     {
