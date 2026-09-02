@@ -26,8 +26,8 @@ const fees = [
 ];
 
 const importantDates = [
-  { event: 'Paper Submission Open',                               date: 'May 1st, 2026',            start: new Date('2026-05-01'), end: new Date('2026-08-30'), icon: <FaRocket /> },
-  { event: 'Last Date for Paper Submission',                      date: 'September 15th, 2026',        start: new Date('2026-09-15'), end: new Date('2026-09-15'), icon: <FaFileAlt /> },
+  { event: 'Paper Submission Open',                               date: 'May 1st, 2026',            start: new Date('2026-05-01'), end: new Date('2026-09-15'), icon: <FaRocket /> },
+  { event: 'Last Date for Paper Submission',                      oldDate: 'August 30th, 2026',     date: 'September 15th, 2026',        start: new Date('2026-09-15'), end: new Date('2026-09-15'), icon: <FaFileAlt /> },
   { event: 'Notification of Acceptance',                         date: 'October 30th, 2026',       start: new Date('2026-10-30'), end: new Date('2026-10-30'), icon: <FaBell /> },
   { event: 'Registration & Camera Ready Submission',             date: 'November 30th, 2026',      start: new Date('2026-11-30'), end: new Date('2026-11-30'), icon: <FaUserCheck /> },
   { event: 'Conference Dates',                                   date: 'February 4th – 6th, 2027', start: new Date('2027-02-04'), end: new Date('2027-02-07'), icon: <FaStar /> },
@@ -87,7 +87,18 @@ const Registration = () => {
                     <h3 className="reg-chain-event">{item.event}</h3>
                     <span className="reg-chain-badge" style={{ background: meta.color }}>{meta.label}</span>
                     <div className="reg-chain-date" style={{ color: meta.color }}>
-                      <FaCalendarAlt style={{ fontSize: 11 }} /> {item.date}
+                      <FaCalendarAlt style={{ fontSize: 11, marginTop: item.oldDate ? 2 : 0, flexShrink: 0 }} />
+                      {item.oldDate ? (
+                        <div className="reg-extended-date-box">
+                          <span className="reg-date-old">{item.oldDate}</span>
+                          <span className="reg-date-new">
+                            {item.date}
+                            <span className="reg-extended-badge">Extended</span>
+                          </span>
+                        </div>
+                      ) : (
+                        <span>{item.date}</span>
+                      )}
                     </div>
                   </div>
                   {index < importantDates.length - 1 && (

@@ -142,7 +142,7 @@
 
 /* Card */
 .reg-chain-card {
-  width: 170px;
+  width: 185px;
   background: #ffffff;
   border-radius: 14px;
   padding: 18px 16px;
@@ -223,10 +223,50 @@
 
 .reg-chain-date {
   display: flex;
-  align-items: center;
-  gap: 5px;
+  align-items: flex-start;
+  gap: 6px;
   font-size: 12px;
   font-weight: 700;
+}
+
+.reg-extended-date-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+}
+
+.reg-date-old {
+  font-size: 11px;
+  color: #94a3b8;
+  text-decoration: line-through;
+  text-decoration-color: #ef4444;
+  text-decoration-thickness: 2px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.reg-date-new {
+  font-size: 12px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.reg-extended-badge {
+  font-size: 9px;
+  font-weight: 700;
+  background: #fee2e2;
+  color: #ef4444;
+  padding: 1px 5px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  border: 1px solid #fca5a5;
+  line-height: 1.2;
+  display: inline-block;
 }
 
 /* Mobile: scroll horizontally */

@@ -10,11 +10,12 @@ const ImpDates = () => {
       event: 'Paper Submission Open',
       date: 'May 1st, 2026',
       desc: 'Portal opens for manuscript submissions across all tracks.',
-      start: new Date('2026-05-01'), end: new Date('2026-08-30'),
+      start: new Date('2026-05-01'), end: new Date('2026-09-15'),
       icon: <FaRocket />,
     },
     {
       event: 'Last Date for Paper Submission',
+      oldDate: 'August 30th, 2026',
       date: 'September 15th, 2026',
       desc: 'Final deadline to submit your full paper via Microsoft CMT.',
       start: new Date('2026-09-15'), end: new Date('2026-09-15'),
@@ -99,7 +100,18 @@ const ImpDates = () => {
                     <h3 className="impd-rm-event">{item.event}</h3>
                     <p className="impd-rm-desc">{item.desc}</p>
                     <div className="impd-rm-date" style={{ color: meta.color }}>
-                      📅 {item.date}
+                      <span className="impd-date-icon">📅</span>
+                      {item.oldDate ? (
+                        <div className="impd-extended-date-box">
+                          <span className="impd-date-old">{item.oldDate}</span>
+                          <span className="impd-date-new">
+                            {item.date}
+                            <span className="impd-extended-badge">Extended</span>
+                          </span>
+                        </div>
+                      ) : (
+                        <span>{item.date}</span>
+                      )}
                     </div>
                   </div>
                 </div>
