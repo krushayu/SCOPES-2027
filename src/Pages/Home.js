@@ -152,8 +152,8 @@ const Home = () => {
   const datesRef = useScrollAnim();
 
   const importantDates = [
-    { title: "Paper Submission open",   date: "01 May 2026",         start: new Date('2026-05-01'), end: new Date('2026-09-15') },
-    { title: "Paper Submission close",  oldDate: "30 August 2026",   date: "September 15th, 2026", start: new Date('2026-09-15'), end: new Date('2026-09-15') },
+    { title: "Paper Submission open",   date: "01 May 2026",         start: new Date('2026-05-01'), end: new Date('2026-09-30') },
+    { title: "Paper Submission close",  oldDate: "30 August 2026",   date: "September 30th, 2026", start: new Date('2026-09-30'), end: new Date('2026-09-30') },
     { title: "Notification of Acceptance", date: "30 October 2026",  start: new Date('2026-10-30'), end: new Date('2026-10-30') },
     { title: "Start date of registration & camera ready submission", date: "01 November 2026", start: new Date('2026-11-01'), end: new Date('2026-11-30') },
     { title: "Conference Dates",        date: "04-06 February 2027", start: new Date('2027-02-04'), end: new Date('2027-02-07') },

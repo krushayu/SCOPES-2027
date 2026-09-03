@@ -10,15 +10,15 @@ const ImpDates = () => {
       event: 'Paper Submission Open',
       date: 'May 1st, 2026',
       desc: 'Portal opens for manuscript submissions across all tracks.',
-      start: new Date('2026-05-01'), end: new Date('2026-09-15'),
+      start: new Date('2026-05-01'), end: new Date('2026-09-30'),
       icon: <FaRocket />,
     },
     {
       event: 'Last Date for Paper Submission',
       oldDate: 'August 30th, 2026',
-      date: 'September 15th, 2026',
+      date: 'September 30th, 2026',
       desc: 'Final deadline to submit your full paper via Microsoft CMT.',
-      start: new Date('2026-09-15'), end: new Date('2026-09-15'),
+      start: new Date('2026-09-30'), end: new Date('2026-09-30'),
       icon: <FaFileAlt />,
     },
     {
