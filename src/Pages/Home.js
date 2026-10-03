@@ -153,9 +153,9 @@ const Home = () => {
 
   const importantDates = [
     { title: "Paper Submission open",   date: "01 May 2026",         start: new Date('2026-05-01'), end: new Date('2026-09-30') },
-    { title: "Paper Submission close",  oldDate: "30 August 2026",   date: "September 30th, 2026", start: new Date('2026-09-30'), end: new Date('2026-09-30') },
-    { title: "Notification of Acceptance", date: "30 October 2026",  start: new Date('2026-10-30'), end: new Date('2026-10-30') },
-    { title: "Start date of registration & camera ready submission", date: "01 November 2026", start: new Date('2026-11-01'), end: new Date('2026-11-30') },
+    { title: "Paper Submission close",  oldDate: "30 Septmembet 2026",   date: "October 15th, 2026", start: new Date('2026-10-15'), end: new Date('2026-10-15') },
+    { title: "Notification of Acceptance", date: "30 November 2026",  start: new Date('2026-11-30'), end: new Date('2026-11-30') },
+    { title: "Start date of registration & camera ready submission", date: "15 December 2026", start: new Date('2026-12-15'), end: new Date('2026-12-15') },
     { title: "Conference Dates",        date: "04-06 February 2027", start: new Date('2027-02-04'), end: new Date('2027-02-07') },
   ].map((d) => {
     const now = new Date();
@@ -450,8 +450,8 @@ const Home = () => {
           <div className="gallery-strip-track">
             {[...Array(2)].flatMap((_, si) =>
               [
-                { n: 1, ext: "png" },
-                { n: 2, ext: "png" },
+                // { n: 1, ext: "png" },
+                // { n: 2, ext: "png" },
                 { n: 3, ext: "jpeg" },
                 { n: 4, ext: "jpeg" },
                 { n: 5, ext: "jpeg" },
@@ -483,7 +483,7 @@ const Home = () => {
         </div>
       </section>
 
-{/* SCOPES 2024 Gallery Strip */}
+{/* SCOPES 2016 Gallery Strip */}
       <section className="gallery-strip-section">
         <div className="section-header">
           <h2 className="section-title">SCOPES-2016 Gallery</h2>
@@ -495,18 +495,24 @@ const Home = () => {
               [
                 { n: 1, ext: "png" },
                 { n: 2, ext: "png" },
-                { n: 3, ext: "jpeg" },
-                { n: 4, ext: "jpeg" },
-                { n: 5, ext: "jpeg" },
-                { n: 6, ext: "jpeg" },
-                { n: 7, ext: "jpeg" },
-                { n: 8, ext: "jpeg" },
-                { n: 9, ext: "jpeg" },
+                { n: 3, ext: "png" },
+                { n: 1, ext: "png" },
+                { n: 2, ext: "png" },
+                { n: 3, ext: "png" },
+                { n: 1, ext: "png" },
+                { n: 2, ext: "png" },
+                { n: 3, ext: "png" },
+                // { n: 4, ext: "jpeg" },
+                // { n: 5, ext: "jpeg" },
+                // { n: 6, ext: "jpeg" },
+                // { n: 7, ext: "jpeg" },
+                // { n: 8, ext: "jpeg" },
+                // { n: 9, ext: "jpeg" },
                 
               ].map((img, i) => (
                 <img
                   key={`${si}-${i}`}
-                  src={`/scopes-prev/scopes2024/scope${img.n}.${img.ext}`}
+                  src={`/scopes-prev/scopes2016/scope${img.n}.${img.ext}`}
                   alt={`SCOPES 2016 - ${img.n}`}
                   className="gallery-strip-img"
                 />
