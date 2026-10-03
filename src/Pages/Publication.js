@@ -24,7 +24,7 @@ const Publication = () => {
         <section className="pub-card">
           <h3 className="pub-card-title">
             <FaBook className="pub-small-icon" />
-            Previous SCOPES Proceedings & SCOPES Database
+            Previous SCOPES Proceedings
           </h3>
           <p className="pub-text">
             Explore the published proceedings from previous SCOPES conferences, now available on IEEE Xplore and SCOPES Database.:
