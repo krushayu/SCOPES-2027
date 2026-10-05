@@ -79,5 +79,32 @@
     "talkTitle": "Coming soon....",
     "abstract": "Coming soon....",
     "image": "/speaker_data/speakers/Jagannath_Nayak.png"
+  },
+  {
+    "id": 10,
+    "name": "Dr. Binay Kumar Das",
+    "profession": "Distinguished Scientist and Director General, Electronics & Communication Systems (ECS) Cluster, Defence Research and Development Organisation (DRDO), Ministry of Defence, Government of India",
+    "about": "Dr. Binay Kumar Das is a Distinguished Scientist and serves as the Director General of the Electronics & Communication Systems (ECS) cluster at the Defence Research and Development Organisation (DRDO), Ministry of Defence, Government of India.",
+    "talkTitle": "Coming soon....",
+    "abstract": "Coming soon....",
+    "image": "/speaker_data/speakers/binay_kumar_das.png"
+  },
+  {
+    "id": 11,
+    "name": "L Venkata Subramaniam",
+    "profession": "CEO, Qbit Force",
+    "about": "L Venkata Subramaniam is the Chief Executive Officer (CEO) at Qbit Force.",
+    "talkTitle": "Coming soon....",
+    "abstract": "Coming soon....",
+    "image": "/speaker_data/speakers/l_venkata_subramaniam.png"
+  },
+  {
+    "id": 12,
+    "name": "Mr. Manas Panda",
+    "profession": "Scientist 'G' and Jurisdictional Director, STPI Bhubaneswar, Ministry of Electronics & Information Technology (MeitY), Government of India",
+    "about": "Mr. Manas Panda is a Scientist 'G' and Jurisdictional Director at the Software Technology Parks of India (STPI), Bhubaneswar, under the Ministry of Electronics & Information Technology (MeitY), Government of India.",
+    "talkTitle": "Coming soon....",
+    "abstract": "Coming soon....",
+    "image": "/speaker_data/speakers/manas_panda.png"
   }
 ]
