@@ -50,7 +50,7 @@ const Home = () => {
   ];
   const deptImages = [
     { src: "/assets/ece1.png", title: "ECE" },
-    { src: "/assets/slide2.png", title: "University Area" }
+    { src: "/assets/cutm_pkd.png", title: "CUTM PKD" },
   ];
   const scopesImages = [
     { src: "/assets/soet1.jpg", title: "SoET Drone Performance" },
@@ -91,7 +91,9 @@ const Home = () => {
       if (distance > 0) {
         setCountdown({
           days: Math.floor(distance / (1000 * 60 * 60 * 24)),
-          hours: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+          hours: Math.floor(
+            (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
+          ),
           minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
           seconds: Math.floor((distance % (1000 * 60)) / 1000),
         });
@@ -106,15 +108,24 @@ const Home = () => {
     {
       image: "/assets/slide4.JPG",
       overlay: "rgba(0,0,0,0.3)",
-      title: <>3<sup>rd</sup> International Conference</>,
+      title: (
+        <>
+          3<sup>rd</sup> International Conference
+        </>
+      ),
       on: "on",
       subtitle: "Signal Processing, Communication, Power & Embedded Systems",
     },
     {
       image: "/assets/slide1.png",
       overlay: "rgba(0,0,0,0.2)",
-      title: "Centurion University of Technology and Management, Paralakhemundi, Odisha",
-      subtitle: <>4<sup>th</sup>-6<sup>th</sup> February 2027</>,
+      title:
+        "Centurion University of Technology and Management, Paralakhemundi, Odisha",
+      subtitle: (
+        <>
+          4<sup>th</sup>-6<sup>th</sup> February 2027
+        </>
+      ),
       tag: "Hybrid Mode",
     },
     {
@@ -133,13 +144,50 @@ const Home = () => {
   }, [slides.length]);
 
   const nextSlide = () => setCurrentSlide((prev) => (prev + 1) % slides.length);
-  const prevSlide = () => setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+  const prevSlide = () =>
+    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
 
   const conferenceInfo = [
-{ icon: <FaCalendarAlt />, label: "Dates", value: <>4<sup>th</sup>-6<sup>th</sup> Feb 2027</>, color: "#FF6B6B", link: "/imp-dates" },    { icon: <FaMapMarkerAlt />, label: "Venue", value: "Centurion University of Technology and Management, Paralakhemundi", color: "#4ECDC4", link: "https://maps.app.goo.gl/hVvbqeLRXWvEa9gT9" },
-    { icon: <FaPaperPlane />, label: "Submit Paper", value: "Open Now", color: "#45B7D1", link: "/paper-submission" },
-    { icon: <FaAward />, label: "Publication", value: "IEEE Xplore", color: "#96CEB4", link: "/publication" },
-    { icon: <MdAppRegistration />, label: "Mode", value: "Hybrid", color: "#DDA0DD", link: "/program-schedule" },
+    {
+      icon: <FaCalendarAlt />,
+      label: "Dates",
+      value: (
+        <>
+          4<sup>th</sup>-6<sup>th</sup> Feb 2027
+        </>
+      ),
+      color: "#FF6B6B",
+      link: "/imp-dates",
+    },
+    {
+      icon: <FaMapMarkerAlt />,
+      label: "Venue",
+      value:
+        "Centurion University of Technology and Management, Paralakhemundi",
+      color: "#4ECDC4",
+      link: "https://maps.app.goo.gl/hVvbqeLRXWvEa9gT9",
+    },
+    {
+      icon: <FaPaperPlane />,
+      label: "Submit Paper",
+      value: "Open Now",
+      color: "#45B7D1",
+      link: "/paper-submission",
+    },
+    {
+      icon: <FaAward />,
+      label: "Publication",
+      value: "IEEE Xplore",
+      color: "#96CEB4",
+      link: "/publication",
+    },
+    {
+      icon: <MdAppRegistration />,
+      label: "Mode",
+      value: "Hybrid",
+      color: "#DDA0DD",
+      link: "/program-schedule",
+    },
   ];
 
   const infoRef = useScrollAnim();
@@ -152,16 +200,42 @@ const Home = () => {
   const datesRef = useScrollAnim();
 
   const importantDates = [
-    { title: "Paper Submission open",   date: "01 May 2026",         start: new Date('2026-05-01'), end: new Date('2026-09-30') },
-    { title: "Paper Submission close",  oldDate: "30 Septmembet 2026",   date: "October 15th, 2026", start: new Date('2026-10-15'), end: new Date('2026-10-15') },
-    { title: "Notification of Acceptance", date: "30 November 2026",  start: new Date('2026-11-30'), end: new Date('2026-11-30') },
-    { title: "Start date of registration & camera ready submission", date: "15 December 2026", start: new Date('2026-12-15'), end: new Date('2026-12-15') },
-    { title: "Conference Dates",        date: "04-06 February 2027", start: new Date('2027-02-04'), end: new Date('2027-02-07') },
+    {
+      title: "Paper Submission open",
+      date: "01 May 2026",
+      start: new Date("2026-05-01"),
+      end: new Date("2026-10-15"),
+    },
+    {
+      title: "Paper Submission close",
+      oldDate: "30 Septmembet 2026",
+      date: "October 15th, 2026",
+      start: new Date("2026-10-15"),
+      end: new Date("2026-10-15"),
+    },
+    {
+      title: "Notification of Acceptance",
+      date: "15 November 2026",
+      start: new Date("2026-11-15"),
+      end: new Date("2026-11-15"),
+    },
+    {
+      title: "Start date of registration & camera ready submission",
+      date: "30 November 2026",
+      start: new Date("2026-11-30"),
+      end: new Date("2026-11-30"),
+    },
+    {
+      title: "Conference Dates",
+      date: "04-06 February 2027",
+      start: new Date("2027-02-04"),
+      end: new Date("2027-02-07"),
+    },
   ].map((d) => {
     const now = new Date();
-    if (now > d.end)    return { ...d, status: 'over' };
-    if (now >= d.start) return { ...d, status: 'active' };
-    return { ...d, status: 'upcoming' };
+    if (now > d.end) return { ...d, status: "over" };
+    if (now >= d.start) return { ...d, status: "active" };
+    return { ...d, status: "upcoming" };
   });
 
   return (
@@ -169,8 +243,9 @@ const Home = () => {
       {/* Marquee Section */}
       <div className="marquee-section">
         <div className="marquee-text">
-          Conference Record Number: 71015 &nbsp;&nbsp;||&nbsp;&nbsp;
-          Accepted papers will be submitted for inclusion into IEEE Xplore subject to meeting IEEE Xplore's scope and quality requirements
+          Conference Record Number: 71015 &nbsp;&nbsp;||&nbsp;&nbsp; Accepted
+          papers will be submitted for inclusion into IEEE Xplore subject to
+          meeting IEEE Xplore's scope and quality requirements
         </div>
       </div>
 
@@ -225,8 +300,12 @@ const Home = () => {
             </div>
           ))}
 
-          <button className="slider-btn prev" onClick={prevSlide}>‹</button>
-          <button className="slider-btn next" onClick={nextSlide}>›</button>
+          <button className="slider-btn prev" onClick={prevSlide}>
+            ‹
+          </button>
+          <button className="slider-btn next" onClick={nextSlide}>
+            ›
+          </button>
         </div>
 
         {/* Conference Quick Info */}
@@ -238,8 +317,20 @@ const Home = () => {
 
               if (isExternal) {
                 return (
-                  <a href={item.link} target="_blank" rel="noopener noreferrer" className="info-card" key={index} style={{ textDecoration: "none" }}>
-                    <div className="info-icon" style={{ backgroundColor: item.color }}>{item.icon}</div>
+                  <a
+                    href={item.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="info-card"
+                    key={index}
+                    style={{ textDecoration: "none" }}
+                  >
+                    <div
+                      className="info-icon"
+                      style={{ backgroundColor: item.color }}
+                    >
+                      {item.icon}
+                    </div>
                     <div className="info-content">
                       <div className="info-label">{item.label}</div>
                       <div className="info-value">{item.value}</div>
@@ -249,11 +340,23 @@ const Home = () => {
               }
 
               const CardWrapper = isHash ? "a" : Link;
-              const linkProps = isHash ? { href: item.link } : { to: item.link };
+              const linkProps = isHash
+                ? { href: item.link }
+                : { to: item.link };
 
               return (
-                <CardWrapper {...linkProps} className="info-card" key={index} style={{ textDecoration: "none" }}>
-                  <div className="info-icon" style={{ backgroundColor: item.color }}>{item.icon}</div>
+                <CardWrapper
+                  {...linkProps}
+                  className="info-card"
+                  key={index}
+                  style={{ textDecoration: "none" }}
+                >
+                  <div
+                    className="info-icon"
+                    style={{ backgroundColor: item.color }}
+                  >
+                    {item.icon}
+                  </div>
                   <div className="info-content">
                     <div className="info-label">{item.label}</div>
                     <div className="info-value">{item.value}</div>
@@ -269,20 +372,29 @@ const Home = () => {
       <section className="speakers-section anim-fade-up" ref={speakersRef}>
         <div className="section-header">
           <h2 className="section-title">Keynote Speakers</h2>
-          <p className="section-subtitle">Learn from World-renowned Experts and Industry Leaders</p>
+          <p className="section-subtitle">
+            Learn from World-renowned Experts and Industry Leaders
+          </p>
         </div>
         <div className="speakers-strip-wrapper">
           <div className="speakers-strip-track">
             {[...speakers, ...speakers].map((speaker, i) => (
               <div className="speaker-card" key={i}>
                 <div className="speaker-image-wrapper">
-                  <img src={speaker.image} alt={speaker.name} className="speaker-image" />
+                  <img
+                    src={speaker.image}
+                    alt={speaker.name}
+                    className="speaker-image"
+                  />
                 </div>
                 <div className="speaker-card-divider"></div>
                 <h3 className="speaker-name">{speaker.name}</h3>
                 <div className="speaker-card-divider2"></div>
                 <p className="speaker-profession">{speaker.profession}</p>
-                <button className="speaker-see-more" onClick={() => setSelectedSpeaker(speaker)}>
+                <button
+                  className="speaker-see-more"
+                  onClick={() => setSelectedSpeaker(speaker)}
+                >
                   See More →
                 </button>
               </div>
@@ -295,56 +407,126 @@ const Home = () => {
       <section className="conf-about-section anim-fade-up" ref={confAboutRef}>
         <div className="section-header">
           <h2 className="section-title">SCOPES-2027</h2>
-          <p className="section-subtitle">Bringing Together Researchers, Engineers, and Industry Experts</p>
+          <p className="section-subtitle">
+            Bringing Together Researchers, Engineers, and Industry Experts
+          </p>
         </div>
         <div className="conf-about-body">
           <div className="conf-vm-grid">
             <div className="conf-vm-card conf-vision">
               <h3>Vision</h3>
               <p>
-                To become a leading international platform that fosters innovation, interdisciplinary research, and collaboration in emerging technologies, driving the development of intelligent, sustainable, and future-ready engineering solutions aligned with global and industrial needs.
+                To become a leading international platform that fosters
+                innovation, interdisciplinary research, and collaboration in
+                emerging technologies, driving the development of intelligent,
+                sustainable, and future-ready engineering solutions aligned with
+                global and industrial needs.
               </p>
             </div>
             <div className="conf-vm-card conf-mission">
               <h3>Mission</h3>
               <ul>
-                <li>To provide a global forum for researchers, academicians, and industry professionals to present and exchange cutting-edge research.</li>
-                <li>To promote integration of signal processing, communication, power, quantum technologies, and embedded systems.</li>
-                <li>To address real-world industrial challenges through innovative and scalable solutions.</li>
-                <li>To encourage collaboration between academia and industry for technology transfer and innovation.</li>
-                <li>To support the development of sustainable, intelligent, and human-centric technologies aligned with IEEE's mission of advancing technology for humanity.</li>
+                <li>
+                  To provide a global forum for researchers, academicians, and
+                  industry professionals to present and exchange cutting-edge
+                  research.
+                </li>
+                <li>
+                  To promote integration of signal processing, communication,
+                  power, quantum technologies, and embedded systems.
+                </li>
+                <li>
+                  To address real-world industrial challenges through innovative
+                  and scalable solutions.
+                </li>
+                <li>
+                  To encourage collaboration between academia and industry for
+                  technology transfer and innovation.
+                </li>
+                <li>
+                  To support the development of sustainable, intelligent, and
+                  human-centric technologies aligned with IEEE's mission of
+                  advancing technology for humanity.
+                </li>
               </ul>
             </div>
           </div>
           <br />
           <ul className="conf-about-intro">
-            <li>The IEEE International Conference on Signal Processing, Communication, Power and Embedded Systems (SCOPES) is a premier forum dedicated to advancing research and innovation in key engineering domains. The conference brings together researchers, academicians, industry experts, and students from across the globe to exchange ideas, present cutting-edge research, and foster collaborative partnerships.</li>
-            <li>SCOPES focuses on both fundamental and applied aspects of signal processing, communication systems, power engineering, quantum technology, and embedded systems. It highlights emerging trends such as artificial intelligence, next-generation communication (5G/6G), smart energy systems, advanced chip design, and intelligent embedded solutions.</li>
-            <li>The conference aims to bridge the gap between academia and industry by addressing real-world challenges in areas such as smart manufacturing, healthcare technologies, sustainable energy, and intelligent infrastructure. Through keynote talks, technical sessions, and tutorials, participants gain insights into the latest technological advancements and future directions.</li>
-            <li>SCOPES aligns with IEEE's mission of advancing technology for humanity by promoting innovation, interdisciplinary research, and knowledge sharing at a global level.</li>
+            <li>
+              The IEEE International Conference on Signal Processing,
+              Communication, Power and Embedded Systems (SCOPES) is a premier
+              forum dedicated to advancing research and innovation in key
+              engineering domains. The conference brings together researchers,
+              academicians, industry experts, and students from across the globe
+              to exchange ideas, present cutting-edge research, and foster
+              collaborative partnerships.
+            </li>
+            <li>
+              SCOPES focuses on both fundamental and applied aspects of signal
+              processing, communication systems, power engineering, quantum
+              technology, and embedded systems. It highlights emerging trends
+              such as artificial intelligence, next-generation communication
+              (5G/6G), smart energy systems, advanced chip design, and
+              intelligent embedded solutions.
+            </li>
+            <li>
+              The conference aims to bridge the gap between academia and
+              industry by addressing real-world challenges in areas such as
+              smart manufacturing, healthcare technologies, sustainable energy,
+              and intelligent infrastructure. Through keynote talks, technical
+              sessions, and tutorials, participants gain insights into the
+              latest technological advancements and future directions.
+            </li>
+            <li>
+              SCOPES aligns with IEEE's mission of advancing technology for
+              humanity by promoting innovation, interdisciplinary research, and
+              knowledge sharing at a global level.
+            </li>
           </ul>
         </div>
       </section>
 
       {/* Speaker Modal */}
       {selectedSpeaker && (
-        <div className="speaker-modal-overlay" onClick={() => setSelectedSpeaker(null)}>
+        <div
+          className="speaker-modal-overlay"
+          onClick={() => setSelectedSpeaker(null)}
+        >
           <div className="speaker-modal" onClick={(e) => e.stopPropagation()}>
-            <button className="modal-close" onClick={() => setSelectedSpeaker(null)}>×</button>
+            <button
+              className="modal-close"
+              onClick={() => setSelectedSpeaker(null)}
+            >
+              ×
+            </button>
             <div className="modal-content">
               <div className="modal-left">
-                <img src={selectedSpeaker.image} alt={selectedSpeaker.name} className="modal-speaker-image" />
+                <img
+                  src={selectedSpeaker.image}
+                  alt={selectedSpeaker.name}
+                  className="modal-speaker-image"
+                />
               </div>
               <div className="modal-right">
                 <h2 className="modal-speaker-name">{selectedSpeaker.name}</h2>
-                <p className="modal-speaker-profession">{selectedSpeaker.profession}</p>
+                <p className="modal-speaker-profession">
+                  {selectedSpeaker.profession}
+                </p>
                 <div className="modal-section">
                   <h3>About</h3>
                   <p>
                     {selectedSpeaker.about.length > 300 ? (
                       <>
                         {selectedSpeaker.about.substring(0, 300)}...
-                        <button className="read-more-btn" onClick={(e) => { e.target.previousSibling.textContent = selectedSpeaker.about; e.target.style.display = "none"; }}>
+                        <button
+                          className="read-more-btn"
+                          onClick={(e) => {
+                            e.target.previousSibling.textContent =
+                              selectedSpeaker.about;
+                            e.target.style.display = "none";
+                          }}
+                        >
                           Read More
                         </button>
                       </>
@@ -370,38 +552,121 @@ const Home = () => {
       {/* About University Section */}
       <section className="about-university-section anim-fade-up" ref={aboutRef}>
         <div className="section-header">
-          <h2 className="section-title">Centurion University of Technology and Management, Odisha</h2>
+          <h2 className="section-title">
+            Centurion University of Technology and Management, Odisha
+          </h2>
           <p className="section-subtitle">Accredited with 'A+' Grade by NAAC</p>
         </div>
         <div className="about-content">
           <div className="about-image-slider anim-slide-left">
-            <img key={aboutImgIndex} src={aboutImages[aboutImgIndex].src} alt="CUTM Campus" className="about-img" />
-            <div className="scopes-img-title">{aboutImages[aboutImgIndex].title}</div>
+            <img
+              key={aboutImgIndex}
+              src={aboutImages[aboutImgIndex].src}
+              alt="CUTM Campus"
+              className="about-img"
+            />
+            <div className="scopes-img-title">
+              {aboutImages[aboutImgIndex].title}
+            </div>
           </div>
           <div className="about-text anim-slide-right">
-          <p>▪ Centurion University of Technology & Management (CUTM) is a State-notified Skill University, accredited A+ by NAAC, the only Skill University in India to hold this distinction. Recognised as a “Centre of Excellence” by the Ministry of Skill Development & Entrepreneurship (MoSDE), Government of India, Centurion is also approved by DGCA as a Drone Pilot Training Institute and has been accorded Section-1 University status by the Department of Education and Training, Government of Australia. The Outlook, in its rankings for 2024 and 2025, ranked Centurion University as the No.1 Skill University in India and among the Top-10 Private State Universities nationally, two years consecutively.<a href="https://cutm.ac.in/" target="_blank" rel="noopener noreferrer" className="cutm-inline-link">Visit cutm.ac.in →</a></p>
-          <p>▪ The University has received national and international recognition for its pioneering model of integrating skill development into higher education, which earned the University citations by name in the United Nations General Assembly debate in education, UNESCO, the World Bank, NITI Aayog, and the British Council, among others, affirming its role as a model institution for inclusive, impactful, and transformative education.</p>
-          <p>▪ Centurion University has also been awarded the “Green Gown Award International 2025 – Highly Commendable Nature Positive” by the Environmental Association for Universities and Colleges (EAUC) in partnership with the International Association of Universities and the UN Environmental Program, thus confirming the commitment towards ecological sustainability.</p>
-          <p>▪ Centurion University’s mission is to integrate skill, education, and enterprise to create meaningful livelihoods and social transformation. Through Gram Tarang Training & Employability Services (GTETS) - our social enterprise and the first NSDC partner - we have skilled over 850,000 youth from below-poverty-line and indigenous communities, including differently-abled individuals, helping them secure dignified employment and sustainable livelihoods.</p>
+            <p>
+              ▪ Centurion University of Technology & Management (CUTM) is a
+              State-notified Skill University, accredited A+ by NAAC, the only
+              Skill University in India to hold this distinction. Recognised as
+              a “Centre of Excellence” by the Ministry of Skill Development &
+              Entrepreneurship (MoSDE), Government of India, Centurion is also
+              approved by DGCA as a Drone Pilot Training Institute and has been
+              accorded Section-1 University status by the Department of
+              Education and Training, Government of Australia. The Outlook, in
+              its rankings for 2024 and 2025, ranked Centurion University as the
+              No.1 Skill University in India and among the Top-10 Private State
+              Universities nationally, two years consecutively.
+              <a
+                href="https://cutm.ac.in/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="cutm-inline-link"
+              >
+                Visit cutm.ac.in →
+              </a>
+            </p>
+            <p>
+              ▪ The University has received national and international
+              recognition for its pioneering model of integrating skill
+              development into higher education, which earned the University
+              citations by name in the United Nations General Assembly debate in
+              education, UNESCO, the World Bank, NITI Aayog, and the British
+              Council, among others, affirming its role as a model institution
+              for inclusive, impactful, and transformative education.
+            </p>
+            <p>
+              ▪ Centurion University has also been awarded the “Green Gown Award
+              International 2025 – Highly Commendable Nature Positive” by the
+              Environmental Association for Universities and Colleges (EAUC) in
+              partnership with the International Association of Universities and
+              the UN Environmental Program, thus confirming the commitment
+              towards ecological sustainability.
+            </p>
+            <p>
+              ▪ Centurion University’s mission is to integrate skill, education,
+              and enterprise to create meaningful livelihoods and social
+              transformation. Through Gram Tarang Training & Employability
+              Services (GTETS) - our social enterprise and the first NSDC
+              partner - we have skilled over 850,000 youth from
+              below-poverty-line and indigenous communities, including
+              differently-abled individuals, helping them secure dignified
+              employment and sustainable livelihoods.
+            </p>
           </div>
         </div>
       </section>
 
       {/* About School of Engineering and Technology (SoET) */}
-      <section className="scopes-conference-section anim-fade-up" ref={scopesRef}>
+      <section
+        className="scopes-conference-section anim-fade-up"
+        ref={scopesRef}
+      >
         <div className="section-header">
-          <h2 className="section-title">School of Engineering and Technology, Paralakhemundi</h2>
+          <h2 className="section-title">
+            School of Engineering and Technology, Paralakhemundi
+          </h2>
           {/* <p className="section-subtitle">SoET - Centurion University of Technology and Management</p> */}
         </div>
         <div className="scopes-content">
           <div className="scopes-text anim-slide-left">
-            <p> Established in 1997 at Paralakhemundi and expanded to Bhubaneswar in 2008, the School of Engineering and Technology at Centurion University of Technology and Management (CUTM), Odisha, has been committed to excellence in engineering education, research, innovation, and skill development. Since its inception, the School has nurtured competent, socially responsible, and globally competitive engineers equipped to address contemporary technological challenges and contribute effectively to industry, academia, and society.</p>
-            <p> SoET is equipped with state-of-the-art laboratories, innovation centers, and research facilities that foster hands-on learning and industry-ready skill development. The school maintains strong collaborations with leading industries and research organizations to ensure curriculum relevance and placement excellence.</p>
+            <p>
+              {" "}
+              Established in 1997 at Paralakhemundi and expanded to Bhubaneswar
+              in 2008, the School of Engineering and Technology at Centurion
+              University of Technology and Management (CUTM), Odisha, has been
+              committed to excellence in engineering education, research,
+              innovation, and skill development. Since its inception, the School
+              has nurtured competent, socially responsible, and globally
+              competitive engineers equipped to address contemporary
+              technological challenges and contribute effectively to industry,
+              academia, and society.
+            </p>
+            <p>
+              {" "}
+              SoET is equipped with state-of-the-art laboratories, innovation
+              centers, and research facilities that foster hands-on learning and
+              industry-ready skill development. The school maintains strong
+              collaborations with leading industries and research organizations
+              to ensure curriculum relevance and placement excellence.
+            </p>
             {/* <p>▪ With a focus on interdisciplinary research, entrepreneurship, and societal impact, SoET actively contributes to national and international conferences, publications, and funded research projects, making it a vibrant center for academic and technological advancement.</p> */}
           </div>
           <div className="scopes-image-slider anim-slide-right">
-            <img key={scopesImgIndex} src={scopesImages[scopesImgIndex].src} alt="SoET" className="scopes-img" />
-            <div className="scopes-img-title">{scopesImages[scopesImgIndex].title}</div>
+            <img
+              key={scopesImgIndex}
+              src={scopesImages[scopesImgIndex].src}
+              alt="SoET"
+              className="scopes-img"
+            />
+            <div className="scopes-img-title">
+              {scopesImages[scopesImgIndex].title}
+            </div>
           </div>
         </div>
       </section>
@@ -409,15 +674,38 @@ const Home = () => {
       {/* Department Section */}
       <section className="department-section anim-fade-up" ref={deptRef}>
         <div className="section-header">
-          <h2 className="section-title">Department of Electronics and Communication Engineering, Paralakhemundi</h2>
+          <h2 className="section-title">
+            Department of Electronics and Communication Engineering,
+            Paralakhemundi
+          </h2>
         </div>
         <div className="department-content">
           <div className="department-image anim-slide-left">
-            <img key={deptImgIndex} src={deptImages[deptImgIndex].src} alt="ECE Department" className="dept-img" />
-            <div className="scopes-img-title">{deptImages[deptImgIndex].title}</div>
+            <img
+              key={deptImgIndex}
+              src={deptImages[deptImgIndex].src}
+              alt="ECE Department"
+              className="dept-img"
+            />
+            <div className="scopes-img-title">
+              {deptImages[deptImgIndex].title}
+            </div>
           </div>
           <div className="department-text anim-slide-right">
-            <p>Department of Electronics and Communication Engineering aims to produce qualified and dynamic engineers in the fast-changing area of Smart Devices, Mobile Emerging Technologies, Automation, Industrial IoT, and VLSI. The Department has sophisticated and modern laboratory equipment and software/tool (HFSS, CADENCE, MATLAB, MULTISIM, KEIL uVision, LABVIEW) for research and development work in the areas of Antenna and Microwave Engineering, Signal Processing and Communication, VLSI and Embedded System. The department undertakes real-time application projects in Smart Irrigation, Industrial IoT, Soil Moisture Prototype Development, Insulin Pump Prototype Development and Chip Design</p>
+            <p>
+              Department of Electronics and Communication Engineering aims to
+              produce qualified and dynamic engineers in the fast-changing area
+              of Smart Devices, Mobile Emerging Technologies, Automation,
+              Industrial IoT, and VLSI. The Department has sophisticated and
+              modern laboratory equipment and software/tool (HFSS, CADENCE,
+              MATLAB, MULTISIM, KEIL uVision, LABVIEW) for research and
+              development work in the areas of Antenna and Microwave
+              Engineering, Signal Processing and Communication, VLSI and
+              Embedded System. The department undertakes real-time application
+              projects in Smart Irrigation, Industrial IoT, Soil Moisture
+              Prototype Development, Insulin Pump Prototype Development and Chip
+              Design
+            </p>
           </div>
         </div>
       </section>
@@ -440,11 +728,13 @@ const Home = () => {
         </div>
       </section> */}
 
-      {/* SCOPES 2016 Gallery Strip */}
+      {/* SCOPES 2024 Gallery Strip */}
       <section className="gallery-strip-section">
         <div className="section-header">
           <h2 className="section-title">SCOPES-2024 Gallery</h2>
-          <p className="section-subtitle">Glimpses from the previous conference</p>
+          <p className="section-subtitle">
+            Glimpses from the previous conference
+          </p>
         </div>
         <div className="gallery-strip-wrapper">
           <div className="gallery-strip-track">
@@ -452,13 +742,14 @@ const Home = () => {
               [
                 // { n: 1, ext: "png" },
                 // { n: 2, ext: "png" },
-                { n: 3, ext: "jpeg" },
-                { n: 4, ext: "jpeg" },
-                { n: 5, ext: "jpeg" },
-                { n: 6, ext: "jpeg" },
-                { n: 7, ext: "jpeg" },
-                { n: 8, ext: "jpeg" },
-                { n: 9, ext: "jpeg" },
+                { n: 3, ext: "webp" },
+                { n: 4, ext: "webp" },
+                { n: 5, ext: "webp" },
+                { n: 6, ext: "webp" },
+                { n: 7, ext: "webp" },
+                { n: 8, ext: "webp" },
+                { n: 9, ext: "webp" },
+                { n: 10, ext: "webp" },
                 // { n: 10, ext: "jpeg" },
                 // { n: 11, ext: "jpeg" },
                 // { n: 12, ext: "jpeg" },
@@ -468,8 +759,6 @@ const Home = () => {
                 // { n : 16, ext: "jpeg" },
                 // { n : 18, exy: "jpg" },
                 // { n : 19, ext: "jpeg" },
-
-                
               ].map((img, i) => (
                 <img
                   key={`${si}-${i}`}
@@ -483,36 +772,73 @@ const Home = () => {
         </div>
       </section>
 
-{/* SCOPES 2016 Gallery Strip */}
+      {/* SCOPES 2016 Gallery Strip */}
       <section className="gallery-strip-section">
         <div className="section-header">
           <h2 className="section-title">SCOPES-2016 Gallery</h2>
-          <p className="section-subtitle">Glimpses from the previous conference</p>
+          <p className="section-subtitle">
+            Glimpses from the previous conference
+          </p>
         </div>
         <div className="gallery-strip-wrapper">
           <div className="gallery-strip-track">
             {[...Array(2)].flatMap((_, si) =>
               [
-                { n: 1, ext: "png" },
-                { n: 2, ext: "png" },
-                { n: 3, ext: "png" },
-                { n: 1, ext: "png" },
-                { n: 2, ext: "png" },
-                { n: 3, ext: "png" },
-                { n: 1, ext: "png" },
-                { n: 2, ext: "png" },
-                { n: 3, ext: "png" },
-                // { n: 4, ext: "jpeg" },
-                // { n: 5, ext: "jpeg" },
-                // { n: 6, ext: "jpeg" },
-                // { n: 7, ext: "jpeg" },
-                // { n: 8, ext: "jpeg" },
-                // { n: 9, ext: "jpeg" },
-                
+                { n: 1, ext: "webp" },
+                { n: 2, ext: "webp" },
+                { n: 3, ext: "webp" },
+                { n: 21, ext: "webp" },
+                { n: 22, ext: "webp" },
+                { n: 23, ext: "webp" },
+                { n: 24, ext: "webp" },
+                { n: 25, ext: "webp" },
+                { n: 26, ext: "webp" },
+                { n: 27, ext: "webp" },
+                { n: 28, ext: "webp" },
+                { n: 29, ext: "webp" },
+                { n: 30, ext: "webp" },
+                { n: 31, ext: "webp" },
+                { n: 32, ext: "webp" },
+                { n: 33, ext: "webp" },
+                { n: 34, ext: "webp" },
+                { n: 35, ext: "webp" },
+                { n: 36, ext: "webp" },
+                { n: 37, ext: "webp" },
+                { n: 38, ext: "webp" },
+                { n: 39, ext: "webp" },
+                { n: 40, ext: "webp" },
+                { n: 41, ext: "webp" },
+                { n: 42, ext: "webp" },
+                { n: 43, ext: "webp" },
+                { n: 44, ext: "webp" },
+                { n: 45, ext: "webp" },
+                { n: 46, ext: "webp" },
+                { n: 47, ext: "webp" },
+                { n: 48, ext: "webp" },
+                { n: 49, ext: "webp" },
+                { n: 50, ext: "webp" },
+                { n: 51, ext: "webp" },
+                { n: 52, ext: "webp" },
+                { n: 53, ext: "webp" },
+                { n: 54, ext: "webp" },
+                { n: 55, ext: "webp" },
+                { n: 56, ext: "webp" },
+                { n: 57, ext: "webp" },
+                { n: 58, ext: "webp" },
+                { n: 59, ext: "webp" },
+                { n: 60, ext: "webp" },
+                { n: 61, ext: "webp" },
+                { n: 62, ext: "webp" },
+                { n: 63, ext: "webp" },
+                { n: 64, ext: "webp" },
+                { n: 65, ext: "webp" },
+                { n: 66, ext: "webp" },
+                { n: 67, ext: "webp" },
+                { n: 68, ext: "webp" },
               ].map((img, i) => (
                 <img
                   key={`${si}-${i}`}
-                  src={`/scopes-prev/scopes2016/scope${img.n}.${img.ext}`}
+                  src={`/scopes-prev/scopes2016/scopes${img.n}.${img.ext}`}
                   alt={`SCOPES 2016 - ${img.n}`}
                   className="gallery-strip-img"
                 />
@@ -522,9 +848,11 @@ const Home = () => {
         </div>
       </section>
 
-
       {/* IEEE Copyright Section */}
-      <section className="ieee-copyright-section anim-zoom-in" ref={copyrightRef}>
+      <section
+        className="ieee-copyright-section anim-zoom-in"
+        ref={copyrightRef}
+      >
         <h3 className="copyright-heading">IEEE Copyright Details</h3>
         <div className="copyright-list">
           <p>U.S. Government work not protected by U.S. copyright</p>
@@ -580,19 +908,27 @@ const Home = () => {
                 <tbody>
                   <tr>
                     <td>R&amp;D and Industry Participants</td>
-                    <td>₹9,000</td><td>₹10,000</td><td>$250</td>
+                    <td>₹9,000</td>
+                    <td>₹10,000</td>
+                    <td>$250</td>
                   </tr>
                   <tr>
                     <td>Faculty Participants from Academia</td>
-                    <td>₹8,000</td><td>₹9,000</td><td>$225</td>
+                    <td>₹8,000</td>
+                    <td>₹9,000</td>
+                    <td>$225</td>
                   </tr>
                   <tr>
                     <td>UG/PG Students &amp; Research Scholars</td>
-                    <td>₹7,000</td><td>₹8,000</td><td>$200</td>
+                    <td>₹7,000</td>
+                    <td>₹8,000</td>
+                    <td>$200</td>
                   </tr>
                   <tr>
                     <td>Listener / Accompany Person</td>
-                    <td>₹2,000</td><td>₹2,000</td><td>$100</td>
+                    <td>₹2,000</td>
+                    <td>₹2,000</td>
+                    <td>$100</td>
                   </tr>
                   {/* <tr>
                     <td>Accompany</td>
@@ -600,7 +936,10 @@ const Home = () => {
                   </tr> */}
                 </tbody>
               </table>
-              <p className="fees-note">* Fee includes Conference Kit, Banquet, Lunch, Tea, and GST as applicable.</p>
+              <p className="fees-note">
+                * Fee includes Conference Kit, Banquet, Lunch, Tea, and GST as
+                applicable.
+              </p>
             </div>
           </div>
         </div>

@@ -10,7 +10,7 @@ const ImpDates = () => {
       event: 'Paper Submission Open',
       date: 'May 1st, 2026',
       desc: 'Portal opens for manuscript submissions across all tracks.',
-      start: new Date('2026-05-01'), end: new Date('2026-09-30'),
+      start: new Date('2026-05-01'), end: new Date('2026-10-15'),
       icon: <FaRocket />,
     },
     {
@@ -23,16 +23,16 @@ const ImpDates = () => {
     },
     {
       event: 'Notification of Acceptance',
-      date: 'November 30th, 2026',
+      date: 'November 15th, 2026',
       desc: 'Authors will be notified about acceptance or rejection.',
-      start: new Date('2026-11-30'), end: new Date('2026-11-30'),
+      start: new Date('2026-11-15'), end: new Date('2026-11-15'),
       icon: <FaBell />,
     },
     {
       event: 'Registration & Camera Ready',
-      date: 'December 15th, 2026',
+      date: 'November 30th, 2026',
       desc: 'Start date for registration and camera-ready paper submission.',
-      start: new Date('2026-12-15'), end: new Date('2026-12-15'),
+      start: new Date('2026-11-30'), end: new Date('2026-11-30'),
       icon: <FaUserCheck />,
    },
     // {
