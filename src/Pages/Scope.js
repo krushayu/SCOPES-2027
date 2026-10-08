@@ -74,7 +74,7 @@ const trackSDGImages = {
 const tracks = [
   {
     icon: <FaSignal />,
-    title: "Advanced Signal, Image & Intelligent Systems",
+    title: "Track 1: Advanced Signal, Image & Intelligent Systems",
     color: "#e74c3c",
     topics: [
       "AI/ML and deep learning for signal, speech, image, and video processing",
@@ -90,7 +90,7 @@ const tracks = [
   },
   {
     icon: <FaNetworkWired />,
-    title: "Next-Generation Communication Technologies",
+    title: "Track 2: Next-Generation Communication Technologies",
     color: "#2980b9",
     topics: [
       "5G-Advanced and 6G communication systems",
@@ -105,7 +105,7 @@ const tracks = [
   },
   {
     icon: <FaBolt />,
-    title: "Smart Power Systems & Sustainable Energy",
+    title: "Track 3: Smart Power Systems & Sustainable Energy",
     color: "#f39c12",
     topics: [
       "Smart grids and digital energy systems",
@@ -120,7 +120,7 @@ const tracks = [
   },
   {
     icon: <FaMicrochip />,
-    title: "Embedded Systems, VLSI & Advanced Chip Design",
+    title: "Track 4: Embedded Systems, VLSI & Advanced Chip Design",
     color: "#27ae60",
     topics: [
       "ASIC, FPGA, and System-on-Chip (SoC) design",
@@ -135,7 +135,7 @@ const tracks = [
   },
   {
     icon: <FaIndustry />,
-    title: "Industry 4.0/5.0 & Intelligent Automation",
+    title: "Track 5: Industry 4.0/5.0 & Intelligent Automation",
     color: "#8e44ad",
     topics: [
       "Cyber-physical systems and digital twins",
@@ -150,7 +150,7 @@ const tracks = [
   },
   {
     icon: <FaFlask />,
-    title: "Interdisciplinary & Emerging Technologies",
+    title: "Track 6: Interdisciplinary & Emerging Technologies",
     color: "#00897b",
     topics: [
       "Smart cities and intelligent infrastructure",
@@ -165,7 +165,7 @@ const tracks = [
   },
   {
     icon: <FaAtom />,
-    title: "Quantum Control, Computing & Learning",
+    title: "Track 7: Quantum Control, Computing & Learning",
     color: "#6c5ce7",
     topics: [
       "Quantum computing and quantum algorithms",
@@ -180,7 +180,7 @@ const tracks = [
   },
   {
     icon: <FaSeedling />,
-    title: "Precision Agriculture & Digital Farming Technologies",
+    title: "Track 8: Precision Agriculture & Digital Farming Technologies",
     color: "#2ecc71",
     topics: [
       "Sensor-based precision crop management",
