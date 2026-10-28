@@ -135,6 +135,58 @@
   border-radius: 20px;
   letter-spacing: 0.5px;
   text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.impd-rm-badge.impd-hard-badge {
+  background: linear-gradient(135deg, #ef4444, #dc2626) !important;
+  box-shadow: 0 2px 10px rgba(239, 68, 68, 0.4);
+  letter-spacing: 0.6px;
+  font-weight: 800;
+}
+
+.impd-fire-icon {
+  font-size: 11px;
+  animation: impdFlame 1.2s infinite alternate;
+}
+
+@keyframes impdFlame {
+  0% { transform: scale(1); filter: drop-shadow(0 0 1px #fff); }
+  100% { transform: scale(1.2); filter: drop-shadow(0 0 4px #ffedd5); }
+}
+
+.impd-subevent-pill {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 800;
+  color: #dc2626;
+  background: #fee2e2;
+  border: 1px solid #fca5a5;
+  padding: 2px 8px;
+  border-radius: 12px;
+  margin-left: 8px;
+  vertical-align: middle;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.impd-hard-note {
+  font-size: 12px;
+  font-weight: 700;
+  color: #b91c1c;
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+  line-height: 1.35;
+}
+
+.impd-row.is-hard .impd-rm-card-inner {
+  border-color: #fca5a5;
+  border-top: 4px solid #ef4444;
+  box-shadow: 0 8px 30px rgba(239, 68, 68, 0.16);
+  background: linear-gradient(180deg, #fffafa 0%, #ffffff 100%);
 }
 
 .impd-rm-num {

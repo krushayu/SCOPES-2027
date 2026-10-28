@@ -433,6 +433,7 @@ const Committee = () => {
       color: "#7c3aed",
       bg: "#f5f3ff",
       members: [
+        "Mr. Laxmidhar Behera, SoET, PKD, CUTM, Odisha",
         "Dr. Madan Mohan Rout, Assistant Prof., SoET, PKD, CUTM",
         "Dr. Krushna Chandra Sethi, Assistant Prof., SoET, PKD, CUTM",
         "Dr. Narayan Gouda, CUTM, Odisha",

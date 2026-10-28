@@ -2,6 +2,9 @@
   min-height: 100vh;
   background: #f1f5f9;
   padding-top: 80px;
+  overflow-x: hidden;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 /* Hero */
@@ -11,6 +14,8 @@
   text-align: center;
   color: white;
   border-bottom: 3px solid #00b4d8;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .reg-hero h1 {
@@ -28,11 +33,13 @@
 /* Container */
 .reg-container {
   max-width: 960px;
+  width: 100%;
   margin: 0 auto;
   padding: 50px 20px;
   display: flex;
   flex-direction: column;
   gap: 32px;
+  box-sizing: border-box;
 }
 
 /* Card */
@@ -41,6 +48,8 @@
   border-radius: 16px;
   padding: 36px 40px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .reg-card-title {
@@ -115,166 +124,547 @@
   vertical-align: middle;
 }
 
-/* ── Important Dates Horizontal Chain ── */
-.reg-dates-chain {
+/* ── Important Dates Showcase ── */
+.reg-dates-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.reg-dates-header {
   display: flex;
-  flex-direction: row;
+  justify-content: space-between;
   align-items: flex-start;
-  overflow-x: auto;
-  padding: 10px 4px 16px;
-  gap: 0;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 24px;
 }
 
-.reg-chain-item {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  flex-shrink: 0;
+.reg-dates-title {
+  margin: 0 0 6px 0;
+  border-bottom: none;
+  padding-bottom: 0;
 }
 
-/* Connector line between cards */
-.reg-chain-line {
-  width: 40px;
-  height: 3px;
-  background: linear-gradient(to right, #c7d2fe, #e0e7ff);
-  flex-shrink: 0;
+.reg-dates-subtitle {
+  font-size: 14px;
+  color: #64748b;
+  margin: 0;
+  line-height: 1.5;
 }
 
-/* Card */
-.reg-chain-card {
-  width: 185px;
-  background: #ffffff;
-  border-radius: 14px;
-  padding: 18px 16px;
-  border: 1.5px solid #e2e8f0;
-  border-top: 4px solid var(--accent, #6366f1);
-  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-  flex-shrink: 0;
-}
-
-.reg-chain-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 28px rgba(0,0,0,0.12);
-}
-
-.reg-chain-item.active .reg-chain-card {
-  box-shadow: 0 4px 20px rgba(34,197,94,0.35);
-  border-color: #bbf7d0;
-}
-
-.reg-chain-item.active .reg-chain-card:hover {
-  box-shadow: 0 10px 32px rgba(34,197,94,0.5);
-}
-
-.reg-chain-item.over .reg-chain-card {
-  box-shadow: 0 4px 20px rgba(239,68,68,0.3);
-  border-color: #fecaca;
-  opacity: 0.85;
-  filter: none;
-}
-
-.reg-chain-item.over .reg-chain-card:hover {
-  box-shadow: 0 10px 32px rgba(239,68,68,0.45);
-}
-
-/* Node icon on top of card */
-.reg-chain-node {
-  width: 40px;
-  height: 40px;
-  border-radius: 10px;
+.reg-dates-legend {
   display: flex;
   align-items: center;
-  justify-content: center;
-  color: white;
-  font-size: 17px;
-  margin-bottom: 12px;
-  transition: transform 0.25s ease;
-}
-
-.reg-chain-card:hover .reg-chain-node {
-  transform: scale(1.1);
-}
-
-.reg-chain-event {
-  font-size: 13px;
-  font-weight: 800;
-  color: #0a192f;
-  margin: 0 0 10px;
-  line-height: 1.4;
-}
-
-.reg-chain-item.over .reg-chain-event {
-  text-decoration: line-through;
-  color: #94a3b8;
-}
-
-.reg-chain-badge {
-  display: inline-block;
-  font-size: 10px;
-  font-weight: 700;
-  color: white;
-  padding: 3px 10px;
+  gap: 14px;
+  background: #f8fafc;
+  padding: 8px 14px;
   border-radius: 20px;
-  text-transform: uppercase;
-  letter-spacing: 0.4px;
-  margin-bottom: 8px;
-}
-
-.reg-chain-date {
-  display: flex;
-  align-items: flex-start;
-  gap: 6px;
+  border: 1px solid #e2e8f0;
   font-size: 12px;
-  font-weight: 700;
+  font-weight: 600;
+  color: #475569;
 }
 
-.reg-extended-date-box {
+.reg-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.reg-legend-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.reg-legend-dot.active {
+  background: #22c55e;
+  box-shadow: 0 0 0 2px rgba(34, 197, 94, 0.2);
+}
+
+.reg-legend-dot.upcoming {
+  background: #6366f1;
+}
+
+.reg-legend-dot.hard {
+  background: #ef4444;
+  box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.2);
+}
+
+/* Dates Grid: 6-column system for 3 top / 2 bottom layout */
+.reg-dates-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Default card styling */
+.reg-date-tile {
+  grid-column: span 2;
+  background: #ffffff;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 22px 20px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 2px;
+  position: relative;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  box-shadow: 0 4px 16px rgba(10, 25, 47, 0.05);
+  min-width: 0;
+  box-sizing: border-box;
 }
 
-.reg-date-old {
-  font-size: 11px;
-  color: #94a3b8;
-  text-decoration: line-through;
-  text-decoration-color: #ef4444;
-  text-decoration-thickness: 2px;
-  font-weight: 600;
-  line-height: 1.2;
+.reg-date-tile:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(10, 25, 47, 0.1);
+  border-color: #cbd5e1;
 }
 
-.reg-date-new {
-  font-size: 12px;
-  font-weight: 700;
+/* Row 2 cards span 3 columns each (balanced 2-card row) */
+.reg-date-tile:nth-child(4),
+.reg-date-tile:nth-child(5) {
+  grid-column: span 3;
+}
+
+/* Card Accent Line */
+.reg-tile-accent-line {
+  position: absolute;
+  top: 0;
+  left: 20px;
+  right: 20px;
+  height: 3.5px;
+  border-radius: 0 0 4px 4px;
+  background: var(--tile-accent, #00b4d8);
+}
+
+/* Top bar: Phase & Badge */
+.reg-tile-top {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.reg-tile-phase {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  color: #94a3b8;
+  text-transform: uppercase;
+}
+
+.reg-tile-badge {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 20px;
+  display: inline-flex;
   align-items: center;
   gap: 5px;
+}
+
+.reg-tile-badge.active-badge {
+  background: #dcfce7;
+  color: #15803d;
+  border: 1px solid #bbf7d0;
+}
+
+.reg-badge-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #16a34a;
+  animation: regPulseDot 1.8s infinite;
+}
+
+@keyframes regPulseDot {
+  0% { transform: scale(0.9); opacity: 0.8; }
+  50% { transform: scale(1.4); opacity: 1; }
+  100% { transform: scale(0.9); opacity: 0.8; }
+}
+
+.reg-tile-badge.upcoming-badge {
+  background: #e0e7ff;
+  color: #4338ca;
+  border: 1px solid #c7d2fe;
+}
+
+.reg-tile-badge.closed-badge {
+  background: #f1f5f9;
+  color: #64748b;
+  border: 1px solid #e2e8f0;
+}
+
+/* Main content area */
+.reg-tile-main {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+/* Calendar Tear-sheet Block */
+.reg-cal-block {
+  width: 64px;
+  flex-shrink: 0;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.reg-cal-top {
+  background: var(--tile-accent, #0a192f);
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.6px;
+  padding: 3px 0;
+  text-transform: uppercase;
+}
+
+.reg-cal-num {
+  font-size: 20px;
+  font-weight: 900;
+  color: #0a192f;
+  line-height: 1.2;
+  padding: 4px 2px 0;
+}
+
+.reg-cal-year {
+  font-size: 10px;
+  font-weight: 700;
+  color: #64748b;
+  padding-bottom: 4px;
+}
+
+/* Tile title and icon */
+.reg-tile-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.reg-tile-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+
+.reg-tile-title {
+  font-size: 15px;
+  font-weight: 800;
+  color: #0a192f;
+  margin: 0;
+  line-height: 1.35;
+}
+
+.reg-tile-subevent {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  color: #ef4444;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 2px;
+}
+
+/* Regular tile info */
+.reg-tile-info {
+  margin-top: auto;
+  border-top: 1px dashed #e2e8f0;
+  padding-top: 12px;
+}
+
+.reg-tile-full-date {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 5px;
+}
+
+.reg-cal-mini-icon {
+  color: var(--tile-accent, #00b4d8);
+  font-size: 12px;
+}
+
+.reg-tile-desc {
+  font-size: 12px;
+  color: #64748b;
+  margin: 0;
+  line-height: 1.45;
+}
+
+/* ── Hard Deadline Special Card Styling ── */
+.reg-date-tile.is-hard-deadline {
+  border: 2px solid #ef4444;
+  background: linear-gradient(180deg, #fffafa 0%, #ffffff 100%);
+  box-shadow: 0 6px 20px rgba(239, 68, 68, 0.12);
+}
+
+.reg-date-tile.is-hard-deadline:hover {
+  box-shadow: 0 14px 32px rgba(239, 68, 68, 0.22);
+  transform: translateY(-5px);
+  border-color: #dc2626;
+}
+
+.reg-date-tile.is-hard-deadline .reg-tile-accent-line {
+  background: linear-gradient(90deg, #ef4444, #f97316);
+  height: 4px;
+}
+
+.reg-tile-badge.hard-badge {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  color: #ffffff;
+  box-shadow: 0 2px 8px rgba(239, 68, 68, 0.35);
+  font-weight: 800;
+  letter-spacing: 0.4px;
+}
+
+.reg-badge-icon.pulse {
+  animation: regFlamePulse 1.2s ease-in-out infinite alternate;
+}
+
+@keyframes regFlamePulse {
+  0% { transform: scale(1); filter: drop-shadow(0 0 2px #fff); }
+  100% { transform: scale(1.25); filter: drop-shadow(0 0 6px #ffedd5); }
+}
+
+.reg-date-tile.is-hard-deadline .reg-cal-top {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+}
+
+.reg-date-tile.is-hard-deadline .reg-cal-num {
+  color: #dc2626;
+}
+
+/* Hard Deadline Box */
+.reg-hard-box {
+  margin-top: auto;
+  background: #fef2f2;
+  border: 1px solid #fee2e2;
+  border-radius: 10px;
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.reg-hard-dates-row {
+  display: flex;
+  align-items: center;
+  gap: 7px;
   flex-wrap: wrap;
 }
 
-.reg-extended-badge {
-  font-size: 9px;
-  font-weight: 700;
-  background: #fee2e2;
-  color: #ef4444;
-  padding: 1px 5px;
-  border-radius: 3px;
-  text-transform: uppercase;
-  letter-spacing: 0.4px;
-  border: 1px solid #fca5a5;
-  line-height: 1.2;
-  display: inline-block;
+.reg-hard-old {
+  font-size: 11.5px;
+  color: #94a3b8;
+  text-decoration: line-through;
+  text-decoration-color: #ef4444;
+  text-decoration-thickness: 1.5px;
+  font-weight: 600;
 }
 
-/* Mobile: scroll horizontally */
+.reg-hard-arrow {
+  font-size: 11px;
+  color: #f87171;
+}
+
+.reg-hard-new {
+  font-size: 13px;
+  font-weight: 800;
+  color: #b91c1c;
+}
+
+.reg-hard-tag {
+  font-size: 9.5px;
+  font-weight: 800;
+  text-transform: uppercase;
+  background: #fee2e2;
+  color: #dc2626;
+  border: 1px solid #fca5a5;
+  padding: 1px 6px;
+  border-radius: 4px;
+  letter-spacing: 0.4px;
+}
+
+.reg-hard-warning {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #991b1b;
+  line-height: 1.35;
+}
+
+.reg-hard-warn-icon {
+  color: #dc2626;
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+/* ── Important Dates Responsive Breakpoints ── */
+@media (max-width: 992px) {
+  .reg-dates-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  .reg-date-tile {
+    grid-column: span 1;
+  }
+  .reg-date-tile:nth-child(4) {
+    grid-column: span 1;
+  }
+  .reg-date-tile:nth-child(5) {
+    grid-column: span 2;
+  }
+}
+
 @media (max-width: 768px) {
-  .reg-dates-chain { padding-bottom: 12px; }
-  .reg-chain-card  { width: 148px; padding: 14px 12px; }
-  .reg-chain-event { font-size: 12px; }
-  .reg-chain-line  { width: 24px; }
+  .reg-dates-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    margin-bottom: 18px;
+  }
+
+  .reg-dates-legend {
+    width: 100%;
+    justify-content: space-around;
+    padding: 8px 10px;
+    font-size: 11.5px;
+    box-sizing: border-box;
+  }
+
+  .reg-dates-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    width: 100%;
+  }
+
+  .reg-date-tile,
+  .reg-date-tile:nth-child(4),
+  .reg-date-tile:nth-child(5) {
+    grid-column: auto !important;
+    width: 100% !important;
+    padding: 18px 16px;
+    margin: 0;
+  }
+
+  .reg-tile-main {
+    gap: 14px;
+  }
+
+  .reg-cal-block {
+    width: 58px;
+    min-width: 58px;
+  }
+
+  .reg-cal-num {
+    font-size: 18px;
+  }
+
+  .reg-tile-title {
+    font-size: 14.5px;
+  }
+
+  .reg-hard-box {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .reg-hard-warning {
+    word-break: break-word;
+  }
+}
+
+@media (max-width: 480px) {
+  .reg-dates-section {
+    padding: 20px 14px !important;
+  }
+
+  .reg-dates-legend {
+    display: none;
+  }
+
+  .reg-date-tile,
+  .reg-date-tile:nth-child(4),
+  .reg-date-tile:nth-child(5) {
+    padding: 16px 12px;
+    border-radius: 14px;
+  }
+
+  .reg-tile-top {
+    margin-bottom: 12px;
+  }
+
+  .reg-tile-main {
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+
+  .reg-cal-block {
+    width: 52px;
+    min-width: 52px;
+  }
+
+  .reg-cal-top {
+    font-size: 10px;
+    padding: 2.5px 0;
+  }
+
+  .reg-cal-num {
+    font-size: 16px;
+  }
+
+  .reg-cal-year {
+    font-size: 9px;
+  }
+
+  .reg-tile-title {
+    font-size: 14px;
+  }
+
+  .reg-hard-box {
+    padding: 8px 10px;
+    gap: 6px;
+  }
+
+  .reg-hard-dates-row {
+    gap: 5px;
+  }
+
+  .reg-hard-old {
+    font-size: 10.5px;
+  }
+
+  .reg-hard-new {
+    font-size: 12px;
+  }
+
+  .reg-hard-tag {
+    font-size: 8.5px;
+    padding: 1px 4px;
+  }
+
+  .reg-hard-warning {
+    font-size: 10.5px;
+    line-height: 1.35;
+  }
 }
 
 /* CTA */
@@ -402,19 +792,25 @@
 }
 
 @media (max-width: 768px) {
-  .reg-wrapper { padding-top: 100px; }
+  .reg-wrapper { padding-top: 90px; }
   .reg-hero { padding: 28px 15px; }
   .reg-hero h1 { font-size: 26px; }
-  .reg-hero p { font-size: 13px; }
-  .reg-container { padding: 32px 15px; }
-  .reg-card { padding: 24px 18px; }
+  .reg-hero p { font-size: 13.5px; }
+  .reg-container { padding: 24px 14px; gap: 20px; }
+  .reg-card { padding: 24px 16px; border-radius: 16px; }
   .reg-card-title { font-size: 19px; }
   .reg-guideline-item { padding: 12px 14px; gap: 12px; }
   .reg-guideline-item p { font-size: 14px; }
   .reg-num { min-width: 24px; height: 24px; font-size: 12px; }
-  .reg-chain-card { padding: 14px 16px; }
-  .reg-chain-event { font-size: 14px; }
-  .reg-chain-node { width: 40px; height: 40px; font-size: 16px; }
+}
+
+@media (max-width: 480px) {
+  .reg-wrapper { padding-top: 80px; }
+  .reg-hero { padding: 22px 12px; }
+  .reg-hero h1 { font-size: 22px; }
+  .reg-container { padding: 16px 10px; gap: 16px; }
+  .reg-card { padding: 18px 12px; border-radius: 14px; }
+  .reg-card-title { font-size: 17px; margin-bottom: 16px; }
 }
 
 
@@ -715,4 +1111,384 @@
   .reg-payment-section { padding: 24px 18px; }
   .reg-payment-cards { grid-template-columns: 1fr; }
   .reg-instruction-list { grid-template-columns: 1fr; }
+}
+
+/* ── Registration Clock Countdown Card (Light Mode & Attractive) ── */
+.reg-countdown-card {
+  background: linear-gradient(145deg, #ffffff 0%, #f8fafc 50%, #f0fdf4 100%);
+  border-radius: 24px;
+  padding: 40px 36px;
+  color: #0a192f;
+  text-align: center;
+  box-shadow: 0 10px 40px rgba(10, 25, 47, 0.08), 0 2px 6px rgba(0, 0, 0, 0.03);
+  border: 1.5px solid #e2e8f0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Elegant top highlight bar */
+.reg-countdown-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, #0284c7 0%, #00b4d8 30%, #6366f1 70%, #0d9488 100%);
+}
+
+/* Subtle corner ambient glow */
+.reg-countdown-card::after {
+  content: "";
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(0, 180, 216, 0.12) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+/* Badge pill */
+.reg-countdown-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #f0f9ff;
+  color: #0284c7;
+  border: 1px solid #bae6fd;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  box-shadow: 0 2px 8px rgba(2, 132, 199, 0.1);
+}
+
+.reg-cd-live-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #0284c7;
+  animation: regCdDotPulse 1.6s infinite;
+}
+
+@keyframes regCdDotPulse {
+  0% { transform: scale(0.9); opacity: 0.8; }
+  50% { transform: scale(1.4); opacity: 1; }
+  100% { transform: scale(0.9); opacity: 0.8; }
+}
+
+.reg-countdown-heading {
+  font-size: 28px;
+  font-weight: 900;
+  color: #0a192f;
+  margin: 0 0 8px 0;
+  letter-spacing: -0.4px;
+}
+
+.reg-countdown-sub {
+  font-size: 14.5px;
+  color: #64748b;
+  margin: 0 auto 28px auto;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+.reg-countdown-sub strong {
+  color: #0284c7;
+  font-weight: 800;
+}
+
+/* Clock Dials Flex Container */
+.reg-clock-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin: 28px 0 32px 0;
+  flex-wrap: wrap;
+}
+
+/* Individual Clock Dial */
+.reg-clock-dial {
+  position: relative;
+  width: 116px;
+  height: 116px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 6px 20px rgba(10, 25, 47, 0.06), inset 0 2px 6px rgba(0, 0, 0, 0.02);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.reg-clock-dial:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 12px 28px rgba(10, 25, 47, 0.12);
+}
+
+.reg-clock-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.reg-clock-track {
+  fill: none;
+  stroke-width: 6.5;
+}
+
+.reg-clock-meter {
+  fill: none;
+  stroke-width: 6.5;
+  transition: stroke-dashoffset 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reg-clock-inner {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.reg-clock-number {
+  font-size: 30px;
+  font-weight: 900;
+  color: #0a192f;
+  line-height: 1;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  letter-spacing: -0.5px;
+}
+
+.reg-clock-unit {
+  font-size: 10.5px;
+  font-weight: 800;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-top: 5px;
+}
+
+/* Clock colon separator */
+.reg-clock-colon {
+  font-size: 24px;
+  font-weight: 900;
+  color: #cbd5e1;
+  margin-top: -10px;
+}
+
+/* ── Conference Timeline Stepper inside Countdown ── */
+.reg-cd-milestones {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 10px auto 26px auto;
+  max-width: 720px;
+  padding: 12px 18px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  flex-wrap: wrap;
+}
+
+.reg-cd-step {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #64748b;
+}
+
+.reg-cd-step.completed {
+  color: #15803d;
+}
+
+.reg-cd-step.current {
+  color: #b91c1c;
+  font-weight: 800;
+}
+
+.reg-cd-step.target {
+  color: #0284c7;
+  font-weight: 800;
+}
+
+.reg-cd-step-dot {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 800;
+  background: #e2e8f0;
+  color: #475569;
+}
+
+.reg-cd-step.completed .reg-cd-step-dot {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.reg-cd-step.current .reg-cd-step-dot {
+  background: #fee2e2;
+  color: #dc2626;
+  border: 1px solid #fca5a5;
+}
+
+.reg-cd-step.target .reg-cd-step-dot {
+  background: #e0f2fe;
+  color: #0284c7;
+  border: 1px solid #bae6fd;
+}
+
+.reg-cd-step-line {
+  width: 20px;
+  height: 2px;
+  background: #cbd5e1;
+  border-radius: 2px;
+}
+
+.reg-cd-step-line.active {
+  background: #94a3b8;
+}
+
+/* Bottom Actions Row */
+.reg-countdown-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 14px 20px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+  text-align: left;
+}
+
+.reg-countdown-notice {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 13px;
+  color: #475569;
+  line-height: 1.5;
+  flex: 1;
+  min-width: 260px;
+}
+
+.reg-cd-notice-icon {
+  color: #0284c7;
+  font-size: 15px;
+  flex-shrink: 0;
+}
+
+.reg-cd-cal-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: #ffffff;
+  color: #0284c7;
+  border: 1.5px solid #0284c7;
+  padding: 9px 18px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(2, 132, 199, 0.08);
+}
+
+.reg-cd-cal-btn:hover {
+  background: #0284c7;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(2, 132, 199, 0.25);
+}
+
+@media (max-width: 768px) {
+  .reg-countdown-card {
+    padding: 26px 18px;
+  }
+  .reg-countdown-heading {
+    font-size: 22px;
+  }
+  .reg-clock-container {
+    gap: 10px;
+  }
+  .reg-clock-dial {
+    width: 92px;
+    height: 92px;
+  }
+  .reg-clock-number {
+    font-size: 24px;
+  }
+  .reg-clock-unit {
+    font-size: 9px;
+  }
+  .reg-clock-colon {
+    font-size: 18px;
+    margin-top: -6px;
+  }
+  .reg-countdown-footer {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+  .reg-countdown-notice {
+    justify-content: center;
+    text-align: center;
+  }
+  .reg-cd-cal-btn {
+    justify-content: center;
+    width: 100%;
+  }
+  .reg-cd-milestones {
+    display: none;
+  }
+}
+
+@media (max-width: 440px) {
+  .reg-countdown-card {
+    padding: 20px 12px;
+  }
+  .reg-countdown-heading {
+    font-size: 19px;
+  }
+  .reg-clock-container {
+    gap: 6px;
+  }
+  .reg-clock-dial {
+    width: 68px;
+    height: 68px;
+  }
+  .reg-clock-number {
+    font-size: 18px;
+  }
+  .reg-clock-unit {
+    font-size: 8px;
+  }
+  .reg-clock-colon {
+    font-size: 14px;
+    margin-top: -4px;
+  }
+  .reg-countdown-notice {
+    font-size: 11.5px;
+  }
 }

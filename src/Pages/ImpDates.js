@@ -1,6 +1,6 @@
 import React from 'react';
 import '../styles/ImpDates.css';
-import { FaRocket, FaFileAlt, FaBell, FaUserCheck, FaStar } from 'react-icons/fa';
+import { FaRocket, FaBell, FaUserCheck, FaStar, FaFireAlt, FaExclamationTriangle } from 'react-icons/fa';
 
 const ImpDates = () => {
   const now = new Date();
@@ -10,22 +10,24 @@ const ImpDates = () => {
       event: 'Paper Submission Open',
       date: 'May 1st, 2026',
       desc: 'Portal opens for manuscript submissions across all tracks.',
-      start: new Date('2026-05-01'), end: new Date('2026-10-15'),
+      start: new Date('2026-05-01'), end: new Date('2026-10-31'),
       icon: <FaRocket />,
     },
     {
-      event: 'Last Date for Paper Submission',
-      oldDate: 'September 30th, 2026',
-      date: 'October 15th, 2026',
-      desc: 'Final deadline to submit your full paper via Microsoft CMT.',
-      start: new Date('2026-10-15'), end: new Date('2026-10-15'),
-      icon: <FaFileAlt />,
+      event: 'Paper Submission Close',
+      subEvent: 'Hard Deadline',
+      isHardDeadline: true,
+      oldDate: 'October 15th, 2026',
+      date: 'October 31st, 2026',
+      desc: 'Strict final cut-off deadline to submit your full paper via Microsoft CMT. No further extension.',
+      start: new Date('2026-10-31'), end: new Date('2026-10-31'),
+      icon: <FaFireAlt />,
     },
     {
       event: 'Notification of Acceptance',
-      date: 'November 15th, 2026',
+      date: 'November 20th, 2026',
       desc: 'Authors will be notified about acceptance or rejection.',
-      start: new Date('2026-11-15'), end: new Date('2026-11-15'),
+      start: new Date('2026-11-20'), end: new Date('2026-11-20'),
       icon: <FaBell />,
     },
     {
@@ -61,6 +63,7 @@ const ImpDates = () => {
     active:   { label: 'Active Now', color: '#22c55e', glow: 'rgba(34,197,94,0.25)' },
     upcoming: { label: 'Upcoming',   color: '#00b4d8', glow: 'rgba(0,180,216,0.2)' },
     over:     { label: 'Closed',     color: '#94a3b8', glow: 'rgba(148,163,184,0.15)' },
+    hard:     { label: 'Hard Deadline', color: '#ef4444', glow: 'rgba(239,68,68,0.28)' },
   };
 
   return (
@@ -82,22 +85,33 @@ const ImpDates = () => {
 
           {dates.map((item, index) => {
             const status = getStatus(item);
-            const meta = statusMeta[status];
+            const meta = item.isHardDeadline ? statusMeta.hard : statusMeta[status];
             const isLeft = index % 2 === 0;
 
             return (
-              <div className={`impd-row ${isLeft ? 'left' : 'right'} ${status}`} key={index}>
+              <div className={`impd-row ${isLeft ? 'left' : 'right'} ${status} ${item.isHardDeadline ? 'is-hard' : ''}`} key={index}>
 
                 {/* Card */}
                 <div className="impd-rm-card" style={{ '--glow': meta.glow, '--accent': meta.color }}>
                   <div className="impd-rm-card-inner">
                     <div className="impd-rm-top">
-                      <span className="impd-rm-badge" style={{ background: meta.color }}>
-                        {meta.label}
+                      <span className={`impd-rm-badge ${item.isHardDeadline ? 'impd-hard-badge' : ''}`} style={{ background: meta.color }}>
+                        {item.isHardDeadline ? (
+                          <>
+                            <FaFireAlt className="impd-fire-icon" /> Hard Deadline
+                          </>
+                        ) : (
+                          meta.label
+                        )}
                       </span>
                       <span className="impd-rm-num">0{index + 1}</span>
                     </div>
-                    <h3 className="impd-rm-event">{item.event}</h3>
+                    <h3 className="impd-rm-event">
+                      {item.event}
+                      {item.subEvent && (
+                        <span className="impd-subevent-pill">{item.subEvent}</span>
+                      )}
+                    </h3>
                     <p className="impd-rm-desc">{item.desc}</p>
                     <div className="impd-rm-date" style={{ color: meta.color }}>
                       <span className="impd-date-icon">📅</span>
@@ -108,6 +122,12 @@ const ImpDates = () => {
                             {item.date}
                             <span className="impd-extended-badge">Extended</span>
                           </span>
+                          {item.isHardDeadline && (
+                            <span className="impd-hard-note">
+                              <FaExclamationTriangle style={{ marginRight: 5, fontSize: 11, flexShrink: 0 }} />
+                              Strict Deadline — No further extension will be granted.
+                            </span>
+                          )}
                         </div>
                       ) : (
                         <span>{item.date}</span>

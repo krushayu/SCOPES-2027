@@ -6,6 +6,8 @@ import {
   FaPaperPlane,
   FaAward,
   FaMapMarkerAlt,
+  FaFireAlt,
+  FaExclamationTriangle,
 } from "react-icons/fa";
 import { MdAppRegistration } from "react-icons/md";
 
@@ -204,20 +206,22 @@ const Home = () => {
       title: "Paper Submission open",
       date: "01 May 2026",
       start: new Date("2026-05-01"),
-      end: new Date("2026-10-15"),
+      end: new Date("2026-10-31"),
     },
     {
       title: "Paper Submission close",
-      oldDate: "30 Septmembet 2026",
-      date: "October 15th, 2026",
-      start: new Date("2026-10-15"),
-      end: new Date("2026-10-15"),
-    },
+      subTitle: "Hard Deadline",
+      isHardDeadline: true,
+      oldDate: "October 15th, 2026",
+      date: "October 31st, 2026",
+      start: new Date("2026-10-31"),
+      end: new Date("2026-10-31"),
+    },  
     {
       title: "Notification of Acceptance",
-      date: "15 November 2026",
-      start: new Date("2026-11-15"),
-      end: new Date("2026-11-15"),
+      date: "20 November 2026",
+      start: new Date("2026-11-20"),
+      end: new Date("2026-11-20"),
     },
     {
       title: "Start date of registration & camera ready submission",
@@ -873,10 +877,20 @@ const Home = () => {
             <h3 className="column-title">Important Dates</h3>
             <div className="dates-list">
               {importantDates.map((date, index) => (
-                <div className={`date-item ${date.status}`} key={index}>
-                  <div className="date-dot"></div>
+                <div
+                  className={`date-item ${date.status} ${date.isHardDeadline ? "is-hard-deadline" : ""}`}
+                  key={index}
+                >
+                  <div className={`date-dot ${date.isHardDeadline ? "hard-dot" : ""}`}></div>
                   <div className="date-content">
-                    <h4 className="date-title">{date.title}</h4>
+                    <div className="date-header-row">
+                      <h4 className="date-title">{date.title}</h4>
+                      {date.isHardDeadline && (
+                        <span className="home-hard-tag">
+                          <FaFireAlt className="home-hard-flame" /> Hard Deadline
+                        </span>
+                      )}
+                    </div>
                     {date.oldDate ? (
                       <div className="date-extended-container">
                         <span className="date-old-crossed">{date.oldDate}</span>
@@ -884,6 +898,12 @@ const Home = () => {
                           {date.date}
                           <span className="date-extended-tag">Extended</span>
                         </span>
+                        {date.isHardDeadline && (
+                          <span className="home-hard-note">
+                            <FaExclamationTriangle style={{ marginRight: 4, fontSize: 10, flexShrink: 0 }} />
+                            Strict Deadline — No further extension.
+                          </span>
+                        )}
                       </div>
                     ) : (
                       <div className="date-value">{date.date}</div>
