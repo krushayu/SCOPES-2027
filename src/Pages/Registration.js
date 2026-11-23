@@ -88,7 +88,7 @@ const importantDates = [
   },
 ];
 
-const REGISTRATION_START_DATE = new Date('2026-11-23T21:30:00');
+const REGISTRATION_START_DATE = new Date('2026-12-10T00:00:00');
 
 const getTimeRemaining = (targetDate) => {
   const total = targetDate.getTime() - new Date().getTime();
