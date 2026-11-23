@@ -406,7 +406,11 @@
   line-height: 1.45;
 }
 
-/* ── Hard Deadline Special Card Styling ── */
+.reg-date-tile.status-over {
+  opacity: 0.5;
+  background: #f8fafc;
+  filter: grayscale(1);
+}
 .reg-date-tile.is-hard-deadline {
   border: 2px solid #ef4444;
   background: linear-gradient(180deg, #fffafa 0%, #ffffff 100%);
@@ -717,78 +721,125 @@
 .reg-table-wrapper {
   overflow-x: auto;
   margin-bottom: 16px;
-  border-radius: 12px;
-  border: 1px solid #e2e8f0;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(15, 43, 107, 0.13);
 }
 
 .reg-table {
   width: 100%;
   border-collapse: collapse;
-  min-width: 560px;
+  min-width: 600px;
+  background: #ffffff;
 }
 
 .reg-table thead tr {
-  background: linear-gradient(135deg, #0a192f, #1e3c72);
+  background: linear-gradient(90deg, #0f2b6b 0%, #1e3a8a 60%, #0f2b6b 100%);
 }
 
 .reg-table th {
   padding: 16px 20px;
   color: white;
-  font-size: 14px;
-  font-weight: 700;
+  font-size: 13.5px;
+  font-weight: 800;
   text-align: center;
-  white-space: nowrap;
-  letter-spacing: 0.3px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  border-right: 1px solid rgba(255,255,255,0.12);
 }
 
-.reg-table th:first-child {
-  text-align: left;
-}
+.reg-table th:first-child { text-align: left; }
+.reg-table th:nth-child(2) { text-align: left; }
+.reg-table th:last-child { border-right: none; }
 
 .reg-table tbody tr {
+  border-bottom: 1px solid #f1f5f9;
+  transition: background 0.18s ease;
+}
+
+.reg-table tbody tr:hover { background: #f0f9ff; }
+
+.reg-group-start td { border-top: 2.5px solid #bae6fd !important; }
+
+.reg-td-cat {
+  vertical-align: middle;
+  font-weight: 800;
+  font-size: 15.5px;
+  color: #0f2b6b;
+  background: #f0f6ff;
+  padding: 14px 20px;
+  line-height: 1.4;
+  border-right: 1px solid #e2e8f0;
   border-bottom: 1px solid #e2e8f0;
-  transition: background 0.2s;
-}
-
-.reg-table tbody tr:last-child {
-  border-bottom: none;
-}
-
-.reg-table tbody tr:nth-child(even) {
-  background: #f0f9ff;
-}
-
-.reg-table tbody tr:hover {
-  background: #dbeafe;
+  border-left: 4px solid #0f2b6b;
+  white-space: normal !important;
+  min-width: 180px;
 }
 
 .reg-table td {
-  padding: 16px 20px;
-  font-size: 15px;
-  color: #1d4ed8;
-  font-weight: 700;
+  padding: 13px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #334155;
   text-align: center;
+  border-right: 1px solid #e2e8f0;
+  border-bottom: 1px solid #f1f5f9;
   white-space: nowrap;
+  vertical-align: middle;
 }
 
-.reg-td-cat {
+.reg-table td:last-child { border-right: none; }
+
+.reg-td-ieee {
   text-align: left !important;
-  color: #0a192f !important;
-  font-weight: 600 !important;
-  white-space: normal !important;
-  line-height: 1.5;
-  min-width: 200px;
+  color: #0f2b6b !important;
+  font-weight: 800 !important;
+  background: #eff6ff;
+}
+
+.reg-table td:not(.reg-td-cat):not(.reg-td-ieee):nth-child(2) {
+  text-align: left;
+}
+
+.reg-td-fee {
+  text-align: center !important;
+  font-weight: 700;
+  color: #0f172a;
+  background: #ffffff;
+}
+
+.reg-td-early {
+  color: #15803d !important;
+  background: #f0fdf4;
+  font-weight: 700 !important;
+  text-align: center !important;
+}
+
+.reg-td-regular {
+  color: #b45309 !important;
+  background: #fffbeb;
+  font-weight: 700 !important;
+  text-align: center !important;
+}
+
+.reg-table td:nth-child(3):not(.reg-td-cat) {
+  text-align: center !important;
 }
 
 .reg-fee-note {
   font-size: 13px;
-  color: #64748b;
+  color: #475569;
   margin: 0;
-  padding: 10px 14px;
+  padding: 13px 18px;
   background: #f8fafc;
-  border-radius: 6px;
-  border-left: 3px solid #00b4d8;
+  border-radius: 10px;
+  border-left: 4px solid #00b4d8;
+}
+
+@media (max-width: 768px) {
+  .reg-table th { padding: 12px 10px; font-size: 11.5px; }
+  .reg-table td { padding: 11px 10px; font-size: 13px; }
+  .reg-fee-note { font-size: 12px; }
 }
 
 @media (max-width: 768px) {

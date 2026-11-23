@@ -25,16 +25,16 @@ const ImpDates = () => {
     },
     {
       event: 'Notification of Acceptance',
-      date: 'November 20th, 2026',
+      date: 'December 5th, 2026',
       desc: 'Authors will be notified about acceptance or rejection.',
-      start: new Date('2026-11-20'), end: new Date('2026-11-20'),
+      start: new Date('2026-12-05'), end: new Date('2026-12-05'),
       icon: <FaBell />,
     },
     {
       event: 'Registration & Camera Ready',
-      date: 'November 30th, 2026',
+      date: 'December 10th, 2026',
       desc: 'Start date for registration and camera-ready paper submission.',
-      start: new Date('2026-11-30'), end: new Date('2026-11-30'),
+      start: new Date('2026-12-10'), end: new Date('2026-12-10'),
       icon: <FaUserCheck />,
    },
     // {

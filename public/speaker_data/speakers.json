@@ -10,6 +10,11 @@
   },
   {
     "id": 10,
+    "featured": true,
+    "vip": true,
+    "badge": "Distinguished Dignitary",
+    "vipTag": "DRDO DG & Scientist",
+    "honorific": "Director General, ECS Cluster, DRDO",
     "name": "Dr. Binay Kumar Das",
     "profession": "Distinguished Scientist and Director General, Electronics & Communication Systems (ECS) Cluster, Defence Research and Development Organisation (DRDO), Ministry of Defence, Government of India",
     "about": "Dr. Binay Kumar Das is a Distinguished Scientist and serves as the Director General of the Electronics & Communication Systems (ECS) cluster at the Defence Research and Development Organisation (DRDO), Ministry of Defence, Government of India.",

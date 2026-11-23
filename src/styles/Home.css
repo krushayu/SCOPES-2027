@@ -1174,7 +1174,7 @@
   display: flex;
   gap: 24px;
   width: max-content;
-  animation: speakersScroll 28s linear infinite;
+  animation: speakersScroll 30s linear infinite;
   padding: 10px 0 20px 0;
   will-change: transform;
 }
@@ -1183,10 +1183,19 @@
   animation-play-state: paused;
 }
 
-/* 8 speakers × (220px card + 24px gap) = 8 × 244px = 1952px */
 @keyframes speakersScroll {
   0%   { transform: translateX(0); }
-  100% { transform: translateX(calc(-244px * 8)); }
+  100% { transform: translateX(calc(-244px * 11)); }
+}
+
+@media (max-width: 768px) {
+  .speakers-strip-track {
+    animation-duration: 20s;
+  }
+  @keyframes speakersScroll {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(calc(-184px * 11)); }
+  }
 }
 
 .speaker-card {
@@ -1206,6 +1215,269 @@
 .speaker-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.18);
+}
+
+/* ── Featured / Distinguished Speaker Card ── */
+.speaker-card-featured {
+  border: 2px solid #0ea5e9 !important;
+  background: linear-gradient(180deg, #f0f9ff 0%, #ffffff 100%) !important;
+  box-shadow: 0 8px 28px rgba(14, 165, 233, 0.22) !important;
+  animation: featuredCardGlow 3s ease-in-out infinite alternate !important;
+}
+
+.speaker-card-featured:hover {
+  transform: translateY(-10px) !important;
+  box-shadow: 0 18px 40px rgba(14, 165, 233, 0.35) !important;
+}
+
+@keyframes featuredCardGlow {
+  0%   { box-shadow: 0 6px 20px rgba(14, 165, 233, 0.18), 0 0 0 1.5px rgba(14,165,233,0.2); }
+  100% { box-shadow: 0 10px 32px rgba(14, 165, 233, 0.32), 0 0 0 3px rgba(14,165,233,0.15); }
+}
+
+.speaker-featured-tag {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: #0369a1;
+  background: #e0f2fe;
+  border-radius: 0 0 8px 8px;
+  padding: 3px 10px;
+  display: inline-block;
+  margin: 6px auto 0;
+}
+
+.speaker-card-featured .speaker-card-divider {
+  background: linear-gradient(90deg, #0ea5e9, #38bdf8, #0ea5e9) !important;
+}
+
+.speaker-card-featured .speaker-name {
+  color: #0c4a6e !important;
+}
+
+.speaker-card-featured .speaker-see-more {
+  background: linear-gradient(135deg, #0369a1 0%, #0ea5e9 100%) !important;
+  box-shadow: 0 4px 14px rgba(14, 165, 233, 0.3) !important;
+}
+
+@keyframes vipAuraPulse {
+  0% {
+    box-shadow: 0 10px 30px rgba(217, 119, 6, 0.28), 0 0 0 1px rgba(245, 158, 11, 0.35), 0 0 16px rgba(251, 191, 36, 0.18);
+  }
+  100% {
+    box-shadow: 0 14px 44px rgba(217, 119, 6, 0.45), 0 0 0 2.5px rgba(245, 158, 11, 0.6), 0 0 30px rgba(251, 191, 36, 0.35);
+  }
+}
+
+/* VIP Top Ribbon Banner */
+.speaker-vip-ribbon,
+.speaker-featured-crown {
+  width: 100%;
+  background: linear-gradient(135deg, #78350f 0%, #92400e 20%, #b45309 45%, #d97706 70%, #f59e0b 90%, #b45309 100%) !important;
+  color: #ffffff !important;
+  font-size: 11px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.9px !important;
+  text-transform: uppercase !important;
+  padding: 8px 10px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 6px !important;
+  position: relative !important;
+  overflow: hidden !important;
+  border-bottom: 1.5px solid rgba(255, 255, 255, 0.35) !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.45) !important;
+}
+
+.vip-ribbon-glow {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.45), transparent);
+  animation: vipShineMove 3.2s infinite ease-in-out;
+}
+
+@keyframes vipShineMove {
+  0% { left: -100%; }
+  45%, 100% { left: 220%; }
+}
+
+.vip-crown-icon,
+.speaker-crown-icon {
+  font-size: 14px !important;
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.3));
+}
+
+.vip-ribbon-text {
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.vip-star-icon {
+  color: #fef08a;
+  font-size: 11px;
+}
+
+/* VIP Image Wrapper */
+.vip-image-wrapper {
+  position: relative;
+  height: 215px !important;
+  background: #f8fafc;
+}
+
+.vip-image-wrapper .speaker-image {
+  transition: transform 0.45s ease;
+}
+
+.speaker-card-vip:hover .vip-image-wrapper .speaker-image {
+  transform: scale(1.06);
+}
+
+/* Floating Medallion Badge on Photo */
+.vip-corner-badge {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  background: rgba(15, 23, 42, 0.92);
+  backdrop-filter: blur(6px);
+  border: 1px solid #f59e0b;
+  color: #fef08a;
+  font-size: 9.5px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  padding: 3px 9px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+  z-index: 3;
+}
+
+.vip-corner-star {
+  color: #fbbf24;
+  font-size: 10px;
+}
+
+/* VIP Dividers */
+.vip-card-divider,
+.featured-divider {
+  background: linear-gradient(90deg, #92400e 0%, #f59e0b 50%, #92400e 100%) !important;
+  height: 3px !important;
+}
+
+.vip-card-divider2 {
+  background: linear-gradient(90deg, transparent, #d97706, transparent) !important;
+  height: 1.5px !important;
+  width: 85% !important;
+  margin: 6px 0 !important;
+}
+
+/* VIP Name & Honorific Tag */
+.vip-speaker-name {
+  font-size: 15.5px !important;
+  font-weight: 800 !important;
+  color: #0f172a !important;
+  letter-spacing: -0.2px;
+  margin: 10px 10px 4px !important;
+}
+
+.vip-honor-pill {
+  font-size: 10px;
+  font-weight: 700;
+  color: #92400e;
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+  border: 1px solid #fcd34d;
+  padding: 3px 10px;
+  border-radius: 12px;
+  margin: 3px 10px 4px 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  box-shadow: 0 2px 6px rgba(217, 119, 6, 0.12);
+  max-width: 90%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.vip-pill-icon {
+  font-size: 11px;
+}
+
+.vip-speaker-profession {
+  color: #1e293b !important;
+  font-weight: 500 !important;
+  font-size: 11px !important;
+  line-height: 1.45 !important;
+  padding: 0 12px !important;
+  margin: 0 12px 10px !important;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* VIP Action Button */
+.vip-see-more {
+  background: linear-gradient(135deg, #92400e 0%, #b45309 40%, #d97706 80%, #f59e0b 100%) !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  font-size: 12px !important;
+  padding: 8px 18px !important;
+  border-radius: 20px !important;
+  border: none !important;
+  box-shadow: 0 4px 14px rgba(180, 83, 9, 0.35) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  cursor: pointer !important;
+  transition: all 0.25s ease !important;
+  margin-bottom: 14px !important;
+}
+
+.vip-see-more:hover {
+  transform: translateY(-2px) scale(1.03) !important;
+  box-shadow: 0 8px 22px rgba(180, 83, 9, 0.5) !important;
+  background: linear-gradient(135deg, #78350f 0%, #92400e 40%, #d97706 100%) !important;
+}
+
+.vip-btn-arrow {
+  color: #fef08a;
+  font-size: 12px;
+}
+
+/* Modal VIP enhancement */
+.modal-vip-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: linear-gradient(135deg, #fef3c7, #fde68a);
+  border: 1px solid #f59e0b;
+  color: #92400e;
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  padding: 4px 14px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 8px rgba(217, 119, 6, 0.15);
+}
+
+.modal-vip-badge-crown {
+  font-size: 14px;
+}
+
+.modal-vip-badge-honor {
+  color: #b45309;
+  font-weight: 700;
+  text-transform: none;
 }
 
 .speaker-image-wrapper {
@@ -1252,6 +1524,10 @@
   margin: 0 12px 10px;
   line-height: 1.4;
   flex: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .speaker-see-more {
@@ -1702,336 +1978,574 @@
 
 /* Dates & Fees Section */
 .dates-fees-section {
-  padding: 100px 20px;
-  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  padding: 80px 20px 100px;
+  background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
 }
 
-.dates-fees-grid {
-  max-width: 1200px;
+.home-info-container {
+  max-width: 1240px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
   gap: 40px;
 }
 
-.dates-column, .fees-column {
-  background: white;
+/* Landscape Block Wrapper (Both Dates & Fees) */
+.home-dates-landscape,
+.home-fees-landscape {
+  background: #ffffff;
   border-radius: 20px;
-  padding: 40px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  padding: 34px 32px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.03);
+  border: 1px solid #e2e8f0;
 }
 
-.column-title {
-  font-size: 28px;
-  font-weight: 700;
-  color: #0a192f;
-  margin-bottom: 30px;
-  padding-bottom: 15px;
-  border-bottom: 3px solid #00b4d8;
-}
-
-.dates-list {
+/* Block Header */
+.home-block-header {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1.5px solid #f1f5f9;
+}
+
+.home-block-title-group {
+  display: flex;
+  align-items: center;
   gap: 12px;
 }
 
-.date-item {
-  display: flex;
-  gap: 14px;
-  align-items: flex-start;
-  padding: 12px 16px;
-  border-radius: 10px;
-  background: #f8fafc;
-  transition: all 0.3s ease;
-}
-
-.date-item:hover {
+.home-block-pill {
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  padding: 4px 10px;
+  border-radius: 20px;
   background: #e0f2fe;
-  transform: translateX(5px);
+  color: #0284c7;
 }
 
-.date-item.active {
-  background: linear-gradient(135deg, #fff5f5 0%, #ffe4e6 100%);
-  border-left: 4px solid #ff6b6b;
+.home-block-pill.fees-pill {
+  background: #dcfce7;
+  color: #15803d;
 }
 
-.date-item.over {
-  background: #f8fafc;
-  opacity: 0.55;
-}
-
-.date-item.over .date-value {
-  color: #94a3b8;
-  text-decoration: line-through;
-}
-
-.date-dot {
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background: #00b4d8;
-  margin-top: 5px;
-  flex-shrink: 0;
-}
-
-.date-item.active .date-dot {
-  background: #ff6b6b;
-  animation: pulse 2s infinite;
-}
-
-.date-content {
-  flex: 1;
-}
-
-.date-item .date-title {
-  font-size: 14px;
-  font-weight: 600;
+.home-block-title {
+  font-size: 24px;
+  font-weight: 800;
   color: #0a192f;
-  margin-bottom: 4px;
-}
-
-.date-item .date-value {
-  font-size: 15px;
-  font-weight: 700;
-  color: #00b4d8;
-}
-
-.date-item.active .date-value {
-  color: #ff6b6b;
-}
-
-.date-extended-container {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 2px;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
 }
 
-.date-old-crossed {
+.home-block-icon {
+  color: #00b4d8;
+  font-size: 20px;
+}
+
+.home-block-link {
   font-size: 13px;
-  color: #94a3b8;
-  text-decoration: line-through;
-  text-decoration-color: #ef4444;
-  text-decoration-thickness: 2px;
-  font-weight: 600;
-  line-height: 1.2;
-}
-
-.date-new-val {
-  font-size: 15px;
   font-weight: 700;
   color: #00b4d8;
-  display: flex;
+  text-decoration: none;
+  display: inline-flex;
   align-items: center;
   gap: 6px;
-  flex-wrap: wrap;
+  padding: 6px 14px;
+  border-radius: 8px;
+  background: #f0f9ff;
+  border: 1px solid #bae6fd;
+  transition: all 0.25s ease;
 }
 
-.date-item.active .date-new-val {
-  color: #ff6b6b;
+.home-block-link:hover {
+  background: #00b4d8;
+  color: #ffffff;
+  transform: translateX(2px);
 }
 
-.date-extended-tag {
-  font-size: 10px;
-  font-weight: 700;
-  background: #fee2e2;
-  color: #ef4444;
-  padding: 1px 6px;
-  border-radius: 4px;
+/* ── Landscape Dates Grid (5 columns on desktop) ── */
+.home-dates-landscape-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+}
+
+.home-date-card {
+  background: #ffffff;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 16px 14px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.home-date-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3.5px;
+  background: var(--card-accent, #00b4d8);
+}
+
+.home-date-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+  border-color: #cbd5e1;
+}
+
+.home-date-card.status-over {
+  opacity: 0.5;
+  background: #f8fafc;
+  filter: grayscale(1);
+}
+
+.home-date-card.status-active {
+  border-color: #38bdf8;
+  box-shadow: 0 6px 20px rgba(56, 189, 248, 0.15);
+  animation: homeActiveGlow 2s ease-in-out infinite;
+}
+
+@keyframes homeActiveGlow {
+  0%, 100% { box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.4), 0 6px 20px rgba(56, 189, 248, 0.2); }
+  50%       { box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.25), 0 8px 28px rgba(56, 189, 248, 0.35); }
+}
+
+.home-date-card.is-hard-deadline {
+  background: linear-gradient(145deg, #fffafa 0%, #ffffff 100%);
+  border: 1.5px solid #fca5a5;
+  box-shadow: 0 6px 20px rgba(239, 68, 68, 0.12);
+}
+
+.home-date-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.home-date-phase {
+  font-size: 10.5px;
+  font-weight: 800;
+  color: #64748b;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  border: 1px solid #fca5a5;
-  line-height: 1.2;
 }
 
-.date-item.is-hard-deadline {
-  background: linear-gradient(135deg, #fff7f7 0%, #ffffff 100%);
-  border: 1.5px solid #fecaca;
-  border-left: 4px solid #ef4444;
-  border-radius: 12px;
-  padding: 12px 14px;
-  margin: 8px 0;
-  box-shadow: 0 4px 14px rgba(239, 68, 68, 0.08);
-}
-
-.date-dot.hard-dot {
-  background: #ef4444 !important;
-  box-shadow: 0 0 0 4px rgba(239, 68, 68, 0.2);
-}
-
-.date-header-row {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  flex-wrap: wrap;
-  margin-bottom: 4px;
-}
-
-.date-header-row .date-title {
-  margin-bottom: 0 !important;
-}
-
-.home-hard-tag {
+.home-date-status-badge {
+  font-size: 9.5px;
+  font-weight: 800;
+  padding: 2px 7px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
   display: inline-flex;
   align-items: center;
   gap: 4px;
-  font-size: 10px;
-  font-weight: 800;
-  color: #ffffff;
+}
+
+.home-date-status-badge.upcoming {
+  background: #f1f5f9;
+  color: #475569;
+}
+
+.home-date-status-badge.active {
+  background: #e0f2fe;
+  color: #0284c7;
+}
+
+.home-date-status-badge.active .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #0284c7;
+  animation: pulse 1.5s infinite;
+}
+
+.home-date-status-badge.over {
+  background: #f1f5f9;
+  color: #94a3b8;
+}
+
+.home-date-status-badge.hard {
   background: linear-gradient(135deg, #ef4444, #dc2626);
-  padding: 2px 7px;
-  border-radius: 12px;
-  text-transform: uppercase;
-  letter-spacing: 0.4px;
-  box-shadow: 0 2px 6px rgba(239, 68, 68, 0.3);
+  color: #ffffff;
+  box-shadow: 0 2px 6px rgba(239, 68, 68, 0.35);
 }
 
-.home-hard-flame {
-  font-size: 10px;
-}
-
-.home-hard-note {
+.home-date-card-body {
   display: flex;
   align-items: center;
-  font-size: 11px;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.home-date-cal-block {
+  width: 52px;
+  min-width: 52px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.home-date-month {
+  background: #0a192f;
+  color: #ffffff;
+  font-size: 9.5px;
+  font-weight: 800;
+  padding: 2px 0;
+  letter-spacing: 0.5px;
+}
+
+.home-date-card.is-hard-deadline .home-date-month {
+  background: #dc2626;
+}
+
+.home-date-day {
+  font-size: 17px;
+  font-weight: 900;
+  color: #0a192f;
+  padding: 2px 0 0;
+  line-height: 1.1;
+}
+
+.home-date-year {
+  font-size: 9px;
   font-weight: 700;
+  color: #94a3b8;
+  padding-bottom: 3px;
+}
+
+.home-date-meta {
+  flex: 1;
+  min-width: 0;
+}
+
+.home-date-icon-circle {
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  margin-bottom: 4px;
+}
+
+.home-date-name {
+  font-size: 13px;
+  font-weight: 700;
+  color: #0a192f;
+  margin: 0;
+  line-height: 1.35;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.home-date-footer {
+  margin-top: auto;
+  padding-top: 8px;
+  border-top: 1px solid #f1f5f9;
+}
+
+.home-date-footer-val {
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #64748b;
+}
+
+.home-date-hard-box {
+  margin-top: auto;
+  background: #fef2f2;
+  border: 1px solid #fee2e2;
+  border-radius: 8px;
+  padding: 7px 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.home-date-hard-row {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.home-date-crossed {
+  font-size: 10.5px;
+  color: #94a3b8;
+  text-decoration: line-through;
+  text-decoration-color: #ef4444;
+  font-weight: 600;
+}
+
+.home-date-arrow {
+  font-size: 9px;
+  color: #ef4444;
+}
+
+.home-date-new {
+  font-size: 11.5px;
+  font-weight: 800;
   color: #b91c1c;
-  margin-top: 4px;
+}
+
+.home-date-hard-note {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 9.5px;
+  font-weight: 700;
+  color: #991b1b;
+  line-height: 1.25;
+}
+
+/* ── Registration Fees Card Grid ── */
+.fees-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.fee-cat-card {
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1.5px solid #e2e8f0;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+  background: var(--cat-light, #f8fafc);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.fee-cat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.1);
+}
+
+.fee-cat-header {
+  background: var(--cat-accent, #0f2b6b);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 800;
+  padding: 12px 14px;
+  text-align: center;
+  letter-spacing: 0.3px;
   line-height: 1.3;
 }
 
+.fee-cat-col-labels {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 0;
+  padding: 6px 12px;
+  background: rgba(0,0,0,0.04);
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.fee-cat-col-labels span {
+  font-size: 10px;
+  font-weight: 700;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.fee-cat-col-labels span:nth-child(2),
+.fee-cat-col-labels span:nth-child(3) {
+  text-align: center;
+  min-width: 62px;
+}
+
+.fee-cat-row {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-items: center;
+  padding: 9px 12px;
+  border-bottom: 1px solid #e2e8f0;
+  gap: 4px;
+}
+
+.fee-cat-row:last-child {
+  border-bottom: none;
+}
+
+.fee-cat-row.ieee-row {
+  background: rgba(255,255,255,0.7);
+}
+
+.fee-row-type {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #334155;
+}
+
+.fee-cat-row.ieee-row .fee-row-type {
+  color: var(--cat-accent);
+  font-weight: 800;
+}
+
+.fee-row-price {
+  font-size: 13px;
+  font-weight: 700;
+  text-align: center;
+  min-width: 62px;
+  white-space: nowrap;
+}
+
+.fee-row-price.early {
+  color: #15803d;
+}
+
+.fee-row-price.regular {
+  color: #b45309;
+}
+
+@media screen and (max-width: 1024px) {
+  .fees-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .fees-cards-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── Registration Fees Table ── */
 .fees-table-wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-bottom: 16px;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(15, 43, 107, 0.13);
 }
 
 .fees-table {
   width: 100%;
   border-collapse: collapse;
-  border-radius: 12px;
-  overflow: hidden;
+  min-width: 560px;
+  background: #ffffff;
 }
 
-.fees-table thead {
-  background: linear-gradient(135deg, #00b4d8 0%, #4cc9f0 100%);
-  color: white;
+.fees-table thead tr {
+  background: linear-gradient(90deg, #0f2b6b 0%, #1e3a8a 60%, #0f2b6b 100%);
 }
 
 .fees-table th {
-  padding: 15px;
-  text-align: left;
-  font-weight: 700;
-  font-size: 16px;
+  color: #ffffff;
+  padding: 16px 20px;
+  font-size: 13.5px;
+  font-weight: 800;
+  text-align: center;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  border-right: 1px solid rgba(255,255,255,0.12);
 }
 
+.fees-table th:first-child { text-align: left; border-radius: 0; }
+.fees-table th:nth-child(2) { text-align: left; }
+.fees-table th:last-child { border-right: none; }
+
 .fees-table tbody tr {
-  border-bottom: 1px solid #e5e7eb;
-  transition: all 0.3s ease;
+  transition: background 0.18s ease;
 }
 
 .fees-table tbody tr:hover {
-  background: #f8fafc;
+  background: #f0f9ff;
 }
 
-.fees-table tbody tr:last-child {
-  border-bottom: none;
+.fee-group-start td {
+  border-top: 2.5px solid #bae6fd !important;
 }
 
-.fees-table td {
-  padding: 15px;
-  color: #334155;
-  font-size: 15px;
+.fee-parent-cat {
+  vertical-align: middle;
+  font-weight: 800;
+  color: #0f2b6b;
+  background: #f0f6ff;
+  padding: 14px 20px;
+  font-size: 15.5px;
+  line-height: 1.4;
+  border-right: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+  border-left: 4px solid #0f2b6b;
+  letter-spacing: 0.2px;
 }
 
-.fees-table td:first-child {
+.fee-sub-cat {
   font-weight: 600;
-  color: #0a192f;
+  color: #334155;
+  padding: 13px 20px;
+  border-right: 1px solid #e2e8f0;
+  border-bottom: 1px solid #f1f5f9;
+  font-size: 14px;
+  background: #ffffff;
 }
 
-.fees-table td:not(:first-child) {
+.fee-sub-cat.fee-ieee {
+  color: #0f2b6b;
+  font-weight: 800;
+  background: #eff6ff;
+}
+
+.fee-price {
   text-align: center;
   font-weight: 700;
-  color: #00b4d8;
+  padding: 13px 20px;
+  border-right: 1px solid #e2e8f0;
+  border-bottom: 1px solid #f1f5f9;
+  font-size: 15px;
+  white-space: nowrap;
+  letter-spacing: 0.3px;
 }
 
-.register-btn {
-  width: 100%;
-  background: linear-gradient(135deg, #ff6b6b 0%, #ff8e53 100%);
-  color: white;
-  border: none;
-  padding: 15px 30px;
-  border-radius: 12px;
-  font-size: 18px;
-  font-weight: 700;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 8px 20px rgba(255, 107, 107, 0.3);
+.fee-price:last-child { border-right: none; }
+
+.fee-price.fee-early {
+  color: #15803d;
+  background: #f0fdf4;
 }
 
-.register-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 30px rgba(255, 107, 107, 0.5);
+.fee-price.fee-regular {
+  color: #b45309;
+  background: #fffbeb;
 }
 
 .fees-note {
   font-size: 13px;
-  color: #666;
+  color: #475569;
   line-height: 1.6;
   text-align: center;
   margin: 0;
-  padding: 15px;
+  padding: 13px 18px;
   background: #f8fafc;
-  border-radius: 8px;
-  border-left: 3px solid #00b4d8;
-}
-
-@media screen and (max-width: 992px) {
-  .dates-fees-grid {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
+  border-radius: 10px;
+  border-left: 4px solid #00b4d8;
 }
 
 @media screen and (max-width: 768px) {
-  .dates-fees-section {
-    padding: 60px 15px;
-  }
-  
-  .dates-column, .fees-column {
-    padding: 25px 20px;
-  }
-  
-  .column-title {
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-  
-  .date-item {
-    padding: 10px 14px;
-  }
-  
-  .date-item .date-title {
-    font-size: 13px;
-  }
-  
-  .date-item .date-value {
-    font-size: 14px;
-  }
-  
-  .fees-table th,
-  .fees-table td {
-    padding: 12px 8px;
-    font-size: 13px;
-  }
-  
-  .register-btn {
-    font-size: 16px;
-    padding: 12px 25px;
-  }
-  
-  .fees-note {
-    font-size: 12px;
-  }
+  .fees-table th { padding: 12px 10px; font-size: 11.5px; }
+  .fees-table td { padding: 11px 10px; font-size: 13px; }
+  .fees-note { font-size: 12px; }
 }

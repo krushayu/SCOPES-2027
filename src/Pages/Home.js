@@ -8,6 +8,11 @@ import {
   FaMapMarkerAlt,
   FaFireAlt,
   FaExclamationTriangle,
+  FaRocket,
+  FaBell,
+  FaUserCheck,
+  FaStar,
+  FaArrowRight,
 } from "react-icons/fa";
 import { MdAppRegistration } from "react-icons/md";
 
@@ -30,6 +35,16 @@ const useScrollAnim = (threshold = 0.15) => {
   }, [threshold]);
   return ref;
 };
+
+const isVIPSpeaker = (s) => Boolean(
+  s && (
+    s.vip ||
+    s.featured ||
+    s.isVIP ||
+    s.distinguished ||
+    (s.name && s.name.toLowerCase().includes("binay kumar das"))
+  )
+);
 
 const Home = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -203,35 +218,66 @@ const Home = () => {
 
   const importantDates = [
     {
+      phase: "Phase 01",
       title: "Paper Submission open",
       date: "01 May 2026",
+      month: "MAY",
+      day: "01",
+      year: "2026",
+      icon: <FaRocket />,
+      accent: "#0284c7",
       start: new Date("2026-05-01"),
       end: new Date("2026-10-31"),
     },
     {
+      phase: "Phase 02",
       title: "Paper Submission close",
       subTitle: "Hard Deadline",
       isHardDeadline: true,
       oldDate: "October 15th, 2026",
       date: "October 31st, 2026",
+      month: "OCT",
+      day: "31",
+      year: "2026",
+      note: "Hard Deadline — No further extension.",
+      icon: <FaFireAlt />,
+      accent: "#ef4444",
       start: new Date("2026-10-31"),
       end: new Date("2026-10-31"),
-    },  
+    },
     {
+      phase: "Phase 03",
       title: "Notification of Acceptance",
-      date: "20 November 2026",
-      start: new Date("2026-11-20"),
-      end: new Date("2026-11-20"),
+      date: "05 December 2026",
+      month: "DEC",
+      day: "05",
+      year: "2026",
+      icon: <FaBell />,
+      accent: "#6366f1",
+      start: new Date("2026-12-05"),
+      end: new Date("2026-12-05"),
     },
     {
+      phase: "Phase 04",
       title: "Start date of registration & camera ready submission",
-      date: "30 November 2026",
-      start: new Date("2026-11-30"),
-      end: new Date("2026-11-30"),
+      date: "10 December 2026",
+      month: "DEC",
+      day: "10",
+      year: "2026",
+      icon: <FaUserCheck />,
+      accent: "#0d9488",
+      start: new Date("2026-12-10"),
+      end: new Date("2026-12-10"),
     },
     {
+      phase: "Phase 05",
       title: "Conference Dates",
       date: "04-06 February 2027",
+      month: "FEB",
+      day: "04–06",
+      year: "2027",
+      icon: <FaStar />,
+      accent: "#f59e0b",
       start: new Date("2027-02-04"),
       end: new Date("2027-02-07"),
     },
@@ -382,27 +428,29 @@ const Home = () => {
         </div>
         <div className="speakers-strip-wrapper">
           <div className="speakers-strip-track">
-            {[...speakers, ...speakers].map((speaker, i) => (
-              <div className="speaker-card" key={i}>
-                <div className="speaker-image-wrapper">
-                  <img
-                    src={speaker.image}
-                    alt={speaker.name}
-                    className="speaker-image"
-                  />
-                </div>
-                <div className="speaker-card-divider"></div>
-                <h3 className="speaker-name">{speaker.name}</h3>
-                <div className="speaker-card-divider2"></div>
-                <p className="speaker-profession">{speaker.profession}</p>
-                <button
-                  className="speaker-see-more"
-                  onClick={() => setSelectedSpeaker(speaker)}
+            {[...speakers, ...speakers].map((speaker, i) => {
+              const isFeatured = isVIPSpeaker(speaker);
+              return (
+                <div
+                  className={`speaker-card${isFeatured ? ' speaker-card-featured' : ''}`}
+                  key={i}
                 >
-                  See More →
-                </button>
-              </div>
-            ))}
+                  <div className="speaker-image-wrapper">
+                    <img src={speaker.image} alt={speaker.name} className="speaker-image" />
+                  </div>
+                  <div className="speaker-card-divider"></div>
+                  <h3 className="speaker-name">{speaker.name}</h3>
+                  {isFeatured && (
+                    <span className="speaker-featured-tag">Distinguished Speaker</span>
+                  )}
+                  <div className="speaker-card-divider2"></div>
+                  <p className="speaker-profession">{speaker.profession}</p>
+                  <button className="speaker-see-more" onClick={() => setSelectedSpeaker(speaker)}>
+                    See More →
+                  </button>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -866,101 +914,200 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Important Dates & Registration Fees */}
+      {/* Important Dates (Landscape) & Registration Fees (3 Categories) */}
       <section className="dates-fees-section anim-fade-up" ref={datesRef}>
         <div className="section-header">
           <h2 className="section-title">Important Information</h2>
-          <p className="section-subtitle">Key dates and registration details</p>
+          <p className="section-subtitle">
+            Key conference dates &amp; registration fee structure
+          </p>
         </div>
-        <div className="dates-fees-grid">
-          <div className="dates-column anim-slide-left">
-            <h3 className="column-title">Important Dates</h3>
-            <div className="dates-list">
-              {importantDates.map((date, index) => (
-                <div
-                  className={`date-item ${date.status} ${date.isHardDeadline ? "is-hard-deadline" : ""}`}
-                  key={index}
-                >
-                  <div className={`date-dot ${date.isHardDeadline ? "hard-dot" : ""}`}></div>
-                  <div className="date-content">
-                    <div className="date-header-row">
-                      <h4 className="date-title">{date.title}</h4>
-                      {date.isHardDeadline && (
-                        <span className="home-hard-tag">
-                          <FaFireAlt className="home-hard-flame" /> Hard Deadline
+
+        <div className="home-info-container">
+          {/* 1. Important Dates in Landscape Mode */}
+          <div className="home-dates-landscape">
+            <div className="home-block-header">
+              <div className="home-block-title-group">
+                {/* <span className="home-block-pill">Timeline</span> */}
+                <h3 className="home-block-title">
+                  <FaCalendarAlt className="home-block-icon" /> Important Dates
+                </h3>
+              </div>
+              <Link to="/imp-dates" className="home-block-link">
+                View All Details <FaArrowRight />
+              </Link>
+            </div>
+
+            <div className="home-dates-landscape-grid">
+              {importantDates.map((item, index) => {
+                const isHard = item.isHardDeadline;
+                return (
+                  <div
+                    key={index}
+                    className={`home-date-card status-${item.status} ${isHard ? "is-hard-deadline" : ""}`}
+                    style={{ "--card-accent": item.accent }}
+                  >
+                    <div className="home-date-card-top">
+                      <span className="home-date-phase">{item.phase}</span>
+                      {isHard ? (
+                        <span className="home-date-status-badge hard">
+                          <FaFireAlt className="pulse" /> Hard Deadline
                         </span>
+                      ) : item.status === "active" ? (
+                        <span className="home-date-status-badge active">
+                          <span className="dot" /> Active Now
+                        </span>
+                      ) : item.status === "over" ? (
+                        <span className="home-date-status-badge over">Closed</span>
+                      ) : (
+                        <span className="home-date-status-badge upcoming">Upcoming</span>
                       )}
                     </div>
-                    {date.oldDate ? (
-                      <div className="date-extended-container">
-                        <span className="date-old-crossed">{date.oldDate}</span>
-                        <span className="date-new-val">
-                          {date.date}
-                          <span className="date-extended-tag">Extended</span>
-                        </span>
-                        {date.isHardDeadline && (
-                          <span className="home-hard-note">
-                            <FaExclamationTriangle style={{ marginRight: 4, fontSize: 10, flexShrink: 0 }} />
-                            Strict Deadline — No further extension.
-                          </span>
-                        )}
+
+                    <div className="home-date-card-body">
+                      <div className="home-date-cal-block">
+                        <span className="home-date-month">{item.month}</span>
+                        <span className="home-date-day">{item.day}</span>
+                        <span className="home-date-year">{item.year}</span>
+                      </div>
+                      <div className="home-date-meta">
+                        <div
+                          className="home-date-icon-circle"
+                          style={{ color: item.accent, background: `${item.accent}15` }}
+                        >
+                          {item.icon}
+                        </div>
+                        <h4 className="home-date-name">{item.title}</h4>
+                      </div>
+                    </div>
+
+                    {isHard ? (
+                      <div className="home-date-hard-box">
+                        <div className="home-date-hard-row">
+                          <span className="home-date-crossed">{item.oldDate}</span>
+                          <span className="home-date-arrow">➔</span>
+                          <span className="home-date-new">{item.date}</span>
+                        </div>
+                        <div className="home-date-hard-note">
+                          <FaExclamationTriangle style={{ flexShrink: 0, fontSize: 10 }} />
+                          <span>{item.note}</span>
+                        </div>
                       </div>
                     ) : (
-                      <div className="date-value">{date.date}</div>
+                      <div className="home-date-footer">
+                        <span className="home-date-footer-val">{item.date}</span>
+                      </div>
                     )}
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
-          <div className="fees-column anim-slide-right">
-            <h3 className="column-title">Registration Fees</h3>
+
+          {/* 2. Registration Fees */}
+          <div className="home-fees-landscape">
+            <div className="home-block-header">
+              <div className="home-block-title-group">
+                {/* <span className="home-block-pill fees-pill">Fees</span> */}
+                <h3 className="home-block-title">Registration Fees</h3>
+              </div>
+              <Link to="/registration" className="home-block-link">
+                Full Guidelines <FaArrowRight />
+              </Link>
+            </div>
+
             <div className="fees-table-wrapper">
-              <table className="fees-table">
+              <table className="fees-table fees-table-normal">
                 <thead>
                   <tr>
                     <th>Category</th>
-                    <th>IEEE Member</th>
-                    <th>Non-IEEE Member</th>
-                    <th>Foreign Delegates</th>
+                    <th>Delegate Type</th>
+                    <th>Registration Fee</th>
+                    <th>Early Bird</th>
+                    <th>Regular</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td>R&amp;D and Industry Participants</td>
-                    <td>₹9,000</td>
-                    <td>₹10,000</td>
-                    <td>$250</td>
+                    <td rowSpan="3" className="fee-parent-cat">R&amp;D and Industry Participants</td>
+                    <td className="fee-sub-cat fee-ieee">IEEE Member</td>
+                    <td className="fee-price">₹ 9,000</td>
+                    <td className="fee-price fee-early">₹ 9,000</td>
+                    <td className="fee-price fee-regular">₹ 10,000</td>
                   </tr>
                   <tr>
-                    <td>Faculty Participants from Academia</td>
-                    <td>₹8,000</td>
-                    <td>₹9,000</td>
-                    <td>$225</td>
+                    <td className="fee-sub-cat">Non-IEEE Member</td>
+                    <td className="fee-price">₹ 10,000</td>
+                    <td className="fee-price fee-early">₹ 10,000</td>
+                    <td className="fee-price fee-regular">₹ 11,000</td>
                   </tr>
                   <tr>
-                    <td>UG/PG Students &amp; Research Scholars</td>
-                    <td>₹7,000</td>
-                    <td>₹8,000</td>
-                    <td>$200</td>
+                    <td className="fee-sub-cat">Foreign Delegate</td>
+                    <td className="fee-price">$ 250</td>
+                    <td className="fee-price fee-early">$ 250</td>
+                    <td className="fee-price fee-regular">$ 275</td>
+                  </tr>
+
+                  <tr className="fee-group-start">
+                    <td rowSpan="3" className="fee-parent-cat">Faculty Participants from Academia</td>
+                    <td className="fee-sub-cat fee-ieee">IEEE Member</td>
+                    <td className="fee-price">₹ 8,000</td>
+                    <td className="fee-price fee-early">₹ 8,000</td>
+                    <td className="fee-price fee-regular">₹ 9,000</td>
                   </tr>
                   <tr>
-                    <td>Listener / Accompany Person</td>
-                    <td>₹2,000</td>
-                    <td>₹2,000</td>
-                    <td>$100</td>
+                    <td className="fee-sub-cat">Non-IEEE Member</td>
+                    <td className="fee-price">₹ 9,000</td>
+                    <td className="fee-price fee-early">₹ 9,000</td>
+                    <td className="fee-price fee-regular">₹ 10,000</td>
                   </tr>
-                  {/* <tr>
-                    <td>Accompany</td>
-                    <td>₹1,000</td><td>₹1,000</td><td>$50</td>
-                  </tr> */}
+                  <tr>
+                    <td className="fee-sub-cat">Foreign Delegate</td>
+                    <td className="fee-price">$ 225</td>
+                    <td className="fee-price fee-early">$ 225</td>
+                    <td className="fee-price fee-regular">$ 250</td>
+                  </tr>
+
+                  <tr className="fee-group-start">
+                    <td rowSpan="3" className="fee-parent-cat">UG/PG Students &amp; Research Scholars</td>
+                    <td className="fee-sub-cat fee-ieee">IEEE Member</td>
+                    <td className="fee-price">₹ 7,000</td>
+                    <td className="fee-price fee-early">₹ 7,000</td>
+                    <td className="fee-price fee-regular">₹ 8,000</td>
+                  </tr>
+                  <tr>
+                    <td className="fee-sub-cat">Non-IEEE Member</td>
+                    <td className="fee-price">₹ 8,000</td>
+                    <td className="fee-price fee-early">₹ 8,000</td>
+                    <td className="fee-price fee-regular">₹ 9,000</td>
+                  </tr>
+                  <tr>
+                    <td className="fee-sub-cat">Foreign Delegate</td>
+                    <td className="fee-price">$ 200</td>
+                    <td className="fee-price fee-early">$ 200</td>
+                    <td className="fee-price fee-regular">$ 225</td>
+                  </tr>
+
+                  <tr className="fee-group-start">
+                    <td rowSpan="2" className="fee-parent-cat">Listener / Accompany Person</td>
+                    <td className="fee-sub-cat">Indian Attendee</td>
+                    <td className="fee-price">₹ 2,000</td>
+                    <td className="fee-price fee-early">₹ 2,000</td>
+                    <td className="fee-price fee-regular">₹ 3,000</td>
+                  </tr>
+                  <tr>
+                    <td className="fee-sub-cat">Foreign Delegate</td>
+                    <td className="fee-price">$ 100</td>
+                    <td className="fee-price fee-early">$ 100</td>
+                    <td className="fee-price fee-regular">$ 125</td>
+                  </tr>
                 </tbody>
               </table>
-              <p className="fees-note">
-                * Fee includes Conference Kit, Banquet, Lunch, Tea, and GST as
-                applicable.
-              </p>
             </div>
+
+            <p className="fees-note">
+              * Fee includes Conference Kit, Banquet, Lunch, Tea, and GST as applicable.
+            </p>
           </div>
         </div>
       </section>

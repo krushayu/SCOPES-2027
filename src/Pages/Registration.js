@@ -13,17 +13,9 @@ const guidelines = [
   <>The camera-ready version must be in PDF format compiled from IEEE PDF eXpress™: <a href="https://ieee-pdf-express.org/" target="_blank" rel="noopener noreferrer">Click here for IEEE PDF eXpress™</a></>,
   <>Use conference ID <strong>71015</strong> when logging into PDF eXpress. After passing the paper, click on <strong>Approve</strong> option.</>,
   <>Manuscript must be <strong>4 to 6 pages</strong> in IEEE format with similarity index limited to <strong>20%</strong> (single source similarity must be less than 5%).</>,
-  <>Upload camera-ready paper in both <strong>.pdf</strong> and <strong>.doc</strong> formats on the CMT portal by <strong>30th November 2026</strong>.</>,
+  <>Upload camera-ready paper in both <strong>.pdf</strong> and <strong>.doc</strong> formats on the CMT portal by <strong>10th December 2026</strong>.</>,
   <>All authors must individually transfer the electronic copyright to IEEE through CMT while submitting the camera-ready paper.</>,
-  <>Complete all fields in the registration form and payment details by <strong>30th November 2026</strong>.</>,
-];
-
-const fees = [
-  { category: 'R&D and Industry Participants',       ieee: '₹9,000',  nonIeee: '₹10,000', foreign: '$250' },
-  { category: 'Faculty Participants from Academia',  ieee: '₹8,000',  nonIeee: '₹9,000',  foreign: '$225' },
-  { category: 'UG/PG Students & Research Scholars',  ieee: '₹7,000',  nonIeee: '₹8,000',  foreign: '$200' },
-  { category: 'Listener / Accompany Person',          ieee: '₹2,000',  nonIeee: '₹2,000',  foreign: '$100' },
-  // { category: 'Accompany Person',                    ieee: '₹1,000',  nonIeee: '₹1,000',  foreign: '$50'  },
+  <>Complete all fields in the registration form and payment details by <strong>10th December 2026</strong>.</>,
 ];
 
 const importantDates = [
@@ -60,26 +52,24 @@ const importantDates = [
   {
     phase: 'Phase 03',
     event: 'Notification of Acceptance',
-    date: 'November 20th, 2026',
-    month: 'NOV',
-    day: '20',
+    date: 'December 5th, 2026',
+    month: 'DEC',
+    day: '05',
     year: '2026',
-    // desc: 'Authors notified regarding acceptance/revision status via email.',
-    start: new Date('2026-11-20'),
-    end: new Date('2026-11-20'),
+    start: new Date('2026-12-05'),
+    end: new Date('2026-12-05'),
     icon: <FaBell />,
     accent: '#6366f1',
   },
   {
     phase: 'Phase 04',
     event: 'Registration & Camera Ready',
-    date: 'November 30th, 2026',
-    month: 'NOV',
-    day: '30',
+    date: 'December 10th, 2026',
+    month: 'DEC',
+    day: '10',
     year: '2026',
-    // desc: 'Camera-ready paper upload on CMT and author registration fee payment.',
-    start: new Date('2026-11-30'),
-    end: new Date('2026-11-30'),
+    start: new Date('2026-12-10'),
+    end: new Date('2026-12-10'),
     icon: <FaUserCheck />,
     accent: '#0d9488',
   },
@@ -98,7 +88,7 @@ const importantDates = [
   },
 ];
 
-const REGISTRATION_START_DATE = new Date('2026-11-30T00:00:00');
+const REGISTRATION_START_DATE = new Date('2026-12-10T00:00:00');
 
 const getTimeRemaining = (targetDate) => {
   const total = targetDate.getTime() - new Date().getTime();
@@ -191,7 +181,7 @@ const Registration = () => {
         <p>
           {isRegistrationOpen
             ? 'Camera Ready Paper Submission and Registration Guidelines'
-            : 'Author Registration will officially open on November 30, 2026'}
+            : 'Author Registration will officially open on December 10, 2026'}
         </p>
       </div>
 
@@ -205,7 +195,7 @@ const Registration = () => {
             </div>
             <h2 className="reg-countdown-heading">Author Registration Countdown</h2>
             <p className="reg-countdown-sub">
-              Author Registration & Camera-Ready paper submission will officially open on <strong>November 30, 2026</strong>.
+              Author Registration & Camera-Ready paper submission will officially open on <strong>December 10, 2026</strong>.
             </p>
 
             {/* Clock-like Circular Progress Countdown */}
@@ -257,12 +247,12 @@ const Registration = () => {
               <div className="reg-cd-step-line"></div>
               <div className="reg-cd-step upcoming">
                 <span className="reg-cd-step-dot">3</span>
-                <span>Notification (Nov 20)</span>
+                <span>Notification (Dec 5)</span>
               </div>
               <div className="reg-cd-step-line"></div>
               <div className="reg-cd-step target">
                 <span className="reg-cd-step-dot">🔒</span>
-                <span>Registration (Nov 30)</span>
+                <span>Registration (Dec 10)</span>
               </div>
             </div>
 
@@ -270,7 +260,7 @@ const Registration = () => {
             <div className="reg-countdown-footer">
               <div className="reg-countdown-notice">
                 <FaClock className="reg-cd-notice-icon" />
-                <span>Registration guidelines, fee details, and payment links will be unlocked automatically on November 30, 2026.</span>
+                <span>Registration guidelines, fee details, and payment links will be unlocked automatically on December 10, 2026.</span>
               </div>
               <a
                 href={GOOGLE_CAL_URL}
@@ -499,20 +489,86 @@ const Registration = () => {
                   <thead>
                     <tr>
                       <th>Category</th>
-                      <th>IEEE Member</th>
-                      <th>Non-IEEE Member</th>
-                      <th>Foreign Delegates</th>
+                      <th>Delegate Type</th>
+                      <th>Registration Fee</th>
+                      <th>Early Bird</th>
+                      <th>Regular</th>
                     </tr>
                   </thead>
                   <tbody>
-                    {fees.map((row, i) => (
-                      <tr key={i}>
-                        <td className="reg-td-cat">{row.category}</td>
-                        <td>{row.ieee}</td>
-                        <td>{row.nonIeee}</td>
-                        <td>{row.foreign}</td>
-                      </tr>
-                    ))}
+                    <tr>
+                      <td rowSpan="3" className="reg-td-cat">R&amp;D and Industry Participants</td>
+                      <td className="reg-td-ieee">IEEE Member</td>
+                      <td className="reg-td-fee">₹ 9,000</td>
+                      <td className="reg-td-early">₹ 9,000</td>
+                      <td className="reg-td-regular">₹ 10,000</td>
+                    </tr>
+                    <tr>
+                      <td>Non-IEEE Member</td>
+                      <td className="reg-td-fee">₹ 10,000</td>
+                      <td className="reg-td-early">₹ 10,000</td>
+                      <td className="reg-td-regular">₹ 11,000</td>
+                    </tr>
+                    <tr>
+                      <td>Foreign Delegate</td>
+                      <td className="reg-td-fee">$ 250</td>
+                      <td className="reg-td-early">$ 250</td>
+                      <td className="reg-td-regular">$ 275</td>
+                    </tr>
+
+                    <tr className="reg-group-start">
+                      <td rowSpan="3" className="reg-td-cat">Faculty Participants from Academia</td>
+                      <td className="reg-td-ieee">IEEE Member</td>
+                      <td className="reg-td-fee">₹ 8,000</td>
+                      <td className="reg-td-early">₹ 8,000</td>
+                      <td className="reg-td-regular">₹ 9,000</td>
+                    </tr>
+                    <tr>
+                      <td>Non-IEEE Member</td>
+                      <td className="reg-td-fee">₹ 9,000</td>
+                      <td className="reg-td-early">₹ 9,000</td>
+                      <td className="reg-td-regular">₹ 10,000</td>
+                    </tr>
+                    <tr>
+                      <td>Foreign Delegate</td>
+                      <td className="reg-td-fee">$ 225</td>
+                      <td className="reg-td-early">$ 225</td>
+                      <td className="reg-td-regular">$ 250</td>
+                    </tr>
+
+                    <tr className="reg-group-start">
+                      <td rowSpan="3" className="reg-td-cat">UG/PG Students &amp; Research Scholars</td>
+                      <td className="reg-td-ieee">IEEE Member</td>
+                      <td className="reg-td-fee">₹ 7,000</td>
+                      <td className="reg-td-early">₹ 7,000</td>
+                      <td className="reg-td-regular">₹ 8,000</td>
+                    </tr>
+                    <tr>
+                      <td>Non-IEEE Member</td>
+                      <td className="reg-td-fee">₹ 8,000</td>
+                      <td className="reg-td-early">₹ 8,000</td>
+                      <td className="reg-td-regular">₹ 9,000</td>
+                    </tr>
+                    <tr>
+                      <td>Foreign Delegate</td>
+                      <td className="reg-td-fee">$ 200</td>
+                      <td className="reg-td-early">$ 200</td>
+                      <td className="reg-td-regular">$ 225</td>
+                    </tr>
+
+                    <tr className="reg-group-start">
+                      <td rowSpan="2" className="reg-td-cat">Listener / Accompany Person</td>
+                      <td>Indian Attendee</td>
+                      <td className="reg-td-fee">₹ 2,000</td>
+                      <td className="reg-td-early">₹ 2,000</td>
+                      <td className="reg-td-regular">₹ 3,000</td>
+                    </tr>
+                    <tr>
+                      <td>Foreign Delegate</td>
+                      <td className="reg-td-fee">$ 100</td>
+                      <td className="reg-td-early">$ 100</td>
+                      <td className="reg-td-regular">$ 125</td>
+                    </tr>
                   </tbody>
                 </table>
               </div>
