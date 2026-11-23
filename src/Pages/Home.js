@@ -1022,28 +1022,24 @@ const Home = () => {
                   <tr>
                     <th>Category</th>
                     <th>Delegate Type</th>
-                    <th>Registration Fee</th>
-                    <th>Early Bird</th>
-                    <th>Regular</th>
+                    <th>Early Bird<br/><span className="fee-th-date">(Till 25 Dec 2026)</span></th>
+                    <th>Regular<br/><span className="fee-th-date">(After 25 Dec 2026)</span></th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <td rowSpan="3" className="fee-parent-cat">R&amp;D and Industry Participants</td>
                     <td className="fee-sub-cat fee-ieee">IEEE Member</td>
-                    <td className="fee-price">₹ 9,000</td>
                     <td className="fee-price fee-early">₹ 9,000</td>
                     <td className="fee-price fee-regular">₹ 10,000</td>
                   </tr>
                   <tr>
                     <td className="fee-sub-cat">Non-IEEE Member</td>
-                    <td className="fee-price">₹ 10,000</td>
                     <td className="fee-price fee-early">₹ 10,000</td>
                     <td className="fee-price fee-regular">₹ 11,000</td>
                   </tr>
                   <tr>
                     <td className="fee-sub-cat">Foreign Delegate</td>
-                    <td className="fee-price">$ 250</td>
                     <td className="fee-price fee-early">$ 250</td>
                     <td className="fee-price fee-regular">$ 275</td>
                   </tr>
@@ -1051,19 +1047,16 @@ const Home = () => {
                   <tr className="fee-group-start">
                     <td rowSpan="3" className="fee-parent-cat">Faculty Participants from Academia</td>
                     <td className="fee-sub-cat fee-ieee">IEEE Member</td>
-                    <td className="fee-price">₹ 8,000</td>
                     <td className="fee-price fee-early">₹ 8,000</td>
                     <td className="fee-price fee-regular">₹ 9,000</td>
                   </tr>
                   <tr>
                     <td className="fee-sub-cat">Non-IEEE Member</td>
-                    <td className="fee-price">₹ 9,000</td>
                     <td className="fee-price fee-early">₹ 9,000</td>
                     <td className="fee-price fee-regular">₹ 10,000</td>
                   </tr>
                   <tr>
                     <td className="fee-sub-cat">Foreign Delegate</td>
-                    <td className="fee-price">$ 225</td>
                     <td className="fee-price fee-early">$ 225</td>
                     <td className="fee-price fee-regular">$ 250</td>
                   </tr>
@@ -1071,19 +1064,16 @@ const Home = () => {
                   <tr className="fee-group-start">
                     <td rowSpan="3" className="fee-parent-cat">UG/PG Students &amp; Research Scholars</td>
                     <td className="fee-sub-cat fee-ieee">IEEE Member</td>
-                    <td className="fee-price">₹ 7,000</td>
                     <td className="fee-price fee-early">₹ 7,000</td>
                     <td className="fee-price fee-regular">₹ 8,000</td>
                   </tr>
                   <tr>
                     <td className="fee-sub-cat">Non-IEEE Member</td>
-                    <td className="fee-price">₹ 8,000</td>
                     <td className="fee-price fee-early">₹ 8,000</td>
                     <td className="fee-price fee-regular">₹ 9,000</td>
                   </tr>
                   <tr>
                     <td className="fee-sub-cat">Foreign Delegate</td>
-                    <td className="fee-price">$ 200</td>
                     <td className="fee-price fee-early">$ 200</td>
                     <td className="fee-price fee-regular">$ 225</td>
                   </tr>
@@ -1091,13 +1081,11 @@ const Home = () => {
                   <tr className="fee-group-start">
                     <td rowSpan="2" className="fee-parent-cat">Listener / Accompany Person</td>
                     <td className="fee-sub-cat">Indian Attendee</td>
-                    <td className="fee-price">₹ 2,000</td>
                     <td className="fee-price fee-early">₹ 2,000</td>
                     <td className="fee-price fee-regular">₹ 3,000</td>
                   </tr>
                   <tr>
                     <td className="fee-sub-cat">Foreign Delegate</td>
-                    <td className="fee-price">$ 100</td>
                     <td className="fee-price fee-early">$ 100</td>
                     <td className="fee-price fee-regular">$ 125</td>
                   </tr>

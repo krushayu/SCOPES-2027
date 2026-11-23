@@ -752,6 +752,16 @@
 .reg-table th:nth-child(2) { text-align: left; }
 .reg-table th:last-child { border-right: none; }
 
+.reg-th-date {
+  display: block;
+  font-size: 11px;
+  font-weight: 500;
+  opacity: 0.75;
+  letter-spacing: 0;
+  text-transform: none;
+  margin-top: 3px;
+}
+
 .reg-table tbody tr {
   border-bottom: 1px solid #f1f5f9;
   transition: background 0.18s ease;
@@ -781,7 +791,7 @@
   font-size: 14px;
   font-weight: 600;
   color: #334155;
-  text-align: center;
+  text-align: left;
   border-right: 1px solid #e2e8f0;
   border-bottom: 1px solid #f1f5f9;
   white-space: nowrap;
@@ -819,10 +829,6 @@
   color: #b45309 !important;
   background: #fffbeb;
   font-weight: 700 !important;
-  text-align: center !important;
-}
-
-.reg-table td:nth-child(3):not(.reg-td-cat) {
   text-align: center !important;
 }
 

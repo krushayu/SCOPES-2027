@@ -88,7 +88,7 @@ const importantDates = [
   },
 ];
 
-const REGISTRATION_START_DATE = new Date('2026-12-10T00:00:00');
+const REGISTRATION_START_DATE = new Date('2026-11-23T21:30:00');
 
 const getTimeRemaining = (targetDate) => {
   const total = targetDate.getTime() - new Date().getTime();
@@ -490,28 +490,24 @@ const Registration = () => {
                     <tr>
                       <th>Category</th>
                       <th>Delegate Type</th>
-                      <th>Registration Fee</th>
-                      <th>Early Bird</th>
-                      <th>Regular</th>
+                      <th>Early Bird<br/><span className="reg-th-date">(Before 25 Dec 2026)</span></th>
+                      <th>Regular<br/><span className="reg-th-date">(After 25 Dec 2026)</span></th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
                       <td rowSpan="3" className="reg-td-cat">R&amp;D and Industry Participants</td>
                       <td className="reg-td-ieee">IEEE Member</td>
-                      <td className="reg-td-fee">₹ 9,000</td>
                       <td className="reg-td-early">₹ 9,000</td>
                       <td className="reg-td-regular">₹ 10,000</td>
                     </tr>
                     <tr>
                       <td>Non-IEEE Member</td>
-                      <td className="reg-td-fee">₹ 10,000</td>
                       <td className="reg-td-early">₹ 10,000</td>
                       <td className="reg-td-regular">₹ 11,000</td>
                     </tr>
                     <tr>
                       <td>Foreign Delegate</td>
-                      <td className="reg-td-fee">$ 250</td>
                       <td className="reg-td-early">$ 250</td>
                       <td className="reg-td-regular">$ 275</td>
                     </tr>
@@ -519,19 +515,16 @@ const Registration = () => {
                     <tr className="reg-group-start">
                       <td rowSpan="3" className="reg-td-cat">Faculty Participants from Academia</td>
                       <td className="reg-td-ieee">IEEE Member</td>
-                      <td className="reg-td-fee">₹ 8,000</td>
                       <td className="reg-td-early">₹ 8,000</td>
                       <td className="reg-td-regular">₹ 9,000</td>
                     </tr>
                     <tr>
                       <td>Non-IEEE Member</td>
-                      <td className="reg-td-fee">₹ 9,000</td>
                       <td className="reg-td-early">₹ 9,000</td>
                       <td className="reg-td-regular">₹ 10,000</td>
                     </tr>
                     <tr>
                       <td>Foreign Delegate</td>
-                      <td className="reg-td-fee">$ 225</td>
                       <td className="reg-td-early">$ 225</td>
                       <td className="reg-td-regular">$ 250</td>
                     </tr>
@@ -539,19 +532,16 @@ const Registration = () => {
                     <tr className="reg-group-start">
                       <td rowSpan="3" className="reg-td-cat">UG/PG Students &amp; Research Scholars</td>
                       <td className="reg-td-ieee">IEEE Member</td>
-                      <td className="reg-td-fee">₹ 7,000</td>
                       <td className="reg-td-early">₹ 7,000</td>
                       <td className="reg-td-regular">₹ 8,000</td>
                     </tr>
                     <tr>
                       <td>Non-IEEE Member</td>
-                      <td className="reg-td-fee">₹ 8,000</td>
                       <td className="reg-td-early">₹ 8,000</td>
                       <td className="reg-td-regular">₹ 9,000</td>
                     </tr>
                     <tr>
                       <td>Foreign Delegate</td>
-                      <td className="reg-td-fee">$ 200</td>
                       <td className="reg-td-early">$ 200</td>
                       <td className="reg-td-regular">$ 225</td>
                     </tr>
@@ -559,13 +549,11 @@ const Registration = () => {
                     <tr className="reg-group-start">
                       <td rowSpan="2" className="reg-td-cat">Listener / Accompany Person</td>
                       <td>Indian Attendee</td>
-                      <td className="reg-td-fee">₹ 2,000</td>
                       <td className="reg-td-early">₹ 2,000</td>
                       <td className="reg-td-regular">₹ 3,000</td>
                     </tr>
                     <tr>
                       <td>Foreign Delegate</td>
-                      <td className="reg-td-fee">$ 100</td>
                       <td className="reg-td-early">$ 100</td>
                       <td className="reg-td-regular">$ 125</td>
                     </tr>
