@@ -206,9 +206,12 @@ const Footer = () => {
             </p>
             <div className="flag-counter-wrap">
               
-<a href="https://s05.flagcounter.com/stats/xLj1/">
-  <img src="https://s05.flagcounter.com/count2/xLj1/bg_FFFFFF/txt_000000/border_CCCCCC/columns_8/maxflags_250/viewers_Scopes+2027+Visitors/labels_0/pageviews_0/flags_0/percent_0/"
-  alt="Flag Counter" border="0" />
+<a href="https://s05.flagcounter.com/more/xLj1">
+  <img
+    src="https://s05.flagcounter.com/count2/xLj1/bg_FFFFFF/txt_000000/border_CCCCCC/columns_8/maxflags_250/viewers_Scopes+2027+Visitors/labels_0/pageviews_0/flags_0/percent_0/"
+    alt="Scopes 2027 Visitors Flag Counter"
+    border="0"
+  />
 </a>
 
             </div>
