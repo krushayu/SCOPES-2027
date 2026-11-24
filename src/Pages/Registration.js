@@ -52,29 +52,41 @@ const importantDates = [
   {
     phase: 'Phase 03',
     event: 'Notification of Acceptance',
-    date: 'December 5th, 2026',
+    date: 'December 5th - 15th, 2026',
     month: 'DEC',
     day: '05',
     year: '2026',
     start: new Date('2026-12-05'),
-    end: new Date('2026-12-05'),
+    end: new Date('2026-12-15'),
     icon: <FaBell />,
     accent: '#6366f1',
   },
   {
     phase: 'Phase 04',
-    event: 'Registration & Camera Ready',
-    date: 'December 10th, 2026',
+    event: 'Early Bird Registration & Camera Ready',
+    date: 'December 16th - 25th, 2026',
     month: 'DEC',
-    day: '10',
+    day: '16 - 25',
     year: '2026',
-    start: new Date('2026-12-10'),
-    end: new Date('2026-12-10'),
+    start: new Date('2026-12-16'),
+    end: new Date('2026-12-25'),
     icon: <FaUserCheck />,
     accent: '#0d9488',
   },
   {
     phase: 'Phase 05',
+    event: 'Late Registration & Camera Ready Submission',
+    date: 'December 26th - 31st, 2026',
+    month: 'DEC',
+    day: '26-31',
+    year: '2026',
+    start: new Date('2026-12-26'),
+    end: new Date('2026-12-31'),
+    icon: <FaBell />,
+    accent: '#7c3aed',
+  },
+  {
+    phase: 'Phase 06',
     event: 'Conference Dates',
     date: 'February 4th – 6th, 2027',
     month: 'FEB',
@@ -491,7 +503,7 @@ const Registration = () => {
                       <th>Category</th>
                       <th>Delegate Type</th>
                       <th>Early Bird<br/><span className="reg-th-date">(Before 25 Dec 2026)</span></th>
-                      <th>Regular<br/><span className="reg-th-date">(After 25 Dec 2026)</span></th>
+                      <th>Regular<br/><span className="reg-th-date">(25 Dec - 31 Dec, 2026)</span></th>
                     </tr>
                   </thead>
                   <tbody>

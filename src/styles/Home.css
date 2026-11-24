@@ -1198,6 +1198,7 @@
   }
 }
 
+/* ── Electric animated border speaker card ── */
 .speaker-card {
   background: white;
   border-radius: 16px;
@@ -2068,11 +2069,32 @@
   transform: translateX(2px);
 }
 
-/* ── Landscape Dates Grid (5 columns on desktop) ── */
+/* ── Landscape Dates Grid (6 columns on desktop) ── */
 .home-dates-landscape-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 16px;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 14px;
+}
+
+@media (max-width: 1200px) {
+  .home-dates-landscape-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-dates-landscape-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-dates-landscape-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
 }
 
 .home-date-card {

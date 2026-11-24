@@ -222,12 +222,6 @@
   border-color: #cbd5e1;
 }
 
-/* Row 2 cards span 3 columns each (balanced 2-card row) */
-.reg-date-tile:nth-child(4),
-.reg-date-tile:nth-child(5) {
-  grid-column: span 3;
-}
-
 /* Card Accent Line */
 .reg-tile-accent-line {
   position: absolute;
@@ -528,12 +522,6 @@
   }
   .reg-date-tile {
     grid-column: span 1;
-  }
-  .reg-date-tile:nth-child(4) {
-    grid-column: span 1;
-  }
-  .reg-date-tile:nth-child(5) {
-    grid-column: span 2;
   }
 }
 

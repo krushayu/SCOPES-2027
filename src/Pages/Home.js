@@ -248,29 +248,41 @@ const Home = () => {
     {
       phase: "Phase 03",
       title: "Notification of Acceptance",
-      date: "05 December 2026",
+      date: "05 - 15 December 2026",
       month: "DEC",
       day: "05",
       year: "2026",
       icon: <FaBell />,
       accent: "#6366f1",
       start: new Date("2026-12-05"),
-      end: new Date("2026-12-05"),
+      end: new Date("2026-12-15"),
     },
     {
       phase: "Phase 04",
-      title: "Start date of registration & camera ready submission",
-      date: "10 December 2026",
+      title: "Early Bird Registration & Camera Ready submission",
+      date: "16 - 25 December, 2026",
       month: "DEC",
-      day: "10",
+      day: "16–25",
       year: "2026",
       icon: <FaUserCheck />,
       accent: "#0d9488",
-      start: new Date("2026-12-10"),
-      end: new Date("2026-12-10"),
+      start: new Date("2026-12-16"),
+      end: new Date("2026-12-25"),
     },
     {
       phase: "Phase 05",
+      title: "Late Registration & Camera Ready Submission",
+      date: "26 - 31 December, 2026",
+      month: "DEC",
+      day: "26–31",
+      year: "2026",
+      icon: <FaBell />,
+      accent: "#7c3aed",
+      start: new Date("2026-12-26"),
+      end: new Date("2026-12-31"),
+    },
+    {
+      phase: "Phase 06",
       title: "Conference Dates",
       date: "04-06 February 2027",
       month: "FEB",
@@ -1022,8 +1034,8 @@ const Home = () => {
                   <tr>
                     <th>Category</th>
                     <th>Delegate Type</th>
-                    <th>Early Bird<br/><span className="fee-th-date">(Till 25 Dec 2026)</span></th>
-                    <th>Regular<br/><span className="fee-th-date">(After 25 Dec 2026)</span></th>
+                    <th>Early Bird<br/><span className="fee-th-date">(16 Dec - 25 Dec 2026)</span></th>
+                    <th>Regular<br/><span className="fee-th-date">(25 Dec - 31 Dec, 2026)</span></th>
                   </tr>
                 </thead>
                 <tbody>
