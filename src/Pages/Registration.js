@@ -63,7 +63,7 @@ const importantDates = [
   },
   {
     phase: 'Phase 04',
-    event: 'Early Bird Registration & Camera Ready',
+    event: 'Early Bird Registration & Camera Ready Submission',
     date: 'December 16th - 25th, 2026',
     month: 'DEC',
     day: '16 - 25',
@@ -100,7 +100,7 @@ const importantDates = [
   },
 ];
 
-const REGISTRATION_START_DATE = new Date('2026-12-10T00:00:00');
+const REGISTRATION_START_DATE = new Date('2026-12-16T00:00:00');
 
 const getTimeRemaining = (targetDate) => {
   const total = targetDate.getTime() - new Date().getTime();
@@ -193,7 +193,7 @@ const Registration = () => {
         <p>
           {isRegistrationOpen
             ? 'Camera Ready Paper Submission and Registration Guidelines'
-            : 'Author Registration will officially open on December 10, 2026'}
+            : 'Author Registration will officially open on December 16th, 2026'}
         </p>
       </div>
 
@@ -207,7 +207,7 @@ const Registration = () => {
             </div>
             <h2 className="reg-countdown-heading">Author Registration Countdown</h2>
             <p className="reg-countdown-sub">
-              Author Registration & Camera-Ready paper submission will officially open on <strong>December 10, 2026</strong>.
+              Author Registration & Camera-Ready paper submission will officially open on <strong>December 16th, 2026</strong>.
             </p>
 
             {/* Clock-like Circular Progress Countdown */}
@@ -264,7 +264,7 @@ const Registration = () => {
               <div className="reg-cd-step-line"></div>
               <div className="reg-cd-step target">
                 <span className="reg-cd-step-dot">🔒</span>
-                <span>Registration (Dec 10)</span>
+                <span>Registration (Dec 16th)</span>
               </div>
             </div>
 
@@ -272,7 +272,7 @@ const Registration = () => {
             <div className="reg-countdown-footer">
               <div className="reg-countdown-notice">
                 <FaClock className="reg-cd-notice-icon" />
-                <span>Registration guidelines, fee details, and payment links will be unlocked automatically on December 10, 2026.</span>
+                <span>Registration guidelines, fee details, and payment links will be unlocked automatically on December 16th, 2026.</span>
               </div>
               <a
                 href={GOOGLE_CAL_URL}
@@ -360,13 +360,17 @@ const Registration = () => {
                     </div>
 
                     <div className="reg-tile-content">
-                      <div className="reg-tile-icon" style={{ color: item.accent, background: `${item.accent}15` }}>
-                        {item.icon}
+                      <div className="reg-tile-header-row">
+                        <div className="reg-tile-icon" style={{ color: item.accent, background: `${item.accent}15` }}>
+                          {item.icon}
+                        </div>
+                        <div className="reg-tile-title-box">
+                          <h3 className="reg-tile-title">{item.event}</h3>
+                          {item.subEvent && (
+                            <span className="reg-tile-subevent">{item.subEvent}</span>
+                          )}
+                        </div>
                       </div>
-                      <h3 className="reg-tile-title">{item.event}</h3>
-                      {item.subEvent && (
-                        <span className="reg-tile-subevent">{item.subEvent}</span>
-                      )}
                     </div>
                   </div>
 

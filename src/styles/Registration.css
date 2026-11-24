@@ -294,7 +294,7 @@
 /* Main content area */
 .reg-tile-main {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 16px;
   margin-bottom: 16px;
 }
@@ -342,15 +342,28 @@
   min-width: 0;
 }
 
+.reg-tile-header-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
 .reg-tile-icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   width: 28px;
   height: 28px;
+  min-width: 28px;
   border-radius: 8px;
   font-size: 13px;
-  margin-bottom: 6px;
+  margin-top: 1px;
+  flex-shrink: 0;
+}
+
+.reg-tile-title-box {
+  flex: 1;
+  min-width: 0;
 }
 
 .reg-tile-title {

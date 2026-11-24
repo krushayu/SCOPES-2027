@@ -31,7 +31,7 @@ const ImpDates = () => {
       icon: <FaBell />,
     },
     {
-      event: 'Early Bird Registration & Camera Ready',
+      event: 'Early Bird Registration & Camera Ready Submission',
       date: 'December 16th - 25th, 2026',
       desc: 'Start date for registration and camera-ready paper submission.',
       start: new Date('2026-12-16'), end: new Date('2026-12-25'),

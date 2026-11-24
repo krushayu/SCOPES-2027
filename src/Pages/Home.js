@@ -983,13 +983,15 @@ const Home = () => {
                         <span className="home-date-year">{item.year}</span>
                       </div>
                       <div className="home-date-meta">
-                        <div
-                          className="home-date-icon-circle"
-                          style={{ color: item.accent, background: `${item.accent}15` }}
-                        >
-                          {item.icon}
+                        <div className="home-date-header-row">
+                          <div
+                            className="home-date-icon-circle"
+                            style={{ color: item.accent, background: `${item.accent}15` }}
+                          >
+                            {item.icon}
+                          </div>
+                          <h4 className="home-date-name">{item.title}</h4>
                         </div>
-                        <h4 className="home-date-name">{item.title}</h4>
                       </div>
                     </div>
 
