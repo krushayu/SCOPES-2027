@@ -983,15 +983,7 @@ const Home = () => {
                         <span className="home-date-year">{item.year}</span>
                       </div>
                       <div className="home-date-meta">
-                        <div className="home-date-header-row">
-                          <div
-                            className="home-date-icon-circle"
-                            style={{ color: item.accent, background: `${item.accent}15` }}
-                          >
-                            {item.icon}
-                          </div>
-                          <h4 className="home-date-name">{item.title}</h4>
-                        </div>
+                        <h4 className="home-date-name">{item.title}</h4>
                       </div>
                     </div>
 
@@ -1037,7 +1029,7 @@ const Home = () => {
                     <th>Category</th>
                     <th>Delegate Type</th>
                     <th>Early Bird<br/><span className="fee-th-date">(16 Dec - 25 Dec 2026)</span></th>
-                    <th>Regular<br/><span className="fee-th-date">(25 Dec - 31 Dec, 2026)</span></th>
+                    <th>Late <br/><span className="fee-th-date">(25 Dec - 31 Dec, 2026)</span></th>
                   </tr>
                 </thead>
                 <tbody>

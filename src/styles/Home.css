@@ -2257,33 +2257,13 @@
   min-width: 0;
 }
 
-.home-date-header-row {
-  display: flex;
-  align-items: flex-start;
-  gap: 8px;
-}
-
-.home-date-icon-circle {
-  width: 24px;
-  height: 24px;
-  min-width: 24px;
-  border-radius: 6px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 11px;
-  margin-top: 1px;
-  flex-shrink: 0;
-}
-
 .home-date-name {
-  font-size: 12.5px;
+  font-size: 13px;
   font-weight: 700;
   color: #0a192f;
   margin: 0;
   line-height: 1.35;
   word-break: break-word;
-  flex: 1;
 }
 
 .home-date-footer {

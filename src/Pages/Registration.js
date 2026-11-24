@@ -360,17 +360,10 @@ const Registration = () => {
                     </div>
 
                     <div className="reg-tile-content">
-                      <div className="reg-tile-header-row">
-                        <div className="reg-tile-icon" style={{ color: item.accent, background: `${item.accent}15` }}>
-                          {item.icon}
-                        </div>
-                        <div className="reg-tile-title-box">
-                          <h3 className="reg-tile-title">{item.event}</h3>
-                          {item.subEvent && (
-                            <span className="reg-tile-subevent">{item.subEvent}</span>
-                          )}
-                        </div>
-                      </div>
+                      <h3 className="reg-tile-title">{item.event}</h3>
+                      {item.subEvent && (
+                        <span className="reg-tile-subevent">{item.subEvent}</span>
+                      )}
                     </div>
                   </div>
 
@@ -507,7 +500,7 @@ const Registration = () => {
                       <th>Category</th>
                       <th>Delegate Type</th>
                       <th>Early Bird<br/><span className="reg-th-date">(Before 25 Dec 2026)</span></th>
-                      <th>Regular<br/><span className="reg-th-date">(25 Dec - 31 Dec, 2026)</span></th>
+                      <th>Late<br/><span className="reg-th-date">(25 Dec - 31 Dec, 2026)</span></th>
                     </tr>
                   </thead>
                   <tbody>
