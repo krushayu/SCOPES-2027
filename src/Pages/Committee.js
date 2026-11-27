@@ -186,6 +186,7 @@ const Committee = () => {
         "Dr. Chinmayee Dora, Associate Professor, SoET, CUTM, Odisha",
         "Dr. P Anthony Sunny Dayal, Associate Professor, SoET, CUTM, AP",
         "Prof. Soumyadeep Maity, Assistant Professor, SoET, CUTM, Odisha",
+        "Prof. Laxmidhara Behera, Asst. Prof. SoET, CUTM, Odisha "
       ],
     },
     {
